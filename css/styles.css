@@ -1,0 +1,437 @@
+/* Estilos propios; Bootstrap administra contenedores y columnas. */
+:root {
+  --page-background: #f5f7fa;
+  --page-ink: #172b4d;
+}
+body {
+  background-color: var(--page-background);
+  color: var(--page-ink);
+}
+.page-heading {
+  background-color: #eaf1ff;
+  border-bottom: 1px solid #dce5f5;
+}
+.content-panel {
+  background-color: #fff;
+  border: 1px solid #dfe5ec;
+  border-radius: .75rem;
+}
+.skip-link:focus {
+  display: block;
+  padding: 1rem;
+  background: #fff;
+}
+
+/* Limita el panel lateral al ancho disponible, incluso en pantallas pequeñas. */
+#menuPrincipal {
+  --bs-offcanvas-width: 320px;
+  max-width: 100%;
+}
+.navbar .nav-link {
+  border-radius: .375rem;
+}
+.navbar .nav-link:hover,
+.navbar .nav-link:focus-visible {
+  background-color: var(--bs-secondary-bg);
+  color: var(--bs-emphasis-color);
+}
+@media (min-width: 1200px) {
+  .navbar .navbar-brand { font-size: 1rem; }
+  .navbar .nav-link { white-space: nowrap; }
+}
+@media (max-width: 1199.98px) {
+  #menuPrincipal .nav-link { padding: .75rem 1rem; }
+}
+
+/* Tabla al ancho de la pantalla, con un máximo centrado en escritorio. */
+.larines-container {
+  width: 100%;
+  max-width: 1280px;
+  margin-inline: auto;
+}
+.larines-table {
+  width: 100%;
+  table-layout: fixed;
+  font-size: .875rem;
+  --bs-table-color: #244563;
+  --bs-table-striped-color: #244563;
+  --bs-table-striped-bg: #f2f2f2;
+  --bs-table-border-color: #dee2e6;
+}
+.larines-table .col-clave { width: 8%; }
+.larines-table .col-corta { width: 21%; }
+.larines-table .col-larga { width: 71%; }
+.larines-table > thead {
+  --bs-table-bg: #112c43;
+  --bs-table-color: #fff;
+}
+.larines-table > thead > tr > th { border-color: #112c43; }
+.larines-table > :not(caption) > * > * {
+  padding: .75rem;
+  vertical-align: top;
+  overflow-wrap: anywhere;
+}
+.larines-table th:first-child { text-align: center; }
+@media (max-width: 575.98px) {
+  .larines-table .col-clave { width: 14%; }
+  .larines-table .col-corta { width: 29%; }
+  .larines-table .col-larga { width: 57%; }
+  .larines-table > :not(caption) > * > * { padding: .625rem .375rem; }
+}
+
+
+/* El buscador y su barra de estado comparten los bordes de la tabla. */
+.larines-search {
+  width: 100%;
+  margin-inline: 0;
+  padding-inline: 0;
+}
+
+.navbar .navbar-brand {
+  white-space: normal;
+  max-width: calc(100% - 76px);
+  font-size: 1rem;
+}
+
+/* Sección actual: visible tanto en el navbar como en el panel móvil. */
+.navbar .nav-link.active,
+.navbar .nav-link.active:hover,
+.navbar .nav-link.active:focus-visible {
+  color: var(--bs-primary);
+  background-color: var(--bs-primary-bg-subtle);
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: .3em;
+  text-decoration-thickness: 2px;
+}
+
+.fracciones-container {
+  max-width: 1280px;
+  margin-inline: auto;
+}
+.linea-section {
+  width: 100%;
+  max-width: 360px;
+  margin-inline: auto;
+  scroll-margin-top: 1rem;
+}
+.fracciones-table {
+  width: 100%;
+  font-size: .875rem;
+  overflow-wrap: anywhere;
+}
+.fracciones-table th {
+  background-color: #112c43;
+  color: white;
+}
+.navbar .dropdown-menu {
+  max-height: 70vh;
+  overflow-y: auto;
+}
+@media (max-width: 1199.98px) {
+  .navbar .dropdown-menu {
+    max-height: none;
+    border: 0;
+    background-color: transparent;
+    padding-left: 1rem;
+  }
+  .navbar .dropdown-item { padding-block: .625rem; }
+}
+
+/* Acceso al inicio sin transiciones ni animación de desplazamiento. */
+.go-top {
+  position: fixed;
+  right: max(1rem, env(safe-area-inset-right));
+  bottom: max(1rem, env(safe-area-inset-bottom));
+  z-index: 1030;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  padding: 0;
+  border: 1px solid #fff;
+  border-radius: .75rem;
+  background: #112c43;
+  color: #fff;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 20%);
+}
+.go-top[hidden] { display: none; }
+.go-top:hover { background: #244563; }
+.go-top:focus-visible {
+  outline: 3px solid #0d6efd;
+  outline-offset: 3px;
+}
+
+.fracciones-table {
+  max-width: 360px;
+  margin-inline: auto;
+}
+.fracciones-table > :not(caption) > * > * {
+  padding: .375rem;
+  line-height: 1.4;
+}
+/* El foco programático permite continuar con teclado sin mostrar otro control. */
+#contenido:focus { outline: none; }
+
+/* Una línea por fila en móvil; tres líneas por fila desde escritorio. */
+.lineas-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 2rem;
+  align-items: start;
+}
+.lineas-grid > .linea-section { margin-bottom: 0 !important; }
+@media (min-width: 992px) {
+  .lineas-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 2rem 1.5rem;
+  }
+}
+
+/* Botón circular: 70 % transparente y 30 % menor que sus 48 px originales. */
+.go-top {
+  width: 33.6px;
+  height: 33.6px;
+  border-radius: 50%;
+  opacity: .3;
+}
+.go-top svg {
+  width: 16.8px;
+  height: 16.8px;
+}
+
+/* Tipografía compartida por todo el sitio y los componentes de Bootstrap. */
+:root {
+  --bs-font-sans-serif: "Arimo", Arial, sans-serif;
+  --bs-body-font-family: var(--bs-font-sans-serif);
+}
+body,
+button,
+input,
+select,
+textarea {
+  font-family: var(--bs-font-sans-serif);
+}
+
+/* Destino del submenú: sombra suave en lugar del contorno de foco del navegador. */
+.linea-section:target,
+.linea-section:focus {
+  outline: black;
+  border-radius: .375rem;
+  box-shadow: 0 10px 17px rgb(17 44 67 / 18%), 0 1px 4px rgb(17 44 67 / 10%);
+  padding: 8px;
+}
+
+
+/* Menú de navegación sin fondos de botón. */
+.navbar .nav-link,
+.navbar .nav-link:hover,
+.navbar .nav-link:focus-visible,
+.navbar .nav-link.active,
+.navbar .nav-link.active:hover,
+.navbar .nav-link.active:focus-visible {
+  background-color: transparent;
+  border-radius: 0;
+  box-shadow: none;
+}
+.navbar .nav-link:hover {
+  color: var(--bs-primary);
+  text-decoration: underline;
+  text-underline-offset: .3em;
+}
+.navbar .dropdown-menu {
+  border: 1px solid var(--bs-border-color);
+  border-radius: .375rem;
+  box-shadow: 0 6px 18px rgb(17 44 67 / 12%);
+}
+@media (max-width: 1199.98px) {
+  .navbar .dropdown-menu { border: 0; box-shadow: none; }
+}
+
+/* En móvil, la descripción corta permite copiar el texto largo oculto. */
+.larin-copy {
+  display: none;
+}
+.copy-notice {
+  position: fixed;
+  bottom: max(1rem, env(safe-area-inset-bottom));
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1080;
+  max-width: calc(100% - 6rem);
+  padding: .75rem 1.25rem;
+  border-radius: .5rem;
+  background: rgb(0 0 0 / 78%);
+  color: #fff;
+  text-align: center;
+  font-size: .875rem;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity .25s ease;
+}
+.copy-notice.is-visible { opacity: 1; }
+@media (max-width: 767.98px) {
+  .larines-table .col-larga,
+  .larines-table tr > :nth-child(3) { display: none; }
+  .larines-table .col-clave { width: 18%; }
+  .larines-table .col-corta { width: 82%; }
+  .larin-short-text { display: none; }
+  .larin-copy {
+    display: inline;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    color: var(--bs-primary, #0d6efd);
+    text-align: left;
+    font: inherit;
+    text-decoration: underline;
+    text-underline-offset: .2em;
+    cursor: pointer;
+  }
+  .larin-copy:focus-visible { outline: 2px solid #0d6efd; outline-offset: 2px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .copy-notice { transition: none; }
+}
+
+/* Ajustes móviles: contenido centrado al 98 % y navegación más compacta. */
+@media (max-width: 767.98px) {
+  body > header,
+  body > main,
+  body > footer {
+    width: 98%;
+    margin-inline: auto;
+  }
+  body > header .navbar {
+    padding-block: .7rem !important;
+  }
+  .navbar .navbar-brand {
+    padding-block: .175rem;
+    font-size: .9rem;
+    line-height: 1.2;
+  }
+  .navbar-toggler {
+    border: 0;
+    padding: .175rem .525rem;
+  }
+  .navbar-toggler-icon {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+  .navbar-toggler:focus { box-shadow: none; }
+  .navbar-toggler:focus-visible {
+    outline: 2px solid var(--bs-primary);
+    outline-offset: 2px;
+  }
+  #menuPrincipal .nav-link {
+    padding-block: .525rem;
+    line-height: 1.3;
+  }
+  #menuPrincipal .dropdown-item {
+    padding-block: .4375rem;
+    line-height: 1.3;
+  }
+  #menuPrincipal .offcanvas-header,
+  #menuPrincipal .offcanvas-body {
+    padding-top: .7rem;
+    padding-bottom: .7rem;
+  }
+  .larin-copy {
+    color: inherit;
+    text-decoration: none;
+  }
+}
+
+/* Borrado integrado dentro del campo de búsqueda. */
+.search-field { position: relative; }
+.search-field #buscarLarin { padding-right: 2.75rem; }
+.search-clear {
+  position: absolute;
+  right: .25rem;
+  top: 50%;
+  transform: translateY(-50%);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.25rem;
+  height: 2rem;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: transparent;
+  color: #6c757d;
+}
+.search-clear[hidden] { display: none; }
+.search-clear:hover { color: #212529; background: #e9ecef; }
+.search-clear:focus-visible { outline: 2px solid #0d6efd; }
+#buscarLarin::-webkit-search-cancel-button { -webkit-appearance: none; }
+
+/* Navbar de borde a borde; contenido móvil centrado al 98 %. */
+@media (max-width: 767.98px) {
+  body > header {
+    width: 100%;
+    margin-inline: 0;
+  }
+}
+#estadoBusqueda {
+  width: 100%;
+  text-align: right;
+}
+
+/* Opciones temporalmente inactivas del menú. */
+.navbar .nav-link.disabled,
+.navbar .nav-link.disabled:hover,
+.navbar .nav-link.disabled:focus {
+  color: var(--bs-secondary-color, #6c757d);
+  opacity: .55;
+  text-decoration: none;
+  background: transparent;
+  pointer-events: none;
+  cursor: default;
+}
+
+.search-icon { position: absolute; left: 1rem; top: 50%; transform: translateY(-50%); color: #62758a; pointer-events: none; }
+/* Estilo de los buscadores de Larines. */
+.larines-search-field #buscarLarin {
+  padding: .75rem 2.75rem;
+  border-radius: 1.5rem;
+  background: #f2f5f8;
+}
+
+
+.procedimientos-search input {
+  padding: .75rem 2.75rem;
+  border-radius: 1.5rem;
+  background: #f2f5f8;
+}
+#buscarProcedimiento::-webkit-search-cancel-button { -webkit-appearance: none; }
+.procedimientos-table {
+  width: 100%;
+  table-layout: fixed;
+  font-size: .875rem;
+  --bs-table-color: #244563;
+  --bs-table-striped-color: #244563;
+  --bs-table-striped-bg: #f2f2f2;
+  --bs-table-border-color: #dee2e6;
+}
+.procedimientos-table > thead {
+  --bs-table-bg: #112c43;
+  --bs-table-color: #fff;
+}
+.procedimientos-table > :not(caption) > * > * {
+  padding: .75rem;
+  vertical-align: top;
+  overflow-wrap: anywhere;
+}
+@media (max-width: 767.98px) {
+  .procedimientos-table > :not(caption) > * > * { padding: .625rem .375rem; }
+}
+
+/* Número de procedimiento compacto y centrado. */
+.procedimientos-table col:first-child { width: 22% !important; }
+.procedimientos-table col:nth-child(2) { width: 78% !important; }
+.procedimientos-table tr > :first-child {
+  text-align: center;
+  vertical-align: middle;
+}
