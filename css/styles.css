@@ -52,7 +52,7 @@ body {
 .larines-table {
   width: 100%;
   table-layout: fixed;
-  font-size: .875rem;
+  font-size: .95rem;
   --bs-table-color: #244563;
   --bs-table-striped-color: #244563;
   --bs-table-striped-bg: #f2f2f2;
@@ -168,8 +168,8 @@ body {
   margin-inline: auto;
 }
 .fracciones-table > :not(caption) > * > * {
-  padding: .375rem;
-  line-height: 1.4;
+  padding: .21rem .375rem;
+  line-height: 1.2;
 }
 /* El foco programático permite continuar con teclado sin mostrar otro control. */
 #contenido:focus { outline: none; }
@@ -219,7 +219,7 @@ textarea {
 .linea-section:focus {
   outline: black;
   border-radius: .375rem;
-  box-shadow: 0 10px 17px rgb(17 44 67 / 18%), 0 1px 4px rgb(17 44 67 / 10%);
+  box-shadow: none;
   padding: 8px;
 }
 
@@ -395,14 +395,14 @@ textarea {
 /* Estilo de los buscadores de Larines. */
 .larines-search-field #buscarLarin {
   padding: .75rem 2.75rem;
-  border-radius: 1.5rem;
+  border-radius: .90rem;
   background: #f2f5f8;
 }
 
 
 .procedimientos-search input {
   padding: .75rem 2.75rem;
-  border-radius: 1.5rem;
+  border-radius: .90rem;
   background: #f2f5f8;
 }
 #buscarProcedimiento::-webkit-search-cancel-button { -webkit-appearance: none; }
@@ -434,4 +434,68 @@ textarea {
 .procedimientos-table tr > :first-child {
   text-align: center;
   vertical-align: middle;
+}
+
+
+
+
+
+#buscarManual::-webkit-search-cancel-button { -webkit-appearance: none; }
+
+
+/* Navbar fijo y compacto; espacio reservado según su altura real. */
+:root { --site-header-height: 54px; }
+body { padding-top: var(--site-header-height); }
+body > header {
+  position: fixed;
+  inset: 0 0 auto;
+  width: 100%;
+  margin: 0;
+  z-index: 1030;
+  background: #f8f9fa;
+}
+body > header .navbar { padding-block: .35rem !important; }
+body > header .navbar-brand { padding-block: .15rem; }
+body > header .navbar-toggler {
+  border: 0;
+  background: transparent;
+  box-shadow: none;
+  padding: .2rem .4rem;
+}
+body > header .navbar-toggler:focus { box-shadow: none; }
+body > header .navbar-toggler:focus-visible {
+  outline: 2px solid var(--bs-primary);
+  outline-offset: 2px;
+}
+body > header .navbar-toggler-icon { width: 1.5rem; height: 1.5rem; }
+.linea-section,
+#buscarLarin,
+#buscarManual,
+#buscarProcedimiento {
+  scroll-margin-top: calc(var(--site-header-height) + 16px);
+}
+.skip-link:focus { position: fixed; top: 0; left: 0; z-index: 1090; }
+
+.larin-match {
+  background-color: #fff2a8;
+  color: inherit;
+  padding: 0;
+  border-radius: .1rem;
+}
+
+/* Copia desde la descripción larga en escritorio sin apariencia de hipervínculo. */
+.larin-copy-long {
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+.larin-copy-long:focus-visible {
+  outline: 2px solid #0d6efd;
+  outline-offset: 3px;
 }

@@ -48,17 +48,20 @@ const records = Array.from(document.querySelectorAll("[data-registro]"), (row) =
   text: normalizeSearch(row.textContent)
 }));
 
+const searchTerms = SiteSearch.terms;
+const highlightLarin = SiteSearch.highlight;
 function filterLarines() {
   clearSearch.hidden = searchInput.value.length === 0;
-  const query = normalizeSearch(searchInput.value);
+  const terms = searchTerms(searchInput.value);
   let visible = 0;
-  records.forEach(({ row, text }) => {
-    row.hidden = !text.includes(query);
+  records.forEach(({row,text}) => {
+    row.hidden = !SiteSearch.matches(text, terms);
     if (!row.hidden) visible++;
+    highlightLarin(row,terms);
   });
   emptyResults.hidden = visible !== 0;
-  searchStatus.textContent = query
-    ? `Mostrando ${visible} de ${records.length} registros`
+  searchStatus.textContent = terms.length
+    ? "Mostrando " + visible + " de " + records.length + " registros"
     : "Mostrando todos los registros";
 }
 if (searchInput && clearSearch && searchStatus && emptyResults) {
@@ -76,7 +79,7 @@ if (searchInput && clearSearch && searchStatus && emptyResults) {
 // Cada página declara su sección en data-page del body.
 // La selección representa la página abierta, no un enlace provisional pulsado.
 const currentPage = document.body.dataset.page;
-document.querySelectorAll(".navbar-nav .nav-link[data-page]").forEach((link) => {
+document.querySelectorAll(".navbar-nav [data-page]").forEach((link) => {
   const isCurrentPage = link.dataset.page === currentPage;
   link.classList.toggle("active", isCurrentPage);
   if (isCurrentPage) {
@@ -89,6 +92,9 @@ document.querySelectorAll(".navbar-nav .nav-link[data-page]").forEach((link) => 
 
 
 
+document.querySelectorAll("[data-page-group]").forEach(toggle => {
+  toggle.classList.toggle("active", toggle.dataset.pageGroup.split(",").includes(currentPage));
+});
 // "instant" evita el desplazamiento suave definido por Bootstrap.
 const goTop = document.getElementById("volverArriba");
 if (goTop) {
@@ -106,7 +112,7 @@ if (goTop) {
 
 
 // Desplegable por cursor solo en escritorio con ratón; toque y teclado conservan Bootstrap.
-const fractionsToggle = document.getElementById("menuFracciones");
+document.querySelectorAll(".navbar .dropdown-toggle").forEach(fractionsToggle => {
 if (fractionsToggle && window.bootstrap) {
   const dropdownContainer = fractionsToggle.closest(".dropdown");
   const desktopHover = window.matchMedia("(min-width: 1200px) and (hover: hover) and (pointer: fine)");
@@ -134,7 +140,7 @@ if (fractionsToggle && window.bootstrap) {
     dropdown.hide();
   });
 }
-
+});
 // Copia el texto largo sin modificar sus espacios ni su puntuación.
 const copyNotice = document.getElementById("avisoCopiado");
 if (copyNotice) {
@@ -179,7 +185,7 @@ if (copyNotice) {
     button.textContent = shortText;
     button.setAttribute("aria-label", "Copiar larín " + row.cells[0].textContent.trim() + ": " + shortText);
     shortCell.replaceChildren(label, button);
-    button.addEventListener("click", async () => {
+    const copyLarin = async () => {
       try {
         if (navigator.clipboard && window.isSecureContext) {
           try { await navigator.clipboard.writeText(longCell.textContent); }
@@ -191,7 +197,59 @@ if (copyNotice) {
       } catch {
         showCopyNotice("No se pudo copiar. Inténtalo de nuevo.");
       }
-    });
+    };
+    button.addEventListener("click", copyLarin);
+    const longButton = document.createElement("button");
+    longButton.type = "button";
+    longButton.className = "larin-copy-long";
+    longButton.setAttribute("aria-label", "Copiar descripción larga del larín " + row.cells[0].textContent.trim());
+    longButton.title = "Copiar larín";
+    while (longCell.firstChild) longButton.append(longCell.firstChild);
+    longCell.append(longButton);
+    longButton.addEventListener("click", copyLarin);
   });
 }
+
+
+// Reserva la altura real del navbar, incluso al cambiar el ancho o cargar la fuente.
+const siteHeader = document.querySelector("body > header");
+if (siteHeader) {
+  const updateHeaderHeight = () => {
+    document.documentElement.style.setProperty("--site-header-height", siteHeader.getBoundingClientRect().height + "px");
+  };
+  updateHeaderHeight();
+  new ResizeObserver(updateHeaderHeight).observe(siteHeader);
+}
+
+// "/" enfoca la búsqueda sin interceptar escritura, atajos del navegador ni composición.
+const pageSearch = document.querySelector("#buscarLarin, #buscarManual, #buscarProcedimiento");
+if (pageSearch) {
+  pageSearch.setAttribute("aria-keyshortcuts", "/ Escape");
+  pageSearch.addEventListener("keydown", event => {
+    if (event.key === "Escape" && !event.isComposing) {
+      event.preventDefault();
+      event.stopPropagation();
+      pageSearch.blur();
+    }
+  });
+  document.addEventListener("keydown", event => {
+    if (event.key !== "/" || event.ctrlKey || event.metaKey || event.altKey || event.isComposing || event.defaultPrevented) return;
+    const target = event.target instanceof Element ? event.target : document.activeElement;
+    if (target && (target.closest("input, textarea, select, [role='textbox']") || target.isContentEditable)) return;
+    if (document.querySelector("dialog[open]")) return;
+    event.preventDefault();
+    const focusSearch = () => {
+      pageSearch.focus({ preventScroll: true });
+      pageSearch.scrollIntoView({ behavior: "instant", block: "start" });
+    };
+    const openMenu = document.querySelector("#menuPrincipal.show");
+    if (openMenu && window.bootstrap) {
+      openMenu.addEventListener("hidden.bs.offcanvas", () => requestAnimationFrame(focusSearch), { once: true });
+      bootstrap.Offcanvas.getOrCreateInstance(openMenu).hide();
+    } else focusSearch();
+  });
+}
+
+
+
 

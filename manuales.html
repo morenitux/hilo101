@@ -1,0 +1,457 @@
+<!doctype html><html lang="es"><head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Página principal del proyecto.">
+  <title>Manuales | Apoyo para Jefes de Reguladores</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <link href="css/styles.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous" defer=""></script>
+  <script src="js/search.js" defer></script>
+  <script src="js/main.js" defer=""></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Arimo:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<script src="js/manuales.js" defer></script></head>
+<body class="d-flex flex-column min-vh-100" data-page="manuales">
+  <a class="visually-hidden-focusable skip-link" href="#contenido">Saltar al contenido</a>
+
+  <header class="border-bottom">
+    <nav class="navbar navbar-expand-xl bg-body-tertiary py-3" data-bs-theme="light" aria-label="Navegación principal">
+      <div class="container-fluid px-3 px-xl-4">
+        <a class="navbar-brand fw-bold" href="index.html">Apoyo para Jefes de Reguladores</a>
+        <button id="abrirMenu" class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#menuPrincipal" aria-controls="menuPrincipal" aria-expanded="false" aria-label="Abrir menú">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="offcanvas offcanvas-start bg-body-tertiary" tabindex="-1" id="menuPrincipal" aria-labelledby="tituloMenu">
+          <div class="offcanvas-header border-bottom">
+            <h2 class="offcanvas-title h5" id="tituloMenu">Menú principal</h2>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Cerrar menú"></button>
+          </div>
+          <div class="offcanvas-body">
+            <!-- Destinos provisionales hasta crear las páginas correspondientes. -->
+            <ul class="navbar-nav ms-xl-auto">
+              <li class="nav-item dropdown"><button class="nav-link dropdown-toggle" id="menuLarines" type="button" data-bs-toggle="dropdown" aria-expanded="false" data-page-group="larines,larines-pcl12">Larines</button><ul class="dropdown-menu" aria-labelledby="menuLarines"><li><a class="dropdown-item" href="index.html" data-page="larines">PCCI-C5/PCCII</a></li><li><a class="dropdown-item" href="larines_pcl12.html" data-page="larines-pcl12">PCL-12</a></li><li><span class="dropdown-item disabled" aria-disabled="true">Traslados de trenes</span></li></ul></li>
+              <li class="nav-item"><a class="nav-link disabled" data-disabled-href="formacion_trenes.html" data-page="formacion-de-trenes" aria-disabled="true" tabindex="-1">Formacion de trenes</a></li>
+              <li class="nav-item dropdown"><button class="nav-link dropdown-toggle" type="button" id="menuFracciones" data-bs-toggle="dropdown" aria-expanded="false" data-page="fracciones-de-vuelta">Fracciones de vuelta</button><ul class="dropdown-menu" aria-labelledby="menuFracciones"><li><a class="dropdown-item" href="fracciones_vuelta.html#linea1">Línea 1</a></li><li><a class="dropdown-item" href="fracciones_vuelta.html#linea2">Línea 2</a></li><li><a class="dropdown-item" href="fracciones_vuelta.html#linea3">Línea 3</a></li><li><a class="dropdown-item" href="fracciones_vuelta.html#linea4">Línea 4</a></li><li><a class="dropdown-item" href="fracciones_vuelta.html#linea5">Línea 5</a></li><li><a class="dropdown-item" href="fracciones_vuelta.html#linea6">Línea 6</a></li><li><a class="dropdown-item" href="fracciones_vuelta.html#linea7">Línea 7</a></li><li><a class="dropdown-item" href="fracciones_vuelta.html#linea8">Línea 8</a></li><li><a class="dropdown-item" href="fracciones_vuelta.html#linea9">Línea 9</a></li><li><a class="dropdown-item" href="fracciones_vuelta.html#lineaA">Línea A</a></li><li><a class="dropdown-item" href="fracciones_vuelta.html#lineaB">Línea B</a></li><li><a class="dropdown-item" href="fracciones_vuelta.html#linea12">Línea 12</a></li></ul></li>
+              <li class="nav-item"><a class="nav-link active" aria-current="page" href="manuales.html" data-page="manuales">Manuales</a></li>
+              <li class="nav-item"><a class="nav-link" href="procedimientos.html" data-page="procedimientos">Procedimientos</a></li>
+              
+              
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main id="contenido" class="flex-grow-1 bg-white" tabindex="-1">
+  <section class="container-fluid px-0 larines-container" aria-labelledby="tituloManuales">
+    <h1 id="tituloManuales" class="h3 mt-4 mb-0">Manuales</h1>
+    <div class="larines-search py-3" role="search" aria-label="Buscar manuales">
+      <label for="buscarManual" class="visually-hidden">Buscar clave o nombre del manual</label>
+      <div class="search-field procedimientos-search">
+        <svg class="search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="10" cy="10" r="6"></circle><path d="m15 15 5 5"></path></svg>
+        <input id="buscarManual" class="form-control" type="search" placeholder="Buscar clave o nombre del manual" aria-controls="tablaManuales" autocomplete="off">
+        <button id="borrarManual" class="search-clear" type="button" aria-label="Borrar búsqueda" hidden>×</button>
+      </div>
+      <p id="estadoManuales" class="small text-secondary text-end mt-2 mb-0" role="status" aria-live="polite"></p>
+    </div>
+    <table id="tablaManuales" class="table table-striped table-bordered mb-0 procedimientos-table">
+      <caption class="visually-hidden">Manuales. Cada enlace abre el documento en otra pestaña.</caption>
+      <colgroup><col style="width:22%"><col style="width:78%"></colgroup>
+      <thead><tr><th scope="col">Clave</th><th scope="col">Nombre del manual</th></tr></thead>
+      <tbody>
+          <tr data-manual>
+            <td></td><!-- Escribe la clave en la celda anterior. -->
+            <td><a href="files/manuales/5-12-01%20Pilotaje%20Automatico%20PA135%20KHZ.pdf" target="_blank" rel="noopener">5-12-01 Pilotaje Automatico PA135 KHZ</a></td>
+          </tr>
+          <tr data-manual>
+            <td></td><!-- Escribe la clave en la celda anterior. -->
+            <td><a href="files/manuales/5-12-05%20Puesto%20Central%20TCO%20Tr%C3%A1fico%20L-9.pdf" target="_blank" rel="noopener">5-12-05 Puesto Central TCO Tráfico L-9</a></td>
+          </tr>
+          <tr data-manual>
+            <td></td><!-- Escribe la clave en la celda anterior. -->
+            <td><a href="files/manuales/5-12-06%20Puesto%20Central%20Director%20L-9.pdf" target="_blank" rel="noopener">5-12-06 Puesto Central Director L-9</a></td>
+          </tr>
+          <tr data-manual>
+            <td></td><!-- Escribe la clave en la celda anterior. -->
+            <td><a href="files/manuales/5-12-08%20Puesto%20central%20de%20optimizacion%20L-9%20Mando%20centralizado.pdf" target="_blank" rel="noopener">5-12-08 Puesto central de optimizacion L-9 Mando centralizado</a></td>
+          </tr>
+          <tr data-manual>
+            <td></td><!-- Escribe la clave en la celda anterior. -->
+            <td><a href="files/manuales/5-12-100%20Mat.Rod.%20MP-82.pdf" target="_blank" rel="noopener">5-12-100 Mat.Rod. MP-82</a></td>
+          </tr>
+          <tr data-manual>
+            <td></td><!-- Escribe la clave en la celda anterior. -->
+            <td><a href="files/manuales/5-12-115%20Conducci%C3%B3n%2C%20Maniobras%20y%20Aver%C3%ADas%20NE-92.pdf" target="_blank" rel="noopener">5-12-115 Conducción, Maniobras y Averías NE-92</a></td>
+          </tr>
+          <tr data-manual>
+            <td></td><!-- Escribe la clave en la celda anterior. -->
+            <td><a href="files/manuales/5-12-124%20Trenes%20rehabilitados%20%20MP68-R93-94.pdf" target="_blank" rel="noopener">5-12-124 Trenes rehabilitados  MP68-R93-94</a></td>
+          </tr>
+          <tr data-manual>
+            <td></td><!-- Escribe la clave en la celda anterior. -->
+            <td><a href="files/manuales/5-12-13%20Puesto%20Central%20Mandos%20Directos%20L-8.pdf" target="_blank" rel="noopener">5-12-13 Puesto Central Mandos Directos L-8</a></td>
+          </tr>
+          <tr data-manual>
+            <td></td><!-- Escribe la clave en la celda anterior. -->
+            <td><a href="files/manuales/5-12-131%20Terminales%20y%20Vias%20%20Secundarias%20Se%C3%B1al%20Traccion.pdf" target="_blank" rel="noopener">5-12-131 Terminales y Vias  Secundarias Señal Traccion</a></td>
+          </tr>
+          <tr data-manual>
+            <td></td><!-- Escribe la clave en la celda anterior. -->
+            <td><a href="files/manuales/5-12-171%20Notas%20tecnicas%202%205%206%20y%20B.pdf" target="_blank" rel="noopener">5-12-171 Notas tecnicas 2 5 6 y B</a></td>
+          </tr>
+          <tr data-manual>
+            <td></td><!-- Escribe la clave en la celda anterior. -->
+            <td><a href="files/manuales/5-12-171%20Terminales%20y%20talleres.%20se%C3%B1al%20y%20aliment.%20tracc.%20term.%20l-2%2C5%2C6%20y%20B.pdf" target="_blank" rel="noopener">5-12-171 Terminales y talleres. señal y aliment. tracc. term. l-2,5,6 y B</a></td>
+          </tr>
+          <tr data-manual>
+            <td></td><!-- Escribe la clave en la celda anterior. -->
+            <td><a href="files/manuales/5-12-172servicios%20provisionales%20lineas%202%2C5%2C6%20y%20B.pdf" target="_blank" rel="noopener">5-12-172servicios provisionales lineas 2,5,6 y B</a></td>
+          </tr>
+          <tr data-manual>
+            <td></td><!-- Escribe la clave en la celda anterior. -->
+            <td><a href="files/manuales/5-12-173%20trenes%20rehabilitados%20mp-68-R-96.pdf" target="_blank" rel="noopener">5-12-173 trenes rehabilitados mp-68-R-96</a></td>
+          </tr>
+          <tr data-manual>
+            <td></td><!-- Escribe la clave en la celda anterior. -->
+            <td><a href="files/manuales/5-12-173%20Trenes%20Rehabilitados%20MP68-R96.pdf" target="_blank" rel="noopener">5-12-173 Trenes Rehabilitados MP68-R96</a></td>
+          </tr>
+          <tr data-manual>
+            <td></td><!-- Escribe la clave en la celda anterior. -->
+            <td><a href="files/manuales/5-12-175%20Servicios%20provisionales%20Lineas%201%2C3%20y%204.pdf" target="_blank" rel="noopener">5-12-175 Servicios provisionales Lineas 1,3 y 4</a></td>
+          </tr>
+          <tr data-manual>
+            <td></td><!-- Escribe la clave en la celda anterior. -->
+            <td><a href="files/manuales/5-12-176%20Sacem%20L-8.pdf" target="_blank" rel="noopener">5-12-176 Sacem L-8</a></td>
+          </tr>
+          <tr data-manual>
+            <td></td><!-- Escribe la clave en la celda anterior. -->
+            <td><a href="files/manuales/5-12-178%20Talleres%20terminales%20y%20vias%20sec.%20lineas%201%2C3%20y%204.pdf" target="_blank" rel="noopener">5-12-178 Talleres terminales y vias sec. lineas 1,3 y 4</a></td>
+          </tr>
+          <tr data-manual>
+            <td></td><!-- Escribe la clave en la celda anterior. -->
+            <td><a href="files/manuales/5-12-18%20Manual%20Operador%20y%20explotacion%20puesto%20central%20TCO%20L-8.pdf" target="_blank" rel="noopener">5-12-18 Manual Operador y explotacion puesto central TCO L-8</a></td>
+          </tr>
+          <tr data-manual>
+            <td></td><!-- Escribe la clave en la celda anterior. -->
+            <td><a href="files/manuales/5-12-220%20Nva.%20Cabina%20de%20conduccion%20Mod.%20NM-73%20BL6.pdf" target="_blank" rel="noopener">5-12-220 Nva. Cabina de conduccion Mod. NM-73 BL6</a></td>
+          </tr>
+          <tr data-manual>
+            <td></td><!-- Escribe la clave en la celda anterior. -->
+            <td><a href="files/manuales/5-12-232%20Material%20Rodante%20NM-02.pdf" target="_blank" rel="noopener">5-12-232 Material Rodante NM-02</a></td>
+          </tr>
+          <tr data-manual>
+            <td></td><!-- Escribe la clave en la celda anterior. -->
+            <td><a href="files/manuales/5-12-238%20Maniobras%20y%20Averias%20del%20Nm-02.pdf" target="_blank" rel="noopener">5-12-238 Maniobras y Averias del Nm-02</a></td>
+          </tr>
+          <tr data-manual>
+            <td></td><!-- Escribe la clave en la celda anterior. -->
+            <td><a href="files/manuales/5-12-238%20Maniobras%20y%20Aver%C3%ADas%20NM02%20-%20Conductor.pdf" target="_blank" rel="noopener">5-12-238 Maniobras y Averías NM02 - Conductor</a></td>
+          </tr>
+          <tr data-manual>
+            <td></td><!-- Escribe la clave en la celda anterior. -->
+            <td><a href="files/manuales/5-12-29%20Servicios%20Provisionales.pdf" target="_blank" rel="noopener">5-12-29 Servicios Provisionales</a></td>
+          </tr>
+          <tr data-manual>
+            <td></td><!-- Escribe la clave en la celda anterior. -->
+            <td><a href="files/manuales/5-12-30%20Talleres%20Se%C3%B1alizacion%20%20Traccion.pdf" target="_blank" rel="noopener">5-12-30 Talleres Señalizacion  Traccion</a></td>
+          </tr>
+          <tr data-manual>
+            <td></td><!-- Escribe la clave en la celda anterior. -->
+            <td><a href="files/manuales/5-12-36%20Programa%20General%20de%20Tr%C3%A1fico.pdf" target="_blank" rel="noopener">5-12-36 Programa General de Tráfico</a></td>
+          </tr>
+          <tr data-manual>
+            <td></td><!-- Escribe la clave en la celda anterior. -->
+            <td><a href="files/manuales/5-12-38%20Centro%20de%20Comunicaciones%20Formacion%20de%20Reguladores%20del%20PCC.pdf" target="_blank" rel="noopener">5-12-38 Centro de Comunicaciones Formacion de Reguladores del PCC</a></td>
+          </tr>
+          <tr data-manual>
+            <td></td><!-- Escribe la clave en la celda anterior. -->
+            <td><a href="files/manuales/5-12-38%20Centro%20de%20Comunicaciones%2C%20Formaci%C3%B3n%20de%20Reguladores%20del%20PCC.pdf" target="_blank" rel="noopener">5-12-38 Centro de Comunicaciones, Formación de Reguladores del PCC</a></td>
+          </tr>
+          <tr data-manual>
+            <td></td><!-- Escribe la clave en la celda anterior. -->
+            <td><a href="files/manuales/5-12-65%20Distribucion%20de%20la%20Energ%C3%ADa%20134.pdf" target="_blank" rel="noopener">5-12-65 Distribucion de la Energía 134</a></td>
+          </tr>
+          <tr data-manual>
+            <td></td><!-- Escribe la clave en la celda anterior. -->
+            <td><a href="files/manuales/5-12-73%20Circulacion%20de%20Trenes%20-%20Regulador.pdf" target="_blank" rel="noopener">5-12-73 Circulacion de Trenes - Regulador</a></td>
+          </tr>
+          <tr data-manual>
+            <td></td><!-- Escribe la clave en la celda anterior. -->
+            <td><a href="files/manuales/5-12-75%20Nvo.%20Sistema%20%20de%20regualcion%20de%20Trrafico%20de%20trenes.pdf" target="_blank" rel="noopener">5-12-75 Nvo. Sistema  de regualcion de Trrafico de trenes</a></td>
+          </tr>
+          <tr data-manual>
+            <td></td><!-- Escribe la clave en la celda anterior. -->
+            <td><a href="files/manuales/5-12-77%20TELFONIA_L8.indd.pdf" target="_blank" rel="noopener">5-12-77 TELFONIA_L8.indd</a></td>
+          </tr>
+          <tr data-manual>
+            <td></td><!-- Escribe la clave en la celda anterior. -->
+            <td><a href="files/manuales/5-12-86%20Regulaci%C3%B3n%20de%20los%20Trenes.pdf" target="_blank" rel="noopener">5-12-86 Regulación de los Trenes</a></td>
+          </tr>
+          <tr data-manual>
+            <td></td><!-- Escribe la clave en la celda anterior. -->
+            <td><a href="files/manuales/5-12-87%20Atenci%C3%B3n%20de%20Incidentes%20Relevantes%20-%20Transportes.pdf" target="_blank" rel="noopener">5-12-87 Atención de Incidentes Relevantes - Transportes</a></td>
+          </tr>
+          <tr data-manual>
+            <td></td><!-- Escribe la clave en la celda anterior. -->
+            <td><a href="files/manuales/5-12-87%20Distribucion%20de%20la%20energia%20electrica.pdf" target="_blank" rel="noopener">5-12-87 Distribucion de la energia electrica</a></td>
+          </tr>
+          <tr data-manual>
+            <td></td><!-- Escribe la clave en la celda anterior. -->
+            <td><a href="files/manuales/5-12-89%20Se%C3%B1alizacion%201.pdf" target="_blank" rel="noopener">5-12-89 Señalizacion 1</a></td>
+          </tr>
+          <tr data-manual>
+            <td></td><!-- Escribe la clave en la celda anterior. -->
+            <td><a href="files/manuales/5-12-89%20Se%C3%B1alizacion%202.pdf" target="_blank" rel="noopener">5-12-89 Señalizacion 2</a></td>
+          </tr>
+          <tr data-manual>
+            <td></td><!-- Escribe la clave en la celda anterior. -->
+            <td><a href="files/manuales/5-12-89%20Se%C3%B1alizacion%202%20Regulador.pdf" target="_blank" rel="noopener">5-12-89 Señalizacion 2 Regulador</a></td>
+          </tr>
+          <tr data-manual>
+            <td></td><!-- Escribe la clave en la celda anterior. -->
+            <td><a href="files/manuales/5-12-91Tablero%20de%20Control%20Optico%20Manual%20para%20Transportacion.pdf" target="_blank" rel="noopener">5-12-91Tablero de Control Optico Manual para Transportacion</a></td>
+          </tr>
+          <tr data-manual>
+            <td></td><!-- Escribe la clave en la celda anterior. -->
+            <td><a href="files/manuales/5-12-92%20Circulacion%20de%20los%20Trenes%20-%20Conductor.pdf" target="_blank" rel="noopener">5-12-92 Circulacion de los Trenes - Conductor</a></td>
+          </tr>
+          <tr data-manual>
+            <td></td><!-- Escribe la clave en la celda anterior. -->
+            <td><a href="files/manuales/ATS%20Especificacion%20detallada%20de%20la%20IHM%202022-SlE-CBSYS-LIM0-000-lll-30767-E.pdf" target="_blank" rel="noopener">ATS Especificacion detallada de la IHM 2022-SlE-CBSYS-LIM0-000-lll-30767-E</a></td>
+          </tr>
+          <tr data-manual>
+            <td></td><!-- Escribe la clave en la celda anterior. -->
+            <td><a href="files/manuales/Condiciones%20Generales%20de%20Trabajo%20STC%202006%20%28escaneado%29.pdf" target="_blank" rel="noopener">Condiciones Generales de Trabajo STC 2006 (escaneado)</a></td>
+          </tr>
+          <tr data-manual>
+            <td></td><!-- Escribe la clave en la celda anterior. -->
+            <td><a href="files/manuales/Distribucion%20de%20la%20Energ%C3%ADa%20256.pdf" target="_blank" rel="noopener">Distribucion de la Energía 256</a></td>
+          </tr>
+          <tr data-manual>
+            <td></td><!-- Escribe la clave en la celda anterior. -->
+            <td><a href="files/manuales/Instructivo%20para%20la%20atenci%C3%B3n%20de%20Incidentes%20Relevantes%2024-X-12.pdf" target="_blank" rel="noopener">Instructivo para la atención de Incidentes Relevantes 24-X-12</a></td>
+          </tr>
+          <tr data-manual>
+            <td></td><!-- Escribe la clave en la celda anterior. -->
+            <td><a href="files/manuales/Manual%20de%20Capacitaci%C3%B3n%20T%C3%A9cnica%20-%20AIJE.pdf" target="_blank" rel="noopener">Manual de Capacitación Técnica - AIJE</a></td>
+          </tr>
+          <tr data-manual>
+            <td></td><!-- Escribe la clave en la celda anterior. -->
+            <td><a href="files/manuales/Manual%20de%20Operaci%C3%B3n%20para%20el%20Conductor%20Linea%201%20%282022.12.14%EF%BC%89.pdf" target="_blank" rel="noopener">Manual de Operación para el Conductor Linea 1 (2022.12.14）</a></td>
+          </tr>
+          <tr data-manual>
+            <td></td><!-- Escribe la clave en la celda anterior. -->
+            <td><a href="files/manuales/Material%20Rodante%20MP68%20L%C3%ADnea%208%20-%20Conductores.pdf" target="_blank" rel="noopener">Material Rodante MP68 Línea 8 - Conductores</a></td>
+          </tr>
+          <tr data-manual>
+            <td></td><!-- Escribe la clave en la celda anterior. -->
+            <td><a href="files/manuales/Material%20Rodante%20MP82%20-%20Transportes.pdf" target="_blank" rel="noopener">Material Rodante MP82 - Transportes</a></td>
+          </tr>
+          <tr data-manual>
+            <td></td><!-- Escribe la clave en la celda anterior. -->
+            <td><a href="files/manuales/Material%20Rodante%20NM02.pdf" target="_blank" rel="noopener">Material Rodante NM02</a></td>
+          </tr>
+          <tr data-manual>
+            <td></td><!-- Escribe la clave en la celda anterior. -->
+            <td><a href="files/manuales/MCDU%20L1%20MAT%20VESP%20287.pdf" target="_blank" rel="noopener">MCDU L1 MAT VESP 287</a></td>
+          </tr>
+          <tr data-manual>
+            <td></td><!-- Escribe la clave en la celda anterior. -->
+            <td><a href="files/manuales/MCDU%20L3%20MAT%20VESP%20288.pdf" target="_blank" rel="noopener">MCDU L3 MAT VESP 288</a></td>
+          </tr>
+          <tr data-manual>
+            <td></td><!-- Escribe la clave en la celda anterior. -->
+            <td><a href="files/manuales/MCDU%20L9%20MAT%20289.pdf" target="_blank" rel="noopener">MCDU L9 MAT 289</a></td>
+          </tr>
+          <tr data-manual>
+            <td></td><!-- Escribe la clave en la celda anterior. -->
+            <td><a href="files/manuales/MCDU%20LA%20VESP%20389.pdf" target="_blank" rel="noopener">MCDU LA VESP 389</a></td>
+          </tr>
+          <tr data-manual>
+            <td></td><!-- Escribe la clave en la celda anterior. -->
+            <td><a href="files/manuales/Modernizaci%C3%B3n%20Tren%20MP68%20y%20NM73%20L%C3%ADnea%204%2C%206%20y%207%20-%20Transportes.pdf" target="_blank" rel="noopener">Modernización Tren MP68 y NM73 Línea 4, 6 y 7 - Transportes</a></td>
+          </tr>
+          <tr data-manual>
+            <td></td><!-- Escribe la clave en la celda anterior. -->
+            <td><a href="files/manuales/Modernizaci%C3%B3n%20Tren%20MP68%20y%20NM73%20L%C3%ADnea%20B%20-%20Transportes.pdf" target="_blank" rel="noopener">Modernización Tren MP68 y NM73 Línea B - Transportes</a></td>
+          </tr>
+          <tr data-manual>
+            <td></td><!-- Escribe la clave en la celda anterior. -->
+            <td><a href="files/manuales/Modernizaci%C3%B3n%20Tren%20MP68%2C%20NM73%20L%C3%ADnea%205%20-%20Transportes.pdf" target="_blank" rel="noopener">Modernización Tren MP68, NM73 Línea 5 - Transportes</a></td>
+          </tr>
+          <tr data-manual>
+            <td></td><!-- Escribe la clave en la celda anterior. -->
+            <td><a href="files/manuales/Nueva%20Cabina%20de%20Conducci%C3%B3n%20NM73B%20L%C3%ADnea%206%20-%20Conductor.pdf" target="_blank" rel="noopener">Nueva Cabina de Conducción NM73B Línea 6 - Conductor</a></td>
+          </tr>
+          <tr data-manual>
+            <td></td><!-- Escribe la clave en la celda anterior. -->
+            <td><a href="files/manuales/Nuevo%20Sistema%20de%20Regulaci%C3%B3n%20de%20Tr%C3%A1fico%20de%20Trenes.pdf" target="_blank" rel="noopener">Nuevo Sistema de Regulación de Tráfico de Trenes</a></td>
+          </tr>
+          <tr data-manual>
+            <td></td><!-- Escribe la clave en la celda anterior. -->
+            <td><a href="files/manuales/Obra%20Civil%20y%20Mantenimiento%20de%20Estaciones%20-%20IJE.pdf" target="_blank" rel="noopener">Obra Civil y Mantenimiento de Estaciones - IJE</a></td>
+          </tr>
+          <tr data-manual>
+            <td></td><!-- Escribe la clave en la celda anterior. -->
+            <td><a href="files/manuales/Operador%20y%20Explotaci%C3%B3n%20Puesto%20Central%20-%20Mandos%20Directos%20L%C3%ADnea%209.pdf" target="_blank" rel="noopener">Operador y Explotación Puesto Central - Mandos Directos Línea 9</a></td>
+          </tr>
+          <tr data-manual>
+            <td></td><!-- Escribe la clave en la celda anterior. -->
+            <td><a href="files/manuales/Pilotaje%20Automatico%20135%20KHz.pdf" target="_blank" rel="noopener">Pilotaje Automatico 135 KHz</a></td>
+          </tr>
+          <tr data-manual>
+            <td></td><!-- Escribe la clave en la celda anterior. -->
+            <td><a href="files/manuales/Programadora%20General%20de%20Tr%C3%A1fico%20-%20Regulador.pdf" target="_blank" rel="noopener">Programadora General de Tráfico - Regulador</a></td>
+          </tr>
+          <tr data-manual>
+            <td></td><!-- Escribe la clave en la celda anterior. -->
+            <td><a href="files/manuales/Prontuario%20-%20Intervenciones%20y%20Maniobras%20en%20L%C3%ADnea%20para%20Trenes%20NM02.pdf" target="_blank" rel="noopener">Prontuario - Intervenciones y Maniobras en Línea para Trenes NM02</a></td>
+          </tr>
+          <tr data-manual>
+            <td></td><!-- Escribe la clave en la celda anterior. -->
+            <td><a href="files/manuales/Puesto%20Central%20de%20Mandos%20Directos%20L8.pdf" target="_blank" rel="noopener">Puesto Central de Mandos Directos L8</a></td>
+          </tr>
+          <tr data-manual>
+            <td></td><!-- Escribe la clave en la celda anterior. -->
+            <td><a href="files/manuales/Regulaci%C3%B3n%20de%20los%20Trenes%20-%20IJE.pdf" target="_blank" rel="noopener">Regulación de los Trenes - IJE</a></td>
+          </tr>
+          <tr data-manual>
+            <td></td><!-- Escribe la clave en la celda anterior. -->
+            <td><a href="files/manuales/Regulaci%C3%B3n%20de%20Trenes.pdf" target="_blank" rel="noopener">Regulación de Trenes</a></td>
+          </tr>
+          <tr data-manual>
+            <td></td><!-- Escribe la clave en la celda anterior. -->
+            <td><a href="files/manuales/Revista%20-%20Procedimiento%20de%20Estacionamiento%20del%20Material%20Rodante.pdf" target="_blank" rel="noopener">Revista - Procedimiento de Estacionamiento del Material Rodante</a></td>
+          </tr>
+          <tr data-manual>
+            <td></td><!-- Escribe la clave en la celda anterior. -->
+            <td><a href="files/manuales/SACEM%20L%C3%ADnea%208%20-%20Transportes.pdf" target="_blank" rel="noopener">SACEM Línea 8 - Transportes</a></td>
+          </tr>
+          <tr data-manual>
+            <td></td><!-- Escribe la clave en la celda anterior. -->
+            <td><a href="files/manuales/SACEM%20L%C3%ADnea%20B%20-%20Transportes.pdf" target="_blank" rel="noopener">SACEM Línea B - Transportes</a></td>
+          </tr>
+          <tr data-manual>
+            <td></td><!-- Escribe la clave en la celda anterior. -->
+            <td><a href="files/manuales/Servicios%20Provisionales.pdf" target="_blank" rel="noopener">Servicios Provisionales</a></td>
+          </tr>
+          <tr data-manual>
+            <td></td><!-- Escribe la clave en la celda anterior. -->
+            <td><a href="files/manuales/Servicios%20Provisionales%20L%C3%ADnea%20B.pdf" target="_blank" rel="noopener">Servicios Provisionales Línea B</a></td>
+          </tr>
+          <tr data-manual>
+            <td></td><!-- Escribe la clave en la celda anterior. -->
+            <td><a href="files/manuales/Servicios%20Provisionales%20L%C3%ADneas%201%2C%203%20y%204.pdf" target="_blank" rel="noopener">Servicios Provisionales Líneas 1, 3 y 4</a></td>
+          </tr>
+          <tr data-manual>
+            <td></td><!-- Escribe la clave en la celda anterior. -->
+            <td><a href="files/manuales/Servicios%20Provisionales%20L%C3%ADneas%202%2C%205%2C%206%20y%20B.pdf" target="_blank" rel="noopener">Servicios Provisionales Líneas 2, 5, 6 y B</a></td>
+          </tr>
+          <tr data-manual>
+            <td></td><!-- Escribe la clave en la celda anterior. -->
+            <td><a href="files/manuales/Se%C3%B1alizaci%C3%B3n%201%20-%20Conductor.pdf" target="_blank" rel="noopener">Señalización 1 - Conductor</a></td>
+          </tr>
+          <tr data-manual>
+            <td></td><!-- Escribe la clave en la celda anterior. -->
+            <td><a href="files/manuales/Se%C3%B1alizaci%C3%B3n%202%20-%20Conductor.pdf" target="_blank" rel="noopener">Señalización 2 - Conductor</a></td>
+          </tr>
+          <tr data-manual>
+            <td></td><!-- Escribe la clave en la celda anterior. -->
+            <td><a href="files/manuales/Se%C3%B1alizaci%C3%B3n%202%20-%20Regulador.pdf" target="_blank" rel="noopener">Señalización 2 - Regulador</a></td>
+          </tr>
+          <tr data-manual>
+            <td></td><!-- Escribe la clave en la celda anterior. -->
+            <td><a href="files/manuales/Sistemas%20y%20subsistemas%20de%20Nueva%20L%C3%ADnea%201%20y%20NM16.pdf" target="_blank" rel="noopener">Sistemas y subsistemas de Nueva Línea 1 y NM16</a></td>
+          </tr>
+          <tr data-manual>
+            <td></td><!-- Escribe la clave en la celda anterior. -->
+            <td><a href="files/manuales/Soporte%20de%20Curso%20para%20Usuarios%20Finales%20del%20sistema%20Puesto%20Central%20-%20Optimizaci%C3%B3n.pdf" target="_blank" rel="noopener">Soporte de Curso para Usuarios Finales del sistema Puesto Central - Optimización</a></td>
+          </tr>
+          <tr data-manual>
+            <td></td><!-- Escribe la clave en la celda anterior. -->
+            <td><a href="files/manuales/Tablero%20de%20Control%20Optico%20y%20PGT%20L%C3%ADnea%20B%20-%20Mando%20Centralizado.pdf" target="_blank" rel="noopener">Tablero de Control Optico y PGT Línea B - Mando Centralizado</a></td>
+          </tr>
+          <tr data-manual>
+            <td></td><!-- Escribe la clave en la celda anterior. -->
+            <td><a href="files/manuales/Tablero%20de%20Control%20%C3%93ptico%20-%20Transportaci%C3%B3n.pdf" target="_blank" rel="noopener">Tablero de Control Óptico - Transportación</a></td>
+          </tr>
+          <tr data-manual>
+            <td></td><!-- Escribe la clave en la celda anterior. -->
+            <td><a href="files/manuales/Talleres%20Se%C3%B1alizaci%C3%B3n%20-%20Tracci%C3%B3n.pdf" target="_blank" rel="noopener">Talleres Señalización - Tracción</a></td>
+          </tr>
+          <tr data-manual>
+            <td></td><!-- Escribe la clave en la celda anterior. -->
+            <td><a href="files/manuales/Talleres%2C%20Terminales%20y%20V%C3%ADas%20Secundarias%20L%C3%ADneas%201%2C%203%20y%204.pdf" target="_blank" rel="noopener">Talleres, Terminales y Vías Secundarias Líneas 1, 3 y 4</a></td>
+          </tr>
+          <tr data-manual>
+            <td></td><!-- Escribe la clave en la celda anterior. -->
+            <td><a href="files/manuales/TCO%20L%C3%ADnea%208%20-%20Regulador.pdf" target="_blank" rel="noopener">TCO Línea 8 - Regulador</a></td>
+          </tr>
+          <tr data-manual>
+            <td></td><!-- Escribe la clave en la celda anterior. -->
+            <td><a href="files/manuales/TCO%20L%C3%ADnea%209%20-%20Regulador.pdf" target="_blank" rel="noopener">TCO Línea 9 - Regulador</a></td>
+          </tr>
+          <tr data-manual>
+            <td></td><!-- Escribe la clave en la celda anterior. -->
+            <td><a href="files/manuales/Telefon%C3%ADa%20L%C3%ADnea%208%20-%20Conductor.pdf" target="_blank" rel="noopener">Telefonía Línea 8 - Conductor</a></td>
+          </tr>
+          <tr data-manual>
+            <td></td><!-- Escribe la clave en la celda anterior. -->
+            <td><a href="files/manuales/Terminales%20y%20Talleres%20Se%C3%B1alizacion%20y%20Alimentacion%20Traccion%20Terminales%20L%C3%ADneas%202%2C%205%2C%206%20y%20B-.pdf" target="_blank" rel="noopener">Terminales y Talleres Señalizacion y Alimentacion Traccion Terminales Líneas 2, 5, 6 y B-</a></td>
+          </tr>
+          <tr data-manual>
+            <td></td><!-- Escribe la clave en la celda anterior. -->
+            <td><a href="files/manuales/Terminales%20y%20V%C3%ADas%20Secundarias%20Se%C3%B1al%20Tracci%C3%B3n.pdf" target="_blank" rel="noopener">Terminales y Vías Secundarias Señal Tracción</a></td>
+          </tr>
+          <tr data-manual>
+            <td></td><!-- Escribe la clave en la celda anterior. -->
+            <td><a href="files/manuales/Tren%20NM-16%20CAF.pdf" target="_blank" rel="noopener">Tren NM-16 CAF</a></td>
+          </tr>
+          <tr data-manual>
+            <td></td><!-- Escribe la clave en la celda anterior. -->
+            <td><a href="files/manuales/Trenes%20Rehabilitados%20MP68%20-%20R96.pdf" target="_blank" rel="noopener">Trenes Rehabilitados MP68 - R96</a></td>
+          </tr>
+          <tr data-manual>
+            <td></td><!-- Escribe la clave en la celda anterior. -->
+            <td><a href="files/manuales/Trenes%20Rehabilitados%20MP68-R93-94%20-%20Transportaci%C3%B3n.pdf" target="_blank" rel="noopener">Trenes Rehabilitados MP68-R93-94 - Transportación</a></td>
+          </tr>
+        <tr id="sinManuales" hidden><td colspan="2" class="text-center py-4">No se encontraron manuales.</td></tr>
+      </tbody>
+    </table>
+  </section>
+</main>
+
+  <footer class="container-fluid bg-white border-top py-4">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <p class="text-secondary small mb-0">© Sitio creado por <a href="https://morenitux.dev">José Luis Moreno</a></p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+
+
+
+
+
+
+
+
+
+  <button id="volverArriba" class="go-top" type="button" aria-label="Volver al inicio de la página" title="Volver arriba" hidden>
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+      <path d="M5 5h14M6 13l6-6 6 6M12 7v13"></path>
+    </svg>
+  </button>
+</body></html>
+
+
+
+
+
+
