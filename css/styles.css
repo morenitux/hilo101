@@ -499,3 +499,44 @@ body > header .navbar-toggler-icon { width: 1.5rem; height: 1.5rem; }
   outline: 2px solid #0d6efd;
   outline-offset: 3px;
 }
+
+/* Línea visible en Traslados, también cuando se oculta la descripción larga. */
+.traslados-table .col-clave { width: 8%; }
+.traslados-table .col-corta { width: 21%; }
+.traslados-table .col-larga { width: 64%; }
+.traslados-table .col-linea { width: 7%; }
+.traslados-table .traslado-linea,
+.traslados-table thead th:last-child { text-align: center; }
+@media (max-width: 767.98px) {
+  .traslados-table .col-clave { width: 18%; }
+  .traslados-table .col-corta { width: 68%; }
+  .traslados-table .col-linea { width: 14%; }
+}
+
+/* Navegación coordinada con el azul oscuro de las tablas. */
+.navbar {
+  --bs-navbar-color: #41576b;
+  --bs-navbar-hover-color: #112c43;
+  --bs-navbar-active-color: #112c43;
+}
+.navbar .nav-link:hover,
+.navbar .nav-link.active,
+.navbar .nav-link.active:hover,
+.navbar .nav-link.active:focus-visible {
+  color: #112c43;
+}
+.navbar .dropdown-menu {
+  --bs-dropdown-link-color: #41576b;
+  --bs-dropdown-link-hover-color: #112c43;
+  --bs-dropdown-link-hover-bg: #edf2f6;
+  --bs-dropdown-link-active-color: #112c43;
+  --bs-dropdown-link-active-bg: #e3ebf2;
+}
+.navbar .dropdown-item.active { font-weight: 600; }
+.navbar .nav-link.disabled,
+.navbar .nav-link.disabled:hover {
+  color: #6c757d;
+}
+body > header .navbar-toggler:focus-visible {
+  outline-color: #112c43;
+}

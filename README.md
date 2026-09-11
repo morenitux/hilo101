@@ -5,10 +5,11 @@ Sitio de consulta con larines, fracciones de vuelta y procedimientos, adaptado p
 ## Secciones
 
 - **Larines PCCI-C5/PCCII y PCC-L12:** búsqueda por clave o descripción. En móvil, toca la descripción corta para copiar el texto completo.
+- **Traslados de trenes:** consulta con búsqueda y copia de texto, igual que Larines.
 - **Fracciones de vuelta:** tablas por línea del Metro con acceso directo desde el menú.
 - **Procedimientos:** listado de documentos PDF con buscador y enlaces para abrirlos.
 
-Formación de trenes y Traslados de trenes están temporalmente deshabilitados.
+Formación de trenes está temporalmente deshabilitada.
 
 ## Uso
 
@@ -40,6 +41,7 @@ files/
   procedimientos/
 index.html
 larines_pcl12.html
+traslados_trenes.html
 fracciones_vuelta.html
 manuales.html
 procedimientos.html
