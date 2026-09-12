@@ -37,6 +37,7 @@ window.SiteSearch = (() => {
     const nodes=[];
     while(walker.nextNode()) nodes.push(walker.currentNode);
     nodes.forEach(node=>{
+      if (node.parentElement.closest("textarea, input, [data-search-ignore]")) return;
       const original=node.nodeValue;
       let normalized="", offset=0;
       const starts=[],ends=[];
@@ -77,3 +78,4 @@ window.SiteSearch = (() => {
   }
   return {normalize,terms,matches,highlight};
 })();
+

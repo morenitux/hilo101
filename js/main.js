@@ -222,7 +222,7 @@ if (siteHeader) {
 }
 
 // "/" enfoca la búsqueda sin interceptar escritura, atajos del navegador ni composición.
-const pageSearch = document.querySelector("#buscarLarin, #buscarManual, #buscarProcedimiento");
+const pageSearch = document.querySelector("#buscarLarin, #buscarManual, #buscarProcedimiento, #buscarFormacion");
 if (pageSearch) {
   pageSearch.setAttribute("aria-keyshortcuts", "/ Escape");
   pageSearch.addEventListener("keydown", event => {
@@ -253,3 +253,15 @@ if (pageSearch) {
 
 
 
+
+// Larines permanece desplegado dentro del menú móvil.
+const larinesMenuToggle=document.getElementById("menuLarines");
+if(larinesMenuToggle){
+ const collapsedNavigation=window.matchMedia("(max-width: 1199.98px)");
+ const updateLarinesNavigation=()=>{
+  larinesMenuToggle.disabled=collapsedNavigation.matches;
+  larinesMenuToggle.setAttribute("aria-expanded",String(collapsedNavigation.matches || larinesMenuToggle.nextElementSibling.classList.contains("show")));
+ };
+ collapsedNavigation.addEventListener("change",updateLarinesNavigation);
+ updateLarinesNavigation();
+}

@@ -11,7 +11,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Arimo:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
-</head>
+<script src="js/formacion.js" defer></script></head>
 <body class="d-flex flex-column min-vh-100" data-page="formacion-de-trenes">
   <a class="visually-hidden-focusable skip-link" href="#contenido">Saltar al contenido</a>
 
@@ -31,7 +31,7 @@
             <!-- Destinos provisionales hasta crear las páginas correspondientes. -->
             <ul class="navbar-nav ms-xl-auto">
               <li class="nav-item dropdown"><button class="nav-link dropdown-toggle" id="menuLarines" type="button" data-bs-toggle="dropdown" aria-expanded="false" data-page-group="larines,larines-pcl12,traslados">Larines</button><ul class="dropdown-menu" aria-labelledby="menuLarines"><li><a class="dropdown-item" href="index.html" data-page="larines">PCCI-C5/PCCII</a></li><li><a class="dropdown-item" href="larines_pcl12.html" data-page="larines-pcl12">PCL-12</a></li><li><a class="dropdown-item" href="traslados_trenes.html" data-page="traslados">Traslados de trenes</a></li></ul></li>
-              <li class="nav-item"><a class="nav-link active disabled" data-disabled-href="formacion_trenes.html" data-page="formacion-de-trenes" aria-current="page" aria-disabled="true" tabindex="-1">Formacion de trenes</a></li>
+              <li class="nav-item"><a class="nav-link active" href="formacion_trenes.html" data-page="formacion-de-trenes" aria-current="page">Formación de trenes</a></li>
               <li class="nav-item dropdown"><button class="nav-link dropdown-toggle" type="button" id="menuFracciones" data-bs-toggle="dropdown" aria-expanded="false" data-page="fracciones-de-vuelta">Fracciones de vuelta</button><ul class="dropdown-menu" aria-labelledby="menuFracciones"><li><a class="dropdown-item" href="fracciones_vuelta.html#linea1">Línea 1</a></li><li><a class="dropdown-item" href="fracciones_vuelta.html#linea2">Línea 2</a></li><li><a class="dropdown-item" href="fracciones_vuelta.html#linea3">Línea 3</a></li><li><a class="dropdown-item" href="fracciones_vuelta.html#linea4">Línea 4</a></li><li><a class="dropdown-item" href="fracciones_vuelta.html#linea5">Línea 5</a></li><li><a class="dropdown-item" href="fracciones_vuelta.html#linea6">Línea 6</a></li><li><a class="dropdown-item" href="fracciones_vuelta.html#linea7">Línea 7</a></li><li><a class="dropdown-item" href="fracciones_vuelta.html#linea8">Línea 8</a></li><li><a class="dropdown-item" href="fracciones_vuelta.html#linea9">Línea 9</a></li><li><a class="dropdown-item" href="fracciones_vuelta.html#lineaA">Línea A</a></li><li><a class="dropdown-item" href="fracciones_vuelta.html#lineaB">Línea B</a></li><li><a class="dropdown-item" href="fracciones_vuelta.html#linea12">Línea 12</a></li></ul></li>
               <li class="nav-item"><a class="nav-link" href="manuales.html" data-page="manuales">Manuales</a></li>
               <li class="nav-item"><a class="nav-link" href="procedimientos.html" data-page="procedimientos">Procedimientos</a></li>
@@ -45,11 +45,415 @@
   </header>
 
   <main id="contenido" class="flex-grow-1 bg-white" tabindex="-1">
-    <section class="container-fluid py-4" style="max-width: 1280px;" aria-labelledby="tituloFormacion">
-      <h1 id="tituloFormacion" class="h4 mb-0">Formación de trenes</h1>
-      <!-- Aquí se agregará el contenido de Formación de trenes. -->
-    </section>
-  </main>
+<div class="container-fluid px-0 larines-container">
+<h1 class="h3 mt-4 mb-0">Formación de trenes</h1>
+<div class="larines-search py-3" role="search" aria-label="Buscar formación de trenes">
+<label for="buscarFormacion" class="visually-hidden">Buscar motriz o carro</label>
+<div class="search-field procedimientos-search">
+<svg class="search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="10" cy="10" r="6"></circle><path d="m15 15 5 5"></path></svg>
+<input id="buscarFormacion" class="form-control" type="search" placeholder="Buscar motriz o carro" autocomplete="off" aria-controls="tablasFormacion">
+<button id="borrarFormacion" class="search-clear" type="button" aria-label="Borrar búsqueda" hidden>×</button>
+</div><p id="estadoFormacion" class="small text-secondary text-end mt-2 mb-0" role="status" aria-live="polite"></p>
+</div>
+<div id="tablasFormacion"><section class="formacion-section mb-5" data-formacion-section aria-labelledby="titulo-formacion-l1"><h2 id="titulo-formacion-l1" class="h4 mb-3">Línea 1</h2><div class="table-responsive formacion-scroll" tabindex="0" role="region" aria-label="Tabla de formación L1"><table class="table table-striped table-bordered formacion-table mb-0" data-sheet="L1"><thead><tr><th scope="col">Linea</th><th scope="col">Modelo</th><th scope="col">Matricula</th><th scope="col">M1</th><th scope="col">R1</th><th scope="col">N1</th><th scope="col">NI1</th><th scope="col">PR</th><th scope="col">NI2</th><th scope="col">N2</th><th scope="col">R2</th><th scope="col">M2</th></tr></thead><tbody>
+<tr data-formacion><td>1</td><td>MP68R96</td><td>0042/0058</td><td>M0042</td><td>R3025</td><td>N1069</td><td>N1025</td><td>PR3086</td><td>N1071</td><td>N1002</td><td>R3096</td><td>M0058</td></tr>
+<tr data-formacion><td>1</td><td>MP68R96</td><td>0072/0022</td><td>M0072</td><td>R3051</td><td>N1114</td><td>N1060</td><td>PR3093</td><td>N1176</td><td>N1133</td><td>R3015</td><td>M0022</td></tr>
+<tr data-formacion><td>1</td><td>MP68R96</td><td>0089/0029</td><td>M0089</td><td>R3151</td><td>N1004</td><td>N1116</td><td>PR3177</td><td>N1076</td><td>N1053</td><td>R3016</td><td>M0029</td></tr>
+<tr data-formacion><td>1</td><td>NM83A</td><td>0430/0431</td><td>M0430</td><td>R3639</td><td>N1849</td><td>N1850</td><td>PR3640</td><td>N1851</td><td>N1852</td><td>R3641</td><td>M0431</td></tr>
+<tr data-formacion><td>1</td><td>NM83B</td><td>0495/0494</td><td>M0495</td><td>R3733</td><td>N1975</td><td>N1976</td><td>PR3734</td><td>N1977</td><td>N1978</td><td>R3735</td><td>M0494</td></tr>
+<tr data-formacion><td>1</td><td>NM83B</td><td>0511/0483</td><td>M0511</td><td>R3757</td><td>N2007</td><td>N2008</td><td>PR3758</td><td>N2009</td><td>N2010</td><td>R3759</td><td>M0483</td></tr>
+<tr data-formacion><td>1</td><td>NE92</td><td>0521/0520</td><td>M0521</td><td>R3770</td><td>N2028</td><td>N2029</td><td>PR3771</td><td>N2066</td><td>N2031</td><td>R3772</td><td>M0520</td></tr>
+<tr data-formacion><td>1</td><td>NE92</td><td>0529/0528</td><td>M0529</td><td>R3782</td><td>N2044</td><td>N2045</td><td>PR3783</td><td>N2046</td><td>N2047</td><td>R3784</td><td>M0528</td></tr>
+<tr data-formacion><td>1</td><td>NE92</td><td>0539/0425</td><td>M0539</td><td>R3797</td><td>N2064</td><td>N2065</td><td>PR3798</td><td>N2030</td><td>N2067</td><td>R3799</td><td>M0425</td></tr>
+<tr data-formacion><td>1</td><td>NM16</td><td>0672/0673</td><td>M0672</td><td>R3953</td><td>N2272</td><td>N2273</td><td>PR3954</td><td>N2274</td><td>N2275</td><td>R3955</td><td>M0673</td></tr>
+<tr data-formacion><td>1</td><td>NM16</td><td>0674/0675</td><td>M0674</td><td>R3956</td><td>N2276</td><td>N2277</td><td>PR3957</td><td>N2278</td><td>N2279</td><td>R3958</td><td>M0675</td></tr>
+<tr data-formacion><td>1</td><td>NM16</td><td>0677/0676</td><td>M0677</td><td>R3961</td><td>N2283</td><td>N2282</td><td>PR3960</td><td>N2281</td><td>N2280</td><td>R3959</td><td>M0676</td></tr>
+<tr data-formacion><td>1</td><td>NM16</td><td>0678/0679</td><td>M0678</td><td>R3962</td><td>N2284</td><td>N2285</td><td>PR3963</td><td>N2286</td><td>N2287</td><td>R3964</td><td>M0679</td></tr>
+<tr data-formacion><td>1</td><td>NM16</td><td>0680/0681</td><td>M0680</td><td>R3967</td><td>N2291</td><td>N2290</td><td>PR3966</td><td>N2289</td><td>N2288</td><td>R3965</td><td>M0681</td></tr>
+<tr data-formacion><td>1</td><td>NM16</td><td>0682/0683</td><td>M0682</td><td>R3970</td><td>N2295</td><td>N2294</td><td>PR3969</td><td>N2293</td><td>N2292</td><td>R3968</td><td>M0683</td></tr>
+<tr data-formacion><td>1</td><td>NM16</td><td>0684/0685</td><td>M0684</td><td>R3973</td><td>N2299</td><td>N2298</td><td>PR3972</td><td>N2297</td><td>N2296</td><td>R3971</td><td>M0685</td></tr>
+<tr data-formacion><td>1</td><td>NM16</td><td>0686/0687</td><td>M0686</td><td>R3974</td><td>N2300</td><td>N2301</td><td>PR3975</td><td>N2302</td><td>N2303</td><td>R3976</td><td>M0687</td></tr>
+<tr data-formacion><td>1</td><td>NM16</td><td>0688/0689</td><td>M0688</td><td>R3977</td><td>N2304</td><td>N2305</td><td>PR3978</td><td>N2306</td><td>N2307</td><td>R3979</td><td>M0689</td></tr>
+<tr data-formacion><td>1</td><td>NM16</td><td>0690/0691</td><td>M0691</td><td>R3982</td><td>N2311</td><td>N2310</td><td>PR3981</td><td>N2309</td><td>N2308</td><td>R3980</td><td>M0690</td></tr>
+</tbody></table></div></section><section class="formacion-section mb-5" data-formacion-section aria-labelledby="titulo-formacion-l2"><h2 id="titulo-formacion-l2" class="h4 mb-3">Línea 2</h2><div class="table-responsive formacion-scroll" tabindex="0" role="region" aria-label="Tabla de formación L2"><table class="table table-striped table-bordered formacion-table mb-0" data-sheet="L2"><thead><tr><th scope="col">inea</th><th scope="col">Modelo</th><th scope="col">Matricula</th><th scope="col">M1</th><th scope="col">R1</th><th scope="col">N1</th><th scope="col">NI1</th><th scope="col">PR</th><th scope="col">NI2</th><th scope="col">N2</th><th scope="col">R2</th><th scope="col">M2</th></tr></thead><tbody>
+<tr data-formacion><td>2</td><td>NM02</td><td>0582/0583</td><td>M0583</td><td>R3820</td><td>N2095</td><td>N2094</td><td>PR3819</td><td>N2093</td><td>N2092</td><td>R3818</td><td>M0582</td></tr>
+<tr data-formacion><td>2</td><td>NM02</td><td>0584/0585</td><td>M0585</td><td>R3823</td><td>N2099</td><td>N2098</td><td>PR3822</td><td>N2097</td><td>N2096</td><td>R3821</td><td>M0584</td></tr>
+<tr data-formacion><td>2</td><td>NM02</td><td>0586/0587</td><td>M0587</td><td>R3826</td><td>N2103</td><td>N2102</td><td>PR3825</td><td>N2101</td><td>N2100</td><td>R3824</td><td>M0586</td></tr>
+<tr data-formacion><td>2</td><td>NM02</td><td>0588/0589</td><td>M0589</td><td>R3829</td><td>N2107</td><td>N2106</td><td>PR3828</td><td>N2105</td><td>N2104</td><td>R3827</td><td>M0588</td></tr>
+<tr data-formacion><td>2</td><td>NM02</td><td>0590/0591</td><td>M0591</td><td>R3832</td><td>N2111</td><td>N2110</td><td>PR3831</td><td>N2109</td><td>N2108</td><td>R3830</td><td>M0590</td></tr>
+<tr data-formacion><td>2</td><td>NM02</td><td>0592/0593</td><td>M0593</td><td>R3835</td><td>N2115</td><td>N2114</td><td>PR3834</td><td>N2113</td><td>N2112</td><td>R3833</td><td>M0592</td></tr>
+<tr data-formacion><td>2</td><td>NM02</td><td>0594/0595</td><td>M0595</td><td>R3838</td><td>N2119</td><td>N2118</td><td>PR3837</td><td>N2117</td><td>N2116</td><td>R3836</td><td>M0594</td></tr>
+<tr data-formacion><td>2</td><td>NM02</td><td>0596/0597</td><td>M0597</td><td>R3841</td><td>N2123</td><td>N2122</td><td>PR3840</td><td>N2121</td><td>N2128</td><td>R3845</td><td>M0596</td></tr>
+<tr data-formacion><td>2</td><td>NM02</td><td>0598/0599</td><td>M0599</td><td>R3844</td><td>N2127</td><td>N2126</td><td>PR3843</td><td>N2125</td><td>N2124</td><td>R3842</td><td>M0598</td></tr>
+<tr data-formacion><td>2</td><td>NM02</td><td>0600/0601</td><td>M0601</td><td>R3847</td><td>N2131</td><td>N2130</td><td>PR3846</td><td>N2129</td><td>---</td><td>---</td><td>M0600</td></tr>
+<tr data-formacion><td>2</td><td>NM02</td><td>0604/0605</td><td>M0605</td><td>R3853</td><td>N2139</td><td>N2138</td><td>PR3852</td><td>N2137</td><td>N2136</td><td>R3851</td><td>M0604</td></tr>
+<tr data-formacion><td>2</td><td>NM02</td><td>0606/0607</td><td>M0607</td><td>R3856</td><td>N2143</td><td>N2142</td><td>PR3855</td><td>N2141</td><td>N2140</td><td>R3854</td><td>M0606</td></tr>
+<tr data-formacion><td>2</td><td>NM02</td><td>0608/0609</td><td>M0609</td><td>R3859</td><td>N2147</td><td>N2146</td><td>PR3858</td><td>N2145</td><td>N2144</td><td>R3857</td><td>M0608</td></tr>
+<tr data-formacion><td>2</td><td>NM02</td><td>0610/0611</td><td>M0611</td><td>R3862</td><td>N2151</td><td>N2150</td><td>PR3861</td><td>N2149</td><td>N2148</td><td>R3860</td><td>M0610</td></tr>
+<tr data-formacion><td>2</td><td>NM02</td><td>0614/0615</td><td>M0615</td><td>R3868</td><td>N2159</td><td>N2158</td><td>PR3867</td><td>N2157</td><td>N2156</td><td>R3866</td><td>M0614</td></tr>
+<tr data-formacion><td>2</td><td>NM02</td><td>0616/0617</td><td>M0617</td><td>R3871</td><td>N2163</td><td>N2162</td><td>PR3870</td><td>N2161</td><td>N2160</td><td>R3869</td><td>M0616</td></tr>
+<tr data-formacion><td>2</td><td>NM02</td><td>0618/0619</td><td>M0619</td><td>R3874</td><td>N2167</td><td>N2166</td><td>PR3873</td><td>N2165</td><td>N2164</td><td>R3872</td><td>M0618</td></tr>
+<tr data-formacion><td>2</td><td>NM02</td><td>0620/0621</td><td>M0621</td><td>R3877</td><td>N2171</td><td>N2170</td><td>PR3876</td><td>N2169</td><td>N2168</td><td>R3875</td><td>M0620</td></tr>
+<tr data-formacion><td>2</td><td>NM02</td><td>0622/0623</td><td>M0623</td><td>R3880</td><td>N2175</td><td>N2174</td><td>PR3879</td><td>N2173</td><td>N2172</td><td>R3878</td><td>M0622</td></tr>
+<tr data-formacion><td>2</td><td>NM02</td><td>0624/0625</td><td>M0625</td><td>R3883</td><td>N2179</td><td>N2178</td><td>PR3882</td><td>N2177</td><td>N2176</td><td>R3881</td><td>M0624</td></tr>
+<tr data-formacion><td>2</td><td>NM02</td><td>0626/0627</td><td>M0627</td><td>R3886</td><td>N2183</td><td>N2182</td><td>PR3885</td><td>N2181</td><td>N2180</td><td>R3884</td><td>M0626</td></tr>
+<tr data-formacion><td>2</td><td>NM02</td><td>0630/0631</td><td>M0631</td><td>R3892</td><td>N2191</td><td>N2190</td><td>PR3891</td><td>N2189</td><td>N2188</td><td>R3890</td><td>M0630</td></tr>
+<tr data-formacion><td>2</td><td>NM02</td><td>0634/0635</td><td>M0635</td><td>R3898</td><td>N2199</td><td>N2198</td><td>PR3897</td><td>N2197</td><td>N2196</td><td>R3896</td><td>M0634</td></tr>
+<tr data-formacion><td>2</td><td>NM02</td><td>0636/0637</td><td>M0637</td><td>R3901</td><td>N2203</td><td>N2202</td><td>PR3900</td><td>N2201</td><td>N2200</td><td>R3899</td><td>M0636</td></tr>
+<tr data-formacion><td>2</td><td>NM02</td><td>0638/0639</td><td>M0639</td><td>R3904</td><td>N2207</td><td>N2206</td><td>PR3903</td><td>N2205</td><td>N2204</td><td>R3902</td><td>M0638</td></tr>
+<tr data-formacion><td>2</td><td>NM02</td><td>0640/0641</td><td>M0641</td><td>R3907</td><td>N2211</td><td>N2210</td><td>PR3906</td><td>N2209</td><td>N2208</td><td>R3905</td><td>M0640</td></tr>
+<tr data-formacion><td>2</td><td>NM02</td><td>0642/0643</td><td>M0643</td><td>R3910</td><td>N2215</td><td>N2214</td><td>PR3909</td><td>N2213</td><td>N2212</td><td>R3908</td><td>M0642</td></tr>
+<tr data-formacion><td>2</td><td>NM02</td><td>0644/0645</td><td>M0645</td><td>R3913</td><td>N2219</td><td>N2218</td><td>PR3912</td><td>N2217</td><td>N2216</td><td>R3911</td><td>M0644</td></tr>
+<tr data-formacion><td>2</td><td>NM02</td><td>0646/0647</td><td>M0647</td><td>R3916</td><td>N2223</td><td>N2222</td><td>PR3915</td><td>N2221</td><td>N2220</td><td>R3914</td><td>M0646</td></tr>
+<tr data-formacion><td>2</td><td>NM02</td><td>0648/0649</td><td>M0649</td><td>R3919</td><td>N2227</td><td>N2226</td><td>PR3918</td><td>N2225</td><td>N2224</td><td>R3917</td><td>M0648</td></tr>
+<tr data-formacion><td>2</td><td>NM02</td><td>0650/0651</td><td>M0651</td><td>R3922</td><td>N2231</td><td>N2230</td><td>PR3921</td><td>N2229</td><td>N2228</td><td>R3920</td><td>M0650</td></tr>
+<tr data-formacion><td>2</td><td>NM02</td><td>0652/0653</td><td>M0653</td><td>R3925</td><td>N2235</td><td>N2234</td><td>PR3924</td><td>N2233</td><td>N2232</td><td>R3923</td><td>M0652</td></tr>
+<tr data-formacion><td>2</td><td>NM02</td><td>0654/0655</td><td>M0655</td><td>R3928</td><td>N2239</td><td>N2238</td><td>PR3927</td><td>N2237</td><td>N2236</td><td>R3926</td><td>M0654</td></tr>
+<tr data-formacion><td>2</td><td>NM02</td><td>0656/0657</td><td>M0657</td><td>R3931</td><td>N2243</td><td>N2242</td><td>PR3930</td><td>N2241</td><td>N2240</td><td>R3929</td><td>M0656</td></tr>
+<tr data-formacion><td>2</td><td>NM02</td><td>0658/0659</td><td>M0659</td><td>R3934</td><td>N2247</td><td>N2246</td><td>PR3933</td><td>N2245</td><td>N2244</td><td>R3932</td><td>M0658</td></tr>
+<tr data-formacion><td>2</td><td>NM02</td><td>0660/0661</td><td>M0661</td><td>R3937</td><td>N2251</td><td>N2250</td><td>PR3936</td><td>N2249</td><td>N2248</td><td>R3935</td><td>M0660</td></tr>
+<tr data-formacion><td>2</td><td>NM02</td><td>0662/0663</td><td>M0663</td><td>R3940</td><td>N2255</td><td>N2254</td><td>PR3939</td><td>N2253</td><td>N2252</td><td>R3938</td><td>M0662</td></tr>
+<tr data-formacion><td>2</td><td>NM02</td><td>0664/0665</td><td>M0665</td><td>R3943</td><td>N2259</td><td>N2258</td><td>PR3942</td><td>N2257</td><td>N2256</td><td>R3941</td><td>M0664</td></tr>
+<tr data-formacion><td>2</td><td>NM02</td><td>0666/0667</td><td>M0667</td><td>R3946</td><td>N2263</td><td>N2262</td><td>PR3945</td><td>N2261</td><td>N2260</td><td>R3944</td><td>M0666</td></tr>
+<tr data-formacion><td>2</td><td>NM02</td><td>0668/0669</td><td>M0669</td><td>R3949</td><td>N2267</td><td>N2266</td><td>PR3948</td><td>N2265</td><td>N2264</td><td>R3947</td><td>M0668</td></tr>
+<tr data-formacion><td>2</td><td>NM02</td><td>0670/0671</td><td>M0671</td><td>R3952</td><td>N2271</td><td>N2270</td><td>PR3951</td><td>N2269</td><td>N2268</td><td>R3950</td><td>M0670</td></tr>
+</tbody></table></div></section><section class="formacion-section mb-5" data-formacion-section aria-labelledby="titulo-formacion-l3"><h2 id="titulo-formacion-l3" class="h4 mb-3">Línea 3</h2><div class="table-responsive formacion-scroll" tabindex="0" role="region" aria-label="Tabla de formación L3"><table class="table table-striped table-bordered formacion-table mb-0" data-sheet="L3"><thead><tr><th scope="col">Linea</th><th scope="col">Modelo</th><th scope="col">Matricula</th><th scope="col">M1</th><th scope="col">R1</th><th scope="col">N1</th><th scope="col">NI1</th><th scope="col">PR</th><th scope="col">NI2</th><th scope="col">N2</th><th scope="col">R2</th><th scope="col">M2</th></tr></thead><tbody>
+<tr data-formacion><td>3</td><td>NM79RH</td><td>0205/0206</td><td>M0205</td><td>R3326</td><td>N1400</td><td>N1401</td><td>PR3322</td><td>N1402</td><td>N1403</td><td>R3323</td><td>M0206</td></tr>
+<tr data-formacion><td>3</td><td>NM79RH</td><td>0207/0208</td><td>M0207</td><td>R3297</td><td>N1404</td><td>N1405</td><td>PR3298</td><td>N1406</td><td>N1407</td><td>R3299</td><td>M0208</td></tr>
+<tr data-formacion><td>3</td><td>NM79</td><td>0209/0210</td><td>M0209</td><td>R3384</td><td>N1408</td><td>N1409</td><td>PR3385</td><td>N1410</td><td>N1411</td><td>R3386</td><td>M0210</td></tr>
+<tr data-formacion><td>3</td><td>NM79</td><td>0211/0212</td><td>M0211</td><td>R3402</td><td>N1556</td><td>N1413</td><td>PR3463</td><td>N1414</td><td>N1415</td><td>R3404</td><td>M0212</td></tr>
+<tr data-formacion><td>3</td><td>NM79</td><td>0215/0216</td><td>M0215</td><td>R3438</td><td>N1420</td><td>N1421</td><td>PR3439</td><td>N1422</td><td>N1423</td><td>R3440</td><td>M0216</td></tr>
+<tr data-formacion><td>3</td><td>NM79</td><td>0217/0218</td><td>M0217</td><td>R3414</td><td>N1424</td><td>N1425</td><td>PR3415</td><td>N1426</td><td>N1427</td><td>R3416</td><td>M0218</td></tr>
+<tr data-formacion><td>3</td><td>NM79RH</td><td>0227/0228</td><td>M0227</td><td>R3309</td><td>N1444</td><td>N1445</td><td>PR3310</td><td>N1446</td><td>N1447</td><td>R3311</td><td>M0228</td></tr>
+<tr data-formacion><td>3</td><td>NM79</td><td>0229/0230</td><td>M0229</td><td>R3333</td><td>N1448</td><td>N1449</td><td>PR3334</td><td>N1450</td><td>N1451</td><td>R3335</td><td>M0230</td></tr>
+<tr data-formacion><td>3</td><td>NM79</td><td>0231/0232</td><td>M0231</td><td>R3306</td><td>N1452</td><td>N1453</td><td>PR3307</td><td>N1454</td><td>N1455</td><td>R3308</td><td>M0232</td></tr>
+<tr data-formacion><td>3</td><td>NM79</td><td>0235/0236</td><td>M0235</td><td>R3366</td><td>N1460</td><td>N1461</td><td>PR3367</td><td>N1462</td><td>N1463</td><td>R3368</td><td>M0236</td></tr>
+<tr data-formacion><td>3</td><td>NM79</td><td>0239/0240</td><td>M0239</td><td>R3345</td><td>N1468</td><td>N1469</td><td>PR3346</td><td>N1470</td><td>N1471</td><td>R3347</td><td>M0240</td></tr>
+<tr data-formacion><td>3</td><td>NM79</td><td>0243/0244</td><td>M0243</td><td>R3390</td><td>N1476</td><td>N1477</td><td>PR3391</td><td>N1478</td><td>N1479</td><td>R3392</td><td>M0244</td></tr>
+<tr data-formacion><td>3</td><td>NM79</td><td>0245/0246</td><td>M0245</td><td>R3405</td><td>N1480</td><td>N1481</td><td>PR3406</td><td>N1482</td><td>N1483</td><td>R3407</td><td>M0246</td></tr>
+<tr data-formacion><td>3</td><td>NM79</td><td>0251/0252</td><td>M0251</td><td>R3413</td><td>N1492</td><td>N1493</td><td>PR3304</td><td>N1494</td><td>N1495</td><td>R3305</td><td>M0252</td></tr>
+<tr data-formacion><td>3</td><td>NM79</td><td>0253/0254</td><td>M0253</td><td>R3339</td><td>N1496</td><td>N1497</td><td>PR3340</td><td>N1498</td><td>N1499</td><td>R3341</td><td>M0254</td></tr>
+<tr data-formacion><td>3</td><td>NM79</td><td>0255/0256</td><td>M0255</td><td>R3360</td><td>N1500</td><td>N1501</td><td>PR3361</td><td>N1502</td><td>N1503</td><td>R3362</td><td>M0256</td></tr>
+<tr data-formacion><td>3</td><td>NM79</td><td>0259/0260</td><td>M0259</td><td>R3324</td><td>N1508</td><td>N1509</td><td>PR3325</td><td>N1510</td><td>N1511</td><td>R3321</td><td>M0260</td></tr>
+<tr data-formacion><td>3</td><td>NM79</td><td>0263/0264</td><td>M0263</td><td>R3363</td><td>N1516</td><td>N1517</td><td>PR3364</td><td>N1518</td><td>N1519</td><td>R3365</td><td>M0264</td></tr>
+<tr data-formacion><td>3</td><td>NM79</td><td>0265/0266</td><td>M0265</td><td>R3372</td><td>N1520</td><td>N1521</td><td>PR3373</td><td>N1522</td><td>N1523</td><td>R3374</td><td>M0266</td></tr>
+<tr data-formacion><td>3</td><td>NM79</td><td>0267/0268</td><td>M0267</td><td>R3336</td><td>N1524</td><td>N1525</td><td>PR3337</td><td>N1526</td><td>N1527</td><td>R3338</td><td>M0268</td></tr>
+<tr data-formacion><td>3</td><td>NM79</td><td>0271/0272</td><td>M0271</td><td>R3468</td><td>N1532</td><td>N1533</td><td>PR3469</td><td>N1534</td><td>N1535</td><td>R3470</td><td>M0272</td></tr>
+<tr data-formacion><td>3</td><td>NM79</td><td>0275/0276</td><td>M0275</td><td>R3378</td><td>N1540</td><td>N1541</td><td>PR3379</td><td>N1542</td><td>N1543</td><td>R3380</td><td>M0276</td></tr>
+<tr data-formacion><td>3</td><td>NM79</td><td>0277/0278</td><td>M0277</td><td>R3408</td><td>N1544</td><td>N1545</td><td>PR3409</td><td>N1546</td><td>N1547</td><td>R3410</td><td>M0278</td></tr>
+<tr data-formacion><td>3</td><td>NM79</td><td>0279/0280</td><td>M0279</td><td>R3396</td><td>N1548</td><td>N1549</td><td>PR3397</td><td>N1550</td><td>N1551</td><td>R3398</td><td>M0280</td></tr>
+<tr data-formacion><td>3</td><td>NM79</td><td>0283/0284</td><td>M0283</td><td>R3429</td><td>N1412</td><td>N1557</td><td>PR3430</td><td>N1558</td><td>N1559</td><td>R3431</td><td>M0284</td></tr>
+<tr data-formacion><td>3</td><td>NM79</td><td>0289/0290</td><td>M0289</td><td>R3294</td><td>N1568</td><td>N1569</td><td>PR3295</td><td>N1570</td><td>N1571</td><td>R3296</td><td>M0290</td></tr>
+<tr data-formacion><td>3</td><td>NM79</td><td>0299/0300</td><td>M0299</td><td>R3441</td><td>N1588</td><td>N1589</td><td>PR3442</td><td>N1590</td><td>N1591</td><td>R3443</td><td>M0300</td></tr>
+<tr data-formacion><td>3</td><td>NM79</td><td>0301/0302</td><td>M0301</td><td>R3444</td><td>N1592</td><td>N1593</td><td>PR3445</td><td>N1594</td><td>N1595</td><td>R3446</td><td>M0302</td></tr>
+<tr data-formacion><td>3</td><td>NM79</td><td>0303/0304</td><td>M0303</td><td>R3447</td><td>N1596</td><td>N1597</td><td>PR3448</td><td>N1598</td><td>N1599</td><td>R3449</td><td>M0304</td></tr>
+<tr data-formacion><td>3</td><td>NM79RH</td><td>0305/0306</td><td>M0305</td><td>R3450</td><td>N1600</td><td>N1601</td><td>PR3451</td><td>N1602</td><td>N1603</td><td>R3452</td><td>M0306</td></tr>
+<tr data-formacion><td>3</td><td>NM79RH</td><td>0307/0308</td><td>M0307</td><td>R3453</td><td>N1604</td><td>N1605</td><td>PR3454</td><td>N1606</td><td>N1607</td><td>R3455</td><td>M0308</td></tr>
+<tr data-formacion><td>3</td><td>NM79RH</td><td>0311/0312</td><td>M0311</td><td>R3459</td><td>N1612</td><td>N1613</td><td>PR3460</td><td>N1614</td><td>N1615</td><td>R3461</td><td>M0312</td></tr>
+<tr data-formacion><td>3</td><td>NM79RH</td><td>0313/0314</td><td>M0313</td><td>R3462</td><td>N1616</td><td>N1617</td><td>PR3403</td><td>N1618</td><td>N1619</td><td>R3464</td><td>M0314</td></tr>
+<tr data-formacion><td>3</td><td>NM83A</td><td>0408/0409</td><td>M0408</td><td>R3606</td><td>N1805</td><td>N1806</td><td>PR3607</td><td>N1807</td><td>N1808</td><td>R3608</td><td>M0409</td></tr>
+<tr data-formacion><td>3</td><td>NM83A</td><td>0412/0413</td><td>M0412</td><td>R3612</td><td>N1813</td><td>N1814</td><td>PR3613</td><td>N1815</td><td>N1816</td><td>R3614</td><td>M0413</td></tr>
+<tr data-formacion><td>3</td><td>NM83A</td><td>0414/0415</td><td>M0414</td><td>R3615</td><td>N1817</td><td>N1818</td><td>PR3616</td><td>N1819</td><td>N1820</td><td>R3617</td><td>M0415</td></tr>
+<tr data-formacion><td>3</td><td>NM83A</td><td>0420/0421</td><td>M0420</td><td>R3624</td><td>N1829</td><td>N1830</td><td>PR3625</td><td>N1831</td><td>N1832</td><td>R3626</td><td>M0421</td></tr>
+<tr data-formacion><td>3</td><td>NM83A</td><td>0422/0423</td><td>M0422</td><td>R3627</td><td>N1833</td><td>N1834</td><td>PR3628</td><td>N1835</td><td>N1836</td><td>R3629</td><td>M0423</td></tr>
+<tr data-formacion><td>3</td><td>NM83A</td><td>0424/0469</td><td>M0424</td><td>R3630</td><td>N1837</td><td>N1838</td><td>PR3631</td><td>N1839</td><td>N1840</td><td>R3632</td><td>M0469</td></tr>
+<tr data-formacion><td>3</td><td>NM83A</td><td>0426/0427</td><td>M0426</td><td>R3633</td><td>N1841</td><td>N1842</td><td>PR3634</td><td>N1843</td><td>N1844</td><td>R3635</td><td>M0427</td></tr>
+<tr data-formacion><td>3</td><td>NM83A</td><td>0428/0429</td><td>M0428</td><td>R3636</td><td>N1845</td><td>N1846</td><td>PR3637</td><td>N1847</td><td>N1848</td><td>R3638</td><td>M0429</td></tr>
+<tr data-formacion><td>3</td><td>NM79RH</td><td>0432/0433</td><td>M0432</td><td>R3642</td><td>N1853</td><td>N1854</td><td>PR3643</td><td>N1855</td><td>N1856</td><td>R3644</td><td>M0433</td></tr>
+<tr data-formacion><td>3</td><td>NM79RH</td><td>0434/0509</td><td>M0434</td><td>R3645</td><td>N1857</td><td>N1858</td><td>PR3646</td><td>N1859</td><td>N1860</td><td>R3647</td><td>M0509</td></tr>
+<tr data-formacion><td>3</td><td>NM79RH</td><td>0436/0437</td><td>M0436</td><td>R3648</td><td>N1861</td><td>N1862</td><td>PR3649</td><td>N1863</td><td>N1864</td><td>R3650</td><td>M0437</td></tr>
+<tr data-formacion><td>3</td><td>NM79RH</td><td>0438/0449</td><td>M0438</td><td>R3651</td><td>N1865</td><td>N1866</td><td>PR3652</td><td>N1867</td><td>N1888</td><td>R3668</td><td>M0449</td></tr>
+<tr data-formacion><td>3</td><td>NM79RH</td><td>0444/0445</td><td>M0444</td><td>R3660</td><td>N1877</td><td>N1878</td><td>PR3661</td><td>N1879</td><td>N1880</td><td>R3662</td><td>M0445</td></tr>
+<tr data-formacion><td>3</td><td>NM83A</td><td>0446/0447</td><td>M0446</td><td>R3663</td><td>N1881</td><td>N1882</td><td>PR3664</td><td>N1883</td><td>N1884</td><td>R3665</td><td>M0447</td></tr>
+<tr data-formacion><td>3</td><td>NM83A</td><td>0466/0467</td><td>M0466</td><td>R3693</td><td>N1921</td><td>N1922</td><td>PR3694</td><td>N1923</td><td>N1924</td><td>R3695</td><td>M0467</td></tr>
+<tr data-formacion><td>3</td><td>NE92</td><td>0523/0522</td><td>M0523</td><td>R3773</td><td>N2032</td><td>N2033</td><td>PR3774</td><td>N2034</td><td>N2035</td><td>R3775</td><td>M0522</td></tr>
+<tr data-formacion><td>3</td><td>NE92</td><td>0525/0524</td><td>M0525</td><td>R3776</td><td>N2036</td><td>N2037</td><td>PR3777</td><td>N2038</td><td>N2039</td><td>R3778</td><td>M0524</td></tr>
+<tr data-formacion><td>3</td><td>NE92</td><td>0527/0526</td><td>M0527</td><td>R3779</td><td>N2040</td><td>N2041</td><td>PR3780</td><td>N2042</td><td>N2043</td><td>R3781</td><td>M0526</td></tr>
+<tr data-formacion><td>3</td><td>NE92</td><td>0531/0530</td><td>M0531</td><td>R3785</td><td>N2048</td><td>N2049</td><td>PR3786</td><td>N2050</td><td>N2051</td><td>R3787</td><td>M0530</td></tr>
+<tr data-formacion><td>3</td><td>NE92</td><td>0533/0532</td><td>M0533</td><td>R3788</td><td>N2052</td><td>N2053</td><td>PR3789</td><td>N2054</td><td>N2055</td><td>R3790</td><td>M0532</td></tr>
+<tr data-formacion><td>3</td><td>NE92</td><td>0535/0534</td><td>M0535</td><td>R3791</td><td>N2056</td><td>N2057</td><td>PR3792</td><td>N2058</td><td>N2059</td><td>R3793</td><td>M0534</td></tr>
+<tr data-formacion><td>3</td><td>NE92</td><td>0537/0536</td><td>M0537</td><td>R3794</td><td>N2060</td><td>N2061</td><td>PR3795</td><td>N2062</td><td>N2063</td><td>R3796</td><td>M0536</td></tr>
+<tr data-formacion><td>3</td><td>NE92</td><td>0538/0550</td><td>M0538</td><td>R3815</td><td>N2088</td><td>N2089</td><td>PR3816</td><td>N2090</td><td>N2091</td><td>R3817</td><td>M0550</td></tr>
+<tr data-formacion><td>3</td><td>NE92</td><td>0541/0540</td><td>M0541</td><td>R3800</td><td>N2068</td><td>N2069</td><td>PR3801</td><td>N2070</td><td>N2071</td><td>R3802</td><td>M0540</td></tr>
+<tr data-formacion><td>3</td><td>NE92</td><td>0543/0542</td><td>M0543</td><td>R3803</td><td>N2072</td><td>N2073</td><td>PR3804</td><td>N2074</td><td>N2075</td><td>R3805</td><td>M0542</td></tr>
+<tr data-formacion><td>3</td><td>NE92</td><td>0545/0544</td><td>M0545</td><td>R3806</td><td>N2076</td><td>N2077</td><td>PR3810</td><td>N2078</td><td>N2079</td><td>R3808</td><td>M0544</td></tr>
+<tr data-formacion><td>3</td><td>NE92</td><td>0547/0546</td><td>M0547</td><td>R3809</td><td>N2080</td><td>N2081</td><td>PR3807</td><td>N2082</td><td>N2083</td><td>R3811</td><td>M0546</td></tr>
+<tr data-formacion><td>3</td><td>NE92</td><td>0549/0548</td><td>M0549</td><td>R3812</td><td>N2084</td><td>N2085</td><td>PR3813</td><td>N2086</td><td>N2087</td><td>R3814</td><td>M0548</td></tr>
+</tbody></table></div></section><section class="formacion-section mb-5" data-formacion-section aria-labelledby="titulo-formacion-l4"><h2 id="titulo-formacion-l4" class="h4 mb-3">Línea 4</h2><div class="table-responsive formacion-scroll" tabindex="0" role="region" aria-label="Tabla de formación L4"><table class="table table-striped table-bordered formacion-table mb-0" data-sheet="L4"><thead><tr><th scope="col">Linea</th><th scope="col">Modelo</th><th scope="col">Matricula</th><th scope="col">M1</th><th scope="col">R1</th><th scope="col">N1</th><th scope="col">N2</th><th scope="col">PR</th><th scope="col">M2</th></tr></thead><tbody>
+<tr data-formacion><td>4</td><td>NM73M14</td><td>0144/0155</td><td>M0155</td><td>R3235</td><td>N1384</td><td>N1374</td><td>PR3225</td><td>M0144</td></tr>
+<tr data-formacion><td>4</td><td>NM73M14</td><td>0148/0157</td><td>M0157</td><td>R3231</td><td>N1347</td><td>N1348</td><td>PR3287</td><td>M0148</td></tr>
+<tr data-formacion><td>4</td><td>NM73M14</td><td>0149/0153</td><td>M0153</td><td>R3265</td><td>N1295</td><td>N1331</td><td>PR3243</td><td>M0149</td></tr>
+<tr data-formacion><td>4</td><td>NM73M14</td><td>0150/0189</td><td>M0150</td><td>R3272</td><td>N1364</td><td>N1294</td><td>PR3222</td><td>M0189</td></tr>
+<tr data-formacion><td>4</td><td>NM73M14</td><td>0154/0184</td><td>M0154</td><td>R3255</td><td>N1376</td><td>N1381</td><td>PR3228</td><td>M0184</td></tr>
+<tr data-formacion><td>4</td><td>NM73M14</td><td>0160/0194</td><td>M0194</td><td>R3260</td><td>N1329</td><td>N1322</td><td>PR3217</td><td>M0160</td></tr>
+<tr data-formacion><td>4</td><td>NM73M14</td><td>0164/0180</td><td>M0164</td><td>R3266</td><td>N1298</td><td>N1320</td><td>PR3221</td><td>M0180</td></tr>
+<tr data-formacion><td>4</td><td>NM73M14</td><td>0165/0183</td><td>M0183</td><td>R3254</td><td>N1328</td><td>N1289</td><td>PR3284</td><td>M0165</td></tr>
+<tr data-formacion><td>4</td><td>NM73M14</td><td>0167/0182</td><td>M0182</td><td>R3256</td><td>N1332</td><td>N1306</td><td>PR3245</td><td>M0167</td></tr>
+<tr data-formacion><td>4</td><td>NM73BR</td><td>0552/0553</td><td>M0553</td><td>R3274</td><td>N1349</td><td>N1315</td><td>PR3269</td><td>M0552</td></tr>
+<tr data-formacion><td>4</td><td>NM73M14</td><td>0556/0557</td><td>M0557</td><td>R3229</td><td>N1354</td><td>N1369</td><td>PR3215</td><td>M0556</td></tr>
+<tr data-formacion><td>4</td><td>NM73M14</td><td>0560/0561</td><td>M0561</td><td>R3214</td><td>N1360</td><td>N1352</td><td>PR3264</td><td>M0560</td></tr>
+<tr data-formacion><td>4</td><td>NM73M14</td><td>0562/0563</td><td>M0563</td><td>R3237</td><td>N1330</td><td>N1356</td><td>PR3227</td><td>M0562</td></tr>
+<tr data-formacion><td>4</td><td>NM73M14</td><td>0568/0569</td><td>M0569</td><td>R3261</td><td>N1375</td><td>N1357</td><td>PR3224</td><td>M0568</td></tr>
+<tr data-formacion><td>4</td><td>NM73M14</td><td>0570/0571</td><td>M0571</td><td>R3267</td><td>N1337</td><td>N1291</td><td>PR3257</td><td>M0570</td></tr>
+<tr data-formacion><td>4</td><td>NM73M14</td><td>0572/0573</td><td>M0573</td><td>R3223</td><td>N1380</td><td>N1355</td><td>PR3239</td><td>M0572</td></tr>
+<tr data-formacion><td>4</td><td>NM73M14</td><td>0574/0575</td><td>M0575</td><td>R3277</td><td>N1335</td><td>N1367</td><td>PR3216</td><td>M0574</td></tr>
+<tr data-formacion><td>4</td><td>NM73M14</td><td>0580/0581</td><td>M0581</td><td>R3220</td><td>N1296</td><td>N1327</td><td>PR3288</td><td>M0580</td></tr>
+</tbody></table></div></section><section class="formacion-section mb-5" data-formacion-section aria-labelledby="titulo-formacion-l5"><h2 id="titulo-formacion-l5" class="h4 mb-3">Línea 5</h2><div class="table-responsive formacion-scroll" tabindex="0" role="region" aria-label="Tabla de formación L5"><table class="table table-striped table-bordered formacion-table mb-0" data-sheet="L5"><thead><tr><th scope="col">Linea</th><th scope="col">Modelo</th><th scope="col">Matricula</th><th scope="col">M1</th><th scope="col">R1</th><th scope="col">N1</th><th scope="col">NI1</th><th scope="col">PR</th><th scope="col">NI2</th><th scope="col">N2</th><th scope="col">R2</th><th scope="col">M2</th></tr></thead><tbody>
+<tr data-formacion><td>5</td><td>MP68M14</td><td>0003/0063</td><td>M0003</td><td>R3099</td><td>N1109</td><td>N1081</td><td>PR3080</td><td>N1092</td><td>N1216</td><td>R3065</td><td>M0063</td></tr>
+<tr data-formacion><td>5</td><td>MP68M14</td><td>0012/0055</td><td>M0012</td><td>R3129</td><td>N1232</td><td>N1217</td><td>PR3077</td><td>N1039</td><td>N1173</td><td>R3047</td><td>M0055</td></tr>
+<tr data-formacion><td>5</td><td>NM73M14</td><td>0576/0559</td><td>M0559</td><td>R3189</td><td>N1252</td><td>N1279</td><td>PR3188</td><td>N1273</td><td>N1280</td><td>R3194</td><td>M0576</td></tr>
+<tr data-formacion><td>5</td><td>MP68M14</td><td>0023/0045</td><td>M0023</td><td>R3059</td><td>N1104</td><td>N1224</td><td>PR3091</td><td>N1143</td><td>N1177</td><td>R3143</td><td>M0045</td></tr>
+<tr data-formacion><td>5</td><td>MP68M14</td><td>0028/0059</td><td>M0028</td><td>R3164</td><td>N1182</td><td>N1011</td><td>PR3118</td><td>N1186</td><td>N1020</td><td>R3109</td><td>M0059</td></tr>
+<tr data-formacion><td>5</td><td>MP68M14</td><td>0032/0052</td><td>M0032</td><td>R3089</td><td>N1095</td><td>N1200</td><td>PR3120</td><td>N1111</td><td>N1058</td><td>R3045</td><td>M0052</td></tr>
+<tr data-formacion><td>5</td><td>MP68M14</td><td>0060/0081</td><td>M0060</td><td>R3102</td><td>N1196</td><td>N1140</td><td>PR3176</td><td>N1056</td><td>N1040</td><td>R3048</td><td>M0081</td></tr>
+<tr data-formacion><td>5</td><td>MP68M14</td><td>0067/0109</td><td>M0109</td><td>R3073</td><td>N1119</td><td>N1204</td><td>PR3041</td><td>N1203</td><td>N1151</td><td>R3028</td><td>M0067</td></tr>
+<tr data-formacion><td>5</td><td>MP68M14</td><td>0077/0014</td><td>M0077</td><td>R3162</td><td>N1160</td><td>N1180</td><td>PR3115</td><td>N1090</td><td>N1178</td><td>R3004</td><td>M0014</td></tr>
+<tr data-formacion><td>5</td><td>MP68M14</td><td>0021/0097</td><td>M0021</td><td>R3175</td><td>N1164</td><td>N1189</td><td>PR3036</td><td>N1192</td><td>N1110</td><td>R3117</td><td>M0097</td></tr>
+<tr data-formacion><td>5</td><td>MP68M14</td><td>0090/0099</td><td>M0090</td><td>R3062</td><td>N1212</td><td>N1136</td><td>PR3124</td><td>N1142</td><td>N1021</td><td>R3107</td><td>M0099</td></tr>
+<tr data-formacion><td>5</td><td>MP68R93</td><td>0085/0075</td><td>M0085</td><td>R3127</td><td>N1065</td><td>N1028</td><td>PR3040</td><td>N1122</td><td>N1117</td><td>R3070</td><td>M0075</td></tr>
+<tr data-formacion><td>5</td><td>MP68M14</td><td>0102/0084</td><td>M0102</td><td>R3123</td><td>N1087</td><td>N1158</td><td>PR3022</td><td>N1066</td><td>N1013</td><td>R3098</td><td>M0084</td></tr>
+<tr data-formacion><td>5</td><td>MP68M14</td><td>0108/0120</td><td>M0108</td><td>R3082</td><td>N1055</td><td>N1138</td><td>PR3138</td><td>N1235</td><td>N1098</td><td>R3021</td><td>M0120</td></tr>
+<tr data-formacion><td>5</td><td>MP68M14</td><td>0116/0119</td><td>M0119</td><td>R3161</td><td>N1026</td><td>N1006</td><td>PR3110</td><td>N1213</td><td>N1155</td><td>R3088</td><td>M0116</td></tr>
+<tr data-formacion><td>5</td><td>NM73M14</td><td>0125/0140</td><td>M0125</td><td>R3211</td><td>N1251</td><td>N1264</td><td>PR3209</td><td>N1254</td><td>N1246</td><td>R3198</td><td>M0140</td></tr>
+<tr data-formacion><td>5</td><td>NM73M14</td><td>0127/0139</td><td>M0127</td><td>R3190</td><td>N1272</td><td>N1276</td><td>PR3201</td><td>N1262</td><td>N1282</td><td>R3192</td><td>M0139</td></tr>
+<tr data-formacion><td>5</td><td>MP68M14</td><td>0093/0101</td><td>M0093</td><td>R3090</td><td>N1078</td><td>N1210</td><td>PR3063</td><td>N1059</td><td>N1063</td><td>R3103</td><td>M0101</td></tr>
+<tr data-formacion><td>5</td><td>NM73M14</td><td>0130/0200</td><td>M0130</td><td>R3180</td><td>N1267</td><td>N1278</td><td>PR3191</td><td>N1261</td><td>N1245</td><td>R3205</td><td>M0200</td></tr>
+<tr data-formacion><td>5</td><td>NM73M14</td><td>0133/0141</td><td>M0133</td><td>R3208</td><td>N1248</td><td>N1268</td><td>PR3187</td><td>N1263</td><td>N1260</td><td>R3182</td><td>M0141</td></tr>
+<tr data-formacion><td>5</td><td>NM73AR</td><td>0129/0132</td><td>M0132</td><td>R3199</td><td>N1271</td><td>N1240</td><td>PR3185</td><td>N1241</td><td>N1281</td><td>R3186</td><td>M0129</td></tr>
+<tr data-formacion><td>5</td><td>NM73AR</td><td>0137/0131</td><td>M0137</td><td>R3181</td><td>N1266</td><td>N1239</td><td>R3184</td><td>N1255</td><td>N1277</td><td>R3193</td><td>M0131</td></tr>
+</tbody></table></div></section><section class="formacion-section mb-5" data-formacion-section aria-labelledby="titulo-formacion-l6"><h2 id="titulo-formacion-l6" class="h4 mb-3">Línea 6</h2><div class="table-responsive formacion-scroll" tabindex="0" role="region" aria-label="Tabla de formación L6"><table class="table table-striped table-bordered formacion-table mb-0" data-sheet="L6"><thead><tr><th scope="col">Linea</th><th scope="col">Modelo</th><th scope="col">Matricula</th><th scope="col">M1</th><th scope="col">R1</th><th scope="col">N1</th><th scope="col">NI1</th><th scope="col">PR</th><th scope="col">NI2</th><th scope="col">N2</th><th scope="col">R2</th><th scope="col">M2</th></tr></thead><tbody>
+<tr data-formacion><td>6</td><td>NM73AR</td><td>0123/0128</td><td>M0128</td><td>R3183</td><td>N1242</td><td>N1265</td><td>PR3197</td><td>---</td><td>---</td><td>---</td><td>M0123</td></tr>
+<tr data-formacion><td>6</td><td>NM73AR</td><td>0134/0136</td><td>M0134</td><td>R3204</td><td>N1249</td><td>N1275</td><td>PR3203</td><td>---</td><td>---</td><td>---</td><td>M0136</td></tr>
+<tr data-formacion><td>6</td><td>NM73M14</td><td>0145/0188</td><td>M0188</td><td>R3247</td><td>N1338</td><td>N1385</td><td>PR3252</td><td>---</td><td>---</td><td>---</td><td>M0145</td></tr>
+<tr data-formacion><td>6</td><td>NM73M14</td><td>0147/0186</td><td>M0186</td><td>R3268</td><td>N1325</td><td>N1363</td><td>PR3219</td><td>---</td><td>---</td><td>---</td><td>M0147</td></tr>
+<tr data-formacion><td>6</td><td>NM73M14</td><td>0169/0170</td><td>M0170</td><td>R3242</td><td>N1304</td><td>N1342</td><td>PR3281</td><td>---</td><td>---</td><td>---</td><td>M0169</td></tr>
+<tr data-formacion><td>6</td><td>NM73BR</td><td>0175/0185</td><td>M0185</td><td>R3213</td><td>N1314</td><td>N1290</td><td>PR3282</td><td>---</td><td>---</td><td>---</td><td>M0175</td></tr>
+<tr data-formacion><td>6</td><td>NM73M14</td><td>0190/0191</td><td>M0191</td><td>R3236</td><td>N1300</td><td>N1334</td><td>PR3234</td><td>---</td><td>---</td><td>---</td><td>M0190</td></tr>
+<tr data-formacion><td>6</td><td>NM73M14</td><td>0192/0197</td><td>M0197</td><td>R3289</td><td>N1344</td><td>N1377</td><td>PR3233</td><td>---</td><td>---</td><td>---</td><td>M0192</td></tr>
+<tr data-formacion><td>6</td><td>NC82</td><td>0320/0321</td><td>M0320</td><td>R3474</td><td>N1629</td><td>N1630</td><td>PR3475</td><td>N1631</td><td>N1632</td><td>R3476</td><td>M0321</td></tr>
+<tr data-formacion><td>6</td><td>NC82</td><td>0322/0323</td><td>M0322</td><td>R3477</td><td>N1695</td><td>N1634</td><td>PR3478</td><td>N1635</td><td>N1636</td><td>R3479</td><td>M0323</td></tr>
+<tr data-formacion><td>6</td><td>NC82</td><td>0330/0331</td><td>M0330</td><td>R3510</td><td>N1625</td><td>N1626</td><td>PR3511</td><td>N1627</td><td>N1628</td><td>R3512</td><td>M0331</td></tr>
+<tr data-formacion><td>6</td><td>NC82</td><td>0336/0337</td><td>M0336</td><td>R3513</td><td>N1661</td><td>N1662</td><td>PR3514</td><td>N1663</td><td>N1664</td><td>R3515</td><td>M0337</td></tr>
+<tr data-formacion><td>6</td><td>NC82</td><td>0340/0341</td><td>M0340</td><td>R3528</td><td>N1669</td><td>N1670</td><td>PR3529</td><td>N1671</td><td>N1684</td><td>R3530</td><td>M0341</td></tr>
+<tr data-formacion><td>6</td><td>NC82</td><td>0348/0345</td><td>M0348</td><td>R3471</td><td>N1677</td><td>N1678</td><td>PR3490</td><td>N1686</td><td>N1680</td><td>R3473</td><td>M0345</td></tr>
+<tr data-formacion><td>6</td><td>NC82</td><td>0352/0354</td><td>M0352</td><td>R3522</td><td>N1693</td><td>N1694</td><td>PR3523</td><td>N1704</td><td>N1696</td><td>R3524</td><td>M0354</td></tr>
+<tr data-formacion><td>6</td><td>NC82</td><td>0356/0355</td><td>M0356</td><td>R3491</td><td>N1701</td><td>N1659</td><td>PR3526</td><td>N1702</td><td>N1679</td><td>R3489</td><td>M0355</td></tr>
+<tr data-formacion><td>6</td><td>NM83A</td><td>0410/0411</td><td>M0410</td><td>R3609</td><td>N1809</td><td>N1810</td><td>PR3610</td><td>N1811</td><td>N1812</td><td>R3611</td><td>M0411</td></tr>
+<tr data-formacion><td>6</td><td>NM83A</td><td>0418/0419</td><td>M0418</td><td>R3621</td><td>N1825</td><td>N1826</td><td>PR3622</td><td>N1827</td><td>N1828</td><td>R3623</td><td>M0419</td></tr>
+<tr data-formacion><td>6</td><td>NM83A</td><td>0440/0441</td><td>M0440</td><td>R3654</td><td>N1869</td><td>N1870</td><td>PR3655</td><td>N1871</td><td>N1872</td><td>R3656</td><td>M0441</td></tr>
+<tr data-formacion><td>6</td><td>NM83A</td><td>0456/0457</td><td>M0456</td><td>R3351</td><td>N1901</td><td>N1902</td><td>PR3679</td><td>N1903</td><td>N1904</td><td>R3680</td><td>M0457</td></tr>
+<tr data-formacion><td>6</td><td>NM83A</td><td>0460/0461</td><td>M0460</td><td>R3684</td><td>N1909</td><td>N1910</td><td>PR3685</td><td>N1911</td><td>N1912</td><td>R3686</td><td>M0461</td></tr>
+<tr data-formacion><td>6</td><td>NM83A</td><td>0554/0555</td><td>M0555</td><td>R3226</td><td>N1343</td><td>N1318</td><td>PR3275</td><td>---</td><td>---</td><td>---</td><td>M0554</td></tr>
+<tr data-formacion><td>6</td><td>NM83A</td><td>0564/0565</td><td>M0565</td><td>R3283</td><td>N1305</td><td>N1302</td><td>PR3286</td><td>---</td><td>---</td><td>---</td><td>M0564</td></tr>
+<tr data-formacion><td>6</td><td>NM73M14</td><td>0566/0567</td><td>M0567</td><td>R3232</td><td>N1323</td><td>N1378</td><td>PR3246</td><td>---</td><td>---</td><td>---</td><td>M0566</td></tr>
+</tbody></table></div></section><section class="formacion-section mb-5" data-formacion-section aria-labelledby="titulo-formacion-l7"><h2 id="titulo-formacion-l7" class="h4 mb-3">Línea 7</h2><div class="table-responsive formacion-scroll" tabindex="0" role="region" aria-label="Tabla de formación L7"><table class="table table-striped table-bordered formacion-table mb-0" data-sheet="L7"><thead><tr><th scope="col">Linea</th><th scope="col">Modelo</th><th scope="col">Matricula</th><th scope="col">M1</th><th scope="col">R1</th><th scope="col">N1</th><th scope="col">NI1</th><th scope="col">PR</th><th scope="col">NI2</th><th scope="col">N2</th><th scope="col">R2</th><th scope="col">M2</th></tr></thead><tbody>
+<tr data-formacion><td>7</td><td>MP68R93</td><td>0091/0092</td><td>M0091</td><td>R3058</td><td>---</td><td>N1165</td><td>PR3112</td><td>N1184</td><td>N1036</td><td>R3006</td><td>M0092</td></tr>
+<tr data-formacion><td>7</td><td>NM73M14</td><td>0143/0198</td><td>M0143</td><td>R3250</td><td>N1383</td><td>N1365</td><td>PR3259</td><td>N1336</td><td>N1379</td><td>R3244</td><td>M0198</td></tr>
+<tr data-formacion><td>7</td><td>NM73M14</td><td>0146/0162</td><td>M0146</td><td>R3279</td><td>N1340</td><td>N1382</td><td>PR3263</td><td>N1283</td><td>N1339</td><td>R3238</td><td>M0162</td></tr>
+<tr data-formacion><td>7</td><td>NM73M14</td><td>0156/0166</td><td>M0156</td><td>R3290</td><td>N1362</td><td>N1312</td><td>PR3276</td><td>N1286</td><td>N1284</td><td>R3278</td><td>M0166</td></tr>
+<tr data-formacion><td>7</td><td>NM73M14</td><td>0159/0161</td><td>M0159</td><td>R3249</td><td>N1292</td><td>N1345</td><td>PR3270</td><td>N1301</td><td>N1350</td><td>R3248</td><td>M0161</td></tr>
+<tr data-formacion><td>7</td><td>NM73M14</td><td>0174/0176</td><td>M0176</td><td>R3271</td><td>N1287</td><td>N1317</td><td>PR3251</td><td>N1368</td><td>N1326</td><td>R3230</td><td>M0174</td></tr>
+<tr data-formacion><td>7</td><td>NM73M14</td><td>0179/0181</td><td>M0179</td><td>R3285</td><td>N1353</td><td>N1311</td><td>PR3218</td><td>N1285</td><td>N1373</td><td>R3253</td><td>M0181</td></tr>
+<tr data-formacion><td>7</td><td>NM79RH</td><td>0203/0204</td><td>M0203</td><td>R3369</td><td>N1396</td><td>N1397</td><td>PR3370</td><td>N1398</td><td>N1399</td><td>R3371</td><td>M0204</td></tr>
+<tr data-formacion><td>7</td><td>NM79</td><td>0213/0214</td><td>M0214</td><td>R3428</td><td>N1419</td><td>N1418</td><td>PR3427</td><td>N1417</td><td>N1416</td><td>R3426</td><td>M0213</td></tr>
+<tr data-formacion><td>7</td><td>NM79</td><td>0219/0220</td><td>M0219</td><td>R3318</td><td>N1428</td><td>N1429</td><td>PR3319</td><td>N1430</td><td>N1431</td><td>R3320</td><td>M0220</td></tr>
+<tr data-formacion><td>7</td><td>NM79</td><td>0221/0222</td><td>M0222</td><td>R3332</td><td>N1435</td><td>N1434</td><td>PR3331</td><td>N1433</td><td>N1432</td><td>R3330</td><td>M0221</td></tr>
+<tr data-formacion><td>7</td><td>NM79RH</td><td>0225/0226</td><td>M0226</td><td>R3377</td><td>N1443</td><td>N1442</td><td>PR3376</td><td>N1441</td><td>N1440</td><td>R3375</td><td>M0225</td></tr>
+<tr data-formacion><td>7</td><td>NM79</td><td>0233/0234</td><td>M0234</td><td>R3314</td><td>N1459</td><td>N1458</td><td>PR3313</td><td>N1457</td><td>N1456</td><td>R3312</td><td>M0233</td></tr>
+<tr data-formacion><td>7</td><td>NM79</td><td>0237/0238</td><td>M0238</td><td>R3437</td><td>N1467</td><td>N1466</td><td>PR3436</td><td>N1465</td><td>N1464</td><td>R3435</td><td>M0237</td></tr>
+<tr data-formacion><td>7</td><td>NM79</td><td>0241/0242</td><td>M0242</td><td>R3329</td><td>N1475</td><td>N1474</td><td>PR3328</td><td>N1624</td><td>N1472</td><td>R3327</td><td>M0241</td></tr>
+<tr data-formacion><td>7</td><td>NM79</td><td>0247/0248</td><td>M0248</td><td>R3359</td><td>N1487</td><td>N1486</td><td>PR3358</td><td>N1485</td><td>N1484</td><td>R3357</td><td>M0247</td></tr>
+<tr data-formacion><td>7</td><td>NM79</td><td>0257/0258</td><td>M0258</td><td>R3395</td><td>N1507</td><td>N1926</td><td>PR3394</td><td>N1505</td><td>N1504</td><td>R3393</td><td>M0257</td></tr>
+<tr data-formacion><td>7</td><td>NM79</td><td>0261/0262</td><td>M0262</td><td>R3344</td><td>N1515</td><td>N1514</td><td>PR3343</td><td>N1513</td><td>N1512</td><td>R3342</td><td>M0261</td></tr>
+<tr data-formacion><td>7</td><td>NM79</td><td>0269/0270</td><td>M0270</td><td>R3425</td><td>N1531</td><td>N1530</td><td>PR3424</td><td>N1529</td><td>N1528</td><td>R3423</td><td>M0269</td></tr>
+<tr data-formacion><td>7</td><td>NM79</td><td>0273/0274</td><td>M0274</td><td>R3383</td><td>N1539</td><td>N1538</td><td>PR3382</td><td>N1537</td><td>N1536</td><td>R3381</td><td>M0273</td></tr>
+<tr data-formacion><td>7</td><td>NM79</td><td>0285/0286</td><td>M0286</td><td>R3350</td><td>N1563</td><td>N1562</td><td>PR3349</td><td>N1561</td><td>N1560</td><td>R3348</td><td>M0285</td></tr>
+<tr data-formacion><td>7</td><td>NM79RH</td><td>0295/0296</td><td>M0295</td><td>R3411</td><td>N1580</td><td>N1581</td><td>PR3412</td><td>N1582</td><td>N1583</td><td>R3303</td><td>M0296</td></tr>
+<tr data-formacion><td>7</td><td>NM83A</td><td>0442/0443</td><td>M0442</td><td>R3657</td><td>N1873</td><td>N1874</td><td>PR3658</td><td>N1875</td><td>N1876</td><td>R3659</td><td>M0443</td></tr>
+<tr data-formacion><td>7</td><td>NM83A</td><td>0450/0451</td><td>M0451</td><td>R3671</td><td>N1892</td><td>N1891</td><td>PR3670</td><td>N1890</td><td>N1889</td><td>R3669</td><td>M0450</td></tr>
+<tr data-formacion><td>7</td><td>NM83A</td><td>0454/0455</td><td>M0455</td><td>R3677</td><td>N1900</td><td>N1899</td><td>PR3676</td><td>N1898</td><td>N1897</td><td>R3675</td><td>M0454</td></tr>
+<tr data-formacion><td>7</td><td>NM83A</td><td>0464/0465</td><td>M0465</td><td>R3692</td><td>N1920</td><td>N1919</td><td>PR3691</td><td>N1918</td><td>N1917</td><td>R3690</td><td>M0464</td></tr>
+<tr data-formacion><td>7</td><td>NM83A</td><td>0497/0496</td><td>M0497</td><td>R3736</td><td>N1979</td><td>N1980</td><td>PR3797</td><td>N1981</td><td>N1982</td><td>R3738</td><td>M0496</td></tr>
+<tr data-formacion><td>7</td><td>NM73M14</td><td>0578/0579</td><td>M0578</td><td>R3202</td><td>N1243</td><td>N1244</td><td>PR3210</td><td>N1258</td><td>N1270</td><td>R3195</td><td>M0579</td></tr>
+<tr data-formacion><td>7</td><td>NM02</td><td>0602/0603</td><td>M0603</td><td>R3850</td><td>N2135</td><td>N2134</td><td>PR3849</td><td>N2133</td><td>N2132</td><td>R3848</td><td>M0602</td></tr>
+<tr data-formacion><td>7</td><td>NM02</td><td>0612/0613</td><td>M0613</td><td>R3865</td><td>N2155</td><td>N2154</td><td>PR3864</td><td>N2153</td><td>N2152</td><td>R3863</td><td>M0612</td></tr>
+<tr data-formacion><td>7</td><td>NM02</td><td>0628/0629</td><td>M0629</td><td>R3889</td><td>N2187</td><td>N2186</td><td>PR3888</td><td>N2185</td><td>N2184</td><td>R3887</td><td>M0628</td></tr>
+<tr data-formacion><td>7</td><td>NM02</td><td>0632/0633</td><td>M0633</td><td>R3895</td><td>N2195</td><td>N2194</td><td>PR3894</td><td>N2193</td><td>N2192</td><td>R3893</td><td>M0632</td></tr>
+</tbody></table></div></section><section class="formacion-section mb-5" data-formacion-section aria-labelledby="titulo-formacion-l8"><h2 id="titulo-formacion-l8" class="h4 mb-3">Línea 8</h2><div class="table-responsive formacion-scroll" tabindex="0" role="region" aria-label="Tabla de formación L8"><table class="table table-striped table-bordered formacion-table mb-0" data-sheet="L8"><thead><tr><th scope="col">Linea</th><th scope="col">Modelo</th><th scope="col">Matricula</th><th scope="col">M1</th><th scope="col">R1</th><th scope="col">N1</th><th scope="col">NI1</th><th scope="col">PR</th><th scope="col">NI2</th><th scope="col">N2</th><th scope="col">R2</th><th scope="col">M2</th></tr></thead><tbody>
+<tr data-formacion><td>8</td><td>NM79</td><td>0223/0224</td><td>M0223</td><td>R3300</td><td>N1436</td><td>N1437</td><td>PR3301</td><td>N1438</td><td>N1439</td><td>R3302</td><td>M0224</td></tr>
+<tr data-formacion><td>8</td><td>NM79</td><td>0281/0282</td><td>M0281</td><td>R3354</td><td>N1552</td><td>N1553</td><td>PR3355</td><td>N1554</td><td>N1555</td><td>R3356</td><td>M0282</td></tr>
+<tr data-formacion><td>8</td><td>NM79</td><td>0287/0288</td><td>M0287</td><td>R3417</td><td>N1564</td><td>N1565</td><td>PR3418</td><td>N1566</td><td>N1567</td><td>R3419</td><td>M0288</td></tr>
+<tr data-formacion><td>8</td><td>NM79</td><td>0291/0292</td><td>M0291</td><td>R3432</td><td>N1572</td><td>N1573</td><td>PR3433</td><td>N1574</td><td>N1575</td><td>R3434</td><td>M0292</td></tr>
+<tr data-formacion><td>8</td><td>NM79</td><td>0315/0316</td><td>M0315</td><td>R3465</td><td>N1620</td><td>N1621</td><td>PR3466</td><td>N1622</td><td>N1623</td><td>R3467</td><td>M0316</td></tr>
+<tr data-formacion><td>8</td><td>MP82RH</td><td>0359/0358</td><td>M0359</td><td>R3603</td><td>N1705</td><td>N1706</td><td>PR3604</td><td>N1707</td><td>N1778</td><td>R3605</td><td>M0358</td></tr>
+<tr data-formacion><td>8</td><td>MP82RH</td><td>0361/0360</td><td>M0361</td><td>R3549</td><td>N1709</td><td>N1796</td><td>PR3532</td><td>N1711</td><td>N1712</td><td>R3533</td><td>M0360</td></tr>
+<tr data-formacion><td>8</td><td>MP82</td><td>0363/0362</td><td>M0363</td><td>R3537</td><td>N1793</td><td>N1794</td><td>PR3538</td><td>N1715</td><td>N1716</td><td>R3539</td><td>M0362</td></tr>
+<tr data-formacion><td>8</td><td>MP82RH</td><td>0365/0364</td><td>M0365</td><td>R3540</td><td>N1717</td><td>N1718</td><td>PR3541</td><td>N1719</td><td>N1720</td><td>R3542</td><td>M0364</td></tr>
+<tr data-formacion><td>8</td><td>MP82RH</td><td>0367/0366</td><td>M0367</td><td>R3543</td><td>N1721</td><td>N1722</td><td>PR3544</td><td>N1723</td><td>N1724</td><td>R3545</td><td>M0366</td></tr>
+<tr data-formacion><td>8</td><td>MP82</td><td>0369/0368</td><td>M0369</td><td>R3597</td><td>N1725</td><td>N1726</td><td>PR3598</td><td>N1727</td><td>N1728</td><td>R3599</td><td>M0368</td></tr>
+<tr data-formacion><td>8</td><td>MP82RH</td><td>0371/0370</td><td>M0371</td><td>R3531</td><td>N1729</td><td>N1730</td><td>PR3550</td><td>N1731</td><td>N1732</td><td>R3551</td><td>M0370</td></tr>
+<tr data-formacion><td>8</td><td>MP82</td><td>0375/0374</td><td>M0375</td><td>R3585</td><td>N1737</td><td>N1738</td><td>PR3586</td><td>N1739</td><td>N1740</td><td>R3587</td><td>M0374</td></tr>
+<tr data-formacion><td>8</td><td>MP82RH</td><td>0377/0376</td><td>M0377</td><td>R3536</td><td>N1741</td><td>N1742</td><td>PR3535</td><td>N1743</td><td>N1744</td><td>R3566</td><td>M0376</td></tr>
+<tr data-formacion><td>8</td><td>MP82RH</td><td>0379/0378</td><td>M0379</td><td>R3546</td><td>N1745</td><td>N1746</td><td>PR3547</td><td>N1747</td><td>N1748</td><td>R3548</td><td>M0378</td></tr>
+<tr data-formacion><td>8</td><td>MP82RH</td><td>0381/0380</td><td>M0381</td><td>R3552</td><td>N1749</td><td>N1750</td><td>PR3553</td><td>N1751</td><td>N1752</td><td>R3554</td><td>M0380</td></tr>
+<tr data-formacion><td>8</td><td>MP82RH</td><td>0383/0382</td><td>M0383</td><td>R3567</td><td>N1753</td><td>N1754</td><td>PR3571</td><td>N1755</td><td>N1756</td><td>R3569</td><td>M0382</td></tr>
+<tr data-formacion><td>8</td><td>MP82RH</td><td>0385/0384</td><td>M0385</td><td>R3591</td><td>N1757</td><td>N1758</td><td>PR3592</td><td>N1759</td><td>N1760</td><td>R3593</td><td>M0384</td></tr>
+<tr data-formacion><td>8</td><td>MP82RH</td><td>0387/0386</td><td>M0387</td><td>R3576</td><td>N1781</td><td>N1782</td><td>PR3577</td><td>N1783</td><td>N1784</td><td>R3578</td><td>M0386</td></tr>
+<tr data-formacion><td>8</td><td>MP82RH</td><td>0389/0388</td><td>M0389</td><td>R3558</td><td>N1765</td><td>N1766</td><td>PR3559</td><td>N1767</td><td>N1771</td><td>R3560</td><td>M0388</td></tr>
+<tr data-formacion><td>8</td><td>MP82RH</td><td>0391/0390</td><td>M0391</td><td>R3579</td><td>N1734</td><td>N1769</td><td>PR3580</td><td>N1770</td><td>N1772</td><td>R3581</td><td>M0390</td></tr>
+<tr data-formacion><td>8</td><td>MP82</td><td>0393/0392</td><td>M0393</td><td>R3582</td><td>N1773</td><td>N1774</td><td>PR3583</td><td>N1775</td><td>N1776</td><td>R3584</td><td>M0392</td></tr>
+<tr data-formacion><td>8</td><td>MP82</td><td>0395/0394</td><td>M0395</td><td>R3564</td><td>N1777</td><td>N1708</td><td>PR3565</td><td>N1779</td><td>N1780</td><td>R3534</td><td>M0394</td></tr>
+<tr data-formacion><td>8</td><td>MP82RH</td><td>0397/0396</td><td>M0397</td><td>R3600</td><td>N1761</td><td>N1762</td><td>PR3601</td><td>N1763</td><td>N1764</td><td>R3602</td><td>M0396</td></tr>
+<tr data-formacion><td>8</td><td>MP82RH</td><td>0399/0398</td><td>M0399</td><td>R3570</td><td>N1785</td><td>N1786</td><td>PR3568</td><td>N1787</td><td>N1788</td><td>R3572</td><td>M0398</td></tr>
+<tr data-formacion><td>8</td><td>MP82RH</td><td>0401/0400</td><td>M0401</td><td>R3555</td><td>N1789</td><td>N1790</td><td>PR3556</td><td>N1791</td><td>N1792</td><td>R3557</td><td>M0400</td></tr>
+<tr data-formacion><td>8</td><td>MP82RH</td><td>0402/0372</td><td>M0402</td><td>R3573</td><td>N1713</td><td>N1714</td><td>PR3574</td><td>N1735</td><td>N1736</td><td>R3575</td><td>M0372</td></tr>
+<tr data-formacion><td>8</td><td>MP82RH</td><td>0403/0373</td><td>M0403</td><td>R3590</td><td>N1795</td><td>N1768</td><td>PR3589</td><td>N1733</td><td>N1710</td><td>R3588</td><td>M0373</td></tr>
+<tr data-formacion><td>8</td><td>MP82RH</td><td>0405/0404</td><td>M0405</td><td>R3561</td><td>N1797</td><td>N1798</td><td>PR3562</td><td>N1799</td><td>N1800</td><td>R3563</td><td>M0404</td></tr>
+<tr data-formacion><td>8</td><td>MP82RH</td><td>0407/0406</td><td>M0407</td><td>R3594</td><td>N1801</td><td>N1802</td><td>PR3595</td><td>N1803</td><td>N1804</td><td>R3596</td><td>M0406</td></tr>
+</tbody></table></div></section><section class="formacion-section mb-5" data-formacion-section aria-labelledby="titulo-formacion-l9"><h2 id="titulo-formacion-l9" class="h4 mb-3">Línea 9</h2><div class="table-responsive formacion-scroll" tabindex="0" role="region" aria-label="Tabla de formación L9"><table class="table table-striped table-bordered formacion-table mb-0" data-sheet="L9"><thead><tr><th scope="col">Linea</th><th scope="col">Modelo</th><th scope="col">Matricula</th><th scope="col">M1</th><th scope="col">R1</th><th scope="col">N1</th><th scope="col">NI1</th><th scope="col">PR</th><th scope="col">NI2</th><th scope="col">N2</th><th scope="col">R2</th><th scope="col">M2</th></tr></thead><tbody>
+<tr data-formacion><td>9</td><td>NM79</td><td>0249/0250</td><td>M0249</td><td>R3399</td><td>N1488</td><td>N1489</td><td>PR3400</td><td>N1490</td><td>N1491</td><td>R3401</td><td>M0250</td></tr>
+<tr data-formacion><td>9</td><td>NM79RH</td><td>0297/0298</td><td>M0297</td><td>R3420</td><td>N1584</td><td>N1585</td><td>PR3421</td><td>N1586</td><td>N1587</td><td>R3422</td><td>M0298</td></tr>
+<tr data-formacion><td>9</td><td>NM79RH</td><td>0309/0310</td><td>M0309</td><td>R3456</td><td>N1608</td><td>N1609</td><td>PR3457</td><td>N1610</td><td>N1611</td><td>R3458</td><td>M0310</td></tr>
+<tr data-formacion><td>9</td><td>NM79</td><td>0317/0294</td><td>M0317</td><td>R3387</td><td>N1576</td><td>N1577</td><td>PR3388</td><td>N1578</td><td>N1579</td><td>R3389</td><td>M0294</td></tr>
+<tr data-formacion><td>9</td><td>NC82</td><td>0318/0319</td><td>M0318</td><td>R3498</td><td>N1649</td><td>N1650</td><td>PR3499</td><td>N1651</td><td>N1652</td><td>R3500</td><td>M0319</td></tr>
+<tr data-formacion><td>9</td><td>NC82</td><td>0326/0324</td><td>M0326</td><td>R3504</td><td>N1690</td><td>N1699</td><td>PR3505</td><td>N1655</td><td>N1647</td><td>R3506</td><td>M0324</td></tr>
+<tr data-formacion><td>9</td><td>NC82</td><td>0328/0325</td><td>M0328</td><td>R3492</td><td>N1637</td><td>N1638</td><td>PR3493</td><td>N1639</td><td>N1640</td><td>R3494</td><td>M0325</td></tr>
+<tr data-formacion><td>9</td><td>NC82</td><td>0329/0327</td><td>M0329</td><td>R3495</td><td>N1641</td><td>N1642</td><td>PR3496</td><td>N1643</td><td>N1644</td><td>R3497</td><td>M0327</td></tr>
+<tr data-formacion><td>9</td><td>NC82</td><td>0332/0333</td><td>M0332</td><td>R3480</td><td>N1653</td><td>N1654</td><td>PR3481</td><td>N1682</td><td>N1656</td><td>R3482</td><td>M0333</td></tr>
+<tr data-formacion><td>9</td><td>NC82</td><td>0334/0335</td><td>M0334</td><td>R3483</td><td>N1657</td><td>N1658</td><td>PR3484</td><td>N1681</td><td>N1660</td><td>R3485</td><td>M0335</td></tr>
+<tr data-formacion><td>9</td><td>NC82</td><td>0338/0339</td><td>M0338</td><td>R3507</td><td>N1665</td><td>N1666</td><td>PR3508</td><td>N1667</td><td>N1668</td><td>R3509</td><td>M0339</td></tr>
+<tr data-formacion><td>9</td><td>NC82</td><td>0342/0353</td><td>M0342</td><td>R3525</td><td>N1697</td><td>N1698</td><td>PR3472</td><td>N1633</td><td>N1700</td><td>R3527</td><td>M0353</td></tr>
+<tr data-formacion><td>9</td><td>NC82</td><td>0344/0349</td><td>M0344</td><td>R3516</td><td>N1685</td><td>N1683</td><td>PR3517</td><td>N1687</td><td>N1691</td><td>R3518</td><td>M0349</td></tr>
+<tr data-formacion><td>9</td><td>NC82</td><td>0346/0343</td><td>M0346</td><td>R3501</td><td>N1673</td><td>N1674</td><td>PR3502</td><td>N1675</td><td>N1676</td><td>R3503</td><td>M0343</td></tr>
+<tr data-formacion><td>9</td><td>NC82</td><td>0347/0357</td><td>M0347</td><td>R3519</td><td>N1645</td><td>N1646</td><td>PR3520</td><td>N1648</td><td>N1703</td><td>R3521</td><td>M0357</td></tr>
+<tr data-formacion><td>9</td><td>NC82</td><td>0350/0351</td><td>M0350</td><td>R3486</td><td>N1689</td><td>N1672</td><td>PR3487</td><td>N1688</td><td>N1692</td><td>R3488</td><td>M0351</td></tr>
+<tr data-formacion><td>9</td><td>NM83A</td><td>0416/0417</td><td>M0416</td><td>R3618</td><td>N1821</td><td>N1822</td><td>PR3619</td><td>N1823</td><td>N1824</td><td>R3620</td><td>M0417</td></tr>
+<tr data-formacion><td>9</td><td>NM83A</td><td>0452/0453</td><td>M0452</td><td>R3672</td><td>N1893</td><td>N1894</td><td>PR3673</td><td>N1895</td><td>N1896</td><td>R3674</td><td>M0453</td></tr>
+<tr data-formacion><td>9</td><td>NM83A</td><td>0458/0459</td><td>M0458</td><td>R3681</td><td>N1905</td><td>N1906</td><td>PR3682</td><td>N1907</td><td>N1908</td><td>R3683</td><td>M0459</td></tr>
+<tr data-formacion><td>9</td><td>NM83B</td><td>0468/0486</td><td>M0468</td><td>R3721</td><td>N1959</td><td>N1960</td><td>PR3722</td><td>N1961</td><td>N1962</td><td>R3723</td><td>M0486</td></tr>
+<tr data-formacion><td>9</td><td>NM83B</td><td>0471/0470</td><td>M0471</td><td>R3699</td><td>N1930</td><td>N1929</td><td>PR3698</td><td>N1928</td><td>N1927</td><td>R3697</td><td>M0470</td></tr>
+<tr data-formacion><td>9</td><td>NM83B</td><td>0473/0472</td><td>M0473</td><td>R3700</td><td>N1931</td><td>N1932</td><td>PR3701</td><td>N1933</td><td>N1934</td><td>R3702</td><td>M0472</td></tr>
+<tr data-formacion><td>9</td><td>NM83B</td><td>0475/0474</td><td>M0475</td><td>R3705</td><td>N1938</td><td>N1937</td><td>PR3704</td><td>N1936</td><td>N1935</td><td>R3703</td><td>M0474</td></tr>
+<tr data-formacion><td>9</td><td>NM83B</td><td>0477/0476</td><td>M0477</td><td>R3706</td><td>N1939</td><td>N1940</td><td>PR3707</td><td>N1941</td><td>N1942</td><td>R3708</td><td>M0476</td></tr>
+<tr data-formacion><td>9</td><td>NM83B</td><td>0479/0478</td><td>M0479</td><td>R3709</td><td>N1943</td><td>N1944</td><td>PR3710</td><td>N1945</td><td>N1946</td><td>R3711</td><td>M0478</td></tr>
+<tr data-formacion><td>9</td><td>NM83B</td><td>0481/0480</td><td>M0481</td><td>R3712</td><td>N1947</td><td>N1948</td><td>PR3713</td><td>N1949</td><td>N1950</td><td>R3714</td><td>M0480</td></tr>
+<tr data-formacion><td>9</td><td>NM83B</td><td>0489/0488</td><td>M0489</td><td>R3724</td><td>N1963</td><td>N1964</td><td>PR3725</td><td>N1965</td><td>N1966</td><td>R3726</td><td>M0488</td></tr>
+<tr data-formacion><td>9</td><td>NM83B</td><td>0491/0490</td><td>M0491</td><td>R3727</td><td>N1967</td><td>N1968</td><td>PR3728</td><td>N1969</td><td>N1970</td><td>R3729</td><td>M0490</td></tr>
+<tr data-formacion><td>9</td><td>NM83B</td><td>0493/0492</td><td>M0493</td><td>R3730</td><td>N1971</td><td>N1972</td><td>PR3731</td><td>N1973</td><td>N1974</td><td>R3732</td><td>M0492</td></tr>
+<tr data-formacion><td>9</td><td>NM83B</td><td>0499/0498</td><td>M0499</td><td>R3739</td><td>N1983</td><td>N1984</td><td>PR3740</td><td>N1985</td><td>N1986</td><td>R3741</td><td>M0498</td></tr>
+<tr data-formacion><td>9</td><td>NM83B</td><td>0501/0500</td><td>M0501</td><td>R3742</td><td>N1987</td><td>N1988</td><td>PR3743</td><td>N1989</td><td>N1990</td><td>R3744</td><td>M0500</td></tr>
+<tr data-formacion><td>9</td><td>NM83B</td><td>0503/0502</td><td>M0503</td><td>R3745</td><td>N1991</td><td>N1992</td><td>PR3746</td><td>N1993</td><td>N1994</td><td>R3747</td><td>M0502</td></tr>
+<tr data-formacion><td>9</td><td>NM83B</td><td>0505/0504</td><td>M0505</td><td>R3748</td><td>N1995</td><td>N1996</td><td>PR3749</td><td>N1997</td><td>N1998</td><td>R3750</td><td>M0504</td></tr>
+<tr data-formacion><td>9</td><td>NM83B</td><td>0507/0506</td><td>M0507</td><td>R3751</td><td>N1999</td><td>N2000</td><td>PR3752</td><td>N2001</td><td>N2002</td><td>R3753</td><td>M0506</td></tr>
+<tr data-formacion><td>9</td><td>NM83B</td><td>0510/0482</td><td>M0510</td><td>R3715</td><td>N1951</td><td>N1952</td><td>PR3716</td><td>N1953</td><td>N1954</td><td>R3717</td><td>M0482</td></tr>
+<tr data-formacion><td>9</td><td>NM83B</td><td>0513/0512</td><td>M0513</td><td>R3760</td><td>N2011</td><td>N2012</td><td>PR3761</td><td>N2013</td><td>N2014</td><td>R3762</td><td>M0512</td></tr>
+<tr data-formacion><td>9</td><td>NM83B</td><td>0515/0514</td><td>M0515</td><td>R3763</td><td>N2015</td><td>N2016</td><td>PR3764</td><td>N2017</td><td>N2018</td><td>R3765</td><td>M0514</td></tr>
+<tr data-formacion><td>9</td><td>NM83B</td><td>0517/0516</td><td>M0517</td><td>R3766</td><td>N2019</td><td>N2020</td><td>PR3767</td><td>N2021</td><td>N2022</td><td>R3696</td><td>M0516</td></tr>
+<tr data-formacion><td>9</td><td>NM83B</td><td>0519/0518</td><td>M0519</td><td>R3769</td><td>N2026</td><td>N2025</td><td>PR3352</td><td>N2024</td><td>N2023</td><td>R3768</td><td>M0518</td></tr>
+</tbody></table></div></section><section class="formacion-section mb-5" data-formacion-section aria-labelledby="titulo-formacion-la"><h2 id="titulo-formacion-la" class="h4 mb-3">Línea A</h2><div class="table-responsive formacion-scroll" tabindex="0" role="region" aria-label="Tabla de formación LA"><table class="table table-striped table-bordered formacion-table mb-0" data-sheet="LA"><thead><tr><th scope="col">Linea</th><th scope="col">Modelo</th><th scope="col">Matricula</th><th scope="col">FM1</th><th scope="col">FR1</th><th scope="col">FN1</th><th scope="col">FNI1ooFN2</th><th scope="col">FPR</th><th scope="col">FNI2ooFM2</th><th scope="col">FN2</th><th scope="col">FR2</th><th scope="col">FM2</th></tr></thead><tbody>
+<tr data-formacion><td>A</td><td>FM-86</td><td>0001/0002</td><td>FM0001</td><td>FR3001</td><td>FN1001</td><td>FN1002</td><td>FPR3002</td><td>FM0002</td><td>-------</td><td>-------</td><td>-------</td></tr>
+<tr data-formacion><td>A</td><td>FM-86</td><td>0003/0028</td><td>FM0003</td><td>FR3027</td><td>FN1027</td><td>FN1028</td><td>FPR3028</td><td>FM0028</td><td>-------</td><td>-------</td><td>-------</td></tr>
+<tr data-formacion><td>A</td><td>FM-86</td><td>0007/0008</td><td>FM0007</td><td>FR3007</td><td>FN1007</td><td>FN1008</td><td>FPR3008</td><td>FN1035</td><td>FN1036</td><td>FR3035</td><td>FM0008</td></tr>
+<tr data-formacion><td>A</td><td>FM-86</td><td>0009/0010</td><td>FM0009</td><td>FR3009</td><td>FN1009</td><td>FN1010</td><td>FPR3010</td><td>FN1031</td><td>FN1032</td><td>FR3031</td><td>FM0010</td></tr>
+<tr data-formacion><td>A</td><td>FM-86</td><td>0015/0016</td><td>FM0015</td><td>FR3021</td><td>FN1021</td><td>FN1022</td><td>FPR3016</td><td>FN1015</td><td>FN1016</td><td>FR3015</td><td>FM0016</td></tr>
+<tr data-formacion><td>A</td><td>FM-86</td><td>0017/0018</td><td>FM0017</td><td>FR3017</td><td>FN1017</td><td>FN1018</td><td>FPR3018</td><td>FN1003</td><td>FN1004</td><td>FR3003</td><td>FM0018</td></tr>
+<tr data-formacion><td>A</td><td>FM-86</td><td>0019/0020</td><td>FM0019</td><td>FR3037</td><td>FN1037</td><td>FN1038</td><td>FPR3020</td><td>FN1019</td><td>FN1020</td><td>FR3019</td><td>FM0020</td></tr>
+<tr data-formacion><td>A</td><td>FM-86</td><td>0023/0024</td><td>FM0023</td><td>FR3023</td><td>FN1023</td><td>FN1024</td><td>FPR3024</td><td>FN1005</td><td>FN1006</td><td>FR3005</td><td>FM0024</td></tr>
+<tr data-formacion><td>A</td><td>FM-86</td><td>0025/0014</td><td>FM0025</td><td>FR3025</td><td>FN1025</td><td>FN1026</td><td>FPR3026</td><td>FN1067</td><td>FN1068</td><td>FR3032</td><td>FM0014</td></tr>
+<tr data-formacion><td>A</td><td>FM-86</td><td>0029/0026</td><td>FM0029</td><td>FR3029</td><td>FN1029</td><td>FN1030</td><td>FPR3030</td><td>FN1069</td><td>FN1070</td><td>FR3022</td><td>FM0026</td></tr>
+<tr data-formacion><td>A</td><td>FM-86</td><td>0033/0034</td><td>FM0033</td><td>FR3033</td><td>FN1033</td><td>FN1034</td><td>FPR3034</td><td>FN1073</td><td>FN1074</td><td>FR3036</td><td>FM0034</td></tr>
+<tr data-formacion><td>A</td><td>FM-86</td><td>0035/0012</td><td>FM0035</td><td>FR3011</td><td>FN1011</td><td>FN1012</td><td>FPR3012</td><td>FN1013</td><td>FN1014</td><td>FR3013</td><td>FM0012</td></tr>
+<tr data-formacion><td>A</td><td>FM-86</td><td>0039/0030</td><td>FM0039</td><td>FR3039</td><td>FN1039</td><td>FN1040</td><td>FPR3040</td><td>FN1071</td><td>FN1072</td><td>FR3014</td><td>FM0030</td></tr>
+<tr data-formacion><td>A</td><td>FM-95A</td><td>0041/0042</td><td>FM0041</td><td>FR3041</td><td>FN1041</td><td>FN1042</td><td>FPR3042</td><td>FM0042</td><td>-------</td><td>-------</td><td>-------</td></tr>
+<tr data-formacion><td>A</td><td>FM-95A</td><td>0043/0044</td><td>FM0043</td><td>FR3043</td><td>FN1043</td><td>FN1044</td><td>FPR3044</td><td>FM0044</td><td>-------</td><td>-------</td><td>-------</td></tr>
+<tr data-formacion><td>A</td><td>FM-95A</td><td>0045/0046</td><td>FM0045</td><td>FR3045</td><td>FN1045</td><td>FN1046</td><td>FPR3046</td><td>FM0046</td><td>-------</td><td>-------</td><td>-------</td></tr>
+<tr data-formacion><td>A</td><td>FM-95A</td><td>0049/0050</td><td>FM0049</td><td>FR3049</td><td>FN1049</td><td>FN1050</td><td>FPR3050</td><td>FM0050</td><td>-------</td><td>-------</td><td>-------</td></tr>
+<tr data-formacion><td>A</td><td>FM-95A</td><td>0053/0054</td><td>FM0053</td><td>FR3053</td><td>FN1053</td><td>FN1054</td><td>FPR3054</td><td>FN1047</td><td>FN1048</td><td>FR3047</td><td>FM0054</td></tr>
+<tr data-formacion><td>A</td><td>FM-95A</td><td>0055/0056</td><td>FM0055</td><td>FR3055</td><td>FN1055</td><td>FN1056</td><td>FPR3056</td><td>FM0056</td><td>-------</td><td>-------</td><td>-------</td></tr>
+<tr data-formacion><td>A</td><td>FM-95A</td><td>0057/0058</td><td>FM0057</td><td>FR3057</td><td>FN1057</td><td>FN1058</td><td>FPR3058</td><td>FN1051</td><td>FN1052</td><td>FR3051</td><td>FM0058</td></tr>
+<tr data-formacion><td>A</td><td>FM-95A</td><td>0059/0060</td><td>FM0059</td><td>FR3059</td><td>FN1059</td><td>FN1060</td><td>FPR3060</td><td>FM0060</td><td>-------</td><td>-------</td><td>-------</td></tr>
+<tr data-formacion><td>A</td><td>FM-95A</td><td>0061/0062</td><td>FM0061</td><td>FR3061</td><td>FN1061</td><td>FN1062</td><td>FPR3062</td><td>FM0062</td><td>-------</td><td>-------</td><td>-------</td></tr>
+<tr data-formacion><td>A</td><td>FM-95A</td><td>0063/0064</td><td>FM0063</td><td>FR3063</td><td>FN1063</td><td>FN1064</td><td>FPR3064</td><td>FM0064</td><td>-------</td><td>-------</td><td>-------</td></tr>
+<tr data-formacion><td>A</td><td>FM-95A</td><td>0065/0066</td><td>FM0065</td><td>FR3065</td><td>FN1065</td><td>FN1066</td><td>FPR3066</td><td>FM0066</td><td>-------</td><td>-------</td><td>-------</td></tr>
+<tr data-formacion><td>A</td><td>FE-07</td><td>0067/0068</td><td>FM0067</td><td>FR3067</td><td>FN1085</td><td>FN1086</td><td>FPR3068</td><td>FN1087</td><td>FN1088</td><td>FR3069</td><td>FM0068</td></tr>
+<tr data-formacion><td>A</td><td>FE-07</td><td>0069/0070</td><td>FM0069</td><td>FR3070</td><td>FN1089</td><td>FN1090</td><td>FPR3071</td><td>FN1091</td><td>FN1092</td><td>FR3072</td><td>FM0070</td></tr>
+<tr data-formacion><td>A</td><td>FE-07</td><td>0071/0072</td><td>FM0071</td><td>FR3073</td><td>FN1093</td><td>FN1094</td><td>FPR3074</td><td>FN1095</td><td>FN1096</td><td>FR3075</td><td>FM0072</td></tr>
+<tr data-formacion><td>A</td><td>FE-07</td><td>0073/0074</td><td>FM0073</td><td>FR3076</td><td>FN1097</td><td>FN1098</td><td>FPR3077</td><td>FN1099</td><td>FN1100</td><td>FR3078</td><td>FM0074</td></tr>
+<tr data-formacion><td>A</td><td>FE-07</td><td>0075/0076</td><td>FM0075</td><td>FR3079</td><td>FN1101</td><td>FN1102</td><td>FPR3080</td><td>FN1103</td><td>FN1104</td><td>FR3081</td><td>FM0076</td></tr>
+<tr data-formacion><td>A</td><td>FE-07</td><td>0077/0078</td><td>FM0077</td><td>FR3082</td><td>FN1105</td><td>FN1106</td><td>FPR3083</td><td>FN1107</td><td>FN1108</td><td>FR3084</td><td>FM0078</td></tr>
+<tr data-formacion><td>A</td><td>FE-07</td><td>0079/0080</td><td>FM0079</td><td>FR3085</td><td>FN1109</td><td>FN1110</td><td>FPR3086</td><td>FN1111</td><td>FN1112</td><td>FR3087</td><td>FM0080</td></tr>
+<tr data-formacion><td>A</td><td>FE-07</td><td>0081/0082</td><td>FM0081</td><td>FR3088</td><td>FN1113</td><td>FN1114</td><td>FPR3089</td><td>FN1115</td><td>FN1116</td><td>FR3090</td><td>FM0082</td></tr>
+<tr data-formacion><td>A</td><td>FE-07</td><td>0083/0084</td><td>FM0083</td><td>FR3091</td><td>FN1117</td><td>FN1118</td><td>FPR3092</td><td>FN1119</td><td>FN1120</td><td>FR3093</td><td>FM0084</td></tr>
+</tbody></table></div></section><section class="formacion-section mb-5" data-formacion-section aria-labelledby="titulo-formacion-lb"><h2 id="titulo-formacion-lb" class="h4 mb-3">Línea B</h2><div class="table-responsive formacion-scroll" tabindex="0" role="region" aria-label="Tabla de formación LB"><table class="table table-striped table-bordered formacion-table mb-0" data-sheet="LB"><thead><tr><th scope="col">Linea</th><th scope="col">Modelo</th><th scope="col">Matricula</th><th scope="col">M1</th><th scope="col">R1</th><th scope="col">N1</th><th scope="col">NI1</th><th scope="col">PR</th><th scope="col">NI2</th><th scope="col">N2</th><th scope="col">R2</th><th scope="col">M2</th></tr></thead><tbody>
+<tr data-formacion><td>B</td><td>MP68M14</td><td>0002/0001</td><td>M0001</td><td>R3034</td><td>N1127</td><td>N1024</td><td>PR3105</td><td>N1106</td><td>N1130</td><td>R3012</td><td>M0002</td></tr>
+<tr data-formacion><td>B</td><td>MP68M14</td><td>0005/0070</td><td>M0005</td><td>R3043</td><td>N1010</td><td>N1054</td><td>PR3018</td><td>N1228</td><td>N1018</td><td>R3003</td><td>M0070</td></tr>
+<tr data-formacion><td>B</td><td>MP68M14</td><td>0009/0051</td><td>M0009</td><td>R3097</td><td>N1219</td><td>N1157</td><td>PR3139</td><td>N1226</td><td>N1207</td><td>R3071</td><td>M0051</td></tr>
+<tr data-formacion><td>B</td><td>MP68M14</td><td>0013/0068</td><td>M0013</td><td>R3121</td><td>N1141</td><td>N1101</td><td>PR3009</td><td>N1166</td><td>N1221</td><td>R3010</td><td>M0068</td></tr>
+<tr data-formacion><td>B</td><td>MP68M14</td><td>0016/0083</td><td>M0016</td><td>R3001</td><td>N1218</td><td>N1188</td><td>PR3024</td><td>N1205</td><td>N1238</td><td>R3002</td><td>M0083</td></tr>
+<tr data-formacion><td>B</td><td>MP68M14</td><td>0018/0061</td><td>M0018</td><td>R3169</td><td>N1153</td><td>N1086</td><td>PR3100</td><td>N1187</td><td>N1074</td><td>R3068</td><td>M0061</td></tr>
+<tr data-formacion><td>B</td><td>MP68M14</td><td>0019/0015</td><td>M0019</td><td>R3038</td><td>N1094</td><td>N1032</td><td>PR3101</td><td>N1191</td><td>N1049</td><td>R3060</td><td>M0015</td></tr>
+<tr data-formacion><td>B</td><td>MP68M14</td><td>0024/0056</td><td>M0024</td><td>R3007</td><td>N1112</td><td>N1185</td><td>PR3168</td><td>N1102</td><td>N1215</td><td>R3050</td><td>M0056</td></tr>
+<tr data-formacion><td>B</td><td>MP68M14</td><td>0031/0026</td><td>M0031</td><td>R3074</td><td>N1050</td><td>N1128</td><td>PR3122</td><td>N1131</td><td>N1237</td><td>R3019</td><td>M0026</td></tr>
+<tr data-formacion><td>B</td><td>MP68M14</td><td>0036/0086</td><td>M0036</td><td>R3147</td><td>N1031</td><td>N1029</td><td>PR3052</td><td>N1195</td><td>N1154</td><td>R3054</td><td>M0086</td></tr>
+<tr data-formacion><td>B</td><td>MP68M14</td><td>0037/0104</td><td>M0037</td><td>R3072</td><td>N1100</td><td>N1085</td><td>PR3029</td><td>N1042</td><td>N1129</td><td>R3125</td><td>M0104</td></tr>
+<tr data-formacion><td>B</td><td>MP68M14</td><td>0040/0010</td><td>M0040</td><td>R3111</td><td>N1149</td><td>N1044</td><td>PR3154</td><td>N1041</td><td>N1037</td><td>R3095</td><td>M0010</td></tr>
+<tr data-formacion><td>B</td><td>MP68M14</td><td>0041/0107</td><td>M0041</td><td>R3141</td><td>N1005</td><td>N1103</td><td>PR3094</td><td>N1051</td><td>N1064</td><td>R3153</td><td>M0107</td></tr>
+<tr data-formacion><td>B</td><td>MP68M14</td><td>0046/0078</td><td>M0046</td><td>R3037</td><td>N1231</td><td>N1152</td><td>PR3142</td><td>N1075</td><td>N1030</td><td>R3057</td><td>M0078</td></tr>
+<tr data-formacion><td>B</td><td>MP68M14</td><td>0047/0008</td><td>M0047</td><td>R3136</td><td>N1159</td><td>N1067</td><td>PR3155</td><td>N1123</td><td>N1170</td><td>R3160</td><td>M0008</td></tr>
+<tr data-formacion><td>B</td><td>MP68M14</td><td>0049/0082</td><td>M0049</td><td>R3170</td><td>N1169</td><td>N1156</td><td>PR3044</td><td>N1088</td><td>N1214</td><td>R3132</td><td>M0082</td></tr>
+<tr data-formacion><td>B</td><td>MP68M14</td><td>0053/0044</td><td>M0053</td><td>R3055</td><td>N1163</td><td>N1172</td><td>PR3113</td><td>N1070</td><td>N1132</td><td>R3042</td><td>M0044</td></tr>
+<tr data-formacion><td>B</td><td>MP68M14</td><td>0064/0006</td><td>M0064</td><td>R3013</td><td>N1077</td><td>N1150</td><td>PR3026</td><td>N1208</td><td>N1108</td><td>R3133</td><td>M0006</td></tr>
+<tr data-formacion><td>B</td><td>MP68M14</td><td>0065/0017</td><td>M0065</td><td>R3092</td><td>N1033</td><td>N1014</td><td>PR3167</td><td>N1234</td><td>N1105</td><td>R3005</td><td>M0017</td></tr>
+<tr data-formacion><td>B</td><td>MP68M14</td><td>0069/0105</td><td>M0069</td><td>R3033</td><td>N1023</td><td>N1161</td><td>PR3023</td><td>N1146</td><td>N1015</td><td>R3166</td><td>M0105</td></tr>
+<tr data-formacion><td>B</td><td>MP68M14</td><td>0073/0035</td><td>M0073</td><td>R3134</td><td>N1052</td><td>N1175</td><td>PR3131</td><td>N1047</td><td>N1089</td><td>R3011</td><td>M0035</td></tr>
+<tr data-formacion><td>B</td><td>MP68M14</td><td>0074/0043</td><td>M0074</td><td>R3064</td><td>N1197</td><td>N1179</td><td>PR3179</td><td>N1120</td><td>N1227</td><td>R3152</td><td>M0043</td></tr>
+<tr data-formacion><td>B</td><td>MP68M14</td><td>0079/0117</td><td>M0079</td><td>R3172</td><td>N1171</td><td>N1144</td><td>PR3079</td><td>N1139</td><td>N1168</td><td>R3069</td><td>M0117</td></tr>
+<tr data-formacion><td>B</td><td>MP68M14</td><td>0080/0007</td><td>M0080</td><td>R3049</td><td>N1107</td><td>N1035</td><td>PR3149</td><td>N1043</td><td>N1125</td><td>R3087</td><td>M0007</td></tr>
+<tr data-formacion><td>B</td><td>MP68M14</td><td>0087/0033</td><td>M0087</td><td>R3157</td><td>N1229</td><td>N1073</td><td>PR3078</td><td>N1001</td><td>N1174</td><td>R3084</td><td>M0033</td></tr>
+<tr data-formacion><td>B</td><td>MP68M14</td><td>0094/0112</td><td>M0094</td><td>R3148</td><td>N1012</td><td>N1034</td><td>PR3076</td><td>N1126</td><td>N1230</td><td>R3066</td><td>M0112</td></tr>
+<tr data-formacion><td>B</td><td>MP68M14</td><td>0095/0048</td><td>M0095</td><td>R3126</td><td>N1007</td><td>N1147</td><td>PR3008</td><td>N1046</td><td>N1022</td><td>R3046</td><td>M0048</td></tr>
+<tr data-formacion><td>B</td><td>MP68M14</td><td>0096/0038</td><td>M0096</td><td>R3165</td><td>N1003</td><td>N1097</td><td>PR3135</td><td>N1211</td><td>N1206</td><td>R3130</td><td>M0038</td></tr>
+<tr data-formacion><td>B</td><td>MP68M14</td><td>0098/0057</td><td>M0098</td><td>R3146</td><td>N1167</td><td>N1145</td><td>PR3104</td><td>N1099</td><td>N1236</td><td>R3027</td><td>M0057</td></tr>
+<tr data-formacion><td>B</td><td>MP68R96</td><td>0100/0034</td><td>M0100</td><td>R3163</td><td>N1062</td><td>N1083</td><td>PR3108</td><td>N1148</td><td>N1048</td><td>R3158</td><td>M0034</td></tr>
+<tr data-formacion><td>B</td><td>MP68M14</td><td>0103/0118</td><td>M0103</td><td>R3081</td><td>N1008</td><td>N1027</td><td>PR3061</td><td>N1057</td><td>N1183</td><td>R3085</td><td>M0118</td></tr>
+<tr data-formacion><td>B</td><td>MP68M14</td><td>0106/0020</td><td>M0106</td><td>R3083</td><td>N1223</td><td>N1124</td><td>PR3173</td><td>N1135</td><td>N1201</td><td>R3119</td><td>M0020</td></tr>
+<tr data-formacion><td>B</td><td>MP68M14</td><td>0111/0054</td><td>M0111</td><td>R3144</td><td>N1084</td><td>N1115</td><td>PR3075</td><td>N1190</td><td>N1096</td><td>R3171</td><td>M0054</td></tr>
+<tr data-formacion><td>B</td><td>MP68M14</td><td>0115/0110</td><td>M0115</td><td>R3031</td><td>N1222</td><td>N1198</td><td>PR3032</td><td>N1134</td><td>N1068</td><td>R3137</td><td>M0110</td></tr>
+<tr data-formacion><td>B</td><td>MP68M14</td><td>0199/0004</td><td>M0199</td><td>R3056</td><td>N1194</td><td>N1202</td><td>PR3114</td><td>N1072</td><td>N1082</td><td>R3156</td><td>M0004</td></tr>
+</tbody></table></div></section><section class="formacion-section mb-5" data-formacion-section aria-labelledby="titulo-formacion-l12"><h2 id="titulo-formacion-l12" class="h4 mb-3">Línea 12</h2><div class="table-responsive formacion-scroll" tabindex="0" role="region" aria-label="Tabla de formación L12"><table class="table table-striped table-bordered formacion-table mb-0" data-sheet="L12"><thead><tr><th scope="col">Linea</th><th scope="col">Modelo</th><th scope="col">Matricula</th><th scope="col">FR1</th><th scope="col">FN1</th><th scope="col">FN2</th><th scope="col">FN3</th><th scope="col">FN4</th><th scope="col">FN5</th><th scope="col">FR2</th></tr></thead><tbody>
+<tr data-formacion><td>12</td><td>FE-10</td><td>0001/0002</td><td>FR0001</td><td>FN1001</td><td>FN2001</td><td>FN3001</td><td>FN2002</td><td>FN1002</td><td>FR0002</td></tr>
+<tr data-formacion><td>12</td><td>FE-10</td><td>0003/0004</td><td>FR0003</td><td>FN1003</td><td>FN2003</td><td>FN3002</td><td>FN2004</td><td>FN1004</td><td>FR0004</td></tr>
+<tr data-formacion><td>12</td><td>FE-10</td><td>0005/0006</td><td>FR0005</td><td>FN1005</td><td>FN2005</td><td>FN3003</td><td>FN2006</td><td>FN1006</td><td>FR0006</td></tr>
+<tr data-formacion><td>12</td><td>FE-10</td><td>0007/0008</td><td>FR0007</td><td>FN1007</td><td>FN2007</td><td>FN3004</td><td>FN2008</td><td>FN1008</td><td>FR0008</td></tr>
+<tr data-formacion><td>12</td><td>FE-10</td><td>0009/0010</td><td>FR0009</td><td>FN1009</td><td>FN2009</td><td>FN3005</td><td>FN2010</td><td>FN1010</td><td>FR0010</td></tr>
+<tr data-formacion><td>12</td><td>FE-10</td><td>0011/0012</td><td>FR0011</td><td>FN1011</td><td>FN2011</td><td>FN3006</td><td>FN2012</td><td>FN1012</td><td>FR0012</td></tr>
+<tr data-formacion><td>12</td><td>FE-10</td><td>0013/0014</td><td>FR0013</td><td>FN1013</td><td>FN2013</td><td>FN3007</td><td>FN2014</td><td>FN1014</td><td>FR0014</td></tr>
+<tr data-formacion><td>12</td><td>FE-10</td><td>0015/0016</td><td>FR0015</td><td>FN1015</td><td>FN2015</td><td>FN3008</td><td>FN2016</td><td>FN1016</td><td>FR0016</td></tr>
+<tr data-formacion><td>12</td><td>FE-10</td><td>0017/0018</td><td>FR0017</td><td>FN1017</td><td>FN2017</td><td>FN3009</td><td>FN2018</td><td>FN1018</td><td>FR0018</td></tr>
+<tr data-formacion><td>12</td><td>FE-10</td><td>0019/0020</td><td>FR0019</td><td>FN1019</td><td>FN2019</td><td>FN3010</td><td>FN2020</td><td>FN1020</td><td>FR0020</td></tr>
+<tr data-formacion><td>12</td><td>FE-10</td><td>0021/0022</td><td>FR0021</td><td>FN1021</td><td>FN2021</td><td>FN3011</td><td>FN2022</td><td>FN1022</td><td>FR0022</td></tr>
+<tr data-formacion><td>12</td><td>FE-10</td><td>0023/0024</td><td>FR0023</td><td>FN1023</td><td>FN2023</td><td>FN3012</td><td>FN2024</td><td>FN1024</td><td>FR0024</td></tr>
+<tr data-formacion><td>12</td><td>FE-10</td><td>0025/0026</td><td>FR0025</td><td>FN1025</td><td>FN2025</td><td>FN3013</td><td>FN2026</td><td>FN1026</td><td>FR0026</td></tr>
+<tr data-formacion><td>12</td><td>FE-10</td><td>0027/0028</td><td>FR0027</td><td>FN1027</td><td>FN2027</td><td>FN3014</td><td>FN2028</td><td>FN1028</td><td>FR0028</td></tr>
+<tr data-formacion><td>12</td><td>FE-10</td><td>0029/0030</td><td>FR0029</td><td>FN1029</td><td>FN2029</td><td>FN3015</td><td>FN2030</td><td>FN1030</td><td>FR0030</td></tr>
+<tr data-formacion><td>12</td><td>FE-10</td><td>0031/0032</td><td>FR0031</td><td>FN1031</td><td>FN2031</td><td>FN3016</td><td>FN2032</td><td>FN1032</td><td>FR0032</td></tr>
+<tr data-formacion><td>12</td><td>FE-10</td><td>0033/0034</td><td>FR0033</td><td>FN1033</td><td>FN2033</td><td>FN3017</td><td>FN2034</td><td>FN1034</td><td>FR0034</td></tr>
+<tr data-formacion><td>12</td><td>FE-10</td><td>0035/0036</td><td>FR0035</td><td>FN1035</td><td>FN2035</td><td>FN3018</td><td>FN2036</td><td>FN1036</td><td>FR0036</td></tr>
+<tr data-formacion><td>12</td><td>FE-10</td><td>0037/0038</td><td>FR0037</td><td>FN1037</td><td>FN2037</td><td>FN3019</td><td>FN2038</td><td>FN1038</td><td>FR0038</td></tr>
+<tr data-formacion><td>12</td><td>FE-10</td><td>0039/0040</td><td>FR0039</td><td>FN1039</td><td>FN2039</td><td>FN3020</td><td>FN2040</td><td>FN1040</td><td>FR0040</td></tr>
+<tr data-formacion><td>12</td><td>FE-10</td><td>0041/0042</td><td>FR0041</td><td>FN1041</td><td>FN2041</td><td>FN3021</td><td>FN2042</td><td>FN1042</td><td>FR0042</td></tr>
+<tr data-formacion><td>12</td><td>FE-10</td><td>0043/0044</td><td>FR0043</td><td>FN1043</td><td>FN2043</td><td>FN3022</td><td>FN2044</td><td>FN1044</td><td>FR0044</td></tr>
+<tr data-formacion><td>12</td><td>FE-10</td><td>0045/0046</td><td>FR0045</td><td>FN1045</td><td>FN2045</td><td>FN3023</td><td>FN2046</td><td>FN1046</td><td>FR0046</td></tr>
+<tr data-formacion><td>12</td><td>FE-10</td><td>0047/0048</td><td>FR0047</td><td>FN1047</td><td>FN2047</td><td>FN3024</td><td>FN2048</td><td>FN1048</td><td>FR0048</td></tr>
+<tr data-formacion><td>12</td><td>FE-10</td><td>0049/0050</td><td>FR0049</td><td>FN1049</td><td>FN2049</td><td>FN3025</td><td>FN2050</td><td>FN1050</td><td>FR0050</td></tr>
+<tr data-formacion><td>12</td><td>FE-10</td><td>0051/0052</td><td>FR0051</td><td>FN1051</td><td>FN2051</td><td>FN3026</td><td>FN2052</td><td>FN1052</td><td>FR0052</td></tr>
+<tr data-formacion><td>12</td><td>FE-10</td><td>0053/0054</td><td>FR0053</td><td>FN1053</td><td>FN2053</td><td>FN3027</td><td>FN2054</td><td>FN1054</td><td>FR0054</td></tr>
+<tr data-formacion><td>12</td><td>FE-10</td><td>0055/0056</td><td>FR0055</td><td>FN1055</td><td>FN2055</td><td>FN3028</td><td>FN2056</td><td>FN1056</td><td>FR0056</td></tr>
+<tr data-formacion><td>12</td><td>FE-10</td><td>0057/0058</td><td>FR0057</td><td>FN1057</td><td>FN2057</td><td>FN3029</td><td>FN2058</td><td>FN1058</td><td>FR0058</td></tr>
+<tr data-formacion><td>12</td><td>FE-10</td><td>0059/0060</td><td>FR0059</td><td>FN1059</td><td>FN2059</td><td>FN3030</td><td>FN2060</td><td>FN1060</td><td>FR0060</td></tr>
+</tbody></table></div></section></div>
+<p id="sinFormacion" class="text-center py-4" hidden>No se encontraron formaciones.</p>
+</div></main>
 
   <footer class="container-fluid bg-white border-top py-4">
     <div class="container">

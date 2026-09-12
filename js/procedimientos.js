@@ -19,4 +19,3 @@ function filterProcedures() {
 procedureInput.addEventListener("input",filterProcedures);
 procedureClear.addEventListener("click",()=>{procedureInput.value="";filterProcedures();procedureInput.focus();});
 filterProcedures();
-

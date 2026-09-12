@@ -9,7 +9,7 @@ Sitio de consulta con larines, fracciones de vuelta y procedimientos, adaptado p
 - **Fracciones de vuelta:** tablas por línea del Metro con acceso directo desde el menú.
 - **Procedimientos:** listado de documentos PDF con buscador y enlaces para abrirlos.
 
-Formación de trenes está temporalmente deshabilitada.
+Formación de trenes incluye tablas por línea y búsqueda por motriz o carro.
 
 ## Uso
 
