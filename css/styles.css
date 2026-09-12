@@ -571,3 +571,25 @@ body > header .navbar-toggler:focus-visible {
   right: auto;
   transform: translateX(-50%);
 }
+
+/* Marca móvil centrada respecto a toda la barra, independiente de la hamburguesa. */
+.navbar-mobile-logo { display: none; }
+@media (max-width: 767.98px) {
+  body > header .navbar {
+    min-height: 3rem;
+    padding-block: .4rem !important;
+  }
+  body > header .navbar > .container-fluid { min-height: 2.2rem; }
+  body > header .navbar-brand {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+  }
+  .navbar-brand-text { display: none; }
+  .navbar-mobile-logo { display: block; width: 32px; height: 32px; object-fit: contain; }
+  body > header .navbar-toggler { margin-left: auto; }
+}
