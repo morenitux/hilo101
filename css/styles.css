@@ -16,12 +16,6 @@ body {
   border: 1px solid #dfe5ec;
   border-radius: .75rem;
 }
-.skip-link:focus {
-  display: block;
-  padding: 1rem;
-  background: #fff;
-}
-
 /* Limita el panel lateral al ancho disponible, incluso en pantallas pequeñas. */
 #menuPrincipal {
   --bs-offcanvas-width: 320px;
@@ -99,7 +93,7 @@ body {
 .navbar .nav-link.active:focus-visible {
   color: var(--bs-primary);
   background-color: var(--bs-primary-bg-subtle);
-  font-weight: 600;
+  font-weight: 400;
   text-decoration: underline;
   text-underline-offset: .3em;
   text-decoration-thickness: 2px;
@@ -474,8 +468,6 @@ body > header .navbar-toggler-icon { width: 1.5rem; height: 1.5rem; }
 #buscarProcedimiento {
   scroll-margin-top: calc(var(--site-header-height) + 16px);
 }
-.skip-link:focus { position: fixed; top: 0; left: 0; z-index: 1090; }
-
 .larin-match {
   background-color: #fff2a8;
   color: inherit;
@@ -532,7 +524,7 @@ body > header .navbar-toggler-icon { width: 1.5rem; height: 1.5rem; }
   --bs-dropdown-link-active-color: #112c43;
   --bs-dropdown-link-active-bg: #e3ebf2;
 }
-.navbar .dropdown-item.active { font-weight: 600; }
+.navbar .dropdown-item.active { font-weight: 400; }
 .navbar .nav-link.disabled,
 .navbar .nav-link.disabled:hover {
   color: #6c757d;
@@ -592,4 +584,37 @@ body > header .navbar-toggler:focus-visible {
   .navbar-brand-text { display: none; }
   .navbar-mobile-logo { display: block; width: 32px; height: 32px; object-fit: contain; }
   body > header .navbar-toggler { margin-left: auto; }
+}
+
+/* En escritorio, icono seguido del nombre del sitio. */
+@media (min-width: 768px) {
+  body > header .navbar-brand {
+    display: inline-flex;
+    align-items: center;
+    gap: .625rem;
+  }
+  .navbar-mobile-logo {
+    display: block;
+    flex-shrink: 0;
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+  }
+  .navbar-brand-text { font-weight: 700; }
+}
+
+/* Orden explícito de la marca únicamente en escritorio. */
+@media (min-width: 768px) {
+  body > header .navbar-brand { flex-direction: row; }
+  body > header .navbar-brand .navbar-mobile-logo { order: 0; }
+  body > header .navbar-brand .navbar-brand-text { order: 1; }
+}
+
+/* Tipografía uniforme para enlaces y botones del menú. */
+.navbar .nav-link,
+.navbar .dropdown-item {
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
 }

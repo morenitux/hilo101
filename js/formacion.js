@@ -6,12 +6,16 @@ const formationSections=Array.from(document.querySelectorAll("[data-formacion-se
 }));
 const formationTotal=formationSections.reduce((sum,section)=>sum+section.rows.length,0);
 function filterFormations(){
- const terms=SiteSearch.terms(formationInput.value);
+ // Las comas separan alternativas; las palabras de cada alternativa se buscan juntas.
+ const alternatives=formationInput.value.split(",")
+  .map(query=>SiteSearch.terms(query))
+  .filter(group=>group.length>0);
+ const terms=[...new Set(alternatives.flat())];
  let total=0;
  formationSections.forEach(({section,rows})=>{
   let count=0;
   rows.forEach(({row,text})=>{
-   row.hidden=!SiteSearch.matches(text,terms);
+   row.hidden=alternatives.length>0 && !alternatives.some(group=>SiteSearch.matches(text,group));
    SiteSearch.highlight(row,terms);
    if(!row.hidden)count++;
   });
