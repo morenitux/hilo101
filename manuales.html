@@ -33,6 +33,8 @@
               <li class="nav-item dropdown"><button class="nav-link dropdown-toggle" type="button" id="menuFracciones" data-bs-toggle="dropdown" aria-expanded="false" data-page="fracciones-de-vuelta">Fracciones de vuelta</button><ul class="dropdown-menu" aria-labelledby="menuFracciones"><li><a class="dropdown-item" href="fracciones_vuelta.html#linea1">Línea 1</a></li><li><a class="dropdown-item" href="fracciones_vuelta.html#linea2">Línea 2</a></li><li><a class="dropdown-item" href="fracciones_vuelta.html#linea3">Línea 3</a></li><li><a class="dropdown-item" href="fracciones_vuelta.html#linea4">Línea 4</a></li><li><a class="dropdown-item" href="fracciones_vuelta.html#linea5">Línea 5</a></li><li><a class="dropdown-item" href="fracciones_vuelta.html#linea6">Línea 6</a></li><li><a class="dropdown-item" href="fracciones_vuelta.html#linea7">Línea 7</a></li><li><a class="dropdown-item" href="fracciones_vuelta.html#linea8">Línea 8</a></li><li><a class="dropdown-item" href="fracciones_vuelta.html#linea9">Línea 9</a></li><li><a class="dropdown-item" href="fracciones_vuelta.html#lineaA">Línea A</a></li><li><a class="dropdown-item" href="fracciones_vuelta.html#lineaB">Línea B</a></li><li><a class="dropdown-item" href="fracciones_vuelta.html#linea12">Línea 12</a></li></ul></li>
               <li class="nav-item"><a class="nav-link active" aria-current="page" href="manuales.html" data-page="manuales">Manuales</a></li>
               <li class="nav-item"><a class="nav-link" href="procedimientos.html" data-page="procedimientos">Procedimientos</a></li>
+              <li class="nav-item"><a class="nav-link" href="otros_recursos.html" data-page="otros-recursos">Otros recursos</a></li>
+
               
               
             </ul>
@@ -43,383 +45,1309 @@
   </header>
 
   <main id="contenido" class="flex-grow-1 bg-white" tabindex="-1">
-  <section class="container-fluid px-0 larines-container" aria-labelledby="tituloManuales">
-    <h1 id="tituloManuales" class="h3 mt-4 mb-0">Manuales</h1>
-    <div class="larines-search py-3" role="search" aria-label="Buscar manuales">
-      <label for="buscarManual" class="visually-hidden">Buscar clave o nombre del manual</label>
+    <div class="container-fluid px-0 larines-container">
+      <h1 class="h3 mt-4 mb-0">Manuales</h1>
+<div class="larines-search py-3" role="search" aria-label="Buscar manuales">
+      <label for="buscarManual" class="visually-hidden">Buscar clave, título, curso o autor</label>
       <div class="search-field procedimientos-search">
         <svg class="search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="10" cy="10" r="6"></circle><path d="m15 15 5 5"></path></svg>
-        <input id="buscarManual" class="form-control" type="search" placeholder="Buscar clave o nombre del manual" aria-controls="tablaManuales" autocomplete="off">
+        <input id="buscarManual" class="form-control" type="search" placeholder="Buscar clave, título, curso o autor" aria-controls="catalogoManuales" autocomplete="off">
         <button id="borrarManual" class="search-clear" type="button" aria-label="Borrar búsqueda" hidden>×</button>
       </div>
       <p id="estadoManuales" class="small text-secondary text-end mt-2 mb-0" role="status" aria-live="polite"></p>
     </div>
-    <table id="tablaManuales" class="table table-striped table-bordered mb-0 procedimientos-table">
-      <caption class="visually-hidden">Manuales. Cada enlace abre el documento en otra pestaña.</caption>
-      <colgroup><col style="width:22%"><col style="width:78%"></colgroup>
-      <thead><tr><th scope="col">Clave</th><th scope="col">Nombre del manual</th></tr></thead>
-      <tbody>
-          <tr data-manual>
-            <td></td><!-- Escribe la clave en la celda anterior. -->
-            <td><a href="files/manuales/5-12-01%20Pilotaje%20Automatico%20PA135%20KHZ.pdf" target="_blank" rel="noopener">5-12-01 Pilotaje Automatico PA135 KHZ</a></td>
-          </tr>
-          <tr data-manual>
-            <td></td><!-- Escribe la clave en la celda anterior. -->
-            <td><a href="files/manuales/5-12-05%20Puesto%20Central%20TCO%20Tr%C3%A1fico%20L-9.pdf" target="_blank" rel="noopener">5-12-05 Puesto Central TCO Tráfico L-9</a></td>
-          </tr>
-          <tr data-manual>
-            <td></td><!-- Escribe la clave en la celda anterior. -->
-            <td><a href="files/manuales/5-12-06%20Puesto%20Central%20Director%20L-9.pdf" target="_blank" rel="noopener">5-12-06 Puesto Central Director L-9</a></td>
-          </tr>
-          <tr data-manual>
-            <td></td><!-- Escribe la clave en la celda anterior. -->
-            <td><a href="files/manuales/5-12-08%20Puesto%20central%20de%20optimizacion%20L-9%20Mando%20centralizado.pdf" target="_blank" rel="noopener">5-12-08 Puesto central de optimizacion L-9 Mando centralizado</a></td>
-          </tr>
-          <tr data-manual>
-            <td></td><!-- Escribe la clave en la celda anterior. -->
-            <td><a href="files/manuales/5-12-100%20Mat.Rod.%20MP-82.pdf" target="_blank" rel="noopener">5-12-100 Mat.Rod. MP-82</a></td>
-          </tr>
-          <tr data-manual>
-            <td></td><!-- Escribe la clave en la celda anterior. -->
-            <td><a href="files/manuales/5-12-115%20Conducci%C3%B3n%2C%20Maniobras%20y%20Aver%C3%ADas%20NE-92.pdf" target="_blank" rel="noopener">5-12-115 Conducción, Maniobras y Averías NE-92</a></td>
-          </tr>
-          <tr data-manual>
-            <td></td><!-- Escribe la clave en la celda anterior. -->
-            <td><a href="files/manuales/5-12-124%20Trenes%20rehabilitados%20%20MP68-R93-94.pdf" target="_blank" rel="noopener">5-12-124 Trenes rehabilitados  MP68-R93-94</a></td>
-          </tr>
-          <tr data-manual>
-            <td></td><!-- Escribe la clave en la celda anterior. -->
-            <td><a href="files/manuales/5-12-13%20Puesto%20Central%20Mandos%20Directos%20L-8.pdf" target="_blank" rel="noopener">5-12-13 Puesto Central Mandos Directos L-8</a></td>
-          </tr>
-          <tr data-manual>
-            <td></td><!-- Escribe la clave en la celda anterior. -->
-            <td><a href="files/manuales/5-12-131%20Terminales%20y%20Vias%20%20Secundarias%20Se%C3%B1al%20Traccion.pdf" target="_blank" rel="noopener">5-12-131 Terminales y Vias  Secundarias Señal Traccion</a></td>
-          </tr>
-          <tr data-manual>
-            <td></td><!-- Escribe la clave en la celda anterior. -->
-            <td><a href="files/manuales/5-12-171%20Notas%20tecnicas%202%205%206%20y%20B.pdf" target="_blank" rel="noopener">5-12-171 Notas tecnicas 2 5 6 y B</a></td>
-          </tr>
-          <tr data-manual>
-            <td></td><!-- Escribe la clave en la celda anterior. -->
-            <td><a href="files/manuales/5-12-171%20Terminales%20y%20talleres.%20se%C3%B1al%20y%20aliment.%20tracc.%20term.%20l-2%2C5%2C6%20y%20B.pdf" target="_blank" rel="noopener">5-12-171 Terminales y talleres. señal y aliment. tracc. term. l-2,5,6 y B</a></td>
-          </tr>
-          <tr data-manual>
-            <td></td><!-- Escribe la clave en la celda anterior. -->
-            <td><a href="files/manuales/5-12-172servicios%20provisionales%20lineas%202%2C5%2C6%20y%20B.pdf" target="_blank" rel="noopener">5-12-172servicios provisionales lineas 2,5,6 y B</a></td>
-          </tr>
-          <tr data-manual>
-            <td></td><!-- Escribe la clave en la celda anterior. -->
-            <td><a href="files/manuales/5-12-173%20trenes%20rehabilitados%20mp-68-R-96.pdf" target="_blank" rel="noopener">5-12-173 trenes rehabilitados mp-68-R-96</a></td>
-          </tr>
-          <tr data-manual>
-            <td></td><!-- Escribe la clave en la celda anterior. -->
-            <td><a href="files/manuales/5-12-173%20Trenes%20Rehabilitados%20MP68-R96.pdf" target="_blank" rel="noopener">5-12-173 Trenes Rehabilitados MP68-R96</a></td>
-          </tr>
-          <tr data-manual>
-            <td></td><!-- Escribe la clave en la celda anterior. -->
-            <td><a href="files/manuales/5-12-175%20Servicios%20provisionales%20Lineas%201%2C3%20y%204.pdf" target="_blank" rel="noopener">5-12-175 Servicios provisionales Lineas 1,3 y 4</a></td>
-          </tr>
-          <tr data-manual>
-            <td></td><!-- Escribe la clave en la celda anterior. -->
-            <td><a href="files/manuales/5-12-176%20Sacem%20L-8.pdf" target="_blank" rel="noopener">5-12-176 Sacem L-8</a></td>
-          </tr>
-          <tr data-manual>
-            <td></td><!-- Escribe la clave en la celda anterior. -->
-            <td><a href="files/manuales/5-12-178%20Talleres%20terminales%20y%20vias%20sec.%20lineas%201%2C3%20y%204.pdf" target="_blank" rel="noopener">5-12-178 Talleres terminales y vias sec. lineas 1,3 y 4</a></td>
-          </tr>
-          <tr data-manual>
-            <td></td><!-- Escribe la clave en la celda anterior. -->
-            <td><a href="files/manuales/5-12-18%20Manual%20Operador%20y%20explotacion%20puesto%20central%20TCO%20L-8.pdf" target="_blank" rel="noopener">5-12-18 Manual Operador y explotacion puesto central TCO L-8</a></td>
-          </tr>
-          <tr data-manual>
-            <td></td><!-- Escribe la clave en la celda anterior. -->
-            <td><a href="files/manuales/5-12-220%20Nva.%20Cabina%20de%20conduccion%20Mod.%20NM-73%20BL6.pdf" target="_blank" rel="noopener">5-12-220 Nva. Cabina de conduccion Mod. NM-73 BL6</a></td>
-          </tr>
-          <tr data-manual>
-            <td></td><!-- Escribe la clave en la celda anterior. -->
-            <td><a href="files/manuales/5-12-232%20Material%20Rodante%20NM-02.pdf" target="_blank" rel="noopener">5-12-232 Material Rodante NM-02</a></td>
-          </tr>
-          <tr data-manual>
-            <td></td><!-- Escribe la clave en la celda anterior. -->
-            <td><a href="files/manuales/5-12-238%20Maniobras%20y%20Averias%20del%20Nm-02.pdf" target="_blank" rel="noopener">5-12-238 Maniobras y Averias del Nm-02</a></td>
-          </tr>
-          <tr data-manual>
-            <td></td><!-- Escribe la clave en la celda anterior. -->
-            <td><a href="files/manuales/5-12-238%20Maniobras%20y%20Aver%C3%ADas%20NM02%20-%20Conductor.pdf" target="_blank" rel="noopener">5-12-238 Maniobras y Averías NM02 - Conductor</a></td>
-          </tr>
-          <tr data-manual>
-            <td></td><!-- Escribe la clave en la celda anterior. -->
-            <td><a href="files/manuales/5-12-29%20Servicios%20Provisionales.pdf" target="_blank" rel="noopener">5-12-29 Servicios Provisionales</a></td>
-          </tr>
-          <tr data-manual>
-            <td></td><!-- Escribe la clave en la celda anterior. -->
-            <td><a href="files/manuales/5-12-30%20Talleres%20Se%C3%B1alizacion%20%20Traccion.pdf" target="_blank" rel="noopener">5-12-30 Talleres Señalizacion  Traccion</a></td>
-          </tr>
-          <tr data-manual>
-            <td></td><!-- Escribe la clave en la celda anterior. -->
-            <td><a href="files/manuales/5-12-36%20Programa%20General%20de%20Tr%C3%A1fico.pdf" target="_blank" rel="noopener">5-12-36 Programa General de Tráfico</a></td>
-          </tr>
-          <tr data-manual>
-            <td></td><!-- Escribe la clave en la celda anterior. -->
-            <td><a href="files/manuales/5-12-38%20Centro%20de%20Comunicaciones%20Formacion%20de%20Reguladores%20del%20PCC.pdf" target="_blank" rel="noopener">5-12-38 Centro de Comunicaciones Formacion de Reguladores del PCC</a></td>
-          </tr>
-          <tr data-manual>
-            <td></td><!-- Escribe la clave en la celda anterior. -->
-            <td><a href="files/manuales/5-12-38%20Centro%20de%20Comunicaciones%2C%20Formaci%C3%B3n%20de%20Reguladores%20del%20PCC.pdf" target="_blank" rel="noopener">5-12-38 Centro de Comunicaciones, Formación de Reguladores del PCC</a></td>
-          </tr>
-          <tr data-manual>
-            <td></td><!-- Escribe la clave en la celda anterior. -->
-            <td><a href="files/manuales/5-12-65%20Distribucion%20de%20la%20Energ%C3%ADa%20134.pdf" target="_blank" rel="noopener">5-12-65 Distribucion de la Energía 134</a></td>
-          </tr>
-          <tr data-manual>
-            <td></td><!-- Escribe la clave en la celda anterior. -->
-            <td><a href="files/manuales/5-12-73%20Circulacion%20de%20Trenes%20-%20Regulador.pdf" target="_blank" rel="noopener">5-12-73 Circulacion de Trenes - Regulador</a></td>
-          </tr>
-          <tr data-manual>
-            <td></td><!-- Escribe la clave en la celda anterior. -->
-            <td><a href="files/manuales/5-12-75%20Nvo.%20Sistema%20%20de%20regualcion%20de%20Trrafico%20de%20trenes.pdf" target="_blank" rel="noopener">5-12-75 Nvo. Sistema  de regualcion de Trrafico de trenes</a></td>
-          </tr>
-          <tr data-manual>
-            <td></td><!-- Escribe la clave en la celda anterior. -->
-            <td><a href="files/manuales/5-12-77%20TELFONIA_L8.indd.pdf" target="_blank" rel="noopener">5-12-77 TELFONIA_L8.indd</a></td>
-          </tr>
-          <tr data-manual>
-            <td></td><!-- Escribe la clave en la celda anterior. -->
-            <td><a href="files/manuales/5-12-86%20Regulaci%C3%B3n%20de%20los%20Trenes.pdf" target="_blank" rel="noopener">5-12-86 Regulación de los Trenes</a></td>
-          </tr>
-          <tr data-manual>
-            <td></td><!-- Escribe la clave en la celda anterior. -->
-            <td><a href="files/manuales/5-12-87%20Atenci%C3%B3n%20de%20Incidentes%20Relevantes%20-%20Transportes.pdf" target="_blank" rel="noopener">5-12-87 Atención de Incidentes Relevantes - Transportes</a></td>
-          </tr>
-          <tr data-manual>
-            <td></td><!-- Escribe la clave en la celda anterior. -->
-            <td><a href="files/manuales/5-12-87%20Distribucion%20de%20la%20energia%20electrica.pdf" target="_blank" rel="noopener">5-12-87 Distribucion de la energia electrica</a></td>
-          </tr>
-          <tr data-manual>
-            <td></td><!-- Escribe la clave en la celda anterior. -->
-            <td><a href="files/manuales/5-12-89%20Se%C3%B1alizacion%201.pdf" target="_blank" rel="noopener">5-12-89 Señalizacion 1</a></td>
-          </tr>
-          <tr data-manual>
-            <td></td><!-- Escribe la clave en la celda anterior. -->
-            <td><a href="files/manuales/5-12-89%20Se%C3%B1alizacion%202.pdf" target="_blank" rel="noopener">5-12-89 Señalizacion 2</a></td>
-          </tr>
-          <tr data-manual>
-            <td></td><!-- Escribe la clave en la celda anterior. -->
-            <td><a href="files/manuales/5-12-89%20Se%C3%B1alizacion%202%20Regulador.pdf" target="_blank" rel="noopener">5-12-89 Señalizacion 2 Regulador</a></td>
-          </tr>
-          <tr data-manual>
-            <td></td><!-- Escribe la clave en la celda anterior. -->
-            <td><a href="files/manuales/5-12-91Tablero%20de%20Control%20Optico%20Manual%20para%20Transportacion.pdf" target="_blank" rel="noopener">5-12-91Tablero de Control Optico Manual para Transportacion</a></td>
-          </tr>
-          <tr data-manual>
-            <td></td><!-- Escribe la clave en la celda anterior. -->
-            <td><a href="files/manuales/5-12-92%20Circulacion%20de%20los%20Trenes%20-%20Conductor.pdf" target="_blank" rel="noopener">5-12-92 Circulacion de los Trenes - Conductor</a></td>
-          </tr>
-          <tr data-manual>
-            <td></td><!-- Escribe la clave en la celda anterior. -->
-            <td><a href="files/manuales/ATS%20Especificacion%20detallada%20de%20la%20IHM%202022-SlE-CBSYS-LIM0-000-lll-30767-E.pdf" target="_blank" rel="noopener">ATS Especificacion detallada de la IHM 2022-SlE-CBSYS-LIM0-000-lll-30767-E</a></td>
-          </tr>
-          <tr data-manual>
-            <td></td><!-- Escribe la clave en la celda anterior. -->
-            <td><a href="files/manuales/Condiciones%20Generales%20de%20Trabajo%20STC%202006%20%28escaneado%29.pdf" target="_blank" rel="noopener">Condiciones Generales de Trabajo STC 2006 (escaneado)</a></td>
-          </tr>
-          <tr data-manual>
-            <td></td><!-- Escribe la clave en la celda anterior. -->
-            <td><a href="files/manuales/Distribucion%20de%20la%20Energ%C3%ADa%20256.pdf" target="_blank" rel="noopener">Distribucion de la Energía 256</a></td>
-          </tr>
-          <tr data-manual>
-            <td></td><!-- Escribe la clave en la celda anterior. -->
-            <td><a href="files/manuales/Instructivo%20para%20la%20atenci%C3%B3n%20de%20Incidentes%20Relevantes%2024-X-12.pdf" target="_blank" rel="noopener">Instructivo para la atención de Incidentes Relevantes 24-X-12</a></td>
-          </tr>
-          <tr data-manual>
-            <td></td><!-- Escribe la clave en la celda anterior. -->
-            <td><a href="files/manuales/Manual%20de%20Capacitaci%C3%B3n%20T%C3%A9cnica%20-%20AIJE.pdf" target="_blank" rel="noopener">Manual de Capacitación Técnica - AIJE</a></td>
-          </tr>
-          <tr data-manual>
-            <td></td><!-- Escribe la clave en la celda anterior. -->
-            <td><a href="files/manuales/Manual%20de%20Operaci%C3%B3n%20para%20el%20Conductor%20Linea%201%20%282022.12.14%EF%BC%89.pdf" target="_blank" rel="noopener">Manual de Operación para el Conductor Linea 1 (2022.12.14）</a></td>
-          </tr>
-          <tr data-manual>
-            <td></td><!-- Escribe la clave en la celda anterior. -->
-            <td><a href="files/manuales/Material%20Rodante%20MP68%20L%C3%ADnea%208%20-%20Conductores.pdf" target="_blank" rel="noopener">Material Rodante MP68 Línea 8 - Conductores</a></td>
-          </tr>
-          <tr data-manual>
-            <td></td><!-- Escribe la clave en la celda anterior. -->
-            <td><a href="files/manuales/Material%20Rodante%20MP82%20-%20Transportes.pdf" target="_blank" rel="noopener">Material Rodante MP82 - Transportes</a></td>
-          </tr>
-          <tr data-manual>
-            <td></td><!-- Escribe la clave en la celda anterior. -->
-            <td><a href="files/manuales/Material%20Rodante%20NM02.pdf" target="_blank" rel="noopener">Material Rodante NM02</a></td>
-          </tr>
-          <tr data-manual>
-            <td></td><!-- Escribe la clave en la celda anterior. -->
-            <td><a href="files/manuales/MCDU%20L1%20MAT%20VESP%20287.pdf" target="_blank" rel="noopener">MCDU L1 MAT VESP 287</a></td>
-          </tr>
-          <tr data-manual>
-            <td></td><!-- Escribe la clave en la celda anterior. -->
-            <td><a href="files/manuales/MCDU%20L3%20MAT%20VESP%20288.pdf" target="_blank" rel="noopener">MCDU L3 MAT VESP 288</a></td>
-          </tr>
-          <tr data-manual>
-            <td></td><!-- Escribe la clave en la celda anterior. -->
-            <td><a href="files/manuales/MCDU%20L9%20MAT%20289.pdf" target="_blank" rel="noopener">MCDU L9 MAT 289</a></td>
-          </tr>
-          <tr data-manual>
-            <td></td><!-- Escribe la clave en la celda anterior. -->
-            <td><a href="files/manuales/MCDU%20LA%20VESP%20389.pdf" target="_blank" rel="noopener">MCDU LA VESP 389</a></td>
-          </tr>
-          <tr data-manual>
-            <td></td><!-- Escribe la clave en la celda anterior. -->
-            <td><a href="files/manuales/Modernizaci%C3%B3n%20Tren%20MP68%20y%20NM73%20L%C3%ADnea%204%2C%206%20y%207%20-%20Transportes.pdf" target="_blank" rel="noopener">Modernización Tren MP68 y NM73 Línea 4, 6 y 7 - Transportes</a></td>
-          </tr>
-          <tr data-manual>
-            <td></td><!-- Escribe la clave en la celda anterior. -->
-            <td><a href="files/manuales/Modernizaci%C3%B3n%20Tren%20MP68%20y%20NM73%20L%C3%ADnea%20B%20-%20Transportes.pdf" target="_blank" rel="noopener">Modernización Tren MP68 y NM73 Línea B - Transportes</a></td>
-          </tr>
-          <tr data-manual>
-            <td></td><!-- Escribe la clave en la celda anterior. -->
-            <td><a href="files/manuales/Modernizaci%C3%B3n%20Tren%20MP68%2C%20NM73%20L%C3%ADnea%205%20-%20Transportes.pdf" target="_blank" rel="noopener">Modernización Tren MP68, NM73 Línea 5 - Transportes</a></td>
-          </tr>
-          <tr data-manual>
-            <td></td><!-- Escribe la clave en la celda anterior. -->
-            <td><a href="files/manuales/Nueva%20Cabina%20de%20Conducci%C3%B3n%20NM73B%20L%C3%ADnea%206%20-%20Conductor.pdf" target="_blank" rel="noopener">Nueva Cabina de Conducción NM73B Línea 6 - Conductor</a></td>
-          </tr>
-          <tr data-manual>
-            <td></td><!-- Escribe la clave en la celda anterior. -->
-            <td><a href="files/manuales/Nuevo%20Sistema%20de%20Regulaci%C3%B3n%20de%20Tr%C3%A1fico%20de%20Trenes.pdf" target="_blank" rel="noopener">Nuevo Sistema de Regulación de Tráfico de Trenes</a></td>
-          </tr>
-          <tr data-manual>
-            <td></td><!-- Escribe la clave en la celda anterior. -->
-            <td><a href="files/manuales/Obra%20Civil%20y%20Mantenimiento%20de%20Estaciones%20-%20IJE.pdf" target="_blank" rel="noopener">Obra Civil y Mantenimiento de Estaciones - IJE</a></td>
-          </tr>
-          <tr data-manual>
-            <td></td><!-- Escribe la clave en la celda anterior. -->
-            <td><a href="files/manuales/Operador%20y%20Explotaci%C3%B3n%20Puesto%20Central%20-%20Mandos%20Directos%20L%C3%ADnea%209.pdf" target="_blank" rel="noopener">Operador y Explotación Puesto Central - Mandos Directos Línea 9</a></td>
-          </tr>
-          <tr data-manual>
-            <td></td><!-- Escribe la clave en la celda anterior. -->
-            <td><a href="files/manuales/Pilotaje%20Automatico%20135%20KHz.pdf" target="_blank" rel="noopener">Pilotaje Automatico 135 KHz</a></td>
-          </tr>
-          <tr data-manual>
-            <td></td><!-- Escribe la clave en la celda anterior. -->
-            <td><a href="files/manuales/Programadora%20General%20de%20Tr%C3%A1fico%20-%20Regulador.pdf" target="_blank" rel="noopener">Programadora General de Tráfico - Regulador</a></td>
-          </tr>
-          <tr data-manual>
-            <td></td><!-- Escribe la clave en la celda anterior. -->
-            <td><a href="files/manuales/Prontuario%20-%20Intervenciones%20y%20Maniobras%20en%20L%C3%ADnea%20para%20Trenes%20NM02.pdf" target="_blank" rel="noopener">Prontuario - Intervenciones y Maniobras en Línea para Trenes NM02</a></td>
-          </tr>
-          <tr data-manual>
-            <td></td><!-- Escribe la clave en la celda anterior. -->
-            <td><a href="files/manuales/Puesto%20Central%20de%20Mandos%20Directos%20L8.pdf" target="_blank" rel="noopener">Puesto Central de Mandos Directos L8</a></td>
-          </tr>
-          <tr data-manual>
-            <td></td><!-- Escribe la clave en la celda anterior. -->
-            <td><a href="files/manuales/Regulaci%C3%B3n%20de%20los%20Trenes%20-%20IJE.pdf" target="_blank" rel="noopener">Regulación de los Trenes - IJE</a></td>
-          </tr>
-          <tr data-manual>
-            <td></td><!-- Escribe la clave en la celda anterior. -->
-            <td><a href="files/manuales/Regulaci%C3%B3n%20de%20Trenes.pdf" target="_blank" rel="noopener">Regulación de Trenes</a></td>
-          </tr>
-          <tr data-manual>
-            <td></td><!-- Escribe la clave en la celda anterior. -->
-            <td><a href="files/manuales/Revista%20-%20Procedimiento%20de%20Estacionamiento%20del%20Material%20Rodante.pdf" target="_blank" rel="noopener">Revista - Procedimiento de Estacionamiento del Material Rodante</a></td>
-          </tr>
-          <tr data-manual>
-            <td></td><!-- Escribe la clave en la celda anterior. -->
-            <td><a href="files/manuales/SACEM%20L%C3%ADnea%208%20-%20Transportes.pdf" target="_blank" rel="noopener">SACEM Línea 8 - Transportes</a></td>
-          </tr>
-          <tr data-manual>
-            <td></td><!-- Escribe la clave en la celda anterior. -->
-            <td><a href="files/manuales/SACEM%20L%C3%ADnea%20B%20-%20Transportes.pdf" target="_blank" rel="noopener">SACEM Línea B - Transportes</a></td>
-          </tr>
-          <tr data-manual>
-            <td></td><!-- Escribe la clave en la celda anterior. -->
-            <td><a href="files/manuales/Servicios%20Provisionales.pdf" target="_blank" rel="noopener">Servicios Provisionales</a></td>
-          </tr>
-          <tr data-manual>
-            <td></td><!-- Escribe la clave en la celda anterior. -->
-            <td><a href="files/manuales/Servicios%20Provisionales%20L%C3%ADnea%20B.pdf" target="_blank" rel="noopener">Servicios Provisionales Línea B</a></td>
-          </tr>
-          <tr data-manual>
-            <td></td><!-- Escribe la clave en la celda anterior. -->
-            <td><a href="files/manuales/Servicios%20Provisionales%20L%C3%ADneas%201%2C%203%20y%204.pdf" target="_blank" rel="noopener">Servicios Provisionales Líneas 1, 3 y 4</a></td>
-          </tr>
-          <tr data-manual>
-            <td></td><!-- Escribe la clave en la celda anterior. -->
-            <td><a href="files/manuales/Servicios%20Provisionales%20L%C3%ADneas%202%2C%205%2C%206%20y%20B.pdf" target="_blank" rel="noopener">Servicios Provisionales Líneas 2, 5, 6 y B</a></td>
-          </tr>
-          <tr data-manual>
-            <td></td><!-- Escribe la clave en la celda anterior. -->
-            <td><a href="files/manuales/Se%C3%B1alizaci%C3%B3n%201%20-%20Conductor.pdf" target="_blank" rel="noopener">Señalización 1 - Conductor</a></td>
-          </tr>
-          <tr data-manual>
-            <td></td><!-- Escribe la clave en la celda anterior. -->
-            <td><a href="files/manuales/Se%C3%B1alizaci%C3%B3n%202%20-%20Conductor.pdf" target="_blank" rel="noopener">Señalización 2 - Conductor</a></td>
-          </tr>
-          <tr data-manual>
-            <td></td><!-- Escribe la clave en la celda anterior. -->
-            <td><a href="files/manuales/Se%C3%B1alizaci%C3%B3n%202%20-%20Regulador.pdf" target="_blank" rel="noopener">Señalización 2 - Regulador</a></td>
-          </tr>
-          <tr data-manual>
-            <td></td><!-- Escribe la clave en la celda anterior. -->
-            <td><a href="files/manuales/Sistemas%20y%20subsistemas%20de%20Nueva%20L%C3%ADnea%201%20y%20NM16.pdf" target="_blank" rel="noopener">Sistemas y subsistemas de Nueva Línea 1 y NM16</a></td>
-          </tr>
-          <tr data-manual>
-            <td></td><!-- Escribe la clave en la celda anterior. -->
-            <td><a href="files/manuales/Soporte%20de%20Curso%20para%20Usuarios%20Finales%20del%20sistema%20Puesto%20Central%20-%20Optimizaci%C3%B3n.pdf" target="_blank" rel="noopener">Soporte de Curso para Usuarios Finales del sistema Puesto Central - Optimización</a></td>
-          </tr>
-          <tr data-manual>
-            <td></td><!-- Escribe la clave en la celda anterior. -->
-            <td><a href="files/manuales/Tablero%20de%20Control%20Optico%20y%20PGT%20L%C3%ADnea%20B%20-%20Mando%20Centralizado.pdf" target="_blank" rel="noopener">Tablero de Control Optico y PGT Línea B - Mando Centralizado</a></td>
-          </tr>
-          <tr data-manual>
-            <td></td><!-- Escribe la clave en la celda anterior. -->
-            <td><a href="files/manuales/Tablero%20de%20Control%20%C3%93ptico%20-%20Transportaci%C3%B3n.pdf" target="_blank" rel="noopener">Tablero de Control Óptico - Transportación</a></td>
-          </tr>
-          <tr data-manual>
-            <td></td><!-- Escribe la clave en la celda anterior. -->
-            <td><a href="files/manuales/Talleres%20Se%C3%B1alizaci%C3%B3n%20-%20Tracci%C3%B3n.pdf" target="_blank" rel="noopener">Talleres Señalización - Tracción</a></td>
-          </tr>
-          <tr data-manual>
-            <td></td><!-- Escribe la clave en la celda anterior. -->
-            <td><a href="files/manuales/Talleres%2C%20Terminales%20y%20V%C3%ADas%20Secundarias%20L%C3%ADneas%201%2C%203%20y%204.pdf" target="_blank" rel="noopener">Talleres, Terminales y Vías Secundarias Líneas 1, 3 y 4</a></td>
-          </tr>
-          <tr data-manual>
-            <td></td><!-- Escribe la clave en la celda anterior. -->
-            <td><a href="files/manuales/TCO%20L%C3%ADnea%208%20-%20Regulador.pdf" target="_blank" rel="noopener">TCO Línea 8 - Regulador</a></td>
-          </tr>
-          <tr data-manual>
-            <td></td><!-- Escribe la clave en la celda anterior. -->
-            <td><a href="files/manuales/TCO%20L%C3%ADnea%209%20-%20Regulador.pdf" target="_blank" rel="noopener">TCO Línea 9 - Regulador</a></td>
-          </tr>
-          <tr data-manual>
-            <td></td><!-- Escribe la clave en la celda anterior. -->
-            <td><a href="files/manuales/Telefon%C3%ADa%20L%C3%ADnea%208%20-%20Conductor.pdf" target="_blank" rel="noopener">Telefonía Línea 8 - Conductor</a></td>
-          </tr>
-          <tr data-manual>
-            <td></td><!-- Escribe la clave en la celda anterior. -->
-            <td><a href="files/manuales/Terminales%20y%20Talleres%20Se%C3%B1alizacion%20y%20Alimentacion%20Traccion%20Terminales%20L%C3%ADneas%202%2C%205%2C%206%20y%20B-.pdf" target="_blank" rel="noopener">Terminales y Talleres Señalizacion y Alimentacion Traccion Terminales Líneas 2, 5, 6 y B-</a></td>
-          </tr>
-          <tr data-manual>
-            <td></td><!-- Escribe la clave en la celda anterior. -->
-            <td><a href="files/manuales/Terminales%20y%20V%C3%ADas%20Secundarias%20Se%C3%B1al%20Tracci%C3%B3n.pdf" target="_blank" rel="noopener">Terminales y Vías Secundarias Señal Tracción</a></td>
-          </tr>
-          <tr data-manual>
-            <td></td><!-- Escribe la clave en la celda anterior. -->
-            <td><a href="files/manuales/Tren%20NM-16%20CAF.pdf" target="_blank" rel="noopener">Tren NM-16 CAF</a></td>
-          </tr>
-          <tr data-manual>
-            <td></td><!-- Escribe la clave en la celda anterior. -->
-            <td><a href="files/manuales/Trenes%20Rehabilitados%20MP68%20-%20R96.pdf" target="_blank" rel="noopener">Trenes Rehabilitados MP68 - R96</a></td>
-          </tr>
-          <tr data-manual>
-            <td></td><!-- Escribe la clave en la celda anterior. -->
-            <td><a href="files/manuales/Trenes%20Rehabilitados%20MP68-R93-94%20-%20Transportaci%C3%B3n.pdf" target="_blank" rel="noopener">Trenes Rehabilitados MP68-R93-94 - Transportación</a></td>
-          </tr>
-        <tr id="sinManuales" hidden><td colspan="2" class="text-center py-4">No se encontraron manuales.</td></tr>
-      </tbody>
-    </table>
-  </section>
-</main>
+      <div id="catalogoManuales">
+      <section id="transportes" class="manual-section mb-4" data-manual-section aria-labelledby="titulo-transportes">
+        <h2 id="titulo-transportes" class="h4">Transportes</h2>
+        <div class="table-responsive manual-scroll" role="region" aria-label="Manuales de Transportes" tabindex="0">
+          <table class="table table-striped table-bordered mb-0 manual-catalog-table">
+            <thead><tr><th scope="col">CLAVE</th><th scope="col">TITULO</th><th scope="col">CURSO</th><th scope="col">N.P</th><th scope="col">AUTOR</th></tr></thead>
+            <tbody>
+            <!-- Manual 5-12-01 -->
+            <tr data-manual>
+              <td><a href="files/manuales/5-12-01.pdf" target="_blank" rel="noopener">5-12-01</a></td>
+              <td><a href="files/manuales/5-12-01.pdf" target="_blank" rel="noopener">INDUCCIÓN PARA EL ÁREA DE TRANSPORTACIÓN</a></td>
+              <td>TRANSPORTES</td>
+              <td>82</td>
+              <td>TRANSPORTES</td>
+            </tr>
+            <!-- Manual 5-12-02 -->
+            <tr data-manual>
+              <td><a href="files/manuales/5-12-02.pdf" target="_blank" rel="noopener">5-12-02</a></td>
+              <td><a href="files/manuales/5-12-02.pdf" target="_blank" rel="noopener">DEBERES Y RESPONSABILIDADES DEL CONDUCTOR</a></td>
+              <td>CONDUCTOR</td>
+              <td>30</td>
+              <td>INCADE</td>
+            </tr>
+            <!-- Manual 5-12-03 -->
+            <tr data-manual>
+              <td><a href="files/manuales/5-12-03.pdf" target="_blank" rel="noopener">5-12-03</a></td>
+              <td><a href="files/manuales/5-12-03.pdf" target="_blank" rel="noopener">INTRODUCCIÓN A LA COMPUTACIÓN</a></td>
+              <td>TRANSPORTES</td>
+              <td>20</td>
+              <td>INCADE</td>
+            </tr>
+            <!-- Manual 5-12-04 -->
+            <tr data-manual>
+              <td><a href="files/manuales/5-12-04.pdf" target="_blank" rel="noopener">5-12-04</a></td>
+              <td><a href="files/manuales/5-12-04.pdf" target="_blank" rel="noopener">ELECTRICIDAD BASICA CONDUCTOR</a></td>
+              <td>CONDUCTOR</td>
+              <td>74</td>
+              <td>PEREZHDZ Y ALMARAZ</td>
+            </tr>
+            <!-- Manual 5-12-05 -->
+            <tr data-manual>
+              <td><a href="files/manuales/5-12-05.pdf" target="_blank" rel="noopener">5-12-05</a></td>
+              <td><a href="files/manuales/5-12-05.pdf" target="_blank" rel="noopener">ELECTRONICA BASICA APLICADA AL MATERIAL RODANTE</a></td>
+              <td>TRANSPORTES</td>
+              <td>44</td>
+              <td>ROMAN DE LA CRUZ</td>
+            </tr>
+            <!-- Manual 5-12-06 -->
+            <tr data-manual>
+              <td><a href="files/manuales/5-12-06.pdf" target="_blank" rel="noopener">5-12-06</a></td>
+              <td><a href="files/manuales/5-12-06.pdf" target="_blank" rel="noopener">DISTRIBUCION DE LA ENERGIA ELECTRICA L-1,3 Y 4</a></td>
+              <td>CONDUCTOR</td>
+              <td>134</td>
+              <td>INCADE</td>
+            </tr>
+            <!-- Manual 5-12-07 -->
+            <tr data-manual>
+              <td><a href="files/manuales/5-12-07.pdf" target="_blank" rel="noopener">5-12-07</a></td>
+              <td><a href="files/manuales/5-12-07.pdf" target="_blank" rel="noopener">DISTRIBUCION DE LA ENERGIA ELECTRICA L- 2,5,6 Y B</a></td>
+              <td>CONDUCTOR</td>
+              <td>144</td>
+              <td>INCADE</td>
+            </tr>
+            <!-- Manual 5-12-08 -->
+            <tr data-manual>
+              <td><a href="files/manuales/5-12-08.pdf" target="_blank" rel="noopener">5-12-08</a></td>
+              <td><a href="files/manuales/5-12-08.pdf" target="_blank" rel="noopener">DISTRIBUCION DE LA ENERGIA ELECTRICA L-7,8,9 Y A</a></td>
+              <td>CONDUCTOR</td>
+              <td>130</td>
+              <td>INCADE</td>
+            </tr>
+            <!-- Manual 5-12-09 -->
+            <tr data-manual>
+              <td><a href="files/manuales/5-12-09.pdf" target="_blank" rel="noopener">5-12-09</a></td>
+              <td><a href="files/manuales/5-12-09.pdf" target="_blank" rel="noopener">MATERIAL RODANTE</a></td>
+              <td>CONDUCTOR</td>
+              <td>186</td>
+              <td>INCADE</td>
+            </tr>
+            <!-- Manual 5-12-10 -->
+            <tr data-manual>
+              <td><a href="files/manuales/5-12-10.pdf" target="_blank" rel="noopener">5-12-10</a></td>
+              <td><a href="files/manuales/5-12-10.pdf" target="_blank" rel="noopener">MANIOBRAS Y AVERIAS DEL MATERIAL RODANTE</a></td>
+              <td>TRANSPORTES</td>
+              <td>186</td>
+              <td>INACADE</td>
+            </tr>
+            <!-- Manual 5-12-11 -->
+            <tr data-manual>
+              <td><a href="files/manuales/5-12-11.pdf" target="_blank" rel="noopener">5-12-11</a></td>
+              <td><a href="files/manuales/5-12-11.pdf" target="_blank" rel="noopener">SEÑALIZACION 1 TRANSPORTES</a></td>
+              <td>CONDUCTOR</td>
+              <td>120</td>
+              <td>INCADE</td>
+            </tr>
+            <!-- Manual 5-12-12 -->
+            <tr data-manual>
+              <td><a href="files/manuales/5-12-12.pdf" target="_blank" rel="noopener">5-12-12</a></td>
+              <td><a href="files/manuales/5-12-12.pdf" target="_blank" rel="noopener">SEÑALIZACIÓN ll</a></td>
+              <td>CONDUCTOR</td>
+              <td>98</td>
+              <td>INCADE</td>
+            </tr>
+            <!-- Manual 5-12-13 -->
+            <tr data-manual>
+              <td><a href="files/manuales/5-12-13.pdf" target="_blank" rel="noopener">5-12-13</a></td>
+              <td><a href="files/manuales/5-12-13.pdf" target="_blank" rel="noopener">CONDUCCION P.A 135 KHZ</a></td>
+              <td>TRANSPORTES</td>
+              <td>118</td>
+              <td>INCADE</td>
+            </tr>
+            <!-- Manual 5-12-14 -->
+            <tr data-manual>
+              <td><a href="files/manuales/5-12-14.pdf" target="_blank" rel="noopener">5-12-14</a></td>
+              <td><a href="files/manuales/5-12-14.pdf" target="_blank" rel="noopener">CIRCULACION DE LOS TRENES</a></td>
+              <td>CONDUCTOR</td>
+              <td>154</td>
+              <td>INCADE</td>
+            </tr>
+            <!-- Manual 5-12-15 -->
+            <tr data-manual>
+              <td><a href="files/manuales/5-12-15.pdf" target="_blank" rel="noopener">5-12-15</a></td>
+              <td><a href="files/manuales/5-12-15.pdf" target="_blank" rel="noopener">REGULACIÓN DE LOS TRENES</a></td>
+              <td>CONDUCTOR</td>
+              <td>68</td>
+              <td>INCADE</td>
+            </tr>
+            <!-- Manual 5-12-16 -->
+            <tr data-manual>
+              <td><a href="files/manuales/5-12-16.pdf" target="_blank" rel="noopener">5-12-16</a></td>
+              <td><a href="files/manuales/5-12-16.pdf" target="_blank" rel="noopener">PARTICULARIDADES EN LÍNEA</a></td>
+              <td>TRANSPORTES</td>
+              <td>116</td>
+              <td>INCADE</td>
+            </tr>
+            <!-- Manual 5-12-17 -->
+            <tr data-manual>
+              <td><a href="files/manuales/5-12-17.pdf" target="_blank" rel="noopener">5-12-17</a></td>
+              <td><a href="files/manuales/5-12-17.pdf" target="_blank" rel="noopener">MÉTODOS, FORMAS Y REPORTES LÍNEAS 1, 3 Y 4</a></td>
+              <td>CONDUCTOR</td>
+              <td>86</td>
+              <td>INCADE</td>
+            </tr>
+            <!-- Manual 5-12-18 -->
+            <tr data-manual>
+              <td><a href="files/manuales/5-12-18.pdf" target="_blank" rel="noopener">5-12-18</a></td>
+              <td><a href="files/manuales/5-12-18.pdf" target="_blank" rel="noopener">METODOS,FORMAS Y REPORTES LINEA 2,5,6 Y B</a></td>
+              <td>CONDUCTOR</td>
+              <td>68</td>
+              <td>INCADE</td>
+            </tr>
+            <!-- Manual 5-12-19 -->
+            <tr data-manual>
+              <td><a href="files/manuales/5-12-19.pdf" target="_blank" rel="noopener">5-12-19</a></td>
+              <td><a href="files/manuales/5-12-19.pdf" target="_blank" rel="noopener">METODOS FORMAS Y REPORTES LINE 7,8,9 Y A</a></td>
+              <td>CONDUCTOR</td>
+              <td>104</td>
+              <td>INCADE</td>
+            </tr>
+            <!-- Manual 5-12-20 -->
+            <tr data-manual>
+              <td><a href="files/manuales/5-12-20.pdf" target="_blank" rel="noopener">5-12-20</a></td>
+              <td><a href="files/manuales/5-12-20.pdf" target="_blank" rel="noopener">COMUNICACIÓN TETRA EMBARCADO CONDUCTOR</a></td>
+              <td>CONDUCTOR</td>
+              <td>14</td>
+              <td>INCADE</td>
+            </tr>
+            <!-- Manual 5-12-21 -->
+            <tr data-manual>
+              <td><a href="files/manuales/5-12-21.pdf" target="_blank" rel="noopener">5-12-21</a></td>
+              <td><a href="files/manuales/5-12-21.pdf" target="_blank" rel="noopener">MODERNIZACIÓN TREN MP-68/NM-73 LÍNEA 5</a></td>
+              <td>TRANSPORTES</td>
+              <td>54</td>
+              <td>INCADE</td>
+            </tr>
+            <!-- Manual 5-12-22 -->
+            <tr data-manual>
+              <td><a href="files/manuales/5-12-22.pdf" target="_blank" rel="noopener">5-12-22</a></td>
+              <td><a href="files/manuales/5-12-22.pdf" target="_blank" rel="noopener">MODERNIZACIÓN TREN MP68 Y NM73 LÍNEA 4,6 Y 7</a></td>
+              <td>TRANSPORTES</td>
+              <td>56</td>
+              <td>INCADE</td>
+            </tr>
+            <!-- Manual 5-12-23 -->
+            <tr data-manual>
+              <td><a href="files/manuales/5-12-23.pdf" target="_blank" rel="noopener">5-12-23</a></td>
+              <td><a href="files/manuales/5-12-23.pdf" target="_blank" rel="noopener">MANIOBRAS Y AVERÍAS DEL MATERIAL RODANTE NM-02</a></td>
+              <td>TRANSPORTES</td>
+              <td>176</td>
+              <td>C.A.F.</td>
+            </tr>
+            <!-- Manual 5-12-24 -->
+            <tr data-manual>
+              <td><a href="files/manuales/5-12-24.pdf" target="_blank" rel="noopener">5-12-24</a></td>
+              <td><a href="files/manuales/5-12-24.pdf" target="_blank" rel="noopener">MATERIAL RODANTE NM-02</a></td>
+              <td>TRANSPORTES</td>
+              <td>236</td>
+              <td>C.A.F</td>
+            </tr>
+            <!-- Manual 5-12-25 -->
+            <tr data-manual>
+              <td><a href="files/manuales/5-12-25.pdf" target="_blank" rel="noopener">5-12-25</a></td>
+              <td><a href="files/manuales/5-12-25.pdf" target="_blank" rel="noopener">CONDUCCIÓN, MANIOBRAS Y AVERÍAS NE-92</a></td>
+              <td>TRANSPORTES</td>
+              <td>94</td>
+              <td>INCADE</td>
+            </tr>
+            <!-- Manual 5-12-26 -->
+            <tr data-manual>
+              <td><a href="files/manuales/5-12-26.pdf" target="_blank" rel="noopener">5-12-26</a></td>
+              <td><a href="files/manuales/5-12-26.pdf" target="_blank" rel="noopener">TRENES REHABILITADOS MP68/R93-94</a></td>
+              <td>TRANSPORTES</td>
+              <td>66</td>
+              <td>INCADE</td>
+            </tr>
+            <!-- Manual 5-12-27 -->
+            <tr data-manual>
+              <td><a href="files/manuales/5-12-27.pdf" target="_blank" rel="noopener">5-12-27</a></td>
+              <td><a href="files/manuales/5-12-27.pdf" target="_blank" rel="noopener">TRENES REHABILITADOS MP68/R96</a></td>
+              <td>TRANSPORTES</td>
+              <td>72</td>
+              <td>INCADE</td>
+            </tr>
+            <!-- Manual 5-12-28 -->
+            <tr data-manual>
+              <td><a href="files/manuales/5-12-28.pdf" target="_blank" rel="noopener">5-12-28</a></td>
+              <td><a href="files/manuales/5-12-28.pdf" target="_blank" rel="noopener">NUEVA CABINA DE CONDUCCIÓN NM73 BF LÍNEA 4</a></td>
+              <td>TRANSPORTES</td>
+              <td>22</td>
+              <td>INCADE</td>
+            </tr>
+            <!-- Manual 5-12-29 -->
+            <tr data-manual>
+              <td><a href="files/manuales/5-12-29.pdf" target="_blank" rel="noopener">5-12-29</a></td>
+              <td><a href="files/manuales/5-12-29.pdf" target="_blank" rel="noopener">NUEVA CABINA DE CONDUCCIÓN MOD. NM73-B LÍNEA 6</a></td>
+              <td>TRANSPORTES</td>
+              <td>48</td>
+              <td>INCADE</td>
+            </tr>
+            <!-- Manual 5-12-30 -->
+            <tr data-manual>
+              <td><a href="files/manuales/5-12-30.pdf" target="_blank" rel="noopener">5-12-30</a></td>
+              <td><a href="files/manuales/5-12-30.pdf" target="_blank" rel="noopener">MATERIAL RODANTE NM73 AF/ CONVERS N a M</a></td>
+              <td>TRANSPORTES</td>
+              <td>32</td>
+              <td>INCADE</td>
+            </tr>
+            <!-- Manual 5-12-31 -->
+            <tr data-manual>
+              <td><a href="files/manuales/5-12-31.pdf" target="_blank" rel="noopener">5-12-31</a></td>
+              <td><a href="files/manuales/5-12-31.pdf" target="_blank" rel="noopener">PROCEDIMIENTOS PARA MOVER ELECTRICA Y MANUALMENTE LOS APARATOS DE CAMBIO DE VIA</a></td>
+              <td>TRANSPORTES</td>
+              <td>34</td>
+              <td>INCADE</td>
+            </tr>
+            <!-- Manual 5-12-32 -->
+            <tr data-manual>
+              <td><a href="files/manuales/5-12-32.pdf" target="_blank" rel="noopener">5-12-32</a></td>
+              <td><a href="files/manuales/5-12-32.pdf" target="_blank" rel="noopener">INTERVENCIÓN RÁPIDA DE LA CABINA “P”</a></td>
+              <td>TRANSPORTES</td>
+              <td>18</td>
+              <td>INCADE</td>
+            </tr>
+            <!-- Manual 5-12-33 -->
+            <tr data-manual>
+              <td><a href="files/manuales/5-12-33.pdf" target="_blank" rel="noopener">5-12-33</a></td>
+              <td><a href="files/manuales/5-12-33.pdf" target="_blank" rel="noopener">GENERALIDADES DE LOS SERVICIOS PROVISIONALES Y MOVIMIENTO DE APARATOS DE VIA L-2,5,6 Y B</a></td>
+              <td>TRANSPORTES</td>
+              <td>L2-16 L5-16 L6-14 LB-14</td>
+              <td>INCADE</td>
+            </tr>
+            <!-- Manual 5-12-34 -->
+            <tr data-manual>
+              <td><a href="files/manuales/5-12-34.pdf" target="_blank" rel="noopener">5-12-34</a></td>
+              <td><a href="files/manuales/5-12-34.pdf" target="_blank" rel="noopener">NOTAS TÉCNICAS P/ACT. DE P/TRANSPORTES LÍNEAS 1, 3 Y 4</a></td>
+              <td>TRANSPORTES</td>
+              <td>66</td>
+              <td>INCADE</td>
+            </tr>
+            <!-- Manual 5-12-35 -->
+            <tr data-manual>
+              <td><a href="files/manuales/5-12-35.pdf" target="_blank" rel="noopener">5-12-35</a></td>
+              <td><a href="files/manuales/5-12-35.pdf" target="_blank" rel="noopener">NOTAS TÉCNICAS P/ACT. DE P/TRANSPORTES LÍNEAS 2, 5, 6 Y B</a></td>
+              <td>TRANSPORTES</td>
+              <td>116</td>
+              <td>INCADE</td>
+            </tr>
+            <!-- Manual 5-12-36 -->
+            <tr data-manual>
+              <td><a href="files/manuales/5-12-36.pdf" target="_blank" rel="noopener">5-12-36</a></td>
+              <td><a href="files/manuales/5-12-36.pdf" target="_blank" rel="noopener">NOTAS TÉCNICAS P/ACT. DE P/TRANSPORTES LÍNEAS 7, 8, 9 Y A</a>
+                <small class="d-block mt-2"><a href="files/manuales/5-12-36h.pdf" target="_blank" rel="noopener">Documento adicional (36h)</a></small>
+              </td>
+              <td>TRANSPORTES</td>
+              <td>L- 7,8,9 90 L-A 62</td>
+              <td>INCADE</td>
+            </tr>
+            <!-- Manual 5-12-37 -->
+            <tr data-manual>
+              <td><a href="files/manuales/5-12-37.pdf" target="_blank" rel="noopener">5-12-37</a></td>
+              <td><a href="files/manuales/5-12-37.pdf" target="_blank" rel="noopener">SACEM LÍNEA 8</a></td>
+              <td>TRANSPORTES</td>
+              <td>32</td>
+              <td>INCADE</td>
+            </tr>
+            <!-- Manual 5-12-38 -->
+            <tr data-manual>
+              <td><a href="files/manuales/5-12-38.pdf" target="_blank" rel="noopener">5-12-38</a></td>
+              <td><a href="files/manuales/5-12-38.pdf" target="_blank" rel="noopener">MATERIAL RODANTE MP 82</a></td>
+              <td>TRANSPORTES</td>
+              <td>180</td>
+              <td>INCADE</td>
+            </tr>
+            <!-- Manual 5-12-39 -->
+            <tr data-manual>
+              <td><a href="files/manuales/5-12-39.pdf" target="_blank" rel="noopener">5-12-39</a></td>
+              <td><a href="files/manuales/5-12-39.pdf" target="_blank" rel="noopener">CONDUCCIÓN SACEM LÍNEA 8</a></td>
+              <td>TRANSPORTES</td>
+              <td>74</td>
+              <td>INCADE</td>
+            </tr>
+            <!-- Manual 5-12-40 -->
+            <tr data-manual>
+              <td><a href="files/manuales/5-12-40.pdf" target="_blank" rel="noopener">5-12-40</a></td>
+              <td><a href="files/manuales/5-12-40.pdf" target="_blank" rel="noopener">DISTRIBUCIÓN DE LA ENERGÍA ELÉCTRICA LÍNEA 8</a></td>
+              <td>TRANSPORTES</td>
+              <td>92</td>
+              <td>INCADE</td>
+            </tr>
+            <!-- Manual 5-12-41 -->
+            <tr data-manual>
+              <td><a href="files/manuales/5-12-41h.pdf" target="_blank" rel="noopener">5-12-41</a></td>
+              <td><a href="files/manuales/5-12-41h.pdf" target="_blank" rel="noopener">TELEFONÍA LÍNEA 8</a></td>
+              <td>TRANSPORTES</td>
+              <td>52</td>
+              <td>INCADE</td>
+            </tr>
+            <!-- Manual 5-12-42 -->
+            <tr data-manual>
+              <td><a href="files/manuales/5-12-42h.pdf" target="_blank" rel="noopener">5-12-42</a></td>
+              <td><a href="files/manuales/5-12-42h.pdf" target="_blank" rel="noopener">MANUAL DE CAPACITACIÓN TÉCNICA AIJE</a></td>
+              <td>AIJE</td>
+              <td>62</td>
+              <td>INCADE</td>
+            </tr>
+            <!-- Manual 5-12-43 -->
+            <tr data-manual>
+              <td><a href="files/manuales/5-12-43h.pdf" target="_blank" rel="noopener">5-12-43</a></td>
+              <td><a href="files/manuales/5-12-43h.pdf" target="_blank" rel="noopener">OBRA CIVIL Y MANTENIMIENTO DE ESTACIONES</a></td>
+              <td>REGULADOR I.J.E.</td>
+              <td>66</td>
+              <td>INCADE</td>
+            </tr>
+            <!-- Manual 5-12-44 -->
+            <tr data-manual>
+              <td><a href="files/manuales/5-12-44h.pdf" target="_blank" rel="noopener">5-12-44</a></td>
+              <td><a href="files/manuales/5-12-44h.pdf" target="_blank" rel="noopener">TABLERO DE CONTROL OPTICO GER. 1,3,4</a></td>
+              <td>INSP. JEFE DE ESTACIÓN</td>
+              <td>58</td>
+              <td>INCADE</td>
+            </tr>
+            <!-- Manual 5-12-45 -->
+            <tr data-manual>
+              <td><a href="files/manuales/5-12-45h.pdf" target="_blank" rel="noopener">5-12-45</a></td>
+              <td><a href="files/manuales/5-12-45h.pdf" target="_blank" rel="noopener">TABLERO DE CONTROL OPTICO GER. 2,5,6,7,8 Y 9</a></td>
+              <td>IJE</td>
+              <td>40</td>
+              <td>INCADE</td>
+            </tr>
+            <!-- Manual 5-12-46 -->
+            <tr data-manual>
+              <td><a href="files/manuales/5-12-46h.pdf" target="_blank" rel="noopener">5-12-46</a></td>
+              <td><a href="files/manuales/5-12-46h.pdf" target="_blank" rel="noopener">SEÑALIZACION II IJE</a></td>
+              <td>IJE</td>
+              <td>104</td>
+              <td>INCADE</td>
+            </tr>
+            <!-- Manual 5-12-47 -->
+            <tr data-manual>
+              <td><a href="files/manuales/5-12-47h.pdf" target="_blank" rel="noopener">5-12-47</a></td>
+              <td><a href="files/manuales/5-12-47h.pdf" target="_blank" rel="noopener">DISTRIBUCION DE LA ENERGIA ELECTRICA L-1,3 Y 4</a></td>
+              <td>IJE</td>
+              <td>146</td>
+              <td>INCADE</td>
+            </tr>
+            <!-- Manual 5-12-48 -->
+            <tr data-manual>
+              <td><a href="files/manuales/5-12-48h.pdf" target="_blank" rel="noopener">5-12-48</a></td>
+              <td><a href="files/manuales/5-12-48h.pdf" target="_blank" rel="noopener">DISTRIBUCION DE LA ENERGIA ELECTRICA L-2,5,6 Y B</a></td>
+              <td>IJE</td>
+              <td>142</td>
+              <td>INCADE</td>
+            </tr>
+            <!-- Manual 5-12-49 -->
+            <tr data-manual>
+              <td><a href="files/manuales/5-12-49.pdf" target="_blank" rel="noopener">5-12-49</a></td>
+              <td><a href="files/manuales/5-12-49.pdf" target="_blank" rel="noopener">DISTRIBUCIÓN DE LA ENERGÍA ELÉCTRICA L-7,8,9 Y A</a></td>
+              <td>IJE</td>
+              <td>140</td>
+              <td>INCADE</td>
+            </tr>
+            <!-- Manual 5-12-50 -->
+            <tr data-manual>
+              <td><a href="files/manuales/5-12-50h.pdf" target="_blank" rel="noopener">5-12-50</a></td>
+              <td><a href="files/manuales/5-12-50h.pdf" target="_blank" rel="noopener">CIRCULACIÓN DE LOS TRENES IJE</a></td>
+              <td>IJE</td>
+              <td>124</td>
+              <td>INCADE</td>
+            </tr>
+            <!-- Manual 5-12-51 -->
+            <tr data-manual>
+              <td><a href="files/manuales/5-12-51h.pdf" target="_blank" rel="noopener">5-12-51</a></td>
+              <td><a href="files/manuales/5-12-51h.pdf" target="_blank" rel="noopener">COMUNICACIÓN TETRA PORTATIL I.J.E</a></td>
+              <td>IJE</td>
+              <td>38</td>
+              <td>INCADE</td>
+            </tr>
+            <!-- Manual 5-12-52 -->
+            <tr data-manual>
+              <td><a href="files/manuales/5-12-52.pdf" target="_blank" rel="noopener">5-12-52</a></td>
+              <td><a href="files/manuales/5-12-52.pdf" target="_blank" rel="noopener">PROCEDIMINETOS ADMINISTRATIVOS IJE</a></td>
+              <td>IJE</td>
+              <td>216</td>
+              <td>INCADE</td>
+            </tr>
+            <!-- Manual 5-12-53 -->
+            <tr data-manual>
+              <td><a href="files/manuales/5-12-53.pdf" target="_blank" rel="noopener">5-12-53</a></td>
+              <td><a href="files/manuales/5-12-53.pdf" target="_blank" rel="noopener">PROCEDIMIENTOS ADMINISTRATIVOS PARA I.J.E.</a></td>
+              <td>IJE</td>
+              <td>146</td>
+              <td>TRANSPORTES</td>
+            </tr>
+            <!-- Manual 5-12-54 -->
+            <tr data-manual>
+              <td><a href="files/manuales/5-12-54.pdf" target="_blank" rel="noopener">5-12-54</a></td>
+              <td><a href="files/manuales/5-12-54.pdf" target="_blank" rel="noopener">FUNCIONES Y FORMATOS IJE</a></td>
+              <td>IJE</td>
+              <td>134</td>
+              <td>INCADE</td>
+            </tr>
+            <!-- Manual 5-12-55 -->
+            <tr data-manual>
+              <td><a href="files/manuales/5-12-55h.pdf" target="_blank" rel="noopener">5-12-55</a></td>
+              <td><a href="files/manuales/5-12-55h.pdf" target="_blank" rel="noopener">CENTRO DE COMUNICACIONES</a></td>
+              <td>REGULADOR</td>
+              <td>54</td>
+              <td>INCADE</td>
+            </tr>
+            <!-- Manual 5-12-56 -->
+            <tr data-manual>
+              <td><a href="files/manuales/5-12-56h.pdf" target="_blank" rel="noopener">5-12-56</a></td>
+              <td><a href="files/manuales/5-12-56h.pdf" target="_blank" rel="noopener">SEÑALIZACIÓN ll REGULADOR</a></td>
+              <td>REGULADOR</td>
+              <td>108</td>
+              <td>INCADE</td>
+            </tr>
+            <!-- Manual 5-12-57 -->
+            <tr data-manual>
+              <td><a href="files/manuales/5-12-57h.pdf" target="_blank" rel="noopener">5-12-57</a></td>
+              <td><a href="files/manuales/5-12-57h.pdf" target="_blank" rel="noopener">TABLERO DE CONTROL OPTICO</a></td>
+              <td>REGULADOR</td>
+              <td>154</td>
+              <td>INCADE</td>
+            </tr>
+            <!-- Manual 5-12-58 -->
+            <tr data-manual>
+              <td><a href="files/manuales/5-12-58.pdf" target="_blank" rel="noopener">5-12-58</a></td>
+              <td><a href="files/manuales/5-12-58.pdf" target="_blank" rel="noopener">DISRIBUCION DE LA ENERGIA ELECTRICA</a></td>
+              <td>REGULADOR</td>
+              <td>184</td>
+              <td>INCADE</td>
+            </tr>
+            <!-- Manual 5-12-59 -->
+            <tr data-manual>
+              <td><a href="files/manuales/5-12-59.pdf" target="_blank" rel="noopener">5-12-59</a></td>
+              <td><a href="files/manuales/5-12-59.pdf" target="_blank" rel="noopener">REGULACIÓN AUTOMÁTICA DE TRENES LÍNEA 1 A 7 PGT</a></td>
+              <td>REGULADOR</td>
+              <td>132</td>
+              <td>INCADE</td>
+            </tr>
+            <!-- Manual 5-12-60 -->
+            <tr data-manual>
+              <td><a href="files/manuales/5-12-60h.pdf" target="_blank" rel="noopener">5-12-60</a></td>
+              <td><a href="files/manuales/5-12-60h.pdf" target="_blank" rel="noopener">MATERIAL RODANTE</a></td>
+              <td>IJE/REGULADOR</td>
+              <td>312</td>
+              <td>INCADE</td>
+            </tr>
+            <!-- Manual 5-12-61 -->
+            <tr data-manual>
+              <td><a href="files/manuales/5-12-61.pdf" target="_blank" rel="noopener">5-12-61</a></td>
+              <td><a href="files/manuales/5-12-61.pdf" target="_blank" rel="noopener">REGULACIÓN DE LOS TRENES</a></td>
+              <td>IJE/REGULADOR</td>
+              <td>138</td>
+              <td>INCADE</td>
+            </tr>
+            <!-- Manual 5-12-62 -->
+            <tr data-manual>
+              <td><a href="files/manuales/5-12-62.pdf" target="_blank" rel="noopener">5-12-62</a></td>
+              <td><a href="files/manuales/5-12-62.pdf" target="_blank" rel="noopener">TERMINALES Y ZONAS DE MANIOBRAS L-7,8 Y 9</a></td>
+              <td>IJE/REGULADOR</td>
+              <td>236</td>
+              <td>INCADE</td>
+            </tr>
+            <!-- Manual 5-12-63 -->
+            <tr data-manual>
+              <td><a href="files/manuales/5-12-63.pdf" target="_blank" rel="noopener">5-12-63</a></td>
+              <td><a href="files/manuales/5-12-63.pdf" target="_blank" rel="noopener">TERMINALES Y TALLERES SEÑALIZACIÓN Y ALIMENT. TRACCIÓN LÍNEAS 2, 5, 6 Y B</a></td>
+              <td>IJE/REGULADOR</td>
+              <td>148</td>
+              <td>INCADE</td>
+            </tr>
+            <!-- Manual 5-12-64 -->
+            <tr data-manual>
+              <td><a href="files/manuales/5-12-64.pdf" target="_blank" rel="noopener">5-12-64</a></td>
+              <td><a href="files/manuales/5-12-64.pdf" target="_blank" rel="noopener">SERVICIOS PROVISIONALES LÍNEAS 2, 5, 6 Y B</a></td>
+              <td>IJE/REGULADOR</td>
+              <td>198</td>
+              <td>INCADE</td>
+            </tr>
+            <!-- Manual 5-12-65 -->
+            <tr data-manual>
+              <td><a href="files/manuales/5-12-65.pdf" target="_blank" rel="noopener">5-12-65</a></td>
+              <td><a href="files/manuales/5-12-65.pdf" target="_blank" rel="noopener">TALLERES, TERMINALES Y VÍAS SECUNDARIAS LÍNEAS 1, 3 Y 4</a></td>
+              <td>IJE/REGULADOR</td>
+              <td>172</td>
+              <td>INCADE</td>
+            </tr>
+            <!-- Manual 5-12-66 -->
+            <tr data-manual>
+              <td><a href="files/manuales/5-12-66h.pdf" target="_blank" rel="noopener">5-12-66</a></td>
+              <td><a href="files/manuales/5-12-66h.pdf" target="_blank" rel="noopener">SERVICIOS PROVISIONALES LÍNEAS 1, 3 Y 4</a></td>
+              <td>IJE/REGULADOR</td>
+              <td>150</td>
+              <td>INCADE</td>
+            </tr>
+            <!-- Manual 5-12-67 -->
+            <tr data-manual>
+              <td><a href="files/manuales/5-12-67.pdf" target="_blank" rel="noopener">5-12-67</a></td>
+              <td><a href="files/manuales/5-12-67.pdf" target="_blank" rel="noopener">SERVICIOS PROVISIONALES REGULADOR</a></td>
+              <td>REGULADOR</td>
+              <td>294</td>
+              <td>INCADE</td>
+            </tr>
+            <!-- Manual 5-12-68 -->
+            <tr data-manual>
+              <td><a href="files/manuales/5-12-68.pdf" target="_blank" rel="noopener">5-12-68</a></td>
+              <td><a href="files/manuales/5-12-68.pdf" target="_blank" rel="noopener">TALLERES, SEÑALIZACION TRACCION</a></td>
+              <td>TRANSPORTES</td>
+              <td>102</td>
+              <td>INCADE</td>
+            </tr>
+            <!-- Manual 5-12-69 -->
+            <tr data-manual>
+              <td><a href="files/manuales/5-12-69.pdf" target="_blank" rel="noopener">5-12-69</a></td>
+              <td><a href="files/manuales/5-12-69.pdf" target="_blank" rel="noopener">TERMINALES Y VIAS SECUDARIAS, SEÑALIZACION TRACCION</a></td>
+              <td>REGULADOR</td>
+              <td>258</td>
+              <td>INCADE</td>
+            </tr>
+            <!-- Manual 5-12-70 -->
+            <tr data-manual>
+              <td><a href="files/manuales/5-12-70.pdf" target="_blank" rel="noopener">5-12-70</a></td>
+              <td><a href="files/manuales/5-12-70.pdf" target="_blank" rel="noopener">METODOS, FORMAS Y REPORTES REGULADOR</a></td>
+              <td>REGULADOR</td>
+              <td>64</td>
+              <td>INCADE</td>
+            </tr>
+            <!-- Manual 5-12-71 -->
+            <tr data-manual>
+              <td><a href="files/manuales/5-12-71.pdf" target="_blank" rel="noopener">5-12-71</a></td>
+              <td><a href="files/manuales/5-12-71.pdf" target="_blank" rel="noopener">PILOTAJE AUTOMATICO 135 KHZ</a></td>
+              <td>REGULADOR</td>
+              <td>58</td>
+              <td>INCADE</td>
+            </tr>
+            <!-- Manual 5-12-72 -->
+            <tr data-manual>
+              <td><a href="files/manuales/5-12-72.pdf" target="_blank" rel="noopener">5-12-72</a></td>
+              <td><a href="files/manuales/5-12-72.pdf" target="_blank" rel="noopener">NUEVO SISTEMA DE REGULACIÓN DE TRÁFICO DE TRENES</a></td>
+              <td>REGULADOR</td>
+              <td>122</td>
+              <td>INCADE</td>
+            </tr>
+            <!-- Manual 5-12-73 -->
+            <tr data-manual>
+              <td><a href="files/manuales/5-12-73h.pdf" target="_blank" rel="noopener">5-12-73</a></td>
+              <td><a href="files/manuales/5-12-73h.pdf" target="_blank" rel="noopener">CIRCULACIÓN DE LOS TRENES REGULADOR</a></td>
+              <td>REGULADOR</td>
+              <td>154</td>
+              <td>INCADE</td>
+            </tr>
+            <!-- Manual 5-12-74 -->
+            <tr data-manual>
+              <td><a href="files/manuales/5-12-74h.pdf" target="_blank" rel="noopener">5-12-74</a></td>
+              <td><a href="files/manuales/5-12-74h.pdf" target="_blank" rel="noopener">SISTEMA DE RADIOCOMUNICACIÓN CON TECNOLOGÍA DIGITAL TETRA</a></td>
+              <td>REGULADOR</td>
+              <td>32</td>
+              <td>INCADE</td>
+            </tr>
+            <!-- Manual 5-12-75 -->
+            <tr data-manual>
+              <td><a href="files/manuales/5-12-75.pdf" target="_blank" rel="noopener">5-12-75</a></td>
+              <td><a href="files/manuales/5-12-75.pdf" target="_blank" rel="noopener">SIMULADOR BINOI</a></td>
+              <td>REGULADOR</td>
+              <td>102</td>
+              <td>INCADE</td>
+            </tr>
+            <!-- Manual 5-12-76 -->
+            <tr data-manual>
+              <td><a href="files/manuales/5-12-76h.pdf" target="_blank" rel="noopener">5-12-76</a></td>
+              <td><a href="files/manuales/5-12-76h.pdf" target="_blank" rel="noopener">PROGRAMADORA GENERAL DE TRAFICO</a></td>
+              <td>REGULADOR DEL PCC</td>
+              <td>92</td>
+              <td>INCADE</td>
+            </tr>
+            <!-- Manual 5-12-77 -->
+            <tr data-manual>
+              <td><a href="files/manuales/5-12-77.pdf" target="_blank" rel="noopener">5-12-77</a></td>
+              <td><a href="files/manuales/5-12-77.pdf" target="_blank" rel="noopener">T.C.O. LÍNEA 8</a></td>
+              <td>REGULADOR</td>
+              <td>172</td>
+              <td>INCADE</td>
+            </tr>
+            <!-- Manual 5-12-78 -->
+            <tr data-manual>
+              <td><a href="files/manuales/5-12-78.pdf" target="_blank" rel="noopener">5-12-78</a></td>
+              <td><a href="files/manuales/5-12-78.pdf" target="_blank" rel="noopener">PGT LÍNEA 8</a></td>
+              <td>REGULADOR</td>
+              <td>132</td>
+              <td>THALES</td>
+            </tr>
+            <!-- Manual 5-12-79 -->
+            <tr data-manual>
+              <td><a href="files/manuales/5-12-79.pdf" target="_blank" rel="noopener">5-12-79</a></td>
+              <td><a href="files/manuales/5-12-79.pdf" target="_blank" rel="noopener">TERMINALES Y ZONAS DE MANIOBRAS LINEA 8</a></td>
+              <td>TRANSPORTES</td>
+              <td>124</td>
+              <td>INCADE</td>
+            </tr>
+            <!-- Manual 5-12-80 -->
+            <tr data-manual>
+              <td><a href="files/manuales/5-12-80.pdf" target="_blank" rel="noopener">5-12-80</a></td>
+              <td><a href="files/manuales/5-12-80.pdf" target="_blank" rel="noopener">PUESTO CENTRAL, MANDOS DIRECTOS LÍNEA 8</a></td>
+              <td>REGULADOR</td>
+              <td>120</td>
+              <td>THALES</td>
+            </tr>
+            <!-- Manual 5-12-81 -->
+            <tr data-manual>
+              <td><a href="files/manuales/5-12-81.pdf" target="_blank" rel="noopener">5-12-81</a></td>
+              <td><a href="files/manuales/5-12-81.pdf" target="_blank" rel="noopener">ALARMA DE ESTACIONES LÍNEA 8</a></td>
+              <td>REGULADOR</td>
+              <td>48</td>
+              <td>THALES</td>
+            </tr>
+            <!-- Manual 5-12-82 -->
+            <tr data-manual>
+              <td><a href="files/manuales/5-12-82.pdf" target="_blank" rel="noopener">5-12-82</a></td>
+              <td><a href="files/manuales/5-12-82.pdf" target="_blank" rel="noopener">T.C.O. LINEA 9</a></td>
+              <td>REGULADOR</td>
+              <td>138</td>
+              <td>THALES</td>
+            </tr>
+            <!-- Manual 5-12-83 -->
+            <tr data-manual>
+              <td><a href="files/manuales/5-12-83.pdf" target="_blank" rel="noopener">5-12-83</a></td>
+              <td><a href="files/manuales/5-12-83.pdf" target="_blank" rel="noopener">PGT LINEA 9</a></td>
+              <td>REGULADOR</td>
+              <td>140</td>
+              <td>THALES</td>
+            </tr>
+            <!-- Manual 5-12-84 -->
+            <tr data-manual>
+              <td><a href="files/manuales/5-12-84.pdf" target="_blank" rel="noopener">5-12-84</a></td>
+              <td><a href="files/manuales/5-12-84.pdf" target="_blank" rel="noopener">MANDO CENTRALIZADO ARQUITECTURA Y EVOLUCIONES DEL SISTEMA LINEA 9</a></td>
+              <td>REGULADOR</td>
+              <td>42</td>
+              <td>THALES</td>
+            </tr>
+            <!-- Manual 5-12-85 -->
+            <tr data-manual>
+              <td><a href="files/manuales/5-12-85.pdf" target="_blank" rel="noopener">5-12-85</a></td>
+              <td><a href="files/manuales/5-12-85.pdf" target="_blank" rel="noopener">ALARMA DE ESTACIONES LINEA 9</a></td>
+              <td>REGULADOR</td>
+              <td>42</td>
+              <td>THALES</td>
+            </tr>
+            <!-- Manual 5-12-86 -->
+            <tr data-manual>
+              <td><a href="files/manuales/5-12-86.pdf" target="_blank" rel="noopener">5-12-86</a></td>
+              <td><a href="files/manuales/5-12-86.pdf" target="_blank" rel="noopener">PUESTO CENTRAL DE MANDOS DIRECTOS LINEA 9</a></td>
+              <td>REGULADOR</td>
+              <td>138</td>
+              <td>THALES</td>
+            </tr>
+            <!-- Manual 5-12-87 -->
+            <tr data-manual>
+              <td><a href="files/manuales/5-12-87.pdf" target="_blank" rel="noopener">5-12-87</a></td>
+              <td><a href="files/manuales/5-12-87.pdf" target="_blank" rel="noopener">ATENCION DE INCIDENTES RELEVANTES</a></td>
+              <td>TRANSPORTES</td>
+              <td>78</td>
+              <td>INCADE</td>
+            </tr>
+            <!-- Manual 5-12-88 -->
+            <tr data-manual>
+              <td><a href="files/manuales/5-12-88.pdf" target="_blank" rel="noopener">5-12-88</a></td>
+              <td><a href="files/manuales/5-12-88.pdf" target="_blank" rel="noopener">DERECHOS HUMANOS Y RESPONSABILIDAD DE LOS SERVIDORES PUBLICOS</a></td>
+              <td>TRANSPORTES</td>
+              <td>66</td>
+              <td>INCADE</td>
+            </tr>
+            <!-- Manual 5-12-89 -->
+            <tr data-manual>
+              <td><a href="files/manuales/5-12-89.pdf" target="_blank" rel="noopener">5-12-89</a></td>
+              <td><a href="files/manuales/5-12-89.pdf" target="_blank" rel="noopener">CONCEPTO DE SUPERVISOR DE SERVICIOS PÚBLICOS</a></td>
+              <td>TRANSPORTES</td>
+              <td>10</td>
+              <td>INCADE</td>
+            </tr>
+            <!-- Manual 5-12-90 -->
+            <tr data-manual>
+              <td><a href="files/manuales/5-12-90.pdf" target="_blank" rel="noopener">5-12-90</a></td>
+              <td><a href="files/manuales/5-12-90.pdf" target="_blank" rel="noopener">ACTIVIDADES DELSUPER. DE SERV. PÚBLICOS</a></td>
+              <td>S.S.P.</td>
+              <td>16</td>
+              <td>INCADE</td>
+            </tr>
+            <!-- Manual 5-12-91 -->
+            <tr data-manual>
+              <td><a href="files/manuales/5-12-91.pdf" target="_blank" rel="noopener">5-12-91</a></td>
+              <td><a href="files/manuales/5-12-91.pdf" target="_blank" rel="noopener">MANIOBRA DE CONTROL Y DOSIFICACIÓN DE USUARIOS LÍNEAS 9 Y A</a></td>
+              <td>TRANSPORTES</td>
+              <td>48</td>
+              <td>INCADE</td>
+            </tr>
+            <!-- Manual 5-12-92 -->
+            <tr data-manual>
+              <td><a href="files/manuales/5-12-92h.pdf" target="_blank" rel="noopener">5-12-92</a></td>
+              <td><a href="files/manuales/5-12-92h.pdf" target="_blank" rel="noopener">TREN NM-16 LINEA-1 CONDUCTOR</a></td>
+              <td>TRANSPORTES</td>
+              <td>322</td>
+              <td>TRANSPOTES</td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+      <section id="transportes-linea-a" class="manual-section mb-4" data-manual-section aria-labelledby="titulo-transportes-linea-a">
+        <h2 id="titulo-transportes-linea-a" class="h4">Transportes Línea A</h2>
+        <div class="table-responsive manual-scroll" role="region" aria-label="Manuales de Transportes Línea A" tabindex="0">
+          <table class="table table-striped table-bordered mb-0 manual-catalog-table">
+            <thead><tr><th scope="col">CLAVE</th><th scope="col">TITULO</th><th scope="col">CURSO</th><th scope="col">N.P</th><th scope="col">AUTOR</th></tr></thead>
+            <tbody>
+            <!-- Manual 5-13-01 -->
+            <tr data-manual>
+              <td><a href="files/manuales/5-13-01.pdf" target="_blank" rel="noopener">5-13-01</a></td>
+              <td><a href="files/manuales/5-13-01.pdf" target="_blank" rel="noopener">INDUCCION A LINEA A</a></td>
+              <td>METRO FERREO</td>
+              <td>98</td>
+              <td>INCADE</td>
+            </tr>
+            <!-- Manual 5-13-02 -->
+            <tr data-manual>
+              <td><a href="files/manuales/5-13-02.pdf" target="_blank" rel="noopener">5-13-02</a></td>
+              <td><a href="files/manuales/5-13-02.pdf" target="_blank" rel="noopener">CONDUCCION FM-86</a></td>
+              <td>CONDUCTOR</td>
+              <td>100</td>
+              <td>INCADE</td>
+            </tr>
+            <!-- Manual 5-13-03 -->
+            <tr data-manual>
+              <td><a href="files/manuales/5-13-03.pdf" target="_blank" rel="noopener">5-13-03</a></td>
+              <td><a href="files/manuales/5-13-03.pdf" target="_blank" rel="noopener">MATERIAL RODANTE FM-86</a></td>
+              <td>REGULADOR DEL PCL</td>
+              <td>180</td>
+              <td>INCADE</td>
+            </tr>
+            <!-- Manual 5-13-04 -->
+            <tr data-manual>
+              <td><a href="files/manuales/5-13-04.pdf" target="_blank" rel="noopener">5-13-04</a></td>
+              <td><a href="files/manuales/5-13-04.pdf" target="_blank" rel="noopener">MANIOBRAS Y AVERIAS DEL MATERIAL RODANTE FM-86</a></td>
+              <td>REGULADOR DEL PCL</td>
+              <td>108</td>
+              <td>TRANSPORTES LINEA A</td>
+            </tr>
+            <!-- Manual 5-13-05 -->
+            <tr data-manual>
+              <td><a href="files/manuales/5-13-05.pdf" target="_blank" rel="noopener">5-13-05</a></td>
+              <td><a href="files/manuales/5-13-05.pdf" target="_blank" rel="noopener">CONDUCCION FM-95 A</a></td>
+              <td>CONDUCTOR</td>
+              <td>68</td>
+              <td>TRANSPORTES LINEA A</td>
+            </tr>
+            <!-- Manual 5-13-06 -->
+            <tr data-manual>
+              <td><a href="files/manuales/5-13-06.pdf" target="_blank" rel="noopener">5-13-06</a></td>
+              <td><a href="files/manuales/5-13-06.pdf" target="_blank" rel="noopener">MATERIAL RODANTE FM-95 A</a></td>
+              <td>REGULADOR DEL PCL</td>
+              <td>128</td>
+              <td>TRANSPORTES LINEA A</td>
+            </tr>
+            <!-- Manual 5-13-07 -->
+            <tr data-manual>
+              <td><a href="files/manuales/5-13-07.pdf" target="_blank" rel="noopener">5-13-07</a></td>
+              <td><a href="files/manuales/5-13-07.pdf" target="_blank" rel="noopener">MANIOBRAS EN EL MATERIAL RODANTE FM-95 A</a></td>
+              <td>REGULADOR DEL PCL</td>
+              <td>46</td>
+              <td>TRANSPORTES LINEA A</td>
+            </tr>
+            <!-- Manual 5-13-08 -->
+            <tr data-manual>
+              <td><a href="files/manuales/5-13-08.pdf" target="_blank" rel="noopener">5-13-08</a></td>
+              <td><a href="files/manuales/5-13-08.pdf" target="_blank" rel="noopener">PROYECTO DE FE-07</a></td>
+              <td>LINEA A</td>
+              <td>24</td>
+              <td>INCADE</td>
+            </tr>
+            <!-- Manual 5-13-09 -->
+            <tr data-manual>
+              <td><a href="files/manuales/5-13-09.pdf" target="_blank" rel="noopener">5-13-09</a></td>
+              <td><a href="files/manuales/5-13-09.pdf" target="_blank" rel="noopener">CONDUCCION FE-07</a></td>
+              <td>LINEA A</td>
+              <td>258</td>
+              <td>INCADE</td>
+            </tr>
+            <!-- Manual 5-13-10 -->
+            <tr data-manual>
+              <td><a href="files/manuales/5-13-10.pdf" target="_blank" rel="noopener">5-13-10</a></td>
+              <td><a href="files/manuales/5-13-10.pdf" target="_blank" rel="noopener">MANIOBRAS Y AVERIAS FE-07</a></td>
+              <td>LINEA A</td>
+              <td>52</td>
+              <td>INCADE</td>
+            </tr>
+            <!-- Manual 5-13-11 -->
+            <tr data-manual>
+              <td><a href="files/manuales/5-13-11.pdf" target="_blank" rel="noopener">5-13-11</a></td>
+              <td><a href="files/manuales/5-13-11.pdf" target="_blank" rel="noopener">SISTEMA SACEM LINEA A</a></td>
+              <td>METRO FERREO</td>
+              <td>56</td>
+              <td>TRANSPORTES LINEA A</td>
+            </tr>
+            <!-- Manual 5-13-12 -->
+            <tr data-manual>
+              <td><a href="files/manuales/5-13-12.pdf" target="_blank" rel="noopener">5-13-12</a></td>
+              <td><a href="files/manuales/5-13-12.pdf" target="_blank" rel="noopener">CATENARIA</a></td>
+              <td>LINEA A</td>
+              <td>100</td>
+              <td>INCADE</td>
+            </tr>
+            <!-- Manual 5-13-13 -->
+            <tr data-manual>
+              <td><a href="files/manuales/5-13-13.pdf" target="_blank" rel="noopener">5-13-13</a></td>
+              <td><a href="files/manuales/5-13-13.pdf" target="_blank" rel="noopener">VIA FERREA</a></td>
+              <td>REGULADOR DEL PCL</td>
+              <td>68</td>
+              <td>INCADE</td>
+            </tr>
+            <!-- Manual 5-13-14 -->
+            <tr data-manual>
+              <td><a href="files/manuales/5-13-14.pdf" target="_blank" rel="noopener">5-13-14</a></td>
+              <td><a href="files/manuales/5-13-14.pdf" target="_blank" rel="noopener">PARARRAYOS</a></td>
+              <td>LINEA A</td>
+              <td>76</td>
+              <td>INCADE</td>
+            </tr>
+            <!-- Manual 5-13-15 -->
+            <tr data-manual>
+              <td><a href="files/manuales/5-13-15.pdf" target="_blank" rel="noopener">5-13-15</a></td>
+              <td><a href="files/manuales/5-13-15.pdf" target="_blank" rel="noopener">MATERIAL RODANTE LINEA A</a></td>
+              <td>LINEA A</td>
+              <td>186</td>
+              <td>INCADE</td>
+            </tr>
+            <!-- Manual 5-13-16 -->
+            <tr data-manual>
+              <td><a href="files/manuales/5-13-16.pdf" target="_blank" rel="noopener">5-13-16</a></td>
+              <td><a href="files/manuales/5-13-16.pdf" target="_blank" rel="noopener">MANIOBRAS Y AVERIAS DEL MATERIAL RODANTE</a></td>
+              <td>METRO FERREO</td>
+              <td>98</td>
+              <td>INCADE</td>
+            </tr>
+            <!-- Manual 5-13-17 -->
+            <tr data-manual>
+              <td><a href="files/manuales/5-13-17.pdf" target="_blank" rel="noopener">5-13-17</a></td>
+              <td><a href="files/manuales/5-13-17.pdf" target="_blank" rel="noopener">DISTRIBUCION DE LA ENERGIA ELECTRICA</a></td>
+              <td>CONDUCTOR</td>
+              <td>100</td>
+              <td>INCADE</td>
+            </tr>
+            <!-- Manual 5-13-18 -->
+            <tr data-manual>
+              <td><a href="files/manuales/5-13-18.pdf" target="_blank" rel="noopener">5-13-18</a></td>
+              <td><a href="files/manuales/5-13-18.pdf" target="_blank" rel="noopener">SEÑALIZACION LINEA A</a></td>
+              <td>REGULADOR DEL PCL</td>
+              <td>180</td>
+              <td>INCADE</td>
+            </tr>
+            <!-- Manual 5-13-19 -->
+            <tr data-manual>
+              <td><a href="files/manuales/5-13-19.pdf" target="_blank" rel="noopener">5-13-19</a></td>
+              <td><a href="files/manuales/5-13-19.pdf" target="_blank" rel="noopener">REGULACION DE LOS TRENES</a></td>
+              <td>REGULADOR DEL PCL</td>
+              <td>108</td>
+              <td>TRANSPORTES LINEA A</td>
+            </tr>
+            <!-- Manual 5-13-20 -->
+            <tr data-manual>
+              <td><a href="files/manuales/5-13-20.pdf" target="_blank" rel="noopener">5-13-20</a></td>
+              <td><a href="files/manuales/5-13-20.pdf" target="_blank" rel="noopener">TALLERES, TERMINALES Y SONAS DE MANIOBRAS</a></td>
+              <td>CONDUCTOR</td>
+              <td>68</td>
+              <td>TRANSPORTES LINEA A</td>
+            </tr>
+            <!-- Manual 5-13-21 -->
+            <tr data-manual>
+              <td><a href="files/manuales/5-13-21.pdf" target="_blank" rel="noopener">5-13-21</a></td>
+              <td><a href="files/manuales/5-13-21.pdf" target="_blank" rel="noopener">OPERACIÓN DE MANIOBRAS LINEA A</a></td>
+              <td>REGULADOR DEL PCL</td>
+              <td>128</td>
+              <td>TRANSPORTES LINEA A</td>
+            </tr>
+            <!-- Manual 5-13-22 -->
+            <tr data-manual>
+              <td><a href="files/manuales/5-13-22.pdf" target="_blank" rel="noopener">5-13-22</a></td>
+              <td><a href="files/manuales/5-13-22.pdf" target="_blank" rel="noopener">PUESTO DE CONTROL DE LINEA</a></td>
+              <td>REGULADOR DEL PCL</td>
+              <td>46</td>
+              <td>TRANSPORTES LINEA A</td>
+            </tr>
+            <!-- Manual 5-13-23 -->
+            <tr data-manual>
+              <td><a href="files/manuales/5-13-23.pdf" target="_blank" rel="noopener">5-13-23</a></td>
+              <td><a href="files/manuales/5-13-23.pdf" target="_blank" rel="noopener">T.C.O. C.E.E.</a></td>
+              <td>LINEA A</td>
+              <td>24</td>
+              <td>INCADE</td>
+            </tr>
+            <!-- Manual 5-13-24 -->
+            <tr data-manual>
+              <td><a href="files/manuales/5-13-24.pdf" target="_blank" rel="noopener">5-13-24</a></td>
+              <td><a href="files/manuales/5-13-24.pdf" target="_blank" rel="noopener">T.C.O. TRAFICO</a></td>
+              <td>LINEA A</td>
+              <td>258</td>
+              <td>INCADE</td>
+            </tr>
+            <!-- Manual 5-13-25 -->
+            <tr data-manual>
+              <td><a href="files/manuales/5-13-25.pdf" target="_blank" rel="noopener">5-13-25</a></td>
+              <td><a href="files/manuales/5-13-25.pdf" target="_blank" rel="noopener">MANDOS DIRECTOS LINEA A</a></td>
+              <td>LINEA A</td>
+              <td>52</td>
+              <td>INCADE</td>
+            </tr>
+            <!-- Manual 5-13-26 -->
+            <tr data-manual>
+              <td><a href="files/manuales/5-13-26.pdf" target="_blank" rel="noopener">5-13-26</a></td>
+              <td><a href="files/manuales/5-13-26.pdf" target="_blank" rel="noopener">OPTIMIZACION LINEA A</a></td>
+              <td>METRO FERREO</td>
+              <td>56</td>
+              <td>TRANSPORTES LINEA A</td>
+            </tr>
+            <!-- Manual 5-13-27 -->
+            <tr data-manual>
+              <td><a href="files/manuales/5-13-27.pdf" target="_blank" rel="noopener">5-13-27</a></td>
+              <td><a href="files/manuales/5-13-27.pdf" target="_blank" rel="noopener">GESTION MANTENIMIENTO</a></td>
+              <td>LINEA A</td>
+              <td>100</td>
+              <td>INCADE</td>
+            </tr>
+            <!-- Manual 5-13-28 -->
+            <tr data-manual>
+              <td><a href="files/manuales/5-13-28.pdf" target="_blank" rel="noopener">5-13-28</a></td>
+              <td><a href="files/manuales/5-13-28.pdf" target="_blank" rel="noopener">OPERACIÓN Y EXPLOTACION C.E.E</a></td>
+              <td>REGULADOR DEL PCL</td>
+              <td>68</td>
+              <td>INCADE</td>
+            </tr>
+            <!-- Manual 5-13-29 -->
+            <tr data-manual>
+              <td><a href="files/manuales/5-13-29.pdf" target="_blank" rel="noopener">5-13-29</a></td>
+              <td><a href="files/manuales/5-13-29.pdf" target="_blank" rel="noopener">ALARMA DE ESTACIONES</a></td>
+              <td>MANDO CENTRALIZADO</td>
+              <td>46</td>
+              <td>THALES</td>
+            </tr>
+            <!-- Manual 5-13-30 -->
+            <tr data-manual>
+              <td><a href="files/manuales/5-13-30.pdf" target="_blank" rel="noopener">5-13-30</a></td>
+              <td><a href="files/manuales/5-13-30.pdf" target="_blank" rel="noopener">BATERIAS COOP</a></td>
+              <td>TRANSPORTES</td>
+              <td>106</td>
+              <td>INCADE</td>
+            </tr>
+            <!-- Manual 5-13-31 -->
+            <tr data-manual>
+              <td><a href="files/manuales/5-13-31.pdf" target="_blank" rel="noopener">5-13-31</a></td>
+              <td><a href="files/manuales/5-13-31.pdf" target="_blank" rel="noopener">RESISTENCIA AL FRENADO LINEA A</a>
+                <small class="d-block mt-2"><a href="files/manuales/5-13-31%20formatos.pdf" target="_blank" rel="noopener">Formatos adicionales</a></small>
+              </td>
+              <td>TRANSPORTES</td>
+              <td>84</td>
+              <td>INCADE</td>
+            </tr>
+            <!-- Manual 5-13-32 -->
+            <tr data-manual>
+              <td><a href="files/manuales/5-13-32.pdf" target="_blank" rel="noopener">5-13-32</a></td>
+              <td><a href="files/manuales/5-13-32.pdf" target="_blank" rel="noopener">MANTENIMIENTO COSMOS</a></td>
+              <td>TRANSPORTES</td>
+              <td>64</td>
+              <td>INCADE</td>
+            </tr>
+            <!-- Manual 5-13-33 -->
+            <tr data-manual>
+              <td><a href="files/manuales/5-13-33.pdf" target="_blank" rel="noopener">5-13-33</a></td>
+              <td><a href="files/manuales/5-13-33.pdf" target="_blank" rel="noopener">MANIOBRAS Y AVERIAS DE MATERIAL RODANTE PARA TRENES DE 9 CARROS FM95-A</a></td>
+              <td>TRANSPORTES</td>
+              <td>22</td>
+              <td>INCADE</td>
+            </tr>
+            <!-- Manual 5-13-34 -->
+            <tr data-manual>
+              <td><a href="files/manuales/5-13-34.pdf" target="_blank" rel="noopener">5-13-34</a></td>
+              <td><a href="files/manuales/5-13-34.pdf" target="_blank" rel="noopener">SISTEMA DE MONITOREO EMBARCADO LINEA-A PARA TRENES FM95-A DE 9 CARROS</a></td>
+              <td>TRANSPORTES</td>
+              <td>50</td>
+              <td>INCADE</td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+      <section id="transportes-linea-b" class="manual-section mb-4" data-manual-section aria-labelledby="titulo-transportes-linea-b">
+        <h2 id="titulo-transportes-linea-b" class="h4">Transportes Línea B</h2>
+        <div class="table-responsive manual-scroll" role="region" aria-label="Manuales de Transportes Línea B" tabindex="0">
+          <table class="table table-striped table-bordered mb-0 manual-catalog-table">
+            <thead><tr><th scope="col">CLAVE</th><th scope="col">TITULO</th><th scope="col">CURSO</th><th scope="col">N.P</th><th scope="col">AUTOR</th></tr></thead>
+            <tbody>
+            <!-- Manual 5-17-01 -->
+            <tr data-manual>
+              <td><a href="files/manuales/5-17-01.pdf" target="_blank" rel="noopener">5-17-01</a></td>
+              <td><a href="files/manuales/5-17-01.pdf" target="_blank" rel="noopener">CONDUCCIÓN SACEM LÍNEA B</a></td>
+              <td>TRANSPORTES</td>
+              <td>65</td>
+              <td>GCIA. LÍNEAS 2, 5, 6 Y B</td>
+            </tr>
+            <!-- Manual 5-17-02 -->
+            <tr data-manual>
+              <td><a href="files/manuales/5-17-02h.pdf" target="_blank" rel="noopener">5-17-02</a></td>
+              <td><a href="files/manuales/5-17-02h.pdf" target="_blank" rel="noopener">MODERNIZACIÓN TREN MP86 Y NM73 LÍNEA B</a></td>
+              <td>TRANSPORTES</td>
+              <td>56</td>
+              <td>INCADE</td>
+            </tr>
+            <!-- Manual 5-17-03 -->
+            <tr data-manual>
+              <td><a href="files/manuales/5-17-03.pdf" target="_blank" rel="noopener">5-17-03</a></td>
+              <td><a href="files/manuales/5-17-03.pdf" target="_blank" rel="noopener">DISTRIBUCIÓN DE LA ENERGÍA ELÉCTRICA L-B</a></td>
+              <td>TRANSPORTES</td>
+              <td>56</td>
+              <td>INCADE</td>
+            </tr>
+            <!-- Manual 5-17-04 -->
+            <tr data-manual>
+              <td><a href="files/manuales/5-17-04.pdf" target="_blank" rel="noopener">5-17-04</a></td>
+              <td><a href="files/manuales/5-17-04.pdf" target="_blank" rel="noopener">SERVICIOS PROVISIONALES LÍNEA B</a></td>
+              <td>TRANSPORTES</td>
+              <td>82</td>
+              <td>INCADE</td>
+            </tr>
+            <!-- Manual 5-17-05 -->
+            <tr data-manual>
+              <td><a href="files/manuales/5-17-05.pdf" target="_blank" rel="noopener">5-17-05</a></td>
+              <td><a href="files/manuales/5-17-05.pdf" target="_blank" rel="noopener">ALIMENTACIÓN, TRACCIÓN CIUDAD AZTECA</a></td>
+              <td>TRANSPORTES</td>
+              <td>22</td>
+              <td>INCADE</td>
+            </tr>
+            <!-- Manual 5-17-06 -->
+            <tr data-manual>
+              <td><a href="files/manuales/5-17-06.pdf" target="_blank" rel="noopener">5-17-06</a></td>
+              <td><a href="files/manuales/5-17-06.pdf" target="_blank" rel="noopener">TERMINALES Y ZONA DE MANIOBRAS LÍNEA B</a></td>
+              <td>IJE</td>
+              <td>208</td>
+              <td>INCADE</td>
+            </tr>
+            <!-- Manual 5-17-07 -->
+            <tr data-manual>
+              <td><a href="files/manuales/5-17-07.pdf" target="_blank" rel="noopener">5-17-07</a></td>
+              <td><a href="files/manuales/5-17-07.pdf" target="_blank" rel="noopener">TABLERO DE CONTROL ÓPTICO Y PGT LINEA B</a></td>
+              <td>IJE REGULADOR</td>
+              <td>218</td>
+              <td>THALES</td>
+            </tr>
+            <!-- Manual 5-17-08 -->
+            <tr data-manual>
+              <td><a href="files/manuales/5-17-08.pdf" target="_blank" rel="noopener">5-17-08</a></td>
+              <td><a href="files/manuales/5-17-08.pdf" target="_blank" rel="noopener">SACEM LÍNEA B</a></td>
+              <td>TRANSPORTES</td>
+              <td>28</td>
+              <td>INCADE</td>
+            </tr>
+            <!-- Manual 5-17-09 -->
+            <tr data-manual>
+              <td><a href="files/manuales/5-17-09.pdf" target="_blank" rel="noopener">5-17-09</a></td>
+              <td><a href="files/manuales/5-17-09.pdf" target="_blank" rel="noopener">RADIOTELEFONÍA LÍNEA B</a></td>
+              <td>TRANSPORTES</td>
+              <td>30</td>
+              <td>INCADE</td>
+            </tr>
+            <!-- Manual 5-17-10 -->
+            <tr data-manual>
+              <td><a href="files/manuales/5-17-10.pdf" target="_blank" rel="noopener">5-17-10</a></td>
+              <td><a href="files/manuales/5-17-10.pdf" target="_blank" rel="noopener">TELEFONIA TETRA LINEA B</a></td>
+              <td>TRANSPORTES</td>
+              <td>58</td>
+              <td>INCADE</td>
+            </tr>
+            <!-- Manual 5-17-11 -->
+            <tr data-manual>
+              <td><a href="files/manuales/5-17-11.pdf" target="_blank" rel="noopener">5-17-11</a></td>
+              <td><a href="files/manuales/5-17-11.pdf" target="_blank" rel="noopener">PROGRAMADORA GENERAL DE TRÁFICO PGT- LÍNEA B</a></td>
+              <td>TRANSPORTES</td>
+              <td>78</td>
+              <td>JUVENTINO MATA</td>
+            </tr>
+            <!-- Manual 5-17-12 -->
+            <tr data-manual>
+              <td><a href="files/manuales/5-17-12.pdf" target="_blank" rel="noopener">5-17-12</a></td>
+              <td><a href="files/manuales/5-17-12.pdf" target="_blank" rel="noopener">ENCENDIDO DE LA COMPUTADORA DE LA PLATINA DE RADIOTELEFONÍA</a></td>
+              <td>TRANSPORTES</td>
+              <td>24</td>
+              <td>INCADE</td>
+            </tr>
+            <!-- Manual 5-17-13 -->
+            <tr data-manual>
+              <td><a href="files/manuales/5-17-13.pdf" target="_blank" rel="noopener">5-17-13</a></td>
+              <td><a href="files/manuales/5-17-13.pdf" target="_blank" rel="noopener">FINALES DEL SISTEMA</a></td>
+              <td>MANDO CENTRALIZADO</td>
+              <td>24</td>
+              <td>THALES</td>
+            </tr>
+            <!-- Manual 5-17-14 -->
+            <tr data-manual>
+              <td><a href="files/manuales/5-17-14.pdf" target="_blank" rel="noopener">5-17-14</a></td>
+              <td><a href="files/manuales/5-17-14.pdf" target="_blank" rel="noopener">FINALES DEL SISTEMA, SUPERVISIÓN</a></td>
+              <td>MANDO CENTRALIZADO</td>
+              <td>66</td>
+              <td>THALES</td>
+            </tr>
+            <!-- Manual 5-17-15 -->
+            <tr data-manual>
+              <td><a href="files/manuales/5-17-15.pdf" target="_blank" rel="noopener">5-17-15</a></td>
+              <td><a href="files/manuales/5-17-15.pdf" target="_blank" rel="noopener">FINALES DEL SISTEMA, ALARMAS</a></td>
+              <td>MANDO CENTRALIZADO</td>
+              <td>48</td>
+              <td>THALES</td>
+            </tr>
+            <!-- Manual 5-17-16 -->
+            <tr data-manual>
+              <td><a href="files/manuales/5-17-16.pdf" target="_blank" rel="noopener">5-17-16</a></td>
+              <td><a href="files/manuales/5-17-16.pdf" target="_blank" rel="noopener">MANTENIMIENTO HARDWARE Y SOFTWARE, CONFIGURACIÓN</a></td>
+              <td>MANDO CENTRALIZADO</td>
+              <td>34</td>
+              <td>THALES</td>
+            </tr>
+            <!-- Manual 5-17-17 -->
+            <tr data-manual>
+              <td><a href="files/manuales/5-17-17.pdf" target="_blank" rel="noopener">5-17-17</a></td>
+              <td><a href="files/manuales/5-17-17.pdf" target="_blank" rel="noopener">MANTENIMIENTO HARDWARE Y SOFTWARE</a></td>
+              <td>MANDO CENTRALIZADO</td>
+              <td>32</td>
+              <td>THALES</td>
+            </tr>
+            <!-- Manual 5-17-18 -->
+            <tr data-manual>
+              <td><a href="files/manuales/5-17-18.pdf" target="_blank" rel="noopener">5-17-18</a></td>
+              <td><a href="files/manuales/5-17-18.pdf" target="_blank" rel="noopener">MANTENIMIENTO HARDWARE Y SOFTWARE</a></td>
+              <td>MANDO CENTRALIZADO</td>
+              <td>314</td>
+              <td>THALES</td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+      <section id="transportes-linea-12" class="manual-section mb-4" data-manual-section aria-labelledby="titulo-transportes-linea-12">
+        <h2 id="titulo-transportes-linea-12" class="h4">Transportes Línea 12</h2>
+        <div class="table-responsive manual-scroll" role="region" aria-label="Manuales de Transportes Línea 12" tabindex="0">
+          <table class="table table-striped table-bordered mb-0 manual-catalog-table">
+            <thead><tr><th scope="col">CLAVE</th><th scope="col">TITULO</th><th scope="col">CURSO</th><th scope="col">N.P</th><th scope="col">AUTOR</th></tr></thead>
+            <tbody>
+            <!-- Manual 5-18-01 -->
+            <tr data-manual>
+              <td><a href="files/manuales/5-18-01.pdf" target="_blank" rel="noopener">5-18-01</a></td>
+              <td><a href="files/manuales/5-18-01.pdf" target="_blank" rel="noopener">CONDUCCIÓN DEL SISTEMA CBTC</a></td>
+              <td>TRANSPORTES</td>
+              <td>20</td>
+              <td>TRANSPORTES</td>
+            </tr>
+            <!-- Manual 5-18-02 -->
+            <tr data-manual>
+              <td><a href="files/manuales/5-18-02.pdf" target="_blank" rel="noopener">5-18-02</a></td>
+              <td><a href="files/manuales/5-18-02.pdf" target="_blank" rel="noopener">CONDUCCIÓN FE-10</a></td>
+              <td>TRANSPORTES</td>
+              <td>238</td>
+              <td>TRANSPORTES</td>
+            </tr>
+            <!-- Manual 5-18-03 -->
+            <tr data-manual>
+              <td><a href="files/manuales/5-18-03.pdf" target="_blank" rel="noopener">5-18-03</a></td>
+              <td><a href="files/manuales/5-18-03.pdf" target="_blank" rel="noopener">MATERIAL RODANTE TREN L- 12</a></td>
+              <td>TRANSPORTES</td>
+              <td>36</td>
+              <td>TRANSPORTES</td>
+            </tr>
+            <!-- Manual 5-18-04 -->
+            <tr data-manual>
+              <td><a href="files/manuales/5-18-04.pdf" target="_blank" rel="noopener">5-18-04</a></td>
+              <td><a href="files/manuales/5-18-04.pdf" target="_blank" rel="noopener">TELEFONÍA DE TRENES</a></td>
+              <td>TRANSPORTES</td>
+              <td>20</td>
+              <td>TRANSPORTES</td>
+            </tr>
+            <!-- Manual 5-18-05 -->
+            <tr data-manual>
+              <td><a href="files/manuales/5-18-05.pdf" target="_blank" rel="noopener">5-18-05</a></td>
+              <td><a href="files/manuales/5-18-05.pdf" target="_blank" rel="noopener">PILOTAJE AUTOMÁTICO</a></td>
+              <td>TRANSPORTES</td>
+              <td>8</td>
+              <td>TRANSPORTES</td>
+            </tr>
+            <!-- Manual 5-18-06 -->
+            <tr data-manual>
+              <td><a href="files/manuales/5-18-06.pdf" target="_blank" rel="noopener">5-18-06</a></td>
+              <td><a href="files/manuales/5-18-06.pdf" target="_blank" rel="noopener">GUÍA TÉCNICA AVANZADA PARA EL MANTENIMIENTO DE LOS EQUIPOS DE SIMULACIÓN</a></td>
+              <td>TRANSPORTES</td>
+              <td>72</td>
+              <td>TRANSPORTES</td>
+            </tr>
+            <!-- Manual 5-18-07 -->
+            <tr data-manual>
+              <td><a href="files/manuales/5-18-07.pdf" target="_blank" rel="noopener">5-18-07</a></td>
+              <td><a href="files/manuales/5-18-07.pdf" target="_blank" rel="noopener">OPERACIÓN Y MANTENIMIENTO DE SIMULADORES DE CONDUCCIÓN</a></td>
+              <td>TRANSPORTES</td>
+              <td>90</td>
+              <td>TRANSPORTES</td>
+            </tr>
+            <!-- Manual 5-18-08 -->
+            <tr data-manual>
+              <td><a href="files/manuales/5-18-08.pdf" target="_blank" rel="noopener">5-18-08</a></td>
+              <td><a href="files/manuales/5-18-08.pdf" target="_blank" rel="noopener">ACTUALIZACIÓN LÍNEA 12</a></td>
+              <td>TRANSPORTES</td>
+              <td>90</td>
+              <td>TRANSPORTES</td>
+            </tr>
+            <!-- Manual 5-18-09 -->
+            <tr data-manual>
+              <td><a href="files/manuales/5-18-09%281%29.pdf" target="_blank" rel="noopener">5-18-09</a></td>
+              <td><a href="files/manuales/5-18-09%281%29.pdf" target="_blank" rel="noopener">ACTUALIZACIÓN LÍNEA 12</a></td>
+              <td>IJE/REGULADOR</td>
+              <td>26</td>
+              <td>TRANSPORTES</td>
+            </tr>
+            <!-- Manual 5-18-10 -->
+            <tr data-manual>
+              <td><a href="files/manuales/5-18-10.pdf" target="_blank" rel="noopener">5-18-10</a></td>
+              <td><a href="files/manuales/5-18-10.pdf" target="_blank" rel="noopener">MANUAL LINEA 12</a></td>
+              <td>ACTUALIZACIÓN ABRIL 2018</td>
+              <td>156</td>
+              <td>TRANSPORTES</td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+      </div>
+      <section class="mb-4" data-manual-extra-section aria-labelledby="tituloAdicionales">
+        <h2 id="tituloAdicionales" class="h4">Documentos adicionales sin clave</h2>
+        <table class="table table-striped table-bordered mb-0 manual-catalog-table manual-extra-table">
+          <thead><tr><th scope="col">TITULO</th></tr></thead>
+          <tbody>
+          <tr data-manual-extra><td><a href="files/manuales/ACTUALIZACI%C3%93N%20L-12....9-04-18.pdf" target="_blank" rel="noopener">MANUAL DE LÍNEA 12 TRANSPORTACIÓN</a></td></tr>
+          <tr data-manual-extra><td><a href="files/manuales/Regulaci%C3%B3n%20de%20los%20Trenes%20Regulador%202018.pdf" target="_blank" rel="noopener">REGULACIÓN DE LOS TRENES REGULADOR 2018</a></td></tr>
+          <tr data-manual-extra><td><a href="files/manuales/Regulaci%C3%B3n%20de%20losTrenes%20Conductor%202018.pdf" target="_blank" rel="noopener">REGULACIÓN DE LOS TRENES CONDUCTOR 2018</a></td></tr>
+        </tbody>
+        </table>
+      </section>
+      <p id="sinManuales" class="text-secondary py-3" role="status" hidden>No se encontraron manuales con esa búsqueda.</p>
+    </div>
+  </main>
 
   <footer class="container-fluid bg-white border-top py-4">
     <div class="container">

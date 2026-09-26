@@ -618,3 +618,81 @@ body > header .navbar-toggler:focus-visible {
   font-weight: 400;
   line-height: 1.5;
 }
+
+/* Biblioteca de recursos: enlaces amplios y categorías accesibles en móvil. */
+.resources-container { padding-bottom: 2rem !important; }
+.resource-description { color: #617183; margin: 0 0 1rem; }
+.resource-categories { display: flex; flex-wrap: wrap; gap: .5rem; margin: 1.25rem 0 2rem; }
+.resource-categories a {
+  display: inline-flex; align-items: center; gap: .5rem;
+  min-height: 44px; padding: .6rem .9rem; border: 1px solid #dce3e9;
+  border-radius: .65rem; color: #112c43; background: #f5f7fa; text-decoration: none;
+}
+.resource-categories span { color: #617183; font-size: .8rem; }
+.resource-section { margin-bottom: 2rem; scroll-margin-top: calc(var(--site-header-height, 70px) + 16px); }
+.resource-section h2 { font-size: 1.2rem; font-weight: 600; margin: 0 0 .5rem; color: #112c43; }
+.resource-heading { display: flex; align-items: baseline; justify-content: space-between; gap: .5rem; }
+.resource-heading > span { font-size: .85rem; color: #617183; }
+.resource-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: .65rem; }
+.resource-file {
+  display: flex; align-items: center; gap: .8rem; padding: 1rem;
+  min-width: 0; min-height: 76px; border: 1px solid #e0e6ec;
+  border-radius: .7rem; text-decoration: none; color: #112c43; background: #fff;
+}
+.resource-file > span:nth-child(2) { min-width: 0; overflow-wrap: anywhere; }
+.resource-file strong { display: block; font-size: .95rem; font-weight: 500; }
+.resource-file small { display: block; margin-top: .2rem; font-size: .8rem; color: #617183; }
+.resource-file-icon { display: grid; place-items: center; flex-shrink: 0; width: 38px; height: 42px; border-radius: .4rem; background: #edf2f6; font-size: .7rem; font-weight: 700; }
+.resource-open { margin-left: auto; font-size: 1.2rem; }
+a.resource-file:hover, .resource-categories a:hover { background: #edf2f6; color: #112c43; border-color: #a9bac8; }
+a.resource-file:focus-visible, .resource-categories a:focus-visible { outline: 2px solid #112c43; outline-offset: 3px; }
+.resource-placeholder { background: #f8f9fa; border-style: dashed; }
+@media (max-width: 991.98px) { .resource-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 575.98px) {
+  .resource-grid { grid-template-columns: minmax(0, 1fr); }
+  .resource-file { padding: .8rem; }
+  .resource-categories { gap: .4rem; margin-bottom: 1.5rem; }
+  .resource-categories a { font-size: .875rem; padding: .5rem .65rem; }
+}
+
+/* Servicios provisionales: cada línea admite una cantidad independiente de diagramas. */
+.service-demo-note { font-size: .85rem; color: #617183; margin-bottom: 1rem; }
+.service-lines { display: grid; gap: .6rem; }
+.service-line { border: 1px solid #dce3e9; border-radius: .7rem; overflow: hidden; }
+.service-line summary { display: flex; align-items: center; gap: .75rem; padding: .9rem 1rem; min-height: 52px; cursor: pointer; list-style: none; color: #112c43; background: #f5f7fa; }
+.service-line summary::-webkit-details-marker { display: none; }
+.service-line summary::after { content: "+"; font-size: 1.3rem; margin-left: .25rem; }
+.service-line[open] > summary::after { content: "−"; }
+.service-line summary:hover { background: #edf2f6; }
+.service-line summary:focus-visible { outline: 2px solid #112c43; outline-offset: -3px; }
+.service-line-label { font-weight: 600; }
+.service-count { margin-left: auto; font-size: .8rem; color: #617183; text-align: right; }
+.service-line-content { padding: .75rem; }
+.service-diagrams { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .6rem; padding: 0; margin: 0; list-style: none; }
+.service-empty { margin: .25rem; color: #617183; font-size: .9rem; }
+@media (max-width: 575.98px) {
+  .service-diagrams { grid-template-columns: minmax(0, 1fr); }
+  .service-line summary { padding: .8rem; }
+}
+
+/* Catálogos de manuales: cinco columnas conservadas en todas las pantallas. */
+.manual-catalog-table { min-width: 780px; font-size: .95rem; --bs-table-color: #244563; --bs-table-striped-color: #244563; --bs-table-striped-bg: #f2f2f2; }
+.manual-catalog-table thead { --bs-table-bg: #112c43; --bs-table-color: #fff; }
+.manual-catalog-table th, .manual-catalog-table td { padding: .65rem .75rem; vertical-align: middle; }
+.manual-catalog-table th:first-child, .manual-catalog-table td:first-child { width: 12%; text-align: center; white-space: nowrap; }
+.manual-catalog-table th:nth-child(2) { width: 44%; }
+.manual-catalog-table th:nth-child(3) { width: 18%; }
+.manual-catalog-table th:nth-child(4), .manual-catalog-table td:nth-child(4) { width: 9%; text-align: center; }
+.manual-catalog-table a { color: inherit; text-decoration: none; }
+.manual-catalog-table a:hover { text-decoration: underline; }
+.manual-catalog-table a:focus-visible { outline: 2px solid #112c43; outline-offset: 3px; }
+.manual-section { scroll-margin-top: calc(var(--site-header-height, 70px) + 16px); }
+
+/* Documentos sin clave: una columna adaptable al ancho disponible. */
+.manual-extra-table { min-width: 0; width: 100%; table-layout: fixed; }
+.manual-extra-table th:first-child,
+.manual-extra-table td:first-child { width: 100%; text-align: left; white-space: normal; overflow-wrap: anywhere; }
+
+/* Respeta las categorías reservadas para publicar información más adelante. */
+.resource-categories a[hidden],
+.resource-section[hidden] { display: none !important; }
