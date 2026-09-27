@@ -171,6 +171,44 @@ if (copyNotice) {
     if (!copied) throw new Error("No se pudo copiar");
   }
 
+  // Matrículas de formación: conserva el texto original aunque la búsqueda lo resalte.
+  document.querySelectorAll(".formacion-table[data-sheet]").forEach(table => {
+    const line = table.dataset.sheet;
+    if (!/^L(?:[1-9]|A|B)$/.test(line)) return;
+    const headers = Array.from(table.tHead.rows[0].cells, cell =>
+      cell.textContent.normalize("NFD").replace(/[\u0300-\u036f]/g, "").trim().toLowerCase());
+    const registrationIndex = headers.indexOf("matricula");
+    const modelIndex = headers.indexOf("modelo");
+    if (registrationIndex < 0 || modelIndex < 0) return;
+    table.querySelectorAll("[data-formacion]").forEach(row => {
+      const cell = row.cells[registrationIndex];
+      const registration = cell.textContent.trim();
+      const model = row.cells[modelIndex].textContent.trim();
+      if (!registration) return;
+      const text = (line === "LA" ? "FM-" : "M-") + registration + " " + model;
+      const button = document.createElement("button");
+      button.type = "button";
+      button.className = "train-copy";
+      button.textContent = registration;
+      button.title = "Copiar tren";
+      button.setAttribute("aria-label", "Copiar tren " + text);
+      button.addEventListener("click", async () => {
+        try {
+          if (navigator.clipboard && window.isSecureContext) {
+            try { await navigator.clipboard.writeText(text); }
+            catch { legacyCopy(text); }
+          } else {
+            legacyCopy(text);
+          }
+          showCopyNotice("Tren copiado");
+        } catch {
+          showCopyNotice("No se pudo copiar. Inténtalo de nuevo.");
+        }
+      });
+      cell.replaceChildren(button);
+    });
+  });
+
   document.querySelectorAll(".larines-table [data-registro]").forEach((row) => {
     const shortCell = row.cells[1];
     const longCell = row.cells[2];
