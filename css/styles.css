@@ -548,13 +548,14 @@ body > header .navbar-toggler:focus-visible {
 #buscarFormacion { scroll-margin-top: calc(var(--site-header-height) + 16px); }
 #buscarFormacion::-webkit-search-cancel-button { -webkit-appearance: none; }
 @media (max-width: 1199.98px) {
-  #menuLarines + .dropdown-menu {
+  #menuLarines + .dropdown-menu,
+  #menuRecursos + .dropdown-menu {
     display: block;
     position: static !important;
     transform: none !important;
   }
-  #menuLarines:disabled { opacity: 1; color: #112c43; }
-  #menuLarines::after { display: none; }
+  #menuLarines:disabled, #menuRecursos:disabled { opacity: 1; color: #112c43; }
+  #menuLarines::after, #menuRecursos::after { display: none; }
 }
 
 /* Volver arriba centrado horizontalmente en todas las pantallas. */
@@ -701,3 +702,138 @@ a.resource-file:focus-visible, .resource-categories a:focus-visible { outline: 2
 .train-copy { border: 0; background: transparent; padding: .2rem 0; font: inherit; color: inherit; cursor: pointer; }
 .train-copy:focus-visible { outline: 2px solid #112c43; outline-offset: 3px; border-radius: .2rem; }
 .resource-file[hidden] { display: none !important; }
+
+/* Copiado desde descripción corta en móvil y escritorio; texto largo seleccionable. */
+.larin-copy {
+  display: inline;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  text-align: left;
+  font: inherit;
+  text-decoration: none;
+  cursor: pointer;
+}
+.larin-copy:focus-visible { outline: 2px solid #112c43; outline-offset: 2px; }
+.larines-table tbody tr > :nth-child(3) { user-select: text; cursor: text; }
+
+/* Consulta rápida: seleccionar línea y después estación. */
+.service-line-picker { display: flex; flex-wrap: wrap; gap: .5rem; margin-bottom: 1.25rem; }
+.service-line-picker[hidden], .service-panel[hidden] { display: none !important; }
+.service-line-choice {
+  display: inline-flex; align-items: center; justify-content: center; gap: .5rem;
+  min-width: 68px; min-height: 46px; padding: .5rem .65rem;
+  border: 1px solid #ccd6df; border-radius: .6rem;
+  background: #f5f7fa; color: #112c43; font: inherit; font-weight: 600;
+}
+.service-line-choice span { font-size: .75rem; font-weight: 400; opacity: .8; }
+.service-line-choice[aria-pressed="true"] { background: #112c43; color: white; border-color: #112c43; }
+.service-line-choice:focus-visible { outline: 2px solid #112c43; outline-offset: 3px; }
+.service-stations { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: .5rem; list-style: none; padding: 0; margin: 0; }
+.service-stations .resource-file { min-height: 52px; padding: .75rem; height: 100%; }
+.service-stations .resource-file > span:first-child { min-width: 0; overflow-wrap: anywhere; }
+@media (max-width: 767.98px) {
+  .service-stations { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .service-line-picker { gap: .4rem; }
+  .service-line-choice { flex: 1 0 15%; min-width: 52px; }
+}
+
+/* Selector de línea con apariencia de formulario, separado de las categorías. */
+.service-line-field {
+  display: block; padding: 1rem; margin-bottom: 1rem;
+  background: #f5f7fa; border-left: 3px solid #112c43; border-radius: .35rem;
+}
+.service-line-field label { display: block; margin-bottom: .5rem; color: #41576b; font-size: .875rem; }
+.service-line-field select {
+  width: 100%; max-width: 420px; min-height: 48px; border: 1px solid #bdcbd6;
+  border-radius: .45rem; padding: .65rem 2.5rem .65rem .8rem;
+  font: inherit; color: #112c43; background-color: #fff; cursor: pointer;
+}
+.service-line-field select:focus-visible { outline: 2px solid #112c43; outline-offset: 2px; }
+
+/* Encabezados de categoría visibles durante el recorrido de la página. */
+.resource-chapter-heading {
+  display: flex; align-items: center; justify-content: space-between;
+  gap: .75rem; padding: 1rem 1.1rem; margin-bottom: 1rem;
+  border-radius: .6rem; background: #112c43; color: #fff;
+}
+.resource-chapter .resource-chapter-heading h2 { margin: 0; color: inherit; }
+.resource-chapter-heading > span { flex-shrink: 0; font-size: .8rem; }
+
+
+@media (max-width: 575.98px) {
+  .resource-chapter-heading { flex-wrap: wrap; padding: .9rem .8rem; gap: .35rem .75rem; }
+  .resource-chapter-heading h2 { font-size: 1.15rem; }
+}
+
+/* Botones de línea inspirados en las etiquetas de color de Bootstrap. */
+.service-badge-picker { display: flex; flex-wrap: wrap; gap: .5rem; margin: .75rem 0 1.25rem; }
+.service-line-badge {
+  background: var(--line-bg); color: var(--line-ink);
+  border: 0; border-radius: .3rem; padding: .4rem .65rem;
+  font: inherit; font-size: .875rem; font-weight: 700; line-height: 1.25;
+  min-height: 36px; cursor: pointer;
+}
+.service-selected-mark { visibility: hidden; }
+.service-line-badge[aria-pressed="true"] .service-selected-mark { visibility: visible; }
+.service-line-badge[aria-pressed="true"] { outline: 2px solid #112c43; outline-offset: 2px; }
+.service-line-badge:focus-visible { outline: 3px solid #112c43; outline-offset: 3px; }
+.service-line-badge:hover { filter: brightness(.93); }
+@media (max-width: 767.98px) { .service-line-badge { min-height: 44px; } }
+
+/* Anuarios: años legibles y áreas táctiles amplias, sin metadatos repetidos. */
+.annual-grid { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: .65rem; }
+.annual-link {
+  display: flex; align-items: center; justify-content: space-between; gap: .4rem;
+  min-height: 52px; padding: .7rem .85rem; border: 1px solid #d6e0e8;
+  border-radius: .5rem; background: #fff; color: #112c43;
+  font-size: 1rem; font-weight: 600; text-decoration: none;
+}
+.annual-arrow { color: #617183; font-size: .85rem; font-weight: 400; }
+.annual-link:hover { color: #112c43; background: #edf2f6; border-color: #a9bac8; }
+.annual-link:focus-visible { outline: 2px solid #112c43; outline-offset: 3px; }
+.annual-link[hidden] { display: none !important; }
+@media (max-width: 991.98px) { .annual-grid { grid-template-columns: repeat(5, minmax(0, 1fr)); } }
+@media (max-width: 575.98px) {
+  .annual-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: .6rem; }
+  .annual-link { padding: .7rem; }
+}
+
+.profile-pending { justify-content: center; color: #617183; background: #f5f7fa; cursor: default; }
+.profile-grid { margin-bottom: 0; }
+
+/* Alinea el último desplegable hacia el interior del navbar en escritorio. */
+@media (min-width: 1200px) {
+  #menuRecursos + .dropdown-menu {
+    right: 0;
+    left: auto;
+    max-width: calc(100vw - 2rem);
+  }
+}
+
+/* El destino del menú recibe foco sin dibujar un marco alrededor del apartado. */
+#perfiles-linea:focus,
+#perfiles-linea:focus-visible { outline: none; }
+
+/* Formación: encabezados y datos uniformes, también en botones de matrícula. */
+
+.formacion-table th,
+.formacion-table td,
+.formacion-table .train-copy {
+  text-transform: uppercase;
+  text-align: center;
+}
+@media (max-width: 767.98px) {
+  /* Conserva el margen móvil del sitio y aprovecha todo su ancho interior. */
+  .lineas-grid > .linea-section,
+  .fracciones-table { width: 100%; max-width: none; }
+  .manual-catalog-table:not(.manual-extra-table) {
+    width: 100%; min-width: 0; table-layout: fixed;
+  }
+  .manual-catalog-table:not(.manual-extra-table) tr > :nth-child(n+3) { display: none; }
+  .manual-catalog-table:not(.manual-extra-table) tr > :first-child { width: 28%; padding-inline: .35rem; }
+  .manual-catalog-table:not(.manual-extra-table) tr > :nth-child(2) { width: 72%; overflow-wrap: anywhere; }
+}
+
+.formacion-section > h2 { text-transform: uppercase; text-align: left; }

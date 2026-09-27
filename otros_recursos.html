@@ -11,6 +11,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Arimo:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<script src="js/recursos.js" defer></script>
 </head>
 <body class="d-flex flex-column min-vh-100" data-page="otros-recursos">
   <header class="border-bottom">
@@ -32,8 +33,16 @@
               <li class="nav-item"><a class="nav-link" href="formacion_trenes.html" data-page="formacion-de-trenes">Formación de trenes</a></li>
               <li class="nav-item dropdown"><button class="nav-link dropdown-toggle" type="button" id="menuFracciones" data-bs-toggle="dropdown" aria-expanded="false" data-page="fracciones-de-vuelta">Fracciones de vuelta</button><ul class="dropdown-menu" aria-labelledby="menuFracciones"><li><a class="dropdown-item" href="fracciones_vuelta.html#linea1">Línea 1</a></li><li><a class="dropdown-item" href="fracciones_vuelta.html#linea2">Línea 2</a></li><li><a class="dropdown-item" href="fracciones_vuelta.html#linea3">Línea 3</a></li><li><a class="dropdown-item" href="fracciones_vuelta.html#linea4">Línea 4</a></li><li><a class="dropdown-item" href="fracciones_vuelta.html#linea5">Línea 5</a></li><li><a class="dropdown-item" href="fracciones_vuelta.html#linea6">Línea 6</a></li><li><a class="dropdown-item" href="fracciones_vuelta.html#linea7">Línea 7</a></li><li><a class="dropdown-item" href="fracciones_vuelta.html#linea8">Línea 8</a></li><li><a class="dropdown-item" href="fracciones_vuelta.html#linea9">Línea 9</a></li><li><a class="dropdown-item" href="fracciones_vuelta.html#lineaA">Línea A</a></li><li><a class="dropdown-item" href="fracciones_vuelta.html#lineaB">Línea B</a></li><li><a class="dropdown-item" href="fracciones_vuelta.html#linea12">Línea 12</a></li></ul></li>
               <li class="nav-item"><a class="nav-link" href="manuales.html" data-page="manuales">Manuales</a></li>
-              <li class="nav-item"><a class="nav-link" href="procedimientos.html" data-page="procedimientos">Procedimientos</a></li>
-              <li class="nav-item"><a class="nav-link active" aria-current="page" href="otros_recursos.html" data-page="otros-recursos">Otros recursos</a></li>
+              
+              <li class="nav-item dropdown">
+                <button class="nav-link dropdown-toggle" id="menuRecursos" type="button" data-bs-toggle="dropdown" aria-expanded="false" data-page-group="otros-recursos,procedimientos">Otros recursos</button>
+                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="menuRecursos">
+                  <li><a class="dropdown-item" href="otros_recursos.html#perfiles-linea">Perfiles de Línea</a></li>
+                  <li><a class="dropdown-item" href="otros_recursos.html#servicios-provisionales">Servicios provisionales</a></li>
+                  <li><a class="dropdown-item" href="procedimientos.html" data-page="procedimientos">Procedimientos</a></li>
+                  <li><a class="dropdown-item" href="otros_recursos.html#anuarios">Anuarios</a></li>
+                </ul>
+              </li>
 
               
               
@@ -47,252 +56,232 @@
   <main id="contenido" class="flex-grow-1 bg-white" tabindex="-1">
     <div class="container-fluid px-0 larines-container resources-container">
       <h1 class="h3 mt-4 mb-2">Otros recursos</h1>
-      <p class="resource-description">Consulta los anuarios disponibles.</p>
+      <p class="resource-description">Diagramas y anuarios de consulta.</p>
       <nav class="resource-categories" aria-label="Categorías de recursos">
+        <a href="#perfiles-linea">Perfiles de Línea</a>
+        <a href="#servicios-provisionales">Servicios provisionales <span>46</span></a>
         <a href="#anuarios">Anuarios <span>21</span></a>
-        <a hidden href="#servicios-provisionales">Servicios provisionales</a>
+        
         <a hidden href="#diagramas-mr">Diagramas de MR</a>
         <a hidden href="#averias-mr">Averías de MR</a>
         <a hidden href="#mas-recursos">Más recursos</a>
       </nav>
-      <section id="anuarios" class="resource-section">
-        <div class="resource-heading"><h2>Anuarios</h2><span>21 documentos</span></div>
-        <p class="resource-description">Selecciona un anuario para abrir el PDF en otra pestaña.</p>
-        <div class="resource-grid">
-          <a hidden class="resource-file" href="files/anuarios/anuario_2018_2.pdf" target="_blank" rel="noopener">
-            <span class="resource-file-icon" aria-hidden="true">PDF</span>
-            <span><strong>Anuario 2018-2</strong><small>PDF · 8.9 MB</small></span>
-            <span class="resource-open" aria-hidden="true">↗</span>
-          </a>
-          <a class="resource-file" href="files/anuarios/anuario_2023.pdf" target="_blank" rel="noopener">
-            <span class="resource-file-icon" aria-hidden="true">PDF</span>
-            <span><strong>Anuario 2023</strong><small>PDF · 4.4 MB</small></span>
-            <span class="resource-open" aria-hidden="true">↗</span>
-          </a>
-          <a class="resource-file" href="files/anuarios/anuario_2022.pdf" target="_blank" rel="noopener">
-            <span class="resource-file-icon" aria-hidden="true">PDF</span>
-            <span><strong>Anuario 2022</strong><small>PDF · 8.6 MB</small></span>
-            <span class="resource-open" aria-hidden="true">↗</span>
-          </a>
-          <a class="resource-file" href="files/anuarios/anuario_2021.pdf" target="_blank" rel="noopener">
-            <span class="resource-file-icon" aria-hidden="true">PDF</span>
-            <span><strong>Anuario 2021</strong><small>PDF · 24.0 MB</small></span>
-            <span class="resource-open" aria-hidden="true">↗</span>
-          </a>
-          <a class="resource-file" href="files/anuarios/anuario_2020.pdf" target="_blank" rel="noopener">
-            <span class="resource-file-icon" aria-hidden="true">PDF</span>
-            <span><strong>Anuario 2020</strong><small>PDF · 7.9 MB</small></span>
-            <span class="resource-open" aria-hidden="true">↗</span>
-          </a>
-          <a class="resource-file" href="files/anuarios/anuario_2019.pdf" target="_blank" rel="noopener">
-            <span class="resource-file-icon" aria-hidden="true">PDF</span>
-            <span><strong>Anuario 2019</strong><small>PDF · 9.9 MB</small></span>
-            <span class="resource-open" aria-hidden="true">↗</span>
-          </a>
-          <a class="resource-file" href="files/anuarios/anuario_2018.pdf" target="_blank" rel="noopener">
-            <span class="resource-file-icon" aria-hidden="true">PDF</span>
-            <span><strong>Anuario 2018</strong><small>PDF · 8.8 MB</small></span>
-            <span class="resource-open" aria-hidden="true">↗</span>
-          </a>
-          <a class="resource-file" href="files/anuarios/anuario_2017.pdf" target="_blank" rel="noopener">
-            <span class="resource-file-icon" aria-hidden="true">PDF</span>
-            <span><strong>Anuario 2017</strong><small>PDF · 9.0 MB</small></span>
-            <span class="resource-open" aria-hidden="true">↗</span>
-          </a>
-          <a class="resource-file" href="files/anuarios/anuario_2016.pdf" target="_blank" rel="noopener">
-            <span class="resource-file-icon" aria-hidden="true">PDF</span>
-            <span><strong>Anuario 2016</strong><small>PDF · 6.6 MB</small></span>
-            <span class="resource-open" aria-hidden="true">↗</span>
-          </a>
-          <a class="resource-file" href="files/anuarios/anuario_2015.pdf" target="_blank" rel="noopener">
-            <span class="resource-file-icon" aria-hidden="true">PDF</span>
-            <span><strong>Anuario 2015</strong><small>PDF · 6.5 MB</small></span>
-            <span class="resource-open" aria-hidden="true">↗</span>
-          </a>
-          <a class="resource-file" href="files/anuarios/anuario_2014.pdf" target="_blank" rel="noopener">
-            <span class="resource-file-icon" aria-hidden="true">PDF</span>
-            <span><strong>Anuario 2014</strong><small>PDF · 4.3 MB</small></span>
-            <span class="resource-open" aria-hidden="true">↗</span>
-          </a>
-          <a class="resource-file" href="files/anuarios/anuario_2013.pdf" target="_blank" rel="noopener">
-            <span class="resource-file-icon" aria-hidden="true">PDF</span>
-            <span><strong>Anuario 2013</strong><small>PDF · 6.8 MB</small></span>
-            <span class="resource-open" aria-hidden="true">↗</span>
-          </a>
-          <a class="resource-file" href="files/anuarios/anuario_2012.pdf" target="_blank" rel="noopener">
-            <span class="resource-file-icon" aria-hidden="true">PDF</span>
-            <span><strong>Anuario 2012</strong><small>PDF · 12.1 MB</small></span>
-            <span class="resource-open" aria-hidden="true">↗</span>
-          </a>
-          <a class="resource-file" href="files/anuarios/anuario_2011.pdf" target="_blank" rel="noopener">
-            <span class="resource-file-icon" aria-hidden="true">PDF</span>
-            <span><strong>Anuario 2011</strong><small>PDF · 12.7 MB</small></span>
-            <span class="resource-open" aria-hidden="true">↗</span>
-          </a>
-          <a class="resource-file" href="files/anuarios/anuario_2010.pdf" target="_blank" rel="noopener">
-            <span class="resource-file-icon" aria-hidden="true">PDF</span>
-            <span><strong>Anuario 2010</strong><small>PDF · 13.1 MB</small></span>
-            <span class="resource-open" aria-hidden="true">↗</span>
-          </a>
-          <a class="resource-file" href="files/anuarios/anuario_2008.pdf" target="_blank" rel="noopener">
-            <span class="resource-file-icon" aria-hidden="true">PDF</span>
-            <span><strong>Anuario 2008</strong><small>PDF · 13.3 MB</small></span>
-            <span class="resource-open" aria-hidden="true">↗</span>
-          </a>
-          <a class="resource-file" href="files/anuarios/anuario_2006.pdf" target="_blank" rel="noopener">
-            <span class="resource-file-icon" aria-hidden="true">PDF</span>
-            <span><strong>Anuario 2006</strong><small>PDF · 10.6 MB</small></span>
-            <span class="resource-open" aria-hidden="true">↗</span>
-          </a>
-          <a class="resource-file" href="files/anuarios/anuario_2005.pdf" target="_blank" rel="noopener">
-            <span class="resource-file-icon" aria-hidden="true">PDF</span>
-            <span><strong>Anuario 2005</strong><small>PDF · 8.5 MB</small></span>
-            <span class="resource-open" aria-hidden="true">↗</span>
-          </a>
-          <a class="resource-file" href="files/anuarios/anuario_2004.pdf" target="_blank" rel="noopener">
-            <span class="resource-file-icon" aria-hidden="true">PDF</span>
-            <span><strong>Anuario 2004</strong><small>PDF · 11.6 MB</small></span>
-            <span class="resource-open" aria-hidden="true">↗</span>
-          </a>
-          <a class="resource-file" href="files/anuarios/anuario_2003.pdf" target="_blank" rel="noopener">
-            <span class="resource-file-icon" aria-hidden="true">PDF</span>
-            <span><strong>Anuario 2003</strong><small>PDF · 9.3 MB</small></span>
-            <span class="resource-open" aria-hidden="true">↗</span>
-          </a>
-          <a class="resource-file" href="files/anuarios/anuario_1999.pdf" target="_blank" rel="noopener">
-            <span class="resource-file-icon" aria-hidden="true">PDF</span>
-            <span><strong>Anuario 1999</strong><small>PDF · 6.0 MB</small></span>
-            <span class="resource-open" aria-hidden="true">↗</span>
-          </a>
-          <a class="resource-file" href="files/anuarios/anuario_1997.pdf" target="_blank" rel="noopener">
-            <span class="resource-file-icon" aria-hidden="true">PDF</span>
-            <span><strong>Anuario 1997</strong><small>PDF · 8.7 MB</small></span>
-            <span class="resource-open" aria-hidden="true">↗</span>
-          </a>
+      <section id="perfiles-linea" class="resource-section resource-chapter" tabindex="-1">
+        <div class="resource-chapter-heading"><h2>Perfiles de Línea</h2><span>12 perfiles</span></div>
+        <p class="resource-description">Selecciona una línea para abrir su perfil en PDF.</p>
+        <div class="annual-grid profile-grid">
+          <a class="annual-link" href="files/perfiles_linea/L1-perfil.pdf" target="_blank" rel="noopener" aria-label="Abrir perfil de Línea 1 en PDF"><span>Línea 1</span><span class="annual-arrow" aria-hidden="true">↗</span></a>
+          <a class="annual-link" href="files/perfiles_linea/L2-perfil.pdf" target="_blank" rel="noopener" aria-label="Abrir perfil de Línea 2 en PDF"><span>Línea 2</span><span class="annual-arrow" aria-hidden="true">↗</span></a>
+          <a class="annual-link" href="files/perfiles_linea/L3-perfil.pdf" target="_blank" rel="noopener" aria-label="Abrir perfil de Línea 3 en PDF"><span>Línea 3</span><span class="annual-arrow" aria-hidden="true">↗</span></a>
+          <a class="annual-link" href="files/perfiles_linea/L4-perfil.pdf" target="_blank" rel="noopener" aria-label="Abrir perfil de Línea 4 en PDF"><span>Línea 4</span><span class="annual-arrow" aria-hidden="true">↗</span></a>
+          <a class="annual-link" href="files/perfiles_linea/L5-perfil.pdf" target="_blank" rel="noopener" aria-label="Abrir perfil de Línea 5 en PDF"><span>Línea 5</span><span class="annual-arrow" aria-hidden="true">↗</span></a>
+          <a class="annual-link" href="files/perfiles_linea/L6-perfil.pdf" target="_blank" rel="noopener" aria-label="Abrir perfil de Línea 6 en PDF"><span>Línea 6</span><span class="annual-arrow" aria-hidden="true">↗</span></a>
+          <a class="annual-link" href="files/perfiles_linea/L7-perfil.pdf" target="_blank" rel="noopener" aria-label="Abrir perfil de Línea 7 en PDF"><span>Línea 7</span><span class="annual-arrow" aria-hidden="true">↗</span></a>
+          <a class="annual-link" href="files/perfiles_linea/L8-perfil.pdf" target="_blank" rel="noopener" aria-label="Abrir perfil de Línea 8 en PDF"><span>Línea 8</span><span class="annual-arrow" aria-hidden="true">↗</span></a>
+          <a class="annual-link" href="files/perfiles_linea/L9-perfil.pdf" target="_blank" rel="noopener" aria-label="Abrir perfil de Línea 9 en PDF"><span>Línea 9</span><span class="annual-arrow" aria-hidden="true">↗</span></a>
+          <a class="annual-link" href="files/perfiles_linea/LA-perfil.pdf" target="_blank" rel="noopener" aria-label="Abrir perfil de Línea A en PDF"><span>Línea A</span><span class="annual-arrow" aria-hidden="true">↗</span></a>
+          <a class="annual-link" href="files/perfiles_linea/LB-perfil.pdf" target="_blank" rel="noopener" aria-label="Abrir perfil de Línea B en PDF"><span>Línea B</span><span class="annual-arrow" aria-hidden="true">↗</span></a>
+          <a class="annual-link" href="files/perfiles_linea/L12-perfil.pdf" target="_blank" rel="noopener" aria-label="Abrir perfil de Línea 12 en PDF"><span>Línea 12</span><span class="annual-arrow" aria-hidden="true">↗</span></a>
         </div>
       </section>
-<section hidden id="servicios-provisionales" class="resource-section">
-      <h2>Servicios provisionales</h2>
-      <p class="resource-description">Selecciona una línea para consultar sus diagramas. Puedes desplegar varias líneas a la vez.</p>
-      <p class="service-demo-note">Propuesta de organización: las líneas 1, 2 y 3 contienen ejemplos sin archivos.</p>
-      <div class="service-lines">
-        <!-- Línea 1: sustituye los ejemplos por enlaces a los archivos correspondientes. -->
-        <details class="service-line" id="servicio-linea1" open>
-          <summary><span class="service-line-label">Línea 1</span><span class="service-count">2 diagramas de ejemplo</span></summary>
-          <div class="service-line-content">
-            <ul class="service-diagrams">
-              <li class="resource-file resource-placeholder">
-                <span class="resource-file-icon" aria-hidden="true">—</span>
-                <span><strong>Diagrama 01</strong><small>Ejemplo visual · Sin archivo</small></span>
-              </li>
-              <li class="resource-file resource-placeholder">
-                <span class="resource-file-icon" aria-hidden="true">—</span>
-                <span><strong>Diagrama 02</strong><small>Ejemplo visual · Sin archivo</small></span>
-              </li>
-            </ul>
-          </div>
-        </details>
-        <!-- Línea 2: sustituye los ejemplos por enlaces a los archivos correspondientes. -->
-        <details class="service-line" id="servicio-linea2">
-          <summary><span class="service-line-label">Línea 2</span><span class="service-count">1 diagrama de ejemplo</span></summary>
-          <div class="service-line-content">
-            <ul class="service-diagrams">
-              <li class="resource-file resource-placeholder">
-                <span class="resource-file-icon" aria-hidden="true">—</span>
-                <span><strong>Diagrama 01</strong><small>Ejemplo visual · Sin archivo</small></span>
-              </li>
-            </ul>
-          </div>
-        </details>
-        <!-- Línea 3: sustituye los ejemplos por enlaces a los archivos correspondientes. -->
-        <details class="service-line" id="servicio-linea3">
-          <summary><span class="service-line-label">Línea 3</span><span class="service-count">4 diagramas de ejemplo</span></summary>
-          <div class="service-line-content">
-            <ul class="service-diagrams">
-              <li class="resource-file resource-placeholder">
-                <span class="resource-file-icon" aria-hidden="true">—</span>
-                <span><strong>Diagrama 01</strong><small>Ejemplo visual · Sin archivo</small></span>
-              </li>
-              <li class="resource-file resource-placeholder">
-                <span class="resource-file-icon" aria-hidden="true">—</span>
-                <span><strong>Diagrama 02</strong><small>Ejemplo visual · Sin archivo</small></span>
-              </li>
-              <li class="resource-file resource-placeholder">
-                <span class="resource-file-icon" aria-hidden="true">—</span>
-                <span><strong>Diagrama 03</strong><small>Ejemplo visual · Sin archivo</small></span>
-              </li>
-              <li class="resource-file resource-placeholder">
-                <span class="resource-file-icon" aria-hidden="true">—</span>
-                <span><strong>Diagrama 04</strong><small>Ejemplo visual · Sin archivo</small></span>
-              </li>
-            </ul>
-          </div>
-        </details>
-        <!-- Línea 4: sustituye los ejemplos por enlaces a los archivos correspondientes. -->
-        <details class="service-line" id="servicio-linea4">
-          <summary><span class="service-line-label">Línea 4</span><span class="service-count">Por agregar</span></summary>
-          <div class="service-line-content">
-            <p class="service-empty">Aquí se agregarán los diagramas de esta línea.</p>
-          </div>
-        </details>
-        <!-- Línea 5: sustituye los ejemplos por enlaces a los archivos correspondientes. -->
-        <details class="service-line" id="servicio-linea5">
-          <summary><span class="service-line-label">Línea 5</span><span class="service-count">Por agregar</span></summary>
-          <div class="service-line-content">
-            <p class="service-empty">Aquí se agregarán los diagramas de esta línea.</p>
-          </div>
-        </details>
-        <!-- Línea 6: sustituye los ejemplos por enlaces a los archivos correspondientes. -->
-        <details class="service-line" id="servicio-linea6">
-          <summary><span class="service-line-label">Línea 6</span><span class="service-count">Por agregar</span></summary>
-          <div class="service-line-content">
-            <p class="service-empty">Aquí se agregarán los diagramas de esta línea.</p>
-          </div>
-        </details>
-        <!-- Línea 7: sustituye los ejemplos por enlaces a los archivos correspondientes. -->
-        <details class="service-line" id="servicio-linea7">
-          <summary><span class="service-line-label">Línea 7</span><span class="service-count">Por agregar</span></summary>
-          <div class="service-line-content">
-            <p class="service-empty">Aquí se agregarán los diagramas de esta línea.</p>
-          </div>
-        </details>
-        <!-- Línea 8: sustituye los ejemplos por enlaces a los archivos correspondientes. -->
-        <details class="service-line" id="servicio-linea8">
-          <summary><span class="service-line-label">Línea 8</span><span class="service-count">Por agregar</span></summary>
-          <div class="service-line-content">
-            <p class="service-empty">Aquí se agregarán los diagramas de esta línea.</p>
-          </div>
-        </details>
-        <!-- Línea 9: sustituye los ejemplos por enlaces a los archivos correspondientes. -->
-        <details class="service-line" id="servicio-linea9">
-          <summary><span class="service-line-label">Línea 9</span><span class="service-count">Por agregar</span></summary>
-          <div class="service-line-content">
-            <p class="service-empty">Aquí se agregarán los diagramas de esta línea.</p>
-          </div>
-        </details>
-        <!-- Línea A: sustituye los ejemplos por enlaces a los archivos correspondientes. -->
-        <details class="service-line" id="servicio-lineaA">
-          <summary><span class="service-line-label">Línea A</span><span class="service-count">Por agregar</span></summary>
-          <div class="service-line-content">
-            <p class="service-empty">Aquí se agregarán los diagramas de esta línea.</p>
-          </div>
-        </details>
-        <!-- Línea B: sustituye los ejemplos por enlaces a los archivos correspondientes. -->
-        <details class="service-line" id="servicio-lineaB">
-          <summary><span class="service-line-label">Línea B</span><span class="service-count">Por agregar</span></summary>
-          <div class="service-line-content">
-            <p class="service-empty">Aquí se agregarán los diagramas de esta línea.</p>
-          </div>
-        </details>
-        <!-- Línea 12: sustituye los ejemplos por enlaces a los archivos correspondientes. -->
-        <details class="service-line" id="servicio-linea12">
-          <summary><span class="service-line-label">Línea 12</span><span class="service-count">Por agregar</span></summary>
-          <div class="service-line-content">
-            <p class="service-empty">Aquí se agregarán los diagramas de esta línea.</p>
-          </div>
-        </details>
-      </div>
-    </section>
+      <section id="servicios-provisionales" class="resource-section resource-chapter">
+        <div class="resource-chapter-heading"><h2>Servicios provisionales</h2><span>46 diagramas</span></div>
+        <p class="resource-description">Elige la línea y toca la estación. El diagrama se abre en otra pestaña.</p>
+        <div class="service-line-picker service-badge-picker" role="group" aria-label="Seleccionar línea del servicio provisional" hidden>
+<button type="button" class="service-line-badge" data-service-line="1" aria-pressed="false" aria-controls="servicio-linea1" aria-label="Línea 1, 5 diagramas" style="--line-bg:#df4384;--line-ink:#fff">Línea 1<span class="service-selected-mark" aria-hidden="true"> ✓</span></button>
+<button type="button" class="service-line-badge" data-service-line="2" aria-pressed="false" aria-controls="servicio-linea2" aria-label="Línea 2, 5 diagramas" style="--line-bg:#005eaf;--line-ink:#fff">Línea 2<span class="service-selected-mark" aria-hidden="true"> ✓</span></button>
+<button type="button" class="service-line-badge" data-service-line="3" aria-pressed="false" aria-controls="servicio-linea3" aria-label="Línea 3, 8 diagramas" style="--line-bg:#777817;--line-ink:#fff">Línea 3<span class="service-selected-mark" aria-hidden="true"> ✓</span></button>
+<button type="button" class="service-line-badge" data-service-line="4" aria-pressed="false" aria-controls="servicio-linea4" aria-label="Línea 4, 2 diagramas" style="--line-bg:#77c4bb;--line-ink:#112c43">Línea 4<span class="service-selected-mark" aria-hidden="true"> ✓</span></button>
+<button type="button" class="service-line-badge" data-service-line="5" aria-pressed="false" aria-controls="servicio-linea5" aria-label="Línea 5, 4 diagramas" style="--line-bg:#ffcf00;--line-ink:#112c43">Línea 5<span class="service-selected-mark" aria-hidden="true"> ✓</span></button>
+<button type="button" class="service-line-badge" data-service-line="6" aria-pressed="false" aria-controls="servicio-linea6" aria-label="Línea 6, 3 diagramas" style="--line-bg:#c62828;--line-ink:#fff">Línea 6<span class="service-selected-mark" aria-hidden="true"> ✓</span></button>
+<button type="button" class="service-line-badge" data-service-line="7" aria-pressed="false" aria-controls="servicio-linea7" aria-label="Línea 7, 3 diagramas" style="--line-bg:#df650c;--line-ink:#fff">Línea 7<span class="service-selected-mark" aria-hidden="true"> ✓</span></button>
+<button type="button" class="service-line-badge" data-service-line="8" aria-pressed="false" aria-controls="servicio-linea8" aria-label="Línea 8, 5 diagramas" style="--line-bg:#00834b;--line-ink:#fff">Línea 8<span class="service-selected-mark" aria-hidden="true"> ✓</span></button>
+<button type="button" class="service-line-badge" data-service-line="9" aria-pressed="false" aria-controls="servicio-linea9" aria-label="Línea 9, 3 diagramas" style="--line-bg:#754c29;--line-ink:#fff">Línea 9<span class="service-selected-mark" aria-hidden="true"> ✓</span></button>
+<button type="button" class="service-line-badge" data-service-line="A" aria-pressed="false" aria-controls="servicio-lineaA" aria-label="Línea A, 3 diagramas" style="--line-bg:#872885;--line-ink:#fff">Línea A<span class="service-selected-mark" aria-hidden="true"> ✓</span></button>
+<button type="button" class="service-line-badge" data-service-line="B" aria-pressed="false" aria-controls="servicio-lineaB" aria-label="Línea B, 5 diagramas" style="--line-bg:#64746e;--line-ink:#fff">Línea B<span class="service-selected-mark" aria-hidden="true"> ✓</span></button>
+</div>
+        <div id="servicePanels">
+<div class="service-panel" id="servicio-linea1" data-service-panel="1"><h3 class="h5">Línea 1 <span class="service-count">· 5 diagramas</span></h3><ul class="service-stations"><li><a class="resource-file" href="files/servicios_provisionales/L1_sp_balbuena.jpg" target="_blank" rel="noopener" aria-label="Abrir diagrama de Línea 1, Balbuena">
+                  <span><strong>Balbuena</strong></span>
+                  <span class="resource-open" aria-hidden="true">↗</span>
+                </a></li><li><a class="resource-file" href="files/servicios_provisionales/L1_sp_balderas.jpg" target="_blank" rel="noopener" aria-label="Abrir diagrama de Línea 1, Balderas">
+                  <span><strong>Balderas</strong></span>
+                  <span class="resource-open" aria-hidden="true">↗</span>
+                </a></li><li><a class="resource-file" href="files/servicios_provisionales/L1_sp_chapultepec.jpg" target="_blank" rel="noopener" aria-label="Abrir diagrama de Línea 1, Chapultepec">
+                  <span><strong>Chapultepec</strong></span>
+                  <span class="resource-open" aria-hidden="true">↗</span>
+                </a></li><li><a class="resource-file" href="files/servicios_provisionales/L1_sp_pinosuarez.jpg" target="_blank" rel="noopener" aria-label="Abrir diagrama de Línea 1, Pino Suárez">
+                  <span><strong>Pino Suárez</strong></span>
+                  <span class="resource-open" aria-hidden="true">↗</span>
+                </a></li><li><a class="resource-file" href="files/servicios_provisionales/L1_sp_zaragoza.jpg" target="_blank" rel="noopener" aria-label="Abrir diagrama de Línea 1, Zaragoza">
+                  <span><strong>Zaragoza</strong></span>
+                  <span class="resource-open" aria-hidden="true">↗</span>
+                </a></li></ul></div>
+<div class="service-panel" id="servicio-linea2" data-service-panel="2"><h3 class="h5">Línea 2 <span class="service-count">· 5 diagramas</span></h3><ul class="service-stations"><li><a class="resource-file" href="files/servicios_provisionales/L2_sp_colegiomilitar.jpg" target="_blank" rel="noopener" aria-label="Abrir diagrama de Línea 2, Colegio Militar">
+                  <span><strong>Colegio Militar</strong></span>
+                  <span class="resource-open" aria-hidden="true">↗</span>
+                </a></li><li><a class="resource-file" href="files/servicios_provisionales/L2_sp_hidalgo.jpg" target="_blank" rel="noopener" aria-label="Abrir diagrama de Línea 2, Hidalgo">
+                  <span><strong>Hidalgo</strong></span>
+                  <span class="resource-open" aria-hidden="true">↗</span>
+                </a></li><li><a class="resource-file" href="files/servicios_provisionales/L2_sp_pinosuarez.jpg" target="_blank" rel="noopener" aria-label="Abrir diagrama de Línea 2, Pino Suárez">
+                  <span><strong>Pino Suárez</strong></span>
+                  <span class="resource-open" aria-hidden="true">↗</span>
+                </a></li><li><a class="resource-file" href="files/servicios_provisionales/L2_sp_tacuba.jpg" target="_blank" rel="noopener" aria-label="Abrir diagrama de Línea 2, Tacuba">
+                  <span><strong>Tacuba</strong></span>
+                  <span class="resource-open" aria-hidden="true">↗</span>
+                </a></li><li><a class="resource-file" href="files/servicios_provisionales/L2_sp_xola.jpg" target="_blank" rel="noopener" aria-label="Abrir diagrama de Línea 2, Xola">
+                  <span><strong>Xola</strong></span>
+                  <span class="resource-open" aria-hidden="true">↗</span>
+                </a></li></ul></div>
+<div class="service-panel" id="servicio-linea3" data-service-panel="3"><h3 class="h5">Línea 3 <span class="service-count">· 8 diagramas</span></h3><ul class="service-stations"><li><a class="resource-file" href="files/servicios_provisionales/L3_sp_balderas.png" target="_blank" rel="noopener" aria-label="Abrir diagrama de Línea 3, Balderas">
+                  <span><strong>Balderas</strong></span>
+                  <span class="resource-open" aria-hidden="true">↗</span>
+                </a></li><li><a class="resource-file" href="files/servicios_provisionales/L3_sp_centromedico.jpg" target="_blank" rel="noopener" aria-label="Abrir diagrama de Línea 3, Centro Médico">
+                  <span><strong>Centro Médico</strong></span>
+                  <span class="resource-open" aria-hidden="true">↗</span>
+                </a></li><li><a class="resource-file" href="files/servicios_provisionales/L3_sp_coyoacan.jpg" target="_blank" rel="noopener" aria-label="Abrir diagrama de Línea 3, Coyoacán">
+                  <span><strong>Coyoacán</strong></span>
+                  <span class="resource-open" aria-hidden="true">↗</span>
+                </a></li><li><a class="resource-file" href="files/servicios_provisionales/L3_sp_hidalgo.jpg" target="_blank" rel="noopener" aria-label="Abrir diagrama de Línea 3, Hidalgo">
+                  <span><strong>Hidalgo</strong></span>
+                  <span class="resource-open" aria-hidden="true">↗</span>
+                </a></li><li><a class="resource-file" href="files/servicios_provisionales/L3_sp_la_raza.jpg" target="_blank" rel="noopener" aria-label="Abrir diagrama de Línea 3, La Raza">
+                  <span><strong>La Raza</strong></span>
+                  <span class="resource-open" aria-hidden="true">↗</span>
+                </a></li><li><a class="resource-file" href="files/servicios_provisionales/L3_sp_miguelangeldequevedo.jpg" target="_blank" rel="noopener" aria-label="Abrir diagrama de Línea 3, Miguel Ángel de Quevedo">
+                  <span><strong>Miguel Ángel de Quevedo</strong></span>
+                  <span class="resource-open" aria-hidden="true">↗</span>
+                </a></li><li><a class="resource-file" href="files/servicios_provisionales/L3_sp_tlatelolco.jpg" target="_blank" rel="noopener" aria-label="Abrir diagrama de Línea 3, Tlatelolco">
+                  <span><strong>Tlatelolco</strong></span>
+                  <span class="resource-open" aria-hidden="true">↗</span>
+                </a></li><li><a class="resource-file" href="files/servicios_provisionales/L3_sp_zapata.jpg" target="_blank" rel="noopener" aria-label="Abrir diagrama de Línea 3, Zapata">
+                  <span><strong>Zapata</strong></span>
+                  <span class="resource-open" aria-hidden="true">↗</span>
+                </a></li></ul></div>
+<div class="service-panel" id="servicio-linea4" data-service-panel="4"><h3 class="h5">Línea 4 <span class="service-count">· 2 diagramas</span></h3><ul class="service-stations"><li><a class="resource-file" href="files/servicios_provisionales/L4_sp_candelaria.jpg" target="_blank" rel="noopener" aria-label="Abrir diagrama de Línea 4, Candelaria">
+                  <span><strong>Candelaria</strong></span>
+                  <span class="resource-open" aria-hidden="true">↗</span>
+                </a></li><li><a class="resource-file" href="files/servicios_provisionales/L4_sp_consulado.jpg" target="_blank" rel="noopener" aria-label="Abrir diagrama de Línea 4, Consulado">
+                  <span><strong>Consulado</strong></span>
+                  <span class="resource-open" aria-hidden="true">↗</span>
+                </a></li></ul></div>
+<div class="service-panel" id="servicio-linea5" data-service-panel="5"><h3 class="h5">Línea 5 <span class="service-count">· 4 diagramas</span></h3><ul class="service-stations"><li><a class="resource-file" href="files/servicios_provisionales/L5_sp_consulado.jpg" target="_blank" rel="noopener" aria-label="Abrir diagrama de Línea 5, Consulado">
+                  <span><strong>Consulado</strong></span>
+                  <span class="resource-open" aria-hidden="true">↗</span>
+                </a></li><li><a class="resource-file" href="files/servicios_provisionales/L5_sp_instituto_del_petroleo.jpg" target="_blank" rel="noopener" aria-label="Abrir diagrama de Línea 5, Instituto del Petróleo">
+                  <span><strong>Instituto del Petróleo</strong></span>
+                  <span class="resource-open" aria-hidden="true">↗</span>
+                </a></li><li><a class="resource-file" href="files/servicios_provisionales/L5_sp_la_raza.jpg" target="_blank" rel="noopener" aria-label="Abrir diagrama de Línea 5, La Raza">
+                  <span><strong>La Raza</strong></span>
+                  <span class="resource-open" aria-hidden="true">↗</span>
+                </a></li><li><a class="resource-file" href="files/servicios_provisionales/L5_sp_oceania.jpg" target="_blank" rel="noopener" aria-label="Abrir diagrama de Línea 5, Oceanía">
+                  <span><strong>Oceanía</strong></span>
+                  <span class="resource-open" aria-hidden="true">↗</span>
+                </a></li></ul></div>
+<div class="service-panel" id="servicio-linea6" data-service-panel="6"><h3 class="h5">Línea 6 <span class="service-count">· 3 diagramas</span></h3><ul class="service-stations"><li><a class="resource-file" href="files/servicios_provisionales/L6_sp_ferreria.jpg" target="_blank" rel="noopener" aria-label="Abrir diagrama de Línea 6, Ferrería">
+                  <span><strong>Ferrería</strong></span>
+                  <span class="resource-open" aria-hidden="true">↗</span>
+                </a></li><li><a class="resource-file" href="files/servicios_provisionales/L6_sp_instituto_del_petroleo.jpg" target="_blank" rel="noopener" aria-label="Abrir diagrama de Línea 6, Instituto del Petróleo">
+                  <span><strong>Instituto del Petróleo</strong></span>
+                  <span class="resource-open" aria-hidden="true">↗</span>
+                </a></li><li><a class="resource-file" href="files/servicios_provisionales/L6_sp_la_villa_basilica.jpg" target="_blank" rel="noopener" aria-label="Abrir diagrama de Línea 6, La Villa-Basílica">
+                  <span><strong>La Villa-Basílica</strong></span>
+                  <span class="resource-open" aria-hidden="true">↗</span>
+                </a></li></ul></div>
+<div class="service-panel" id="servicio-linea7" data-service-panel="7"><h3 class="h5">Línea 7 <span class="service-count">· 3 diagramas</span></h3><ul class="service-stations"><li><a class="resource-file" href="files/servicios_provisionales/L7_sp_camarones.jpg" target="_blank" rel="noopener" aria-label="Abrir diagrama de Línea 7, Camarones">
+                  <span><strong>Camarones</strong></span>
+                  <span class="resource-open" aria-hidden="true">↗</span>
+                </a></li><li><a class="resource-file" href="files/servicios_provisionales/L7_sp_tacuba.jpg" target="_blank" rel="noopener" aria-label="Abrir diagrama de Línea 7, Tacuba">
+                  <span><strong>Tacuba</strong></span>
+                  <span class="resource-open" aria-hidden="true">↗</span>
+                </a></li><li><a class="resource-file" href="files/servicios_provisionales/L7_sp_tacubaya.jpg" target="_blank" rel="noopener" aria-label="Abrir diagrama de Línea 7, Tacubaya">
+                  <span><strong>Tacubaya</strong></span>
+                  <span class="resource-open" aria-hidden="true">↗</span>
+                </a></li></ul></div>
+<div class="service-panel" id="servicio-linea8" data-service-panel="8"><h3 class="h5">Línea 8 <span class="service-count">· 5 diagramas</span></h3><ul class="service-stations"><li><a class="resource-file" href="files/servicios_provisionales/L8_sp_apatlaco.jpg" target="_blank" rel="noopener" aria-label="Abrir diagrama de Línea 8, Apatlaco">
+                  <span><strong>Apatlaco</strong></span>
+                  <span class="resource-open" aria-hidden="true">↗</span>
+                </a></li><li><a class="resource-file" href="files/servicios_provisionales/L8_sp_atlalilco.jpg" target="_blank" rel="noopener" aria-label="Abrir diagrama de Línea 8, Atlalilco">
+                  <span><strong>Atlalilco</strong></span>
+                  <span class="resource-open" aria-hidden="true">↗</span>
+                </a></li><li><a class="resource-file" href="files/servicios_provisionales/L8_sp_chabacano.jpg" target="_blank" rel="noopener" aria-label="Abrir diagrama de Línea 8, Chabacano">
+                  <span><strong>Chabacano</strong></span>
+                  <span class="resource-open" aria-hidden="true">↗</span>
+                </a></li><li><a class="resource-file" href="files/servicios_provisionales/L8_sp_saltodelagua.jpg" target="_blank" rel="noopener" aria-label="Abrir diagrama de Línea 8, Salto del Agua">
+                  <span><strong>Salto del Agua</strong></span>
+                  <span class="resource-open" aria-hidden="true">↗</span>
+                </a></li><li><a class="resource-file" href="files/servicios_provisionales/L8_sp_santaanita.jpg" target="_blank" rel="noopener" aria-label="Abrir diagrama de Línea 8, Santa Anita">
+                  <span><strong>Santa Anita</strong></span>
+                  <span class="resource-open" aria-hidden="true">↗</span>
+                </a></li></ul></div>
+<div class="service-panel" id="servicio-linea9" data-service-panel="9"><h3 class="h5">Línea 9 <span class="service-count">· 3 diagramas</span></h3><ul class="service-stations"><li><a class="resource-file" href="files/servicios_provisionales/L9_sp_centromedico.jpg" target="_blank" rel="noopener" aria-label="Abrir diagrama de Línea 9, Centro Médico">
+                  <span><strong>Centro Médico</strong></span>
+                  <span class="resource-open" aria-hidden="true">↗</span>
+                </a></li><li><a class="resource-file" href="files/servicios_provisionales/L9_sp_chabacano.jpg" target="_blank" rel="noopener" aria-label="Abrir diagrama de Línea 9, Chabacano">
+                  <span><strong>Chabacano</strong></span>
+                  <span class="resource-open" aria-hidden="true">↗</span>
+                </a></li><li><a class="resource-file" href="files/servicios_provisionales/L9_sp_velodromo.jpg" target="_blank" rel="noopener" aria-label="Abrir diagrama de Línea 9, Velódromo">
+                  <span><strong>Velódromo</strong></span>
+                  <span class="resource-open" aria-hidden="true">↗</span>
+                </a></li></ul></div>
+<div class="service-panel" id="servicio-lineaA" data-service-panel="A"><h3 class="h5">Línea A <span class="service-count">· 3 diagramas</span></h3><ul class="service-stations"><li><a class="resource-file" href="files/servicios_provisionales/LA_sp_guelatao.jpg" target="_blank" rel="noopener" aria-label="Abrir diagrama de Línea A, Guelatao">
+                  <span><strong>Guelatao</strong></span>
+                  <span class="resource-open" aria-hidden="true">↗</span>
+                </a></li><li><a class="resource-file" href="files/servicios_provisionales/LA_sp_sanjuan.jpg" target="_blank" rel="noopener" aria-label="Abrir diagrama de Línea A, San Juan">
+                  <span><strong>San Juan</strong></span>
+                  <span class="resource-open" aria-hidden="true">↗</span>
+                </a></li><li><a class="resource-file" href="files/servicios_provisionales/LA_sp_santamartha.jpg" target="_blank" rel="noopener" aria-label="Abrir diagrama de Línea A, Santa Martha">
+                  <span><strong>Santa Martha</strong></span>
+                  <span class="resource-open" aria-hidden="true">↗</span>
+                </a></li></ul></div>
+<div class="service-panel" id="servicio-lineaB" data-service-panel="B"><h3 class="h5">Línea B <span class="service-count">· 5 diagramas</span></h3><ul class="service-stations"><li><a class="resource-file" href="files/servicios_provisionales/LB_sp_guerrero.jpg" target="_blank" rel="noopener" aria-label="Abrir diagrama de Línea B, Guerrero">
+                  <span><strong>Guerrero</strong></span>
+                  <span class="resource-open" aria-hidden="true">↗</span>
+                </a></li><li><a class="resource-file" href="files/servicios_provisionales/LB_sp_morelos.jpg" target="_blank" rel="noopener" aria-label="Abrir diagrama de Línea B, Morelos">
+                  <span><strong>Morelos</strong></span>
+                  <span class="resource-open" aria-hidden="true">↗</span>
+                </a></li><li><a class="resource-file" href="files/servicios_provisionales/LB_sp_muzquiz.jpg" target="_blank" rel="noopener" aria-label="Abrir diagrama de Línea B, Múzquiz">
+                  <span><strong>Múzquiz</strong></span>
+                  <span class="resource-open" aria-hidden="true">↗</span>
+                </a></li><li><a class="resource-file" href="files/servicios_provisionales/LB_sp_oceania.jpg" target="_blank" rel="noopener" aria-label="Abrir diagrama de Línea B, Oceanía">
+                  <span><strong>Oceanía</strong></span>
+                  <span class="resource-open" aria-hidden="true">↗</span>
+                </a></li><li><a class="resource-file" href="files/servicios_provisionales/LB_sp_villadearagon.jpg" target="_blank" rel="noopener" aria-label="Abrir diagrama de Línea B, Villa de Aragón">
+                  <span><strong>Villa de Aragón</strong></span>
+                  <span class="resource-open" aria-hidden="true">↗</span>
+                </a></li></ul></div>
+<div id="servicio-linea12" hidden><!-- Reservado para futuros diagramas de Línea 12. --></div>
+              </div>
+      </section>
+      <section id="anuarios" class="resource-section resource-chapter resource-chapter-annuals">
+        <div class="resource-chapter-heading"><h2>Anuarios</h2><span>21 documentos</span></div>
+        <p class="resource-description">Selecciona el año para abrir el PDF.</p>
+        <div class="annual-grid">
+          <a hidden class="annual-link" href="files/anuarios/anuario_2018_2.pdf" target="_blank" rel="noopener" aria-label="Abrir Anuario 2018-2 en PDF, en otra pestaña"><span>2018-2</span><span class="annual-arrow" aria-hidden="true">↗</span></a>
+          <a class="annual-link" href="files/anuarios/anuario_2023.pdf" target="_blank" rel="noopener" aria-label="Abrir Anuario 2023 en PDF, en otra pestaña"><span>2023</span><span class="annual-arrow" aria-hidden="true">↗</span></a>
+          <a class="annual-link" href="files/anuarios/anuario_2022.pdf" target="_blank" rel="noopener" aria-label="Abrir Anuario 2022 en PDF, en otra pestaña"><span>2022</span><span class="annual-arrow" aria-hidden="true">↗</span></a>
+          <a class="annual-link" href="files/anuarios/anuario_2021.pdf" target="_blank" rel="noopener" aria-label="Abrir Anuario 2021 en PDF, en otra pestaña"><span>2021</span><span class="annual-arrow" aria-hidden="true">↗</span></a>
+          <a class="annual-link" href="files/anuarios/anuario_2020.pdf" target="_blank" rel="noopener" aria-label="Abrir Anuario 2020 en PDF, en otra pestaña"><span>2020</span><span class="annual-arrow" aria-hidden="true">↗</span></a>
+          <a class="annual-link" href="files/anuarios/anuario_2019.pdf" target="_blank" rel="noopener" aria-label="Abrir Anuario 2019 en PDF, en otra pestaña"><span>2019</span><span class="annual-arrow" aria-hidden="true">↗</span></a>
+          <a class="annual-link" href="files/anuarios/anuario_2018.pdf" target="_blank" rel="noopener" aria-label="Abrir Anuario 2018 en PDF, en otra pestaña"><span>2018</span><span class="annual-arrow" aria-hidden="true">↗</span></a>
+          <a class="annual-link" href="files/anuarios/anuario_2017.pdf" target="_blank" rel="noopener" aria-label="Abrir Anuario 2017 en PDF, en otra pestaña"><span>2017</span><span class="annual-arrow" aria-hidden="true">↗</span></a>
+          <a class="annual-link" href="files/anuarios/anuario_2016.pdf" target="_blank" rel="noopener" aria-label="Abrir Anuario 2016 en PDF, en otra pestaña"><span>2016</span><span class="annual-arrow" aria-hidden="true">↗</span></a>
+          <a class="annual-link" href="files/anuarios/anuario_2015.pdf" target="_blank" rel="noopener" aria-label="Abrir Anuario 2015 en PDF, en otra pestaña"><span>2015</span><span class="annual-arrow" aria-hidden="true">↗</span></a>
+          <a class="annual-link" href="files/anuarios/anuario_2014.pdf" target="_blank" rel="noopener" aria-label="Abrir Anuario 2014 en PDF, en otra pestaña"><span>2014</span><span class="annual-arrow" aria-hidden="true">↗</span></a>
+          <a class="annual-link" href="files/anuarios/anuario_2013.pdf" target="_blank" rel="noopener" aria-label="Abrir Anuario 2013 en PDF, en otra pestaña"><span>2013</span><span class="annual-arrow" aria-hidden="true">↗</span></a>
+          <a class="annual-link" href="files/anuarios/anuario_2012.pdf" target="_blank" rel="noopener" aria-label="Abrir Anuario 2012 en PDF, en otra pestaña"><span>2012</span><span class="annual-arrow" aria-hidden="true">↗</span></a>
+          <a class="annual-link" href="files/anuarios/anuario_2011.pdf" target="_blank" rel="noopener" aria-label="Abrir Anuario 2011 en PDF, en otra pestaña"><span>2011</span><span class="annual-arrow" aria-hidden="true">↗</span></a>
+          <a class="annual-link" href="files/anuarios/anuario_2010.pdf" target="_blank" rel="noopener" aria-label="Abrir Anuario 2010 en PDF, en otra pestaña"><span>2010</span><span class="annual-arrow" aria-hidden="true">↗</span></a>
+          <a class="annual-link" href="files/anuarios/anuario_2008.pdf" target="_blank" rel="noopener" aria-label="Abrir Anuario 2008 en PDF, en otra pestaña"><span>2008</span><span class="annual-arrow" aria-hidden="true">↗</span></a>
+          <a class="annual-link" href="files/anuarios/anuario_2006.pdf" target="_blank" rel="noopener" aria-label="Abrir Anuario 2006 en PDF, en otra pestaña"><span>2006</span><span class="annual-arrow" aria-hidden="true">↗</span></a>
+          <a class="annual-link" href="files/anuarios/anuario_2005.pdf" target="_blank" rel="noopener" aria-label="Abrir Anuario 2005 en PDF, en otra pestaña"><span>2005</span><span class="annual-arrow" aria-hidden="true">↗</span></a>
+          <a class="annual-link" href="files/anuarios/anuario_2004.pdf" target="_blank" rel="noopener" aria-label="Abrir Anuario 2004 en PDF, en otra pestaña"><span>2004</span><span class="annual-arrow" aria-hidden="true">↗</span></a>
+          <a class="annual-link" href="files/anuarios/anuario_2003.pdf" target="_blank" rel="noopener" aria-label="Abrir Anuario 2003 en PDF, en otra pestaña"><span>2003</span><span class="annual-arrow" aria-hidden="true">↗</span></a>
+          <a class="annual-link" href="files/anuarios/anuario_1999.pdf" target="_blank" rel="noopener" aria-label="Abrir Anuario 1999 en PDF, en otra pestaña"><span>1999</span><span class="annual-arrow" aria-hidden="true">↗</span></a>
+          <a class="annual-link" href="files/anuarios/anuario_1997.pdf" target="_blank" rel="noopener" aria-label="Abrir Anuario 1997 en PDF, en otra pestaña"><span>1997</span><span class="annual-arrow" aria-hidden="true">↗</span></a>
+        </div>
+      </section>
+
 <section hidden id="diagramas-mr" class="resource-section"><h2>Diagramas de MR</h2><p class="resource-description">Vista de ejemplo. Aquí aparecerán los documentos cuando los agregues.</p><div class="resource-grid"><div class="resource-file resource-placeholder"><span class="resource-file-icon" aria-hidden="true">—</span><span><strong>Diagrama de distribución · Ejemplo</strong><small>Ejemplo visual · Sin archivo</small></span></div><div class="resource-file resource-placeholder"><span class="resource-file-icon" aria-hidden="true">—</span><span><strong>Esquema de equipos · Ejemplo</strong><small>Ejemplo visual · Sin archivo</small></span></div></div></section>
 <section hidden id="averias-mr" class="resource-section"><h2>Averías de MR</h2><p class="resource-description">Vista de ejemplo. Aquí aparecerán los documentos cuando los agregues.</p><div class="resource-grid"><div class="resource-file resource-placeholder"><span class="resource-file-icon" aria-hidden="true">—</span><span><strong>Guía de consulta · Ejemplo</strong><small>Ejemplo visual · Sin archivo</small></span></div><div class="resource-file resource-placeholder"><span class="resource-file-icon" aria-hidden="true">—</span><span><strong>Índice de averías · Ejemplo</strong><small>Ejemplo visual · Sin archivo</small></span></div></div></section>
 <section hidden id="mas-recursos" class="resource-section"><h2>Más recursos</h2><p class="resource-description">Vista de ejemplo. Aquí aparecerán los documentos cuando los agregues.</p><div class="resource-grid"><div class="resource-file resource-placeholder"><span class="resource-file-icon" aria-hidden="true">—</span><span><strong>Material de consulta · Ejemplo</strong><small>Ejemplo visual · Sin archivo</small></span></div></div></section>

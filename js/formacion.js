@@ -24,7 +24,7 @@ function filterFormations(){
  });
  formationClear.hidden=!formationInput.value;
  document.getElementById("sinFormacion").hidden=total!==0;
- document.getElementById("estadoFormacion").textContent=terms.length ? total+" de "+formationTotal+" formaciones" : formationTotal+" formaciones";
+ document.getElementById("estadoFormacion").textContent=terms.length ? total+" de "+formationTotal+" trenes" : formationTotal+" trenes";
 }
 formationInput.addEventListener("input",filterFormations);
 formationClear.addEventListener("click",()=>{formationInput.value="";filterFormations();formationInput.focus();});

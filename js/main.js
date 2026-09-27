@@ -214,15 +214,12 @@ if (copyNotice) {
     const longCell = row.cells[2];
     if (!shortCell || !longCell) return;
     const shortText = shortCell.textContent;
-    const label = document.createElement("span");
-    label.className = "larin-short-text";
-    label.textContent = shortText;
-    const button = document.createElement("button");
+const button = document.createElement("button");
     button.type = "button";
     button.className = "larin-copy";
     button.textContent = shortText;
     button.setAttribute("aria-label", "Copiar larín " + row.cells[0].textContent.trim() + ": " + shortText);
-    shortCell.replaceChildren(label, button);
+    shortCell.replaceChildren(button);
     const copyLarin = async () => {
       try {
         if (navigator.clipboard && window.isSecureContext) {
@@ -237,14 +234,6 @@ if (copyNotice) {
       }
     };
     button.addEventListener("click", copyLarin);
-    const longButton = document.createElement("button");
-    longButton.type = "button";
-    longButton.className = "larin-copy-long";
-    longButton.setAttribute("aria-label", "Copiar descripción larga del larín " + row.cells[0].textContent.trim());
-    longButton.title = "Copiar larín";
-    while (longCell.firstChild) longButton.append(longCell.firstChild);
-    longCell.append(longButton);
-    longButton.addEventListener("click", copyLarin);
   });
 }
 
@@ -292,9 +281,8 @@ if (pageSearch) {
 
 
 
-// Larines permanece desplegado dentro del menú móvil.
-const larinesMenuToggle=document.getElementById("menuLarines");
-if(larinesMenuToggle){
+// Larines y Otros recursos permanecen desplegados dentro del menú móvil.
+document.querySelectorAll("#menuLarines, #menuRecursos").forEach(larinesMenuToggle => {
  const collapsedNavigation=window.matchMedia("(max-width: 1199.98px)");
  const updateLarinesNavigation=()=>{
   larinesMenuToggle.disabled=collapsedNavigation.matches;
@@ -302,4 +290,4 @@ if(larinesMenuToggle){
  };
  collapsedNavigation.addEventListener("change",updateLarinesNavigation);
  updateLarinesNavigation();
-}
+});
