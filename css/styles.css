@@ -423,8 +423,8 @@ textarea {
 }
 
 /* Número de procedimiento compacto y centrado. */
-.procedimientos-table col:first-child { width: 22% !important; }
-.procedimientos-table col:nth-child(2) { width: 78% !important; }
+.procedimientos-table col:first-child { width: 11.5rem !important; }
+.procedimientos-table col:nth-child(2) { width: auto !important; }
 .procedimientos-table tr > :first-child {
   text-align: center;
   vertical-align: middle;
@@ -837,3 +837,48 @@ a.resource-file:focus-visible, .resource-categories a:focus-visible { outline: 2
 }
 
 .formacion-section > h2 { text-transform: uppercase; text-align: left; }
+
+/* Enlaces de consulta y textos copiables: indicación discreta solo al pasar el cursor. */
+main :is(.larines-table, .formacion-table, .manual-catalog-table, .procedimientos-table) :is(a, .larin-copy, .train-copy) {
+  color: inherit;
+  text-decoration: none;
+}
+@media (hover: hover) {
+  main :is(.larines-table, .formacion-table, .manual-catalog-table, .procedimientos-table) :is(a, .larin-copy, .train-copy):hover {
+    color: inherit;
+    text-decoration-line: underline;
+    text-decoration-style: dotted;
+    text-decoration-color: #7d8993;
+    text-decoration-thickness: 1px;
+    text-underline-offset: .22em;
+  }
+}
+
+/* Prioriza el nombre del procedimiento en pantallas pequeñas. */
+@media (max-width: 767.98px) {
+  #tablaProcedimientos col:first-child { width: 4.5rem !important; }
+  #tablaProcedimientos tr > :first-child { padding-inline: .25rem; }
+  #tablaProcedimientos tbody tr > :first-child { white-space: nowrap; }
+}
+/* Alineación de los números y nombres de procedimientos. */
+#tablaProcedimientos th,
+#tablaProcedimientos td { vertical-align: middle; }
+#tablaProcedimientos tr > :first-child { text-align: center; }
+#tablaProcedimientos tr > :nth-child(2) { text-align: left; }
+@media (min-width: 768px) {
+  #tablaProcedimientos thead th:first-child { overflow-wrap: normal; word-break: normal; }
+}
+/* Categorías y líneas centradas en móvil y tablet; escritorio conserva su alineación. */
+@media (max-width: 1199.98px) {
+  .resource-categories,
+  .service-badge-picker { justify-content: center; }
+}
+
+/* Traslados en móvil horizontal: espacio suficiente para el encabezado Línea. */
+@media (max-width: 1199.98px) and (orientation: landscape) {
+  .traslados-table thead th:last-child { white-space: nowrap; }
+}
+@media (min-width: 768px) and (max-width: 1199.98px) and (orientation: landscape) {
+  .traslados-table .col-linea { width: 10%; }
+  .traslados-table .col-larga { width: 61%; }
+}
