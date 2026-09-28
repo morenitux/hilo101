@@ -291,3 +291,16 @@ document.querySelectorAll("#menuLarines, #menuRecursos").forEach(larinesMenuTogg
  collapsedNavigation.addEventListener("change",updateLarinesNavigation);
  updateLarinesNavigation();
 });
+
+// Cada desplegable conserva el anclaje horizontal a su opción y baja hasta el borde del navbar.
+document.querySelectorAll(".navbar .nav-item.dropdown").forEach(item => {
+  const alignDropdown = () => {
+    if (window.innerWidth < 1200) return;
+    const navbar = item.closest(".navbar");
+    const distance = navbar.getBoundingClientRect().bottom - item.getBoundingClientRect().top;
+    item.style.setProperty("--dropdown-nav-bottom", distance + "px");
+  };
+  item.addEventListener("show.bs.dropdown", alignDropdown);
+  window.addEventListener("resize", alignDropdown);
+  alignDropdown();
+});

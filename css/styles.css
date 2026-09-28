@@ -882,3 +882,78 @@ main :is(.larines-table, .formacion-table, .manual-catalog-table, .procedimiento
   .traslados-table .col-linea { width: 10%; }
   .traslados-table .col-larga { width: 61%; }
 }
+
+.energy-line-picker[hidden], .energy-panel[hidden] { display: none !important; }
+
+/* Segunda propuesta: secciones completas y color reducido a una marca por línea. */
+.service-badge-picker .service-line-badge {
+  position: relative;
+  background: #fff;
+  color: #41576b;
+  border: 1px solid #ccd6df;
+  border-left: 4px solid var(--line-bg);
+  padding: .5rem .65rem;
+  min-height: 44px;
+  font-weight: 500;
+  box-shadow: none;
+}
+.service-badge-picker .service-line-badge[aria-pressed="true"] {
+  background: #e8eef3;
+  color: #112c43;
+  border-top-color: #112c43;
+  border-right-color: #112c43;
+  border-bottom-color: #112c43;
+  font-weight: 700;
+  outline: none;
+}
+.service-badge-picker .service-line-badge:hover { filter: none; background: #f2f5f8; }
+.service-badge-picker .service-line-badge:focus-visible { outline: 2px solid #112c43; outline-offset: 3px; }
+.resource-chapter-heading h2 { display: flex; align-items: center; gap: .6rem; }
+.resource-heading-icon { flex: 0 0 24px; }
+#distribucion-energia .energy-panel,
+#servicios-provisionales .service-panel {
+  border-left: 3px solid #dce3e9;
+  padding-left: .85rem;
+}
+
+/* Selectores de línea compactos, con separación para facilitar el toque. */
+.service-badge-picker { gap: .6rem; }
+.service-badge-picker .service-line-badge {
+  min-height: 34px;
+  padding: .3rem .45rem;
+  font-size: .8rem;
+  border-left-width: 3px;
+}
+
+/* Los desplegables parten del borde inferior común del navbar. */
+@media (min-width: 1200px) {
+  body > header .navbar { position: relative; }
+  .navbar .navbar-nav > .dropdown { position: relative; }
+  .navbar .navbar-nav > .dropdown > .dropdown-menu {
+    top: var(--dropdown-nav-bottom, calc(100% + .35rem));
+    margin-top: 0;
+  }
+}
+@media (max-width: 1199.98px) {
+  #menuRecursos { opacity: 1; color: #112c43; }
+}
+
+.terminal-panel[hidden], .terminal-line-picker[hidden] { display: none !important; }
+.terminal-pending { width: 100%; font: inherit; text-align: left; color: #617183; background: #f5f7fa; cursor: default; }
+#menuRecursos + .dropdown-menu .dropdown-item { white-space: normal; }
+@media (min-width: 1200px) { #menuRecursos + .dropdown-menu { width: 19rem; } }
+
+/* Dos tipos de diagramas dentro de Distribución de la Energía. */
+.energy-tabs { display: flex; gap: .25rem; margin-bottom: 1rem; border-bottom: 1px solid #ccd6df; }
+.energy-tabs[hidden], .energy-topic[hidden], .energy-topic-fallback[hidden] { display: none !important; }
+.energy-tabs button {
+  background: transparent; color: #617183; border: 0; border-bottom: 3px solid transparent;
+  padding: .8rem 1rem; min-height: 48px; font: inherit; cursor: pointer;
+}
+.energy-tabs button[aria-selected="true"] { color: #112c43; border-bottom-color: #112c43; font-weight: 600; background: #f2f5f8; }
+.energy-tabs button:focus-visible { outline: 2px solid #112c43; outline-offset: -2px; }
+.energy-pending { padding: 1.25rem; background: #f5f7fa; border: 1px dashed #bdcbd6; border-radius: .5rem; color: #41576b; }
+.energy-pending p { margin: .5rem 0 0; }
+@media (max-width: 767.98px) {
+  .energy-tabs button { flex: 1; padding: .75rem .5rem; font-size: .9rem; }
+}
