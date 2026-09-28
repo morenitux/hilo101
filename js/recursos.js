@@ -56,6 +56,8 @@ if (terminalChoices.length) {
 // Subapartados de energía: Bucles abre directamente, sin un clic adicional.
 const energyTabs = Array.from(document.querySelectorAll(".energy-tabs [role='tab']"));
 function selectEnergyTopic(id, focus = false) {
+  const requestedTab = energyTabs.find(tab => tab.getAttribute("aria-controls") === id);
+  if (!requestedTab || requestedTab.disabled) id = "energia-bucles";
   energyTabs.forEach(tab => {
     const active = tab.getAttribute("aria-controls") === id;
     tab.setAttribute("aria-selected", String(active));
@@ -81,7 +83,7 @@ if (energyTabs.length) {
       if (event.key === "End") next = energyTabs.length - 1;
       if (next !== undefined) {
         event.preventDefault();
-        selectEnergyTopic(energyTabs[next].getAttribute("aria-controls"), true);
+        if (!energyTabs[next].disabled) selectEnergyTopic(energyTabs[next].getAttribute("aria-controls"), true);
       }
     });
   });
