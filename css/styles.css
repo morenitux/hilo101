@@ -960,3 +960,6 @@ main :is(.larines-table, .formacion-table, .manual-catalog-table, .procedimiento
 
 .energy-tabs button:disabled { color: #7b8792; cursor: not-allowed; background: transparent; }
 .energy-tabs button small { display: block; font-size: .7rem; font-weight: 400; margin-top: .2rem; }
+
+.energy-document small { line-height: 1.4; }
+@media (max-width: 575.98px) { .energy-documents { grid-template-columns: minmax(0, 1fr); } .energy-document { min-height: 64px; } }
