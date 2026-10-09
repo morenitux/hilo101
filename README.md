@@ -11,6 +11,7 @@ Un sitio para tener cerca los textos, tablas y documentos de consulta del Metro.
 - **Fracciones de vuelta:** tablas por línea, accesibles desde el menú.
 - **Manuales y procedimientos:** busca documentos y abre sus PDF. Los manuales están agrupados en Transportes, Línea A, Línea B y Línea 12.
 - **Otros recursos:** perfiles de línea, diagramas de servicios provisionales por estación y anuarios.
+- **Disponibilidad de trenes:** captura por fecha y hora, consulta trenes programados y exporta la tabla. **Polígonos de Carga** permite configurar trenes por línea, hora y tipo de día, además de fechas festivas.
 
 Los buscadores reconocen palabras sin acentos y variantes de singular y plural, y resaltan las coincidencias. Pulsa **`/`** para empezar a buscar y **`Esc`** para salir del cuadro.
 
@@ -32,6 +33,8 @@ Necesitas conexión a internet para cargar **Bootstrap 5** y la fuente **Arimo**
 ## Un proyecto que sigue creciendo
 
 Los datos de las tablas se pueden editar directamente en los HTML. Para agregar o reemplazar documentos, guarda el archivo en su carpeta dentro de `files/` y actualiza el enlace correspondiente. Algunos nombres de procedimientos siguen pendientes de completar.
+
+La configuración de trenes programados, fechas festivas y capturas operativas se guarda en `localStorage` del navegador. Los datos no se comparten automáticamente entre equipos o navegadores.
 
 ---
 

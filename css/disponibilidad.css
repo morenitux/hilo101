@@ -1,0 +1,71 @@
+.availability-container { width: 100%; max-width: 1280px; margin-inline: auto; }
+.hour-pills { display: grid; gap: .35rem; overflow: visible; padding: .15rem .1rem .5rem; }
+.hour-pills-row { display: grid; gap: .4rem; width: fit-content; max-width: 100%; }
+.hour-pills-first { grid-template-columns: repeat(10, minmax(4.15rem, 1fr)); }
+.hour-pills-second { grid-template-columns: repeat(10, minmax(4.15rem, 1fr)); }
+.hour-pill { display: flex; align-items: center; justify-content: center; gap: .25rem; min-width: 4.15rem; white-space: nowrap; }
+.hour-saved-check { font-size: .8rem; font-weight: 700; line-height: 1; }
+.hour-actions { justify-content: flex-end; }
+.csv-download-link { display: inline-flex; align-items: center; gap: .35rem; white-space: nowrap; }
+.csv-download-link:hover { text-decoration: underline !important; }
+.hour-pill:disabled { opacity: .35; }
+.availability-scroll { width: 100%; max-width: 100%; border: 1px solid #dfe5ec; border-radius: .5rem; }
+.availability-table { width: 100%; max-width: 100%; table-layout: fixed; margin: 0; font-size: .75rem; }
+.availability-table thead th { background: #112c43; color: white; vertical-align: middle; text-align: center; overflow-wrap: anywhere; }
+.availability-table th:nth-child(1) { width: 8%; }
+.availability-table th:nth-child(2) { width: 6%; }
+.availability-table th:nth-child(3) { width: 9%; }
+.availability-table th:nth-child(4) { width: 8%; }
+.availability-table th:nth-child(5) { width: 13%; }
+.availability-table th:nth-child(6) { width: 8%; }
+.availability-table th:nth-child(7) { width: 8%; }
+.availability-table th:nth-child(8) { width: 9%; }
+.availability-table th:nth-child(9) { width: 6%; }
+.availability-table th:nth-child(10) { width: 8%; }
+.availability-table th:nth-child(11) { width: 7%; }
+.availability-table th:nth-child(12) { width: 10%; }
+.availability-table thead th:nth-child(3) { overflow-wrap: normal; word-break: normal; }
+.availability-table td, .availability-table th { padding: .3rem .2rem; }
+.availability-table td { text-align: center; }
+.availability-table tbody th { white-space: nowrap; font-size: .82rem; }
+.line-dot { border-left: .3rem solid var(--line-color); padding-left: .3rem; }
+.availability-table .op-input,
+.availability-table .programmed-input,
+.availability-table .circulating-input { width: 100%; min-width: 0; padding: .25rem .2rem; font-size: .76rem; }
+.availability-table .op-input,
+.availability-table .programmed-input,
+.availability-table .circulating-input { text-align: center; }
+.availability-table input[data-field="encargado"] { text-transform: uppercase; }
+.availability-table .programmed-input { background-color: #f1f3f5; }
+.availability-table .fixed-value { display: block; min-height: 1.7rem; padding: .3rem .1rem; text-align: center; font-weight: 600; white-space: nowrap; }
+.availability-table .interval-value { font-variant-numeric: tabular-nums; }
+.rain-controls { display: flex; align-items: center; justify-content: center; gap: .35rem; min-width: 0; }
+.rain-controls .form-check-input { width: 1rem; height: 1rem; margin: 0; flex: 0 0 auto; transform: scale(1.15); cursor: pointer; }
+.rain-controls .form-select { flex: 0 1 92px; width: 92px; min-width: 0; padding: .2rem 1.1rem .2rem .2rem; font-size: .72rem; }
+.rain-controls .form-select { text-align: center; text-align-last: center; }
+.polygon-table { min-width: 1050px; }
+.polygon-table thead th { position: sticky; top: 0; background: #112c43; color: #fff; text-align: center; white-space: nowrap; }
+.polygon-table tbody th { white-space: nowrap; }
+.polygon-input { min-width: 64px; text-align: center; }
+@media (max-width: 991.98px) {
+  .hour-pills-row { width: 100%; }
+  .hour-pills-first { grid-template-columns: repeat(10, minmax(0, 1fr)); }
+  .hour-pills-second { grid-template-columns: repeat(10, minmax(0, 1fr)); }
+  .hour-pill { min-width: 0; }
+}
+@media (max-width: 575.98px) {
+  .hour-pills-row { width: 100%; gap: .15rem; }
+  .hour-pills-first { grid-template-columns: repeat(10, minmax(0, 1fr)); }
+  .hour-pills-second { grid-template-columns: repeat(10, minmax(0, 1fr)); }
+  .hour-pill { min-width: 0; gap: .08rem; padding-inline: .05rem; }
+  .hour-label { font-size: .58rem; letter-spacing: -.04em; }
+  .hour-saved-check { font-size: .55rem; }
+  .availability-table { font-size: .66rem; }
+  .availability-table td, .availability-table th { padding: .22rem .1rem; }
+  .availability-table tbody th { font-size: .74rem; }
+  .availability-table .op-input,
+  .availability-table .programmed-input,
+  .availability-table .circulating-input { font-size: .66rem; }
+  .rain-controls { gap: .2rem; }
+  .rain-controls .form-select { flex-basis: 76px; width: 76px; font-size: .62rem; padding-right: .9rem; }
+}

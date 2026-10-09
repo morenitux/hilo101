@@ -9,6 +9,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous" defer=""></script>
   <script src="js/search.js" defer></script>
   <script src="js/main.js" defer=""></script>
+  <script src="js/fracciones.js" defer=""></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Arimo:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
@@ -30,6 +31,7 @@
             <!-- Destinos provisionales hasta crear las páginas correspondientes. -->
             <ul class="navbar-nav ms-xl-auto">
               <li class="nav-item dropdown"><button class="nav-link dropdown-toggle" id="menuLarines" type="button" data-bs-toggle="dropdown" aria-expanded="false" data-page-group="larines,larines-pcl12,traslados">Larines</button><ul class="dropdown-menu" aria-labelledby="menuLarines"><li><a class="dropdown-item" href="index.html" data-page="larines">PCCI-C5/PCCII</a></li><li><a class="dropdown-item" href="larines_pcl12.html" data-page="larines-pcl12">PCL-12</a></li><li><a class="dropdown-item" href="traslados_trenes.html" data-page="traslados">Traslados de trenes</a></li></ul></li>
+              <li class="nav-item"><a class="nav-link" href="disponibilidad.html" data-page="disponibilidad" hidden>Disponibilidad de Trenes</a></li>
               <li class="nav-item"><a class="nav-link" href="formacion_trenes.html" data-page="formacion-de-trenes">Formación de trenes</a></li>
               <li class="nav-item dropdown"><button class="nav-link dropdown-toggle active" type="button" id="menuFracciones" data-bs-toggle="dropdown" aria-expanded="false" data-page="fracciones-de-vuelta" aria-current="page">Fracciones de vuelta</button><ul class="dropdown-menu" aria-labelledby="menuFracciones"><li><a class="dropdown-item" href="fracciones_vuelta.html#linea1">Línea 1</a></li><li><a class="dropdown-item" href="fracciones_vuelta.html#linea2">Línea 2</a></li><li><a class="dropdown-item" href="fracciones_vuelta.html#linea3">Línea 3</a></li><li><a class="dropdown-item" href="fracciones_vuelta.html#linea4">Línea 4</a></li><li><a class="dropdown-item" href="fracciones_vuelta.html#linea5">Línea 5</a></li><li><a class="dropdown-item" href="fracciones_vuelta.html#linea6">Línea 6</a></li><li><a class="dropdown-item" href="fracciones_vuelta.html#linea7">Línea 7</a></li><li><a class="dropdown-item" href="fracciones_vuelta.html#linea8">Línea 8</a></li><li><a class="dropdown-item" href="fracciones_vuelta.html#linea9">Línea 9</a></li><li><a class="dropdown-item" href="fracciones_vuelta.html#lineaA">Línea A</a></li><li><a class="dropdown-item" href="fracciones_vuelta.html#lineaB">Línea B</a></li><li><a class="dropdown-item" href="fracciones_vuelta.html#linea12">Línea 12</a></li></ul></li>
               <li class="nav-item"><a class="nav-link" href="manuales.html" data-page="manuales">Manuales</a></li>
@@ -93,26 +95,26 @@
             <tbody>
             <tr> <td class="tit" colspan="3"><b>DURACIÓN DE LA VUELTA (MINUTOS):</b></td> <td class="tit2"><b>68</b></td> </tr>
             <tr> <th class="tit">VÍA 1</th> <th class="tit">LÍNEA 1</th> <th class="tit">VÍA 2</th> <th class="tit">Z.E.</th> </tr>
-            <tr> <td class="tit2">0.50</td> <td class="tit2">PANTITLAN</td> <td class="tit2">0.00</td> <td class="tit2">A</td> </tr>
-            <tr> <td class="tit2">0.45</td> <td class="tit2">ZARAGOZA</td> <td class="tit2">0.05</td> <td class="tit2" rowspan="3">B</td> </tr>
-            <tr> <td class="tit2">0.45</td> <td class="tit2">GOMEZ FARIAS</td> <td class="tit2">0.05</td> </tr>
-            <tr> <td class="tit2">0.40</td> <td class="tit2">BOULEVARD PTO. AEREO</td> <td class="tit2">0.10</td> </tr>
-            <tr> <td class="tit2">0.40</td> <td class="tit2">BALBUENA</td> <td class="tit2">0.10</td> <td class="tit2" rowspan="4">C</td> </tr>
-            <tr> <td class="tit2">0.35</td> <td class="tit2">MOCTEZUMA</td> <td class="tit2">0.15</td> </tr>
-            <tr> <td class="tit2">0.35</td> <td class="tit2">SAN LAZARO</td> <td class="tit2">0.15</td> </tr>
-            <tr> <td class="tit2">0.30</td> <td class="tit2">CANDELARIA</td> <td class="tit2">0.20</td> </tr>
-            <tr> <td class="tit2">0.30</td> <td class="tit2">MERCED</td> <td class="tit2">0.20</td> <td class="tit2" rowspan="4">D</td> </tr>
-            <tr> <td class="tit2">0.25</td> <td class="tit2">PINO SUAREZ</td> <td class="tit2">0.25</td> </tr>
-            <tr> <td class="tit2">0.25</td> <td class="tit2">ISABEL LA CATOLICA</td> <td class="tit2">0.25</td> </tr>
-            <tr> <td class="tit2">0.20</td> <td class="tit2">SALTO DEL AGUA</td> <td class="tit2">0.30</td> </tr>
-            <tr> <td class="tit2">0.20</td> <td class="tit2">BALDERAS</td> <td class="tit2">0.30</td> <td class="tit2" rowspan="5">E</td> </tr>
-            <tr> <td class="tit2">0.15</td> <td class="tit2">CUAUHTEMOC</td> <td class="tit2">0.35</td> </tr>
-            <tr> <td class="tit2">0.15</td> <td class="tit2">INSURGENTES</td> <td class="tit2">0.35</td> </tr>
-            <tr> <td class="tit2">0.10</td> <td class="tit2">SEVILLA</td> <td class="tit2">0.40</td> </tr>
-            <tr> <td class="tit2">0.10</td> <td class="tit2">CHAPULTEPEC</td> <td class="tit2">0.40</td> </tr>
-            <tr> <td class="tit2">0.05</td> <td class="tit2">JUANACATLAN</td> <td class="tit2">0.45</td> <td class="tit2" rowspan="3">F</td> </tr>
-            <tr> <td class="tit2">0.05</td> <td class="tit2">TACUBAYA</td> <td class="tit2">0.45</td> </tr>
-            <tr> <td class="tit2">0.00</td> <td class="tit2">OBSERVATORIO</td> <td class="tit2">0.50</td> </tr>
+            <tr> <td class="tit2">0.50</td> <td class="tit2"><span class="station-name">Pantitl&#225;n</span> <span class="station-acronym">(PAN)</span></td> <td class="tit2">0.00</td> <td class="tit2">A</td> </tr>
+            <tr> <td class="tit2">0.45</td> <td class="tit2"><span class="station-name">Zaragoza</span> <span class="station-acronym">(ZAR)</span></td> <td class="tit2">0.05</td> <td class="tit2" rowspan="3">B</td> </tr>
+            <tr> <td class="tit2">0.45</td> <td class="tit2"><span class="station-name">G&#243;mez Far&#237;as</span> <span class="station-acronym">(GOM)</span></td> <td class="tit2">0.05</td> </tr>
+            <tr> <td class="tit2">0.40</td> <td class="tit2"><span class="station-name">Boulevard Pto. A&#233;reo</span> <span class="station-acronym">(BOU)</span></td> <td class="tit2">0.10</td> </tr>
+            <tr> <td class="tit2">0.40</td> <td class="tit2"><span class="station-name">Balbuena</span> <span class="station-acronym">(BAL)</span></td> <td class="tit2">0.10</td> <td class="tit2" rowspan="4">C</td> </tr>
+            <tr> <td class="tit2">0.35</td> <td class="tit2"><span class="station-name">Moctezuma</span> <span class="station-acronym">(MOC)</span></td> <td class="tit2">0.15</td> </tr>
+            <tr> <td class="tit2">0.35</td> <td class="tit2"><span class="station-name">San L&#225;zaro</span> <span class="station-acronym">(SLA)</span></td> <td class="tit2">0.15</td> </tr>
+            <tr> <td class="tit2">0.30</td> <td class="tit2"><span class="station-name">Candelaria</span> <span class="station-acronym">(CAN)</span></td> <td class="tit2">0.20</td> </tr>
+            <tr> <td class="tit2">0.30</td> <td class="tit2"><span class="station-name">Merced</span> <span class="station-acronym">(MER)</span></td> <td class="tit2">0.20</td> <td class="tit2" rowspan="4">D</td> </tr>
+            <tr> <td class="tit2">0.25</td> <td class="tit2"><span class="station-name">Pino Su&#225;rez</span> <span class="station-acronym">(PIN)</span></td> <td class="tit2">0.25</td> </tr>
+            <tr> <td class="tit2">0.25</td> <td class="tit2"><span class="station-name">Isabel la Cat&#243;lica</span> <span class="station-acronym">(ISA)</span></td> <td class="tit2">0.25</td> </tr>
+            <tr> <td class="tit2">0.20</td> <td class="tit2"><span class="station-name">Salto del Agua</span> <span class="station-acronym">(SAL)</span></td> <td class="tit2">0.30</td> </tr>
+            <tr> <td class="tit2">0.20</td> <td class="tit2"><span class="station-name">Balderas</span> <span class="station-acronym">(BAD)</span></td> <td class="tit2">0.30</td> <td class="tit2" rowspan="5">E</td> </tr>
+            <tr> <td class="tit2">0.15</td> <td class="tit2"><span class="station-name">Cuauht&#233;moc</span> <span class="station-acronym">(CUA)</span></td> <td class="tit2">0.35</td> </tr>
+            <tr> <td class="tit2">0.15</td> <td class="tit2"><span class="station-name">Insurgentes</span> <span class="station-acronym">(INS)</span></td> <td class="tit2">0.35</td> </tr>
+            <tr> <td class="tit2">0.10</td> <td class="tit2"><span class="station-name">Sevilla</span> <span class="station-acronym">(SEV)</span></td> <td class="tit2">0.40</td> </tr>
+            <tr> <td class="tit2">0.10</td> <td class="tit2"><span class="station-name">Chapultepec</span> <span class="station-acronym">(CHP)</span></td> <td class="tit2">0.40</td> </tr>
+            <tr> <td class="tit2">0.05</td> <td class="tit2"><span class="station-name">Juanacatl&#225;n</span> <span class="station-acronym">(JNA)</span></td> <td class="tit2">0.45</td> <td class="tit2" rowspan="3">F</td> </tr>
+            <tr> <td class="tit2">0.05</td> <td class="tit2"><span class="station-name">Tacubaya</span> <span class="station-acronym">(TCY)</span></td> <td class="tit2">0.45</td> </tr>
+            <tr> <td class="tit2">0.00</td> <td class="tit2"><span class="station-name">Observatorio</span> <span class="station-acronym">(OBS)</span></td> <td class="tit2">0.50</td> </tr>
             </tbody>
          </table></section><section id="linea2" class="linea-section mb-5" tabindex="-1" aria-labelledby="tituloLinea2"><h2 class="h4 mb-3" id="tituloLinea2">Línea 2</h2><table class="table table-bordered text-center align-middle fracciones-table">
             <colgroup><col>
@@ -152,129 +154,129 @@
             </tr>
             <tr>
             <td class="tit2">0.50</td>
-            <td class="tit2">CUATRO CAMINOS</td>
+            <td class="tit2"><span class="station-name">Cuatro Caminos</span> <span class="station-acronym">(CCA)</span></td>
             <td class="tit2">0.00</td>
             <td class="tit2">A</td>
             </tr>
             <tr>
             <td class="tit2">0.45</td>
-            <td class="tit2">PANTEONES</td>
+            <td class="tit2"><span class="station-name">Panteones</span> <span class="station-acronym">(PTN)</span></td>
             <td class="tit2">0.05</td>
             <td class="tit2" rowspan="2">B</td>
             </tr>
             <tr>
             <td class="tit2">0.45</td>
-            <td class="tit2">TACUBA</td>
+            <td class="tit2"><span class="station-name">Tacuba</span> <span class="station-acronym">(TAC)</span></td>
             <td class="tit2">0.05</td>
             </tr>
             <tr>
             <td class="tit2">0.45</td>
-            <td class="tit2">CUITLAHUAC</td>
+            <td class="tit2"><span class="station-name">Cuitl&#225;huac</span> <span class="station-acronym">(CUI)</span></td>
             <td class="tit2">0.05</td>
             <td class="tit2" rowspan="4">C</td>
             </tr>
             <tr>
             <td class="tit2">0.40</td>
-            <td class="tit2">POPOTLA</td>
+            <td class="tit2"><span class="station-name">Popotla</span> <span class="station-acronym">(POP)</span></td>
             <td class="tit2">0.10</td>
             </tr>
             <tr>
             <td class="tit2">0.40</td>
-            <td class="tit2">COLEGIO MILITAR</td>
+            <td class="tit2"><span class="station-name">Colegio Militar</span> <span class="station-acronym">(COL)</span></td>
             <td class="tit2">0.10</td>
             </tr>
             <tr>
             <td class="tit2">0.40</td>
-            <td class="tit2">NORMAL</td>
+            <td class="tit2"><span class="station-name">Normal</span> <span class="station-acronym">(NOR)</span></td>
             <td class="tit2">0.10</td>
             </tr>
             <tr>
             <td class="tit2">0.35</td>
-            <td class="tit2">SAN COSME</td>
+            <td class="tit2"><span class="station-name">San Cosme</span> <span class="station-acronym">(SCO)</span></td>
             <td class="tit2">0.15</td>
             <td class="tit2" rowspan="6">D</td>
             </tr>
             <tr>
             <td class="tit2">0.35</td>
-            <td class="tit2">REVOLUCION</td>
+            <td class="tit2"><span class="station-name">Revoluci&#243;n</span> <span class="station-acronym">(REV)</span></td>
             <td class="tit2">0.15</td>
             </tr>
             <tr>
             <td class="tit2">0.30</td>
-            <td class="tit2">HIDALGO</td>
+            <td class="tit2"><span class="station-name">Hidalgo</span> <span class="station-acronym">(HID)</span></td>
             <td class="tit2">0.20</td>
             </tr>
             <tr>
             <td class="tit2">0.30</td>
-            <td class="tit2">BELLAS ARTES</td>
+            <td class="tit2"><span class="station-name">Bellas Artes</span> <span class="station-acronym">(BEL)</span></td>
             <td class="tit2">0.20</td>
             </tr>
             <tr>
             <td class="tit2">0.25</td>
-            <td class="tit2">ALLENDE</td>
+            <td class="tit2"><span class="station-name">Allende</span> <span class="station-acronym">(ALL)</span></td>
             <td class="tit2">0.25</td>
             </tr>
             <tr>
             <td class="tit2">0.25</td>
-            <td class="tit2">ZOCALO</td>
+            <td class="tit2"><span class="station-name">Z&#243;calo / Tenochtitlan</span> <span class="station-acronym">(ZOC)</span></td>
             <td class="tit2">0.25</td>
             </tr>
             <tr>
             <td class="tit2">0.25</td>
-            <td class="tit2">PINO SUAREZ</td>
+            <td class="tit2"><span class="station-name">Pino Su&#225;rez</span> <span class="station-acronym">(PIN)</span></td>
             <td class="tit2">0.25</td>
             <td class="tit2" rowspan="5">E</td>
             </tr>
             <tr>
             <td class="tit2">0.20</td>
-            <td class="tit2">SAN ANTONIO ABAD</td>
+            <td class="tit2"><span class="station-name">San Antonio Abad</span> <span class="station-acronym">(SAN)</span></td>
             <td class="tit2">0.30</td>
             </tr>
             <tr>
             <td class="tit2">0.20</td>
-            <td class="tit2">CHABACANO</td>
+            <td class="tit2"><span class="station-name">Chabacano</span> <span class="station-acronym">(CHB)</span></td>
             <td class="tit2">0.30</td>
             </tr>
             <tr>
             <td class="tit2">0.15</td>
-            <td class="tit2">VIADUCTO</td>
+            <td class="tit2"><span class="station-name">Viaducto</span> <span class="station-acronym">(VIA)</span></td>
             <td class="tit2">0.35</td>
             </tr>
             <tr>
             <td class="tit2">0.15</td>
-            <td class="tit2">XOLA</td>
+            <td class="tit2"><span class="station-name">Xola</span> <span class="station-acronym">(XOL)</span></td>
             <td class="tit2">0.35</td>
             </tr>
             <tr>
             <td class="tit2">0.10</td>
-            <td class="tit2">VILLA DE CORTES</td>
+            <td class="tit2"><span class="station-name">Villa de Cort&#233;s</span> <span class="station-acronym">(VIL)</span></td>
             <td class="tit2">0.40</td>
             <td class="tit2" rowspan="3">F</td>
             </tr>
             <tr>
             <td class="tit2">0.10</td>
-            <td class="tit2">NATIVITAS</td>
+            <td class="tit2"><span class="station-name">Nativitas</span> <span class="station-acronym">(NAT)</span></td>
             <td class="tit2">0.40</td>
             </tr>
             <tr>
             <td class="tit2">0.10</td>
-            <td class="tit2">PORTALES</td>
+            <td class="tit2"><span class="station-name">Portales</span> <span class="station-acronym">(POR)</span></td>
             <td class="tit2">0.40</td>
             </tr>
             <tr>
             <td class="tit2">0.05</td>
-            <td class="tit2">ERMITA</td>
+            <td class="tit2"><span class="station-name">Ermita</span> <span class="station-acronym">(ERM)</span></td>
             <td class="tit2">0.45</td>
             <td class="tit2" rowspan="3">G</td>
             </tr>
             <tr>
             <td class="tit2">0.05</td>
-            <td class="tit2">GENERAL ANAYA</td>
+            <td class="tit2"><span class="station-name">General Anaya</span> <span class="station-acronym">(GEN)</span></td>
             <td class="tit2">0.45</td>
             </tr>
             <tr>
             <td class="tit2">0.00</td>
-            <td class="tit2">TASQUEÑA</td>
+            <td class="tit2"><span class="station-name">Tasque&#241;a</span> <span class="station-acronym">(TAS)</span></td>
             <td class="tit2">0.50</td>
             </tr>
 
@@ -315,115 +317,115 @@
          </tr>
          <tr>
          <td class="tit2">0.50</td>
-         <td class="tit2">INDIOS VERDES</td>
+         <td class="tit2"><span class="station-name">Indios Verdes</span> <span class="station-acronym">(INV)</span></td>
          <td class="tit2">0.00</td>
          <td class="tit2">A</td>
          </tr>
          <tr>
          <td class="tit2">0.45</td>
-         <td class="tit2">DEPORTIVO 18 DE MARZO</td>
+         <td class="tit2"><span class="station-name">Deportivo 18 de Marzo</span> <span class="station-acronym">(DMA)</span></td>
          <td class="tit2">0.05</td>
          <td class="tit2" rowspan="3">B</td>
          </tr>
          <tr>
          <td class="tit2">0.45</td>
-         <td class="tit2">POTRERO</td>
+         <td class="tit2"><span class="station-name">Potrero</span> <span class="station-acronym">(POT)</span></td>
          <td class="tit2">0.05</td>
          </tr>
          <tr>
          <td class="tit2">0.40</td>
-         <td class="tit2">LA RAZA</td>
+         <td class="tit2"><span class="station-name">La Raza</span> <span class="station-acronym">(LRZ)</span></td>
          <td class="tit2">0.10</td>
          </tr>
          <tr>
          <td class="tit2">0.40</td>
-         <td class="tit2">TLATELOLCO</td>
+         <td class="tit2"><span class="station-name">Tlatelolco</span> <span class="station-acronym">(TLA)</span></td>
          <td class="tit2">0.10</td>
          <td class="tit2" rowspan="4">C</td>
          </tr>
          <tr>
          <td class="tit2">0.35</td>
-         <td class="tit2">GUERRERO</td>
+         <td class="tit2"><span class="station-name">Guerrero</span> <span class="station-acronym">(GUE)</span></td>
          <td class="tit2">0.15</td>
          </tr>
          <tr>
          <td class="tit2">0.35</td>
-         <td class="tit2">HIDALGO</td>
+         <td class="tit2"><span class="station-name">Hidalgo</span> <span class="station-acronym">(HID)</span></td>
          <td class="tit2">0.15</td>
          </tr>
          <tr>
          <td class="tit2">0.35</td>
-         <td class="tit2">JUAREZ</td>
+         <td class="tit2"><span class="station-name">Ju&#225;rez</span> <span class="station-acronym">(JUA)</span></td>
          <td class="tit2">0.15</td>
          </tr>
          <tr>
          <td class="tit2">0.30</td>
-         <td class="tit2">BALDERAS</td>
+         <td class="tit2"><span class="station-name">Balderas</span> <span class="station-acronym">(BAD)</span></td>
          <td class="tit2">0.20</td>
          <td class="tit2" rowspan="4">D</td>
          </tr>
          <tr>
          <td class="tit2">0.30</td>
-         <td class="tit2">NIÑOS HEROES</td>
+         <td class="tit2"><span class="station-name">Ni&#241;os H&#233;roes / Poder Judicial CDMX</span> <span class="station-acronym">(NHE)</span></td>
          <td class="tit2">0.20</td>
          </tr>
          <tr>
          <td class="tit2">0.25</td>
-         <td class="tit2">HOSPITAL GENERAL</td>
+         <td class="tit2"><span class="station-name">Hospital General</span> <span class="station-acronym">(HGN)</span></td>
          <td class="tit2">0.25</td>
          </tr>
          <tr>
          <td class="tit2">0.25</td>
-         <td class="tit2">CENTRO MEDICO</td>
+         <td class="tit2"><span class="station-name">Centro M&#233;dico</span> <span class="station-acronym">(CME)</span></td>
          <td class="tit2">0.25</td>
          </tr>
          <tr>
          <td class="tit2">0.20</td>
-         <td class="tit2">ETIOPIA</td>
+         <td class="tit2"><span class="station-name">Etiop&#237;a / Plaza de la Transparencia</span> <span class="station-acronym">(ETI)</span></td>
          <td class="tit2">0.30</td>
          <td class="tit2" rowspan="2">E</td>
          </tr>
          <tr>
          <td class="tit2">0.20</td>
-         <td class="tit2">EUGENIA</td>
+         <td class="tit2"><span class="station-name">Eugenia</span> <span class="station-acronym">(EUG)</span></td>
          <td class="tit2">0.30</td>
          </tr>
          <tr>
          <td class="tit2">0.15</td>
-         <td class="tit2">DIVISION DEL NORTE</td>
+         <td class="tit2"><span class="station-name">Divisi&#243;n del Norte</span> <span class="station-acronym">(DNO)</span></td>
          <td class="tit2">0.35</td>
          <td class="tit2" rowspan="2">F</td>
          </tr>
          <tr>
          <td class="tit2">0.15</td>
-         <td class="tit2">ZAPATA</td>
+         <td class="tit2"><span class="station-name">Zapata</span> <span class="station-acronym">(ZAP)</span></td>
          <td class="tit2">0.35</td>
          </tr>
          <tr>
          <td class="tit2">0.10</td>
-         <td class="tit2">COYOACAN</td>
+         <td class="tit2"><span class="station-name">Coyoac&#225;n</span> <span class="station-acronym">(COY)</span></td>
          <td class="tit2">0.40</td>
          <td class="tit2" rowspan="3">G</td>
          </tr>
          <tr>
          <td class="tit2">0.10</td>
-         <td class="tit2">VIVEROS</td>
+         <td class="tit2"><span class="station-name">Viveros / Derechos Humanos</span> <span class="station-acronym">(VIV)</span></td>
          <td class="tit2">0.40</td>
          </tr>
          <tr>
          <td class="tit2">0.05</td>
-         <td class="tit2">MIGUEL ANGEL DE QUEVEDO</td>
+         <td class="tit2"><span class="station-name">Miguel &#193;ngel de Quevedo</span> <span class="station-acronym">(QUE)</span></td>
          <td class="tit2">0.45</td>
          </tr>
          <tr>
          <td class="tit2">0.05</td>
-         <td class="tit2">COPILCO</td>
+         <td class="tit2"><span class="station-name">Copilco</span> <span class="station-acronym">(COP)</span></td>
          <td class="tit2">0.45</td>
          <td class="tit2" rowspan="2">H</td>
          </tr>
          <tr>
          <td class="tit2">0.00</td>
-         <td class="tit2">UNIVERSIDAD</td>
+         <td class="tit2"><span class="station-name">Universidad</span> <span class="station-acronym">(UNI)</span></td>
          <td class="tit2">0.50</td>
          </tr>
          </tbody>
@@ -463,56 +465,56 @@
             </tr>
             <tr>
             <td class="tit2">0.50</td>
-            <td class="tit2">SANTA ANITA</td>
+            <td class="tit2"><span class="station-name">Santa Anita</span> <span class="station-acronym">(SAA)</span></td>
             <td class="tit2">0.00</td>
             <td class="tit2" rowspan="2">E</td>
             </tr>
             <tr>
             <td class="tit2">0.45</td>
-            <td class="tit2">JAMAICA</td>
+            <td class="tit2"><span class="station-name">Jamaica</span> <span class="station-acronym">(JAM)</span></td>
             <td class="tit2">0.05</td>
             </tr>
             <tr>
             <td class="tit2">0.40</td>
-            <td class="tit2">FRAY SERVANDO</td>
+            <td class="tit2"><span class="station-name">Fray Servando</span> <span class="station-acronym">(FRA)</span></td>
             <td class="tit2">0.10</td>
             <td class="tit2" rowspan="2">F</td>
             </tr>
             <tr>
             <td class="tit2">0.35</td>
-            <td class="tit2">CANDELARIA</td>
+            <td class="tit2"><span class="station-name">Candelaria</span> <span class="station-acronym">(CAN)</span></td>
             <td class="tit2">0.15</td>
             </tr>
             <tr>
             <td class="tit2">0.30</td>
-            <td class="tit2">MORELOS</td>
+            <td class="tit2"><span class="station-name">Morelos</span> <span class="station-acronym">(MOR)</span></td>
             <td class="tit2">0.20</td>
             <td class="tit2" rowspan="3">G</td>
             </tr>
             <tr>
             <td class="tit2">0.25</td>
-            <td class="tit2">CANAL DEL NORTE</td>
+            <td class="tit2"><span class="station-name">Canal del Norte</span> <span class="station-acronym">(CNT)</span></td>
             <td class="tit2">0.25</td>
             </tr>
             <tr>
             <td class="tit2">0.20</td>
-            <td class="tit2">CONSULADO</td>
+            <td class="tit2"><span class="station-name">Consulado</span> <span class="station-acronym">(CON)</span></td>
             <td class="tit2">0.30</td>
             </tr>
             <tr>
             <td class="tit2">0.15</td>
-            <td class="tit2">BONDOJITO</td>
+            <td class="tit2"><span class="station-name">Bondojito</span> <span class="station-acronym">(BON)</span></td>
             <td class="tit2">0.35</td>
             <td class="tit2" rowspan="3">H</td>
             </tr>
             <tr>
             <td class="tit2">0.10</td>
-            <td class="tit2">TALISMAN</td>
+            <td class="tit2"><span class="station-name">Talism&#225;n</span> <span class="station-acronym">(TAL)</span></td>
             <td class="tit2">0.40</td>
             </tr>
             <tr>
             <td class="tit2">0.00</td>
-            <td class="tit2">MARTIN CARRERA</td>
+            <td class="tit2"><span class="station-name">Mart&#237;n Carrera</span> <span class="station-acronym">(MAR)</span></td>
             <td class="tit2">0.50</td>
             </tr>
 
@@ -553,73 +555,73 @@
             </tr>
             <tr>
             <td class="tit2">0.50</td>
-            <td class="tit2">POLITECNICO</td>
+            <td class="tit2"><span class="station-name">Polit&#233;cnico</span> <span class="station-acronym">(POL)</span></td>
             <td class="tit2">0.00</td>
             <td class="tit2">A</td>
             </tr>
             <tr>
             <td class="tit2">0.45</td>
-            <td class="tit2">INSTITUTO DEL PETROLEO</td>
+            <td class="tit2"><span class="station-name">Instituto del Petr&#243;leo</span> <span class="station-acronym">(IPE)</span></td>
             <td class="tit2">0.05</td>
             <td class="tit2" rowspan="2">B</td>
             </tr>
             <tr>
             <td class="tit2">0.40</td>
-            <td class="tit2">AUTOBUSES DEL NORTE</td>
+            <td class="tit2"><span class="station-name">Autobuses del Norte</span> <span class="station-acronym">(TAN)</span></td>
             <td class="tit2">0.10</td>
             </tr>
             <tr>
             <td class="tit2">0.35</td>
-            <td class="tit2">LA RAZA</td>
+            <td class="tit2"><span class="station-name">La Raza</span> <span class="station-acronym">(LRZ)</span></td>
             <td class="tit2">0.15</td>
             <td class="tit2" rowspan="3">C</td>
             </tr>
             <tr>
             <td class="tit2">0.30</td>
-            <td class="tit2">MISTERIOS</td>
+            <td class="tit2"><span class="station-name">Misterios</span> <span class="station-acronym">(MIS)</span></td>
             <td class="tit2">0.20</td>
             </tr>
             <tr>
             <td class="tit2">0.30</td>
-            <td class="tit2">VALLE GOMEZ</td>
+            <td class="tit2"><span class="station-name">Valle G&#243;mez</span> <span class="station-acronym">(VGO)</span></td>
             <td class="tit2">0.20</td>
             </tr>
             <tr>
             <td class="tit2">0.25</td>
-            <td class="tit2">CONSULADO</td>
+            <td class="tit2"><span class="station-name">Consulado</span> <span class="station-acronym">(CON)</span></td>
             <td class="tit2">0.25</td>
             <td class="tit2" rowspan="2">D</td>
             </tr>
             <tr>
             <td class="tit2">0.20</td>
-            <td class="tit2">EDUARDO MOLINA</td>
+            <td class="tit2"><span class="station-name">Eduardo Molina</span> <span class="station-acronym">(EDU)</span></td>
             <td class="tit2">0.30</td>
             </tr>
             <tr>
             <td class="tit2">0.20</td>
-            <td class="tit2">ARAGON</td>
+            <td class="tit2"><span class="station-name">Arag&#243;n</span> <span class="station-acronym">(ARA)</span></td>
             <td class="tit2">0.30</td>
             <td class="tit2" rowspan="2">E</td>
             </tr>
             <tr>
             <td class="tit2">0.15</td>
-            <td class="tit2">OCEANIA</td>
+            <td class="tit2"><span class="station-name">Ocean&#237;a</span> <span class="station-acronym">(OCE)</span></td>
             <td class="tit2">0.35</td>
             </tr>
             <tr>
             <td class="tit2">0.10</td>
-            <td class="tit2">TERMINAL AEREA</td>
+            <td class="tit2"><span class="station-name">Terminal A&#233;rea</span> <span class="station-acronym">(TER)</span></td>
             <td class="tit2">0.40</td>
             <td class="tit2" rowspan="2">F</td>
             </tr>
             <tr>
             <td class="tit2">0.05</td>
-            <td class="tit2">HANGARES</td>
+            <td class="tit2"><span class="station-name">Hangares</span> <span class="station-acronym">(HAN)</span></td>
             <td class="tit2">0.45</td>
             </tr>
             <tr>
             <td class="tit2">0.00</td>
-            <td class="tit2">PANTITLAN</td>
+            <td class="tit2"><span class="station-name">Pantitl&#225;n</span> <span class="station-acronym">(PAN)</span></td>
             <td class="tit2">0.50</td>
             <td class="tit2">G</td>
             </tr>
@@ -660,62 +662,62 @@
             </tr>
             <tr>
             <td class="tit2">0.50</td>
-            <td class="tit2">EL ROSARIO</td>
+            <td class="tit2"><span class="station-name">El Rosario</span> <span class="station-acronym">(ROS)</span></td>
             <td class="tit2">0.00</td>
             <td class="tit2" rowspan="2">A</td>
             </tr>
             <tr>
             <td class="tit2">0.45</td>
-            <td class="tit2">TEZOZOMOC</td>
+            <td class="tit2"><span class="station-name">Tezoz&#243;moc</span> <span class="station-acronym">(TEZ)</span></td>
             <td class="tit2">0.05</td>
             </tr>
             <tr>
             <td class="tit2">0.40</td>
-            <td class="tit2">AZCAPOTZALCO</td>
+            <td class="tit2"><span class="station-name">Azcapotzalco</span> <span class="station-acronym">(AZC)</span></td>
             <td class="tit2">0.10</td>
             <td class="tit2" rowspan="3">B</td>
             </tr>
             <tr>
             <td class="tit2">0.35</td>
-            <td class="tit2">FERRERIA</td>
+            <td class="tit2"><span class="station-name">Ferrer&#237;a / Arena Ciudad de M&#233;xico</span> <span class="station-acronym">(FER)</span></td>
             <td class="tit2">0.15</td>
             </tr>
             <tr>
             <td class="tit2">0.30</td>
-            <td class="tit2">NORTE 45</td>
+            <td class="tit2"><span class="station-name">Norte 45</span> <span class="station-acronym">(NTE)</span></td>
             <td class="tit2">0.20</td>
             </tr>
             <tr>
             <td class="tit2">0.25</td>
-            <td class="tit2">VALLEJO</td>
+            <td class="tit2"><span class="station-name">Vallejo</span> <span class="station-acronym">(VAL)</span></td>
             <td class="tit2">0.25</td>
             <td class="tit2" rowspan="2">C</td>
             </tr>
             <tr>
             <td class="tit2">0.20</td>
-            <td class="tit2">INSTITUTO DEL PETROLEO</td>
+            <td class="tit2"><span class="station-name">Instituto del Petr&#243;leo</span> <span class="station-acronym">(IPE)</span></td>
             <td class="tit2">0.30</td>
             </tr>
             <tr>
             <td class="tit2">0.15</td>
-            <td class="tit2">LINDAVISTA</td>
+            <td class="tit2"><span class="station-name">Lindavista</span> <span class="station-acronym">(LIN)</span></td>
             <td class="tit2">0.35</td>
             <td class="tit2" rowspan="2">D</td>
             </tr>
             <tr>
             <td class="tit2">0.10</td>
-            <td class="tit2">DEPORTIVO 18 DE MARZO</td>
+            <td class="tit2"><span class="station-name">Deportivo 18 de Marzo</span> <span class="station-acronym">(DMA)</span></td>
             <td class="tit2">0.40</td>
             </tr>
             <tr>
             <td class="tit2">0.05</td>
-            <td class="tit2">LA VILLA - BASILICA</td>
+            <td class="tit2"><span class="station-name">La Villa / Bas&#237;lica</span> <span class="station-acronym">(VBA)</span></td>
             <td class="tit2">0.45</td>
             <td class="tit2" rowspan="2">E</td>
             </tr>
             <tr>
             <td class="tit2">0.00</td>
-            <td class="tit2">MARTIN CARRERA</td>
+            <td class="tit2"><span class="station-name">Mart&#237;n Carrera</span> <span class="station-acronym">(MAR)</span></td>
             <td class="tit2">0.50</td>
             </tr>
 
@@ -756,79 +758,79 @@
             </tr>
             <tr>
             <td class="tit2">0.50</td>
-            <td class="tit2">EL ROSARIO</td>
+            <td class="tit2"><span class="station-name">El Rosario</span> <span class="station-acronym">(ROS)</span></td>
             <td class="tit2">0.00</td>
             <td class="tit2">A</td>
             </tr>
             <tr>
             <td class="tit2">0.45</td>
-            <td class="tit2">AQUILES SERDAN</td>
+            <td class="tit2"><span class="station-name">Aquiles Serd&#225;n</span> <span class="station-acronym">(AQU)</span></td>
             <td class="tit2">0.05</td>
             <td class="tit2" rowspan="3">B</td>
             </tr>
             <tr>
             <td class="tit2">0.45</td>
-            <td class="tit2">CAMARONES</td>
+            <td class="tit2"><span class="station-name">Camarones</span> <span class="station-acronym">(CAM)</span></td>
             <td class="tit2">0.05</td>
             </tr>
             <tr>
             <td class="tit2">0.40</td>
-            <td class="tit2">REFINERIA</td>
+            <td class="tit2"><span class="station-name">Refiner&#237;a</span> <span class="station-acronym">(REF)</span></td>
             <td class="tit2">0.10</td>
             </tr>
             <tr>
             <td class="tit2">0.35</td>
-            <td class="tit2">TACUBA</td>
+            <td class="tit2"><span class="station-name">Tacuba</span> <span class="station-acronym">(TAC)</span></td>
             <td class="tit2">0.15</td>
             <td class="tit2">C</td>
             </tr>
             <tr>
             <td class="tit2">0.30</td>
-            <td class="tit2">SAN JOAQUIN</td>
+            <td class="tit2"><span class="station-name">San Joaqu&#237;n</span> <span class="station-acronym">(SJO)</span></td>
             <td class="tit2">0.20</td>
             <td class="tit2" rowspan="2">D</td>
             </tr>
             <tr>
             <td class="tit2">0.25</td>
-            <td class="tit2">POLANCO</td>
+            <td class="tit2"><span class="station-name">Polanco</span> <span class="station-acronym">(POA)</span></td>
             <td class="tit2">0.25</td>
             </tr>
             <tr>
             <td class="tit2">0.25</td>
-            <td class="tit2">AUDITORIO</td>
+            <td class="tit2"><span class="station-name">Auditorio</span> <span class="station-acronym">(AUD)</span></td>
             <td class="tit2">0.25</td>
             <td class="tit2" rowspan="2">E</td>
             </tr>
             <tr>
             <td class="tit2">0.20</td>
-            <td class="tit2">CONSTITUYENTES</td>
+            <td class="tit2"><span class="station-name">Constituyentes</span> <span class="station-acronym">(COS)</span></td>
             <td class="tit2">0.30</td>
             </tr>
             <tr>
             <td class="tit2">0.15</td>
-            <td class="tit2">TACUBAYA</td>
+            <td class="tit2"><span class="station-name">Tacubaya</span> <span class="station-acronym">(TCY)</span></td>
             <td class="tit2">0.35</td>
             <td class="tit2" rowspan="3">F</td>
             </tr>
             <tr>
             <td class="tit2">0.10</td>
-            <td class="tit2">SAN PEDRO DE LOS PINOS</td>
+            <td class="tit2"><span class="station-name">San Pedro de los Pinos</span> <span class="station-acronym">(SPE)</span></td>
             <td class="tit2">0.40</td>
             </tr>
             <tr>
             <td class="tit2">0.05</td>
-            <td class="tit2">SAN ANTONIO</td>
+            <td class="tit2"><span class="station-name">San Antonio</span> <span class="station-acronym">(SAT)</span></td>
             <td class="tit2">0.45</td>
             </tr>
             <tr>
             <td class="tit2">0.05</td>
-            <td class="tit2">MIXCOAC</td>
+            <td class="tit2"><span class="station-name">Mixcoac</span> <span class="station-acronym">(MIX)</span></td>
             <td class="tit2">0.45</td>
             <td class="tit2" rowspan="2">G</td>
             </tr>
             <tr>
             <td class="tit2">0.00</td>
-            <td class="tit2">BARRANCA DEL MUERTO</td>
+            <td class="tit2"><span class="station-name">Barranca del Muerto</span> <span class="station-acronym">(BAR)</span></td>
             <td class="tit2">0.50</td>
             </tr>
          </tbody>
@@ -868,104 +870,104 @@
             </tr>
             <tr>
             <td class="tit2">0.50</td>
-            <td class="tit2">GARIBALDI</td>
+            <td class="tit2"><span class="station-name">Garibaldi / Lagunilla</span> <span class="station-acronym">(GAR)</span></td>
             <td class="tit2">0.00</td>
             <td class="tit2">C</td>
             </tr>
             <tr>
             <td class="tit2">0.45</td>
-            <td class="tit2">BELLAS ARTES</td>
+            <td class="tit2"><span class="station-name">Bellas Artes</span> <span class="station-acronym">(BEL)</span></td>
             <td class="tit2">0.05</td>
             <td class="tit2" rowspan="3">D</td>
             </tr>
             <tr>
             <td class="tit2">0.45</td>
-            <td class="tit2">SAN JUAN DE LETRAN</td>
+            <td class="tit2"><span class="station-name">San Juan de Letr&#225;n</span> <span class="station-acronym">(SJL)</span></td>
             <td class="tit2">0.05</td>
             </tr>
             <tr>
             <td class="tit2">0.40</td>
-            <td class="tit2">SALTO DEL AGUA</td>
+            <td class="tit2"><span class="station-name">Salto del Agua</span> <span class="station-acronym">(SAL)</span></td>
             <td class="tit2">0.10</td>
             </tr>
             <tr>
             <td class="tit2">0.40</td>
-            <td class="tit2">DOCTORES</td>
+            <td class="tit2"><span class="station-name">Doctores</span> <span class="station-acronym">(DOC)</span></td>
             <td class="tit2">0.10</td>
             <td class="tit2" rowspan="2">E</td>
             </tr>
             <tr>
             <td class="tit2">0.35</td>
-            <td class="tit2">OBRERA</td>
+            <td class="tit2"><span class="station-name">Obrera</span> <span class="station-acronym">(OBR)</span></td>
             <td class="tit2">0.15</td>
             </tr>
             <tr>
             <td class="tit2">0.35</td>
-            <td class="tit2">CHABACANO</td>
+            <td class="tit2"><span class="station-name">Chabacano</span> <span class="station-acronym">(CHB)</span></td>
             <td class="tit2">0.15</td>
             <td class="tit2" rowspan="3">F</td>
             </tr>
             <tr>
             <td class="tit2">0.30</td>
-            <td class="tit2">LA VIGA</td>
+            <td class="tit2"><span class="station-name">La Viga</span> <span class="station-acronym">(LVG)</span></td>
             <td class="tit2">0.20</td>
             </tr>
             <tr>
             <td class="tit2">0.30</td>
-            <td class="tit2">SANTA ANITA</td>
+            <td class="tit2"><span class="station-name">Santa Anita</span> <span class="station-acronym">(SAA)</span></td>
             <td class="tit2">0.20</td>
             </tr>
             <tr>
             <td class="tit2">0.25</td>
-            <td class="tit2">COYUYA</td>
+            <td class="tit2"><span class="station-name">Coyuya</span> <span class="station-acronym">(CYA)</span></td>
             <td class="tit2">0.25</td>
             <td class="tit2" rowspan="2">G</td>
             </tr>
             <tr>
             <td class="tit2">0.20</td>
-            <td class="tit2">IZTACALCO</td>
+            <td class="tit2"><span class="station-name">Iztacalco</span> <span class="station-acronym">(IZC)</span></td>
             <td class="tit2">0.30</td>
             </tr>
             <tr>
             <td class="tit2">0.20</td>
-            <td class="tit2">APATLACO</td>
+            <td class="tit2"><span class="station-name">Apatlaco</span> <span class="station-acronym">(APA)</span></td>
             <td class="tit2">0.30</td>
             <td class="tit2" rowspan="3">H</td>
             </tr>
             <tr>
             <td class="tit2">0.15</td>
-            <td class="tit2">ACULCO</td>
+            <td class="tit2"><span class="station-name">Aculco</span> <span class="station-acronym">(ACU)</span></td>
             <td class="tit2">0.35</td>
             </tr>
             <tr>
             <td class="tit2">0.15</td>
-            <td class="tit2">ESCUADRON 201</td>
+            <td class="tit2"><span class="station-name">Escuadr&#243;n 201</span> <span class="station-acronym">(ESC)</span></td>
             <td class="tit2">0.35</td>
             </tr>
             <tr>
             <td class="tit2">0.10</td>
-            <td class="tit2">ATLALILCO</td>
+            <td class="tit2"><span class="station-name">Atlalilco</span> <span class="station-acronym">(ATL)</span></td>
             <td class="tit2">0.40</td>
             <td class="tit2" rowspan="5">I</td>
             </tr>
             <tr>
             <td class="tit2">0.10</td>
-            <td class="tit2">IZTAPALAPA</td>
+            <td class="tit2"><span class="station-name">Iztapalapa</span> <span class="station-acronym">(IZP)</span></td>
             <td class="tit2">0.40</td>
             </tr>
             <tr>
             <td class="tit2">0.05</td>
-            <td class="tit2">CERRO DE LA ESTRELLA</td>
+            <td class="tit2"><span class="station-name">Cerro de la Estrella</span> <span class="station-acronym">(CES)</span></td>
             <td class="tit2">0.45</td>
             </tr>
             <tr>
             <td class="tit2">0.05</td>
-            <td class="tit2">UAM-I</td>
+            <td class="tit2"><span class="station-name">UAM I</span> <span class="station-acronym">(UAM)</span></td>
             <td class="tit2">0.45</td>
             </tr>
             <tr>
             <td class="tit2">0.00</td>
-            <td class="tit2">CONSTITUCION DE 1917</td>
+            <td class="tit2"><span class="station-name">Constituci&#243;n de 1917</span> <span class="station-acronym">(COT)</span></td>
             <td class="tit2">0.50</td>
             </tr>
          </tbody>
@@ -1005,68 +1007,68 @@
          </tr>
          <tr>
          <td class="tit2">0.50</td>
-         <td class="tit2">PANTITLAN</td>
+         <td class="tit2"><span class="station-name">Pantitl&#225;n</span> <span class="station-acronym">(PAN)</span></td>
          <td class="tit2">0.00</td>
          <td class="tit2">C</td>
          </tr>
          <tr>
          <td class="tit2">0.45</td>
-         <td class="tit2">PUEBLA</td>
+         <td class="tit2"><span class="station-name">Puebla</span> <span class="station-acronym">(PUE)</span></td>
          <td class="tit2">0.05</td>
          <td class="tit2" rowspan="2">D</td>
          </tr>
          <tr>
          <td class="tit2">0.40</td>
-         <td class="tit2">CIUDAD DEPORTIVA</td>
+         <td class="tit2"><span class="station-name">Ciudad Deportiva</span> <span class="station-acronym">(DEP)</span></td>
          <td class="tit2">0.10</td>
          </tr>
          <tr>
          <td class="tit2">0.35</td>
-         <td class="tit2">VELODROMO</td>
+         <td class="tit2"><span class="station-name">Vel&#243;dromo</span> <span class="station-acronym">(VEL)</span></td>
          <td class="tit2">0.15</td>
          <td class="tit2" rowspan="3">E</td>
          </tr>
          <tr>
          <td class="tit2">0.30</td>
-         <td class="tit2">MIXIUHCA</td>
+         <td class="tit2"><span class="station-name">Mixiuhca</span> <span class="station-acronym">(MIU)</span></td>
          <td class="tit2">0.20</td>
          </tr>
          <tr>
          <td class="tit2">0.25</td>
-         <td class="tit2">JAMAICA</td>
+         <td class="tit2"><span class="station-name">Jamaica</span> <span class="station-acronym">(JAM)</span></td>
          <td class="tit2">0.25</td>
          </tr>
          <tr>
          <td class="tit2">0.25</td>
-         <td class="tit2">CHABACANO</td>
+         <td class="tit2"><span class="station-name">Chabacano</span> <span class="station-acronym">(CHB)</span></td>
          <td class="tit2">0.25</td>
          <td class="tit2" rowspan="2">F</td>
          </tr>
          <tr>
          <td class="tit2">0.20</td>
-         <td class="tit2">LAZARO CARDENAS</td>
+         <td class="tit2"><span class="station-name">L&#225;zaro C&#225;rdenas</span> <span class="station-acronym">(LCA)</span></td>
          <td class="tit2">0.30</td>
          </tr>
          <tr>
          <td class="tit2">0.15</td>
-         <td class="tit2">CENTRO MEDICO</td>
+         <td class="tit2"><span class="station-name">Centro M&#233;dico</span> <span class="station-acronym">(CME)</span></td>
          <td class="tit2">0.35</td>
          <td class="tit2" rowspan="2">G</td>
          </tr>
          <tr>
          <td class="tit2">0.10</td>
-         <td class="tit2">CHILPANCINGO</td>
+         <td class="tit2"><span class="station-name">Chilpancingo</span> <span class="station-acronym">(CHI)</span></td>
          <td class="tit2">0.40</td>
          </tr>
          <tr>
          <td class="tit2">0.05</td>
-         <td class="tit2">PATRIOTISMO</td>
+         <td class="tit2"><span class="station-name">Patriotismo</span> <span class="station-acronym">(PAT)</span></td>
          <td class="tit2">0.45</td>
          <td class="tit2" rowspan="2">H</td>
          </tr>
          <tr>
          <td class="tit2">0.00</td>
-         <td class="tit2">TACUBAYA</td>
+         <td class="tit2"><span class="station-name">Tacubaya</span> <span class="station-acronym">(TCY)</span></td>
          <td class="tit2">0.50</td>
          </tr>
          </tbody>
@@ -1106,57 +1108,57 @@
          </tr>
          <tr>
          <td class="tit2">0.50</td>
-         <td class="tit2">PANTITLAN</td>
+         <td class="tit2"><span class="station-name">Pantitl&#225;n</span> <span class="station-acronym">(PAN)</span></td>
          <td class="tit2">0.00</td>
          <td class="tit2" rowspan="2">A</td>
          </tr>
          <tr>
          <td class="tit2">0.45</td>
-         <td class="tit2">AGRICOLA ORIENTAL</td>
+         <td class="tit2"><span class="station-name">Agr&#237;cola Oriental</span> <span class="station-acronym">(AGO)</span></td>
          <td class="tit2">0.05</td>
          </tr>
          <tr>
          <td class="tit2">0.40</td>
-         <td class="tit2">CANAL DE SAN JUAN</td>
+         <td class="tit2"><span class="station-name">Canal de San Juan</span> <span class="station-acronym">(SNJ)</span></td>
          <td class="tit2">0.10</td>
          <td class="tit2" rowspan="2">B</td>
          </tr>
          <tr>
          <td class="tit2">0.35</td>
-         <td class="tit2">TEPALCATES</td>
+         <td class="tit2"><span class="station-name">Tepalcates</span> <span class="station-acronym">(TPC)</span></td>
          <td class="tit2">0.15</td>
          </tr>
          <tr>
          <td class="tit2">0.30</td>
-         <td class="tit2">GUELATAO</td>
+         <td class="tit2"><span class="station-name">Guelatao</span> <span class="station-acronym">(GLA)</span></td>
          <td class="tit2">0.20</td>
          <td class="tit2">C</td>
          </tr>
          <tr>
          <td class="tit2">0.25</td>
-         <td class="tit2">PEÑON VIEJO</td>
+         <td class="tit2"><span class="station-name">Pe&#241;&#243;n Viejo</span> <span class="station-acronym">(PEV)</span></td>
          <td class="tit2">0.25</td>
          <td class="tit2" rowspan="3">D</td>
          </tr>
          <tr>
          <td class="tit2">0.20</td>
-         <td class="tit2">ACATITLA</td>
+         <td class="tit2"><span class="station-name">Acatitla</span> <span class="station-acronym">(ACT)</span></td>
          <td class="tit2">0.30</td>
          </tr>
          <tr>
          <td class="tit2">0.15</td>
-         <td class="tit2">SANTA MARTA</td>
+         <td class="tit2"><span class="station-name">Santa Marta</span> <span class="station-acronym">(SMA)</span></td>
          <td class="tit2">0.35</td>
          </tr>
          <tr>
          <td class="tit2">0.10</td>
-         <td class="tit2">LOS REYES</td>
+         <td class="tit2"><span class="station-name">Los Reyes</span> <span class="station-acronym">(LRE)</span></td>
          <td class="tit2">0.40</td>
          <td class="tit2" rowspan="2">E</td>
          </tr>
          <tr>
          <td class="tit2">0.00</td>
-         <td class="tit2">LA PAZ</td>
+         <td class="tit2"><span class="station-name">La Paz</span> <span class="station-acronym">(LPA)</span></td>
          <td class="tit2">0.50</td>
          </tr>
          </tbody>
@@ -1196,113 +1198,113 @@
             </tr>
             <tr>
             <td class="tit2">0.50</td>
-            <td class="tit2">CIUDAD AZTECA</td>
+            <td class="tit2"><span class="station-name">Ciudad Azteca</span> <span class="station-acronym">(CAZ)</span></td>
             <td class="tit2">0.00</td>
             <td class="tit2" rowspan="4">J</td>
             </tr>
             <tr>
             <td class="tit2">0.45</td>
-            <td class="tit2">PLAZA ARAGON</td>
+            <td class="tit2"><span class="station-name">Plaza Arag&#243;n</span> <span class="station-acronym">(PAR)</span></td>
             <td class="tit2">0.05</td>
             </tr>
             <tr>
             <td class="tit2">0.45</td>
-            <td class="tit2">OLIMPICA</td>
+            <td class="tit2"><span class="station-name">Ol&#237;mpica</span> <span class="station-acronym">(OLI)</span></td>
             <td class="tit2">0.05</td>
             </tr>
             <tr>
             <td class="tit2">0.40</td>
-            <td class="tit2">ECATEPEC</td>
+            <td class="tit2"><span class="station-name">Ecatepec</span> <span class="station-acronym">(ECA)</span></td>
             <td class="tit2">0.10</td>
             </tr>
             <tr>
             <td class="tit2">0.40</td>
-            <td class="tit2">MUZQUIZ</td>
+            <td class="tit2"><span class="station-name">M&#250;zquiz</span> <span class="station-acronym">(MUZ)</span></td>
             <td class="tit2">0.10</td>
             <td class="tit2" rowspan="3">I</td>
             </tr>
             <tr>
             <td class="tit2">0.35</td>
-            <td class="tit2">RIO DE LOS REMEDIOS</td>
+            <td class="tit2"><span class="station-name">R&#237;o de los Remedios</span> <span class="station-acronym">(RRE)</span></td>
             <td class="tit2">0.15</td>
             </tr>
             <tr>
             <td class="tit2">0.35</td>
-            <td class="tit2">IMPULSORA</td>
+            <td class="tit2"><span class="station-name">Impulsora</span> <span class="station-acronym">(IMP)</span></td>
             <td class="tit2">0.15</td>
             </tr>
             <tr>
             <td class="tit2">0.30</td>
-            <td class="tit2">NEZAHUALCOYOTL</td>
+            <td class="tit2"><span class="station-name">Nezahualc&#243;yotl</span> <span class="station-acronym">(NEZ)</span></td>
             <td class="tit2">0.20</td>
             <td class="tit2" rowspan="2">H</td>
             </tr>
             <tr>
             <td class="tit2">0.30</td>
-            <td class="tit2">VILLA DE ARAGON</td>
+            <td class="tit2"><span class="station-name">Villa de Arag&#243;n</span> <span class="station-acronym">(VAR)</span></td>
             <td class="tit2">0.20</td>
             </tr>
             <tr>
             <td class="tit2">0.25</td>
-            <td class="tit2">BOSQUE DE ARAGON</td>
+            <td class="tit2"><span class="station-name">Bosque de Arag&#243;n</span> <span class="station-acronym">(BOA)</span></td>
             <td class="tit2">0.25</td>
             <td class="tit2" rowspan="2">G</td>
             </tr>
             <tr>
             <td class="tit2">0.25</td>
-            <td class="tit2">DEPORTIVO OCEANIA</td>
+            <td class="tit2"><span class="station-name">Deportivo Ocean&#237;a</span> <span class="station-acronym">(DEO)</span></td>
             <td class="tit2">0.25</td>
             </tr>
             <tr>
             <td class="tit2">0.20</td>
-            <td class="tit2">OCEANIA</td>
+            <td class="tit2"><span class="station-name">Ocean&#237;a</span> <span class="station-acronym">(OCE)</span></td>
             <td class="tit2">0.30</td>
             <td class="tit2" rowspan="4">F</td>
             </tr>
             <tr>
             <td class="tit2">0.20</td>
-            <td class="tit2">ROMERO RUBIO</td>
+            <td class="tit2"><span class="station-name">Romero Rubio</span> <span class="station-acronym">(RRU)</span></td>
             <td class="tit2">0.30</td>
             </tr>
             <tr>
             <td class="tit2">0.20</td>
-            <td class="tit2">R. FLORES MAGON</td>
+            <td class="tit2"><span class="station-name">R. Flores Mag&#243;n</span> <span class="station-acronym">(RFL)</span></td>
             <td class="tit2">0.30</td>
             </tr>
             <tr>
             <td class="tit2">0.15</td>
-            <td class="tit2">SAN LAZARO</td>
+            <td class="tit2"><span class="station-name">San L&#225;zaro</span> <span class="station-acronym">(SLA)</span></td>
             <td class="tit2">0.35</td>
             </tr>
             <tr>
             <td class="tit2">0.15</td>
-            <td class="tit2">MORELOS</td>
+            <td class="tit2"><span class="station-name">Morelos</span> <span class="station-acronym">(MOR)</span></td>
             <td class="tit2">0.35</td>
             <td class="tit2" rowspan="5">E</td>
             </tr>
             <tr>
             <td class="tit2">0.10</td>
-            <td class="tit2">TEPITO</td>
+            <td class="tit2"><span class="station-name">Tepito</span> <span class="station-acronym">(TEP)</span></td>
             <td class="tit2">0.40</td>
             </tr>
             <tr>
             <td class="tit2">0.10</td>
-            <td class="tit2">LAGUNILLA</td>
+            <td class="tit2"><span class="station-name">Lagunilla</span> <span class="station-acronym">(LAG)</span></td>
             <td class="tit2">0.40</td>
             </tr>
             <tr>
             <td class="tit2">0.05</td>
-            <td class="tit2">GARIBALDI</td>
+            <td class="tit2"><span class="station-name">Garibaldi / Lagunilla</span> <span class="station-acronym">(GAR)</span></td>
             <td class="tit2">0.45</td>
             </tr>
             <tr>
             <td class="tit2">0.05</td>
-            <td class="tit2">GUERRERO</td>
+            <td class="tit2"><span class="station-name">Guerrero</span> <span class="station-acronym">(GUE)</span></td>
             <td class="tit2">0.45</td>
             </tr>
             <tr>
             <td class="tit2">0.00</td>
-            <td class="tit2">BUENAVISTA</td>
+            <td class="tit2"><span class="station-name">Buenavista</span> <span class="station-acronym">(BUE)</span></td>
             <td class="tit2">0.50</td>
             <td class="tit2">D</td>
             </tr>
@@ -1343,110 +1345,110 @@
             </tr>
             <tr>
             <td class="tit2">0.50</td>
-            <td class="tit2">TLAHUAC</td>
+            <td class="tit2"><span class="station-name">Tl&#225;huac</span> <span class="station-acronym">(TLH)</span></td>
             <td class="tit2">0.00</td>
             <td class="tit2" rowspan="2">A</td>
             </tr>
             <tr>
             <td class="tit2">0.45</td>
-            <td class="tit2">TLALTENCO</td>
+            <td class="tit2"><span class="station-name">Tlaltenco</span> <span class="station-acronym">(TLT)</span></td>
             <td class="tit2">0.05</td>
             </tr>
             <tr>
             <td class="tit2">0.45</td>
-            <td class="tit2">ZAPOTITLAN</td>
+            <td class="tit2"><span class="station-name">Zapotitl&#225;n</span> <span class="station-acronym">(ZPT)</span></td>
             <td class="tit2">0.05</td>
             <td class="tit2" rowspan="2">B</td>
             </tr>
             <tr>
             <td class="tit2">0.40</td>
-            <td class="tit2">NOPALERA</td>
+            <td class="tit2"><span class="station-name">Nopalera</span> <span class="station-acronym">(NOP)</span></td>
             <td class="tit2">0.10</td>
             </tr>
             <tr>
             <td class="tit2">0.40</td>
-            <td class="tit2">OLIVOS</td>
+            <td class="tit2"><span class="station-name">Olivos</span> <span class="station-acronym">(OLV)</span></td>
             <td class="tit2">0.10</td>
             <td class="tit2" rowspan="2">C</td>
             </tr>
             <tr>
             <td class="tit2">0.35</td>
-            <td class="tit2">TEZONCO</td>
+            <td class="tit2"><span class="station-name">Tezonco</span> <span class="station-acronym">(TEN)</span></td>
             <td class="tit2">0.15</td>
             </tr>
             <tr>
             <td class="tit2">0.35</td>
-            <td class="tit2">PERIFERICO ORIENTE</td>
+            <td class="tit2"><span class="station-name">Perif&#233;rico Oriente</span> <span class="station-acronym">(PEO)</span></td>
             <td class="tit2">0.15</td>
             <td class="tit2" rowspan="4">D</td>
             </tr>
             <tr>
             <td class="tit2">0.30</td>
-            <td class="tit2">CALLE 11</td>
+            <td class="tit2"><span class="station-name">Calle 11</span> <span class="station-acronym">(C11)</span></td>
             <td class="tit2">0.20</td>
             </tr>
             <tr>
             <td class="tit2">0.30</td>
-            <td class="tit2">LOMAS ESTRELLA</td>
+            <td class="tit2"><span class="station-name">Lomas Estrella</span> <span class="station-acronym">(LOE)</span></td>
             <td class="tit2">0.20</td>
             </tr>
             <tr>
             <td class="tit2">0.25</td>
-            <td class="tit2">SAN ANDRES TOMATLAN</td>
+            <td class="tit2"><span class="station-name">San Andr&#233;s Tomatl&#225;n</span> <span class="station-acronym">(STO)</span></td>
             <td class="tit2">0.25</td>
             </tr>
             <tr>
             <td class="tit2">0.25</td>
-            <td class="tit2">CULHUACAN</td>
+            <td class="tit2"><span class="station-name">Culhuac&#225;n</span> <span class="station-acronym">(CLH)</span></td>
             <td class="tit2">0.25</td>
             <td class="tit2" rowspan="2">E</td>
             </tr>
             <tr>
             <td class="tit2">0.20</td>
-            <td class="tit2">ATLALILCO</td>
+            <td class="tit2"><span class="station-name">Atlalilco</span> <span class="station-acronym">(ATL)</span></td>
             <td class="tit2">0.30</td>
             </tr>
             <tr>
             <td class="tit2">0.15</td>
-            <td class="tit2">MEXICALTZINGO</td>
+            <td class="tit2"><span class="station-name">Mexicaltzingo</span> <span class="station-acronym">(MEX)</span></td>
             <td class="tit2">0.35</td>
             <td class="tit2" rowspan="2">F</td>
             </tr>
             <tr>
             <td class="tit2">0.10</td>
-            <td class="tit2">ERMITA</td>
+            <td class="tit2"><span class="station-name">Ermita</span> <span class="station-acronym">(ERM)</span></td>
             <td class="tit2">0.40</td>
             </tr>
             <tr>
             <td class="tit2">0.10</td>
-            <td class="tit2">EJE CENTRAL</td>
+            <td class="tit2"><span class="station-name">Eje Central</span> <span class="station-acronym">(EJC)</span></td>
             <td class="tit2">0.40</td>
             <td class="tit2" rowspan="3">G</td>
             </tr>
             <tr>
             <td class="tit2">0.10</td>
-            <td class="tit2">PARQUE DE LOS VENADOS</td>
+            <td class="tit2"><span class="station-name">Parque de los Venados</span> <span class="station-acronym">(PAV)</span></td>
             <td class="tit2">0.40</td>
             </tr>
             <tr>
             <td class="tit2">0.05</td>
-            <td class="tit2">ZAPATA</td>
+            <td class="tit2"><span class="station-name">Zapata</span> <span class="station-acronym">(ZAP)</span></td>
             <td class="tit2">0.45</td>
             </tr>
             <tr>
             <td class="tit2">0.05</td>
-            <td class="tit2">HOSPITAL 20 DE NOVIEMBRE</td>
+            <td class="tit2"><span class="station-name">20 de Noviembre</span> <span class="station-acronym">(H20)</span></td>
             <td class="tit2">0.45</td>
             <td class="tit2" rowspan="3">H</td>
             </tr>
             <tr>
             <td class="tit2">0.05</td>
-            <td class="tit2">INSURGENTES SUR</td>
+            <td class="tit2"><span class="station-name">Insurgentes Sur</span> <span class="station-acronym">(ISS)</span></td>
             <td class="tit2">0.45</td>
             </tr>
             <tr>
             <td class="tit2">0.00</td>
-            <td class="tit2">MIXCOAC</td>
+            <td class="tit2"><span class="station-name">Mixcoac</span> <span class="station-acronym">(MIX)</span></td>
             <td class="tit2">0.50</td>
             </tr>
             </tbody>

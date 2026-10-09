@@ -165,6 +165,8 @@ body {
   padding: .21rem .375rem;
   line-height: 1.2;
 }
+.fracciones-table .station-name { text-transform: none; }
+.fracciones-table .station-acronym { font-size: .75em; font-weight: 700; white-space: nowrap; }
 /* El foco programático permite continuar con teclado sin mostrar otro control. */
 #contenido:focus { outline: none; }
 
@@ -217,6 +219,40 @@ textarea {
   padding: 8px;
 }
 
+#linea1 { --line-highlight-color: #e2231a; }
+#linea2 { --line-highlight-color: #00529b; }
+#linea3 { --line-highlight-color: #b31b34; }
+#linea4 { --line-highlight-color: #6b2d91; }
+#linea5 { --line-highlight-color: #f3c300; }
+#linea6 { --line-highlight-color: #da291c; }
+#linea7 { --line-highlight-color: #f58220; }
+#linea8 { --line-highlight-color: #00843d; }
+#linea9 { --line-highlight-color: #8a1538; }
+#lineaA { --line-highlight-color: #9b0044; }
+#lineaB { --line-highlight-color: #b5bd00; }
+#linea12 { --line-highlight-color: #b6a278; }
+.linea-section.is-highlighted {
+  border-radius: .65rem;
+  animation: linea-highlight-fade 3.6s ease-out forwards;
+}
+@keyframes linea-highlight-fade {
+  0%, 55% {
+    outline: 2px solid var(--line-highlight-color);
+    outline-offset: 1px;
+    box-shadow: 0 0 0 4px color-mix(in srgb, var(--line-highlight-color) 22%, transparent);
+    background-color: color-mix(in srgb, var(--line-highlight-color) 5%, transparent);
+  }
+  100% {
+    outline-color: transparent;
+    outline-offset: 5px;
+    box-shadow: 0 0 0 0 transparent;
+    background-color: transparent;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .linea-section.is-highlighted { animation-duration: .01ms; }
+}
+
 
 /* Menú de navegación sin fondos de botón. */
 .navbar .nav-link,
@@ -249,17 +285,19 @@ textarea {
 }
 .copy-notice {
   position: fixed;
-  bottom: max(1rem, env(safe-area-inset-bottom));
-  left: 50%;
-  transform: translateX(-50%);
+  top: 50%;
+  left: 0;
+  width: 100%;
+  transform: translateY(-50%);
   z-index: 1080;
-  max-width: calc(100% - 6rem);
-  padding: .75rem 1.25rem;
-  border-radius: .5rem;
+  max-width: none;
+  padding: 1rem 1.25rem;
+  border-radius: 0;
   background: rgb(0 0 0 / 78%);
   color: #fff;
   text-align: center;
-  font-size: .875rem;
+  font-size: 1.125rem;
+  font-weight: 600;
   pointer-events: none;
   opacity: 0;
   transition: opacity .25s ease;
