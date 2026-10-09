@@ -14,7 +14,7 @@ if (menu && menuToggle) {
 
   menu.querySelectorAll("a.nav-link, a.dropdown-item").forEach((link) => {
     link.addEventListener("click", (event) => {
-      if (window.innerWidth < 1200 && window.bootstrap) {
+      if (window.innerWidth < 768 && window.bootstrap) {
         const panel = bootstrap.Offcanvas.getInstance(menu);
         if (panel) {
           const requested = new URL(link.href, location.href);
@@ -111,36 +111,42 @@ if (goTop) {
 }
 
 
-// Desplegable por cursor solo en escritorio con ratón; toque y teclado conservan Bootstrap.
-document.querySelectorAll(".navbar .dropdown-toggle").forEach(fractionsToggle => {
-if (fractionsToggle && window.bootstrap) {
-  const dropdownContainer = fractionsToggle.closest(".dropdown");
-  const desktopHover = window.matchMedia("(min-width: 1200px) and (hover: hover) and (pointer: fine)");
-  const dropdown = bootstrap.Dropdown.getOrCreateInstance(fractionsToggle);
-  let closeDropdownTimer;
-  dropdownContainer.addEventListener("mouseenter", () => {
-    if (!desktopHover.matches) return;
-    clearTimeout(closeDropdownTimer);
-    dropdown.show();
+// En la barra lateral de tablet/escritorio, todos los submenús permanecen abiertos.
+const sidebarNavigation = window.matchMedia("(min-width: 768px) and (max-width: 1199.98px)");
+const updateSidebarDropdowns = () => {
+  document.querySelectorAll(".navbar .dropdown-toggle").forEach(toggle => {
+    const collapsibleSidebarGroup = ["menuLarines", "menuFracciones", "menuRecursos"].includes(toggle.id);
+    const submenu = toggle.nextElementSibling;
+    if (collapsibleSidebarGroup && submenu?.classList.contains("dropdown-menu")) {
+      submenu.classList.toggle("show", sidebarNavigation.matches);
+      toggle.setAttribute("aria-expanded", String(sidebarNavigation.matches));
+    } else {
+      toggle.setAttribute("aria-expanded", String(sidebarNavigation.matches));
+    }
   });
-  dropdownContainer.addEventListener("mouseleave", () => {
-    if (!desktopHover.matches) return;
-    closeDropdownTimer = setTimeout(() => {
-      if (!dropdownContainer.contains(document.activeElement)) dropdown.hide();
-    }, 150);
-  });
-  dropdownContainer.addEventListener("focusout", () => {
-    if (!desktopHover.matches) return;
-    setTimeout(() => {
-      if (!dropdownContainer.matches(":hover") && !dropdownContainer.contains(document.activeElement)) dropdown.hide();
-    }, 0);
-  });
-  desktopHover.addEventListener("change", () => {
-    clearTimeout(closeDropdownTimer);
-    dropdown.hide();
+};
+document.querySelectorAll(".navbar .dropdown-toggle[data-bs-toggle='dropdown']").forEach(toggle => {
+  toggle.addEventListener("click", event => {
+    if (!sidebarNavigation.matches) return;
+    if (["menuLarines", "menuFracciones", "menuRecursos"].includes(toggle.id)) return;
+    event.preventDefault();
+    event.stopImmediatePropagation();
+    toggle.setAttribute("aria-expanded", "true");
+  }, true);
+});
+const resourcesToggle = document.getElementById("menuRecursos");
+if (resourcesToggle) {
+  resourcesToggle.addEventListener("click", event => {
+    if (window.innerWidth < 768) return;
+    event.preventDefault();
+    const submenu = resourcesToggle.nextElementSibling;
+    if (!submenu?.classList.contains("dropdown-menu")) return;
+    const isOpen = submenu.classList.toggle("show");
+    resourcesToggle.setAttribute("aria-expanded", String(isOpen));
   });
 }
-});
+sidebarNavigation.addEventListener("change", updateSidebarDropdowns);
+updateSidebarDropdowns();
 // Copia el texto largo sin modificar sus espacios ni su puntuación.
 const copyNotice = document.getElementById("avisoCopiado");
 if (copyNotice) {
@@ -283,7 +289,7 @@ if (pageSearch) {
 
 // Larines y Otros recursos permanecen desplegados dentro del menú móvil.
 document.querySelectorAll("#menuLarines, #menuRecursos").forEach(larinesMenuToggle => {
- const collapsedNavigation=window.matchMedia("(max-width: 1199.98px)");
+ const collapsedNavigation=window.matchMedia("(max-width: 767.98px)");
  const updateLarinesNavigation=()=>{
   larinesMenuToggle.disabled=collapsedNavigation.matches;
   larinesMenuToggle.setAttribute("aria-expanded",String(collapsedNavigation.matches || larinesMenuToggle.nextElementSibling.classList.contains("show")));
