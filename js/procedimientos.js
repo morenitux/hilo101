@@ -2,6 +2,13 @@
 const procedureInput = document.getElementById("buscarProcedimiento");
 const procedureClear = document.getElementById("borrarProcedimiento");
 const normalizeProcedure = value => value.normalize("NFD").replace(/[̀-ͯ]/g,"").toLowerCase().trim();
+document.querySelectorAll("#tablaProcedimientos tbody td:first-child a").forEach(link => {
+  const number = link.textContent.trim().match(/\d+/)?.[0];
+  if (!number) return;
+  const code = `P-${number.padStart(3, "0")}`;
+  link.textContent = code;
+  link.title = `Abrir PDF: ${code}`;
+});
 const procedureRows = Array.from(document.querySelectorAll("[data-procedimiento]"), row=>({row,text:normalizeProcedure(row.textContent)}));
 function filterProcedures() {
   const query = normalizeProcedure(procedureInput.value);

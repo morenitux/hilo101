@@ -256,6 +256,140 @@ if (siteHeader) {
 
 // "/" enfoca la búsqueda sin interceptar escritura, atajos del navegador ni composición.
 const pageSearch = document.querySelector("#buscarLarin, #buscarManual, #buscarProcedimiento, #buscarFormacion");
+
+// Atajos globales para navegar a las secciones principales desde cualquier página.
+const navigationShortcuts = {
+  l: "index.html",
+  f: "formacion_trenes.html",
+  v: "fracciones_vuelta.html",
+  m: "manuales.html",
+  p: "otros_recursos.html#perfiles-linea",
+  t: "otros_recursos.html#terminales-vias",
+  e: "otros_recursos.html#distribucion-energia",
+  s: "otros_recursos.html#servicios-provisionales",
+  r: "procedimientos.html"
+};
+
+// Marca la letra asociada al atajo dentro de los elementos disponibles del navbar.
+const shortcutLabels = [
+  ["#menuLarines .nav-item-label", "l"],
+  ['.navbar a[data-page="formacion-de-trenes"]', "f"],
+  ["#menuFracciones .nav-item-label", "v"],
+  ['.navbar a[data-page="manuales"]', "m"],
+  ['.navbar a[href="procedimientos.html"]', "r"],
+  ['.navbar a[href$="#perfiles-linea"]', "p"],
+  ['.navbar a[href$="#terminales-vias"]', "t"],
+  ['.navbar a[href$="#distribucion-energia"]', "e", 1],
+  ['.navbar a[href$="#servicios-provisionales"]', "s"]
+];
+shortcutLabels.forEach(([selector, letter, occurrence = 0]) => {
+  document.querySelectorAll(selector).forEach(element => {
+    const label = element.querySelector(".nav-item-label") || element;
+    const walker = document.createTreeWalker(label, NodeFilter.SHOW_TEXT);
+    let textNode;
+    while ((textNode = walker.nextNode())) {
+      const normalizedText = textNode.data.toLowerCase();
+      let index = -1;
+      let searchFrom = 0;
+      for (let found = 0; found <= occurrence; found++) {
+        index = normalizedText.indexOf(letter, searchFrom);
+        if (index < 0) break;
+        searchFrom = index + 1;
+      }
+      if (index < 0) continue;
+      const match = textNode.data.slice(index, index + 1);
+      const before = textNode.data.slice(0, index);
+      textNode.data = textNode.data.slice(index + 1);
+      const marker = document.createElement("span");
+      marker.className = "shortcut-letter";
+      marker.textContent = match;
+      if (before) textNode.parentNode.insertBefore(document.createTextNode(before), textNode);
+      textNode.parentNode.insertBefore(marker, textNode);
+      break;
+    }
+  });
+});
+
+const updateShortcutHints = visible => document.documentElement.classList.toggle("shortcuts-visible", visible);
+window.addEventListener("keydown", event => {
+  if (event.key === "Alt" && !event.ctrlKey && !event.metaKey) updateShortcutHints(true);
+}, true);
+window.addEventListener("keyup", event => {
+  if (event.key === "Alt") updateShortcutHints(false);
+}, true);
+window.addEventListener("blur", () => updateShortcutHints(false));
+document.addEventListener("visibilitychange", () => {
+  if (document.hidden) updateShortcutHints(false);
+});
+
+// Panel de ayuda flotante con los atajos disponibles en el sitio.
+const keyboardHelp = document.createElement("aside");
+keyboardHelp.className = "keyboard-help";
+keyboardHelp.id = "ayudaAtajos";
+keyboardHelp.hidden = true;
+keyboardHelp.setAttribute("role", "dialog");
+keyboardHelp.setAttribute("aria-modal", "false");
+keyboardHelp.setAttribute("aria-labelledby", "tituloAyudaAtajos");
+keyboardHelp.innerHTML = `
+  <div class="keyboard-help-header">
+    <h2 id="tituloAyudaAtajos">Ayuda</h2>
+    <button class="keyboard-help-close" type="button" aria-label="Cerrar ayuda">&times;</button>
+  </div>
+  <p class="keyboard-help-description">Atajos de teclado para navegar por el sitio:</p>
+  <dl class="keyboard-help-list">
+    <div><dt><kbd>Alt + L</kbd></dt><dd>Larines PCCI-C5/PCCII</dd></div>
+    <div><dt><kbd>Alt + F</kbd></dt><dd>Formación de trenes</dd></div>
+    <div><dt><kbd>Alt + V</kbd></dt><dd>Fracciones de vuelta</dd></div>
+    <div><dt><kbd>Alt + M</kbd></dt><dd>Manuales</dd></div>
+    <div><dt><kbd>Alt + P</kbd></dt><dd>Perfiles de Línea</dd></div>
+    <div><dt><kbd>Alt + T</kbd></dt><dd>Terminales</dd></div>
+    <div><dt><kbd>Alt + E</kbd></dt><dd>Distribución de la Energía</dd></div>
+    <div><dt><kbd>Alt + S</kbd></dt><dd>Servicios provisionales</dd></div>
+    <div><dt><kbd>Alt + R</kbd></dt><dd>Procedimientos</dd></div>
+    <div><dt><kbd>/</kbd></dt><dd>Ir al cuadro de búsqueda</dd></div>
+  </dl>
+  <p class="keyboard-help-footer">Presiona <kbd>?</kbd> o <kbd>Esc</kbd> para cerrar.</p>`;
+document.body.appendChild(keyboardHelp);
+
+const keyboardHelpClose = keyboardHelp.querySelector(".keyboard-help-close");
+let helpReturnFocus = null;
+const setKeyboardHelp = visible => {
+  keyboardHelp.hidden = !visible;
+  if (visible) {
+    helpReturnFocus = document.activeElement;
+    keyboardHelpClose.focus({ preventScroll: true });
+  } else if (helpReturnFocus instanceof HTMLElement) {
+    helpReturnFocus.focus({ preventScroll: true });
+  }
+};
+keyboardHelpClose.addEventListener("click", () => setKeyboardHelp(false));
+window.addEventListener("keydown", event => {
+  if (event.key === "Escape" && !keyboardHelp.hidden) {
+    event.preventDefault();
+    event.stopImmediatePropagation();
+    setKeyboardHelp(false);
+  }
+}, true);
+document.addEventListener("keydown", event => {
+  if (event.key !== "?" || event.ctrlKey || event.metaKey || event.altKey || event.isComposing || event.defaultPrevented) return;
+  const target = event.target instanceof Element ? event.target : document.activeElement;
+  if (target && (target.closest("input, textarea, select, [role='textbox']") || target.isContentEditable)) return;
+  event.preventDefault();
+  setKeyboardHelp(keyboardHelp.hidden);
+});
+
+document.addEventListener("keydown", event => {
+  if (!event.altKey || event.ctrlKey || event.metaKey || event.shiftKey || event.isComposing || event.defaultPrevented) return;
+  if (event.getModifierState?.("AltGraph")) return;
+  const destination = navigationShortcuts[event.key.toLowerCase()];
+  if (!destination) return;
+  const target = event.target instanceof Element ? event.target : document.activeElement;
+  if (target && (target.closest("input, textarea, select, [role='textbox']") || target.isContentEditable)) return;
+  if (document.querySelector("dialog[open]")) return;
+  event.preventDefault();
+  window.location.href = destination;
+});
+
 if (pageSearch) {
   pageSearch.setAttribute("aria-keyshortcuts", "/ Escape");
   pageSearch.addEventListener("keydown", event => {
@@ -273,6 +407,7 @@ if (pageSearch) {
     event.preventDefault();
     const focusSearch = () => {
       pageSearch.focus({ preventScroll: true });
+      pageSearch.select();
       pageSearch.scrollIntoView({ behavior: "instant", block: "start" });
     };
     const openMenu = document.querySelector("#menuPrincipal.show");
