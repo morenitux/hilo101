@@ -4,6 +4,41 @@
 const menu = document.getElementById("menuPrincipal");
 const menuToggle = document.getElementById("abrirMenu");
 
+// Abrir los menús principales sin depender del data API de Bootstrap.
+const primaryMenuToggles = ["menuLarines", "menuRecursos"]
+  .map(id => document.getElementById(id))
+  .filter(Boolean);
+const closePrimaryMenus = except => {
+  primaryMenuToggles.forEach(toggle => {
+    if (toggle === except) return;
+    toggle.nextElementSibling?.classList.remove("show");
+    toggle.setAttribute("aria-expanded", "false");
+  });
+};
+document.addEventListener("click", event => {
+  const target = event.target instanceof Element ? event.target : null;
+  const toggle = target?.closest("#menuLarines, #menuRecursos");
+  if (toggle) {
+    event.preventDefault();
+    event.stopImmediatePropagation();
+    const submenu = toggle.nextElementSibling;
+    if (!submenu?.classList.contains("dropdown-menu")) return;
+    const willOpen = !submenu.classList.contains("show");
+    closePrimaryMenus(toggle);
+    submenu.classList.toggle("show", willOpen);
+    toggle.setAttribute("aria-expanded", String(willOpen));
+    return;
+  }
+  if (!target?.closest(".navbar .nav-item.dropdown")) closePrimaryMenus();
+}, true);
+document.addEventListener("keydown", event => {
+  if (event.key !== "Escape") return;
+  const openToggle = primaryMenuToggles.find(toggle => toggle.nextElementSibling?.classList.contains("show"));
+  if (!openToggle) return;
+  closePrimaryMenus();
+  openToggle.focus({ preventScroll: true });
+});
+
 if (menu && menuToggle) {
   menu.addEventListener("show.bs.offcanvas", () => {
     menuToggle.setAttribute("aria-expanded", "true");
@@ -14,6 +49,8 @@ if (menu && menuToggle) {
 
   menu.querySelectorAll("a.nav-link, a.dropdown-item").forEach((link) => {
     link.addEventListener("click", (event) => {
+      // Los disparadores de submenú se quedan en el panel para que Bootstrap pueda abrirlos.
+      if (link.matches(".dropdown-toggle")) return;
       if (window.innerWidth < 768 && window.bootstrap) {
         const panel = bootstrap.Offcanvas.getInstance(menu);
         if (panel) {
@@ -45,8 +82,11 @@ const emptyResults = document.getElementById("sinResultados");
 const normalizeSearch = (value) => value.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLocaleLowerCase("es").trim();
 const records = Array.from(document.querySelectorAll("[data-registro]"), (row) => ({
   row,
-  text: normalizeSearch(row.textContent)
+  text: normalizeSearch(`${row.dataset.linea || ""} ${row.dataset.codigoLinea || ""} ${row.textContent}`)
 }));
+const larinSections = Array.from(document.querySelectorAll("#tablaLarines tbody[data-larin-section]"));
+const larinSectionLinks = new Map(Array.from(document.querySelectorAll(".larin-section-nav [data-larin-jump]"), link => [link.dataset.larinJump, link]));
+const larinSectionNav = document.querySelector(".larin-section-nav");
 
 const searchTerms = SiteSearch.terms;
 const highlightLarin = SiteSearch.highlight;
@@ -59,6 +99,13 @@ function filterLarines() {
     if (!row.hidden) visible++;
     highlightLarin(row,terms);
   });
+  larinSections.forEach(section => {
+    const hasVisibleRecord = Boolean(section.querySelector("[data-registro]:not([hidden])"));
+    section.hidden = !hasVisibleRecord;
+    const jumpLink = larinSectionLinks.get(section.dataset.larinSection);
+    if (jumpLink) jumpLink.hidden = !hasVisibleRecord;
+  });
+  if (larinSectionNav) larinSectionNav.hidden = !Array.from(larinSectionLinks.values()).some(link => !link.hidden);
   emptyResults.hidden = visible !== 0;
   searchStatus.textContent = terms.length
     ? "Mostrando " + visible + " de " + records.length + " registros"
@@ -111,42 +158,6 @@ if (goTop) {
 }
 
 
-// En la barra lateral de tablet/escritorio, todos los submenús permanecen abiertos.
-const sidebarNavigation = window.matchMedia("(min-width: 768px) and (max-width: 1199.98px)");
-const updateSidebarDropdowns = () => {
-  document.querySelectorAll(".navbar .dropdown-toggle").forEach(toggle => {
-    const collapsibleSidebarGroup = ["menuLarines", "menuFracciones", "menuRecursos"].includes(toggle.id);
-    const submenu = toggle.nextElementSibling;
-    if (collapsibleSidebarGroup && submenu?.classList.contains("dropdown-menu")) {
-      submenu.classList.toggle("show", sidebarNavigation.matches);
-      toggle.setAttribute("aria-expanded", String(sidebarNavigation.matches));
-    } else {
-      toggle.setAttribute("aria-expanded", String(sidebarNavigation.matches));
-    }
-  });
-};
-document.querySelectorAll(".navbar .dropdown-toggle[data-bs-toggle='dropdown']").forEach(toggle => {
-  toggle.addEventListener("click", event => {
-    if (!sidebarNavigation.matches) return;
-    if (["menuLarines", "menuFracciones", "menuRecursos"].includes(toggle.id)) return;
-    event.preventDefault();
-    event.stopImmediatePropagation();
-    toggle.setAttribute("aria-expanded", "true");
-  }, true);
-});
-const resourcesToggle = document.getElementById("menuRecursos");
-if (resourcesToggle) {
-  resourcesToggle.addEventListener("click", event => {
-    if (window.innerWidth < 768) return;
-    event.preventDefault();
-    const submenu = resourcesToggle.nextElementSibling;
-    if (!submenu?.classList.contains("dropdown-menu")) return;
-    const isOpen = submenu.classList.toggle("show");
-    resourcesToggle.setAttribute("aria-expanded", String(isOpen));
-  });
-}
-sidebarNavigation.addEventListener("change", updateSidebarDropdowns);
-updateSidebarDropdowns();
 // Copia el texto largo sin modificar sus espacios ni su puntuación.
 const copyNotice = document.getElementById("avisoCopiado");
 if (copyNotice) {
@@ -267,7 +278,8 @@ const navigationShortcuts = {
   t: "otros_recursos.html#terminales-vias",
   e: "otros_recursos.html#distribucion-energia",
   s: "otros_recursos.html#servicios-provisionales",
-  r: "procedimientos.html"
+  r: "procedimientos.html",
+  n: "traslados_trenes.html"
 };
 
 // Marca la letra asociada al atajo dentro de los elementos disponibles del navbar.
@@ -280,7 +292,8 @@ const shortcutLabels = [
   ['.navbar a[href$="#perfiles-linea"]', "p"],
   ['.navbar a[href$="#terminales-vias"]', "t"],
   ['.navbar a[href$="#distribucion-energia"]', "e", 1],
-  ['.navbar a[href$="#servicios-provisionales"]', "s"]
+  ['.navbar a[href$="#servicios-provisionales"]', "s"],
+  ['.navbar a[data-page="traslados"]', "n"]
 ];
 shortcutLabels.forEach(([selector, letter, occurrence = 0]) => {
   document.querySelectorAll(selector).forEach(element => {
@@ -338,6 +351,7 @@ keyboardHelp.innerHTML = `
   <p class="keyboard-help-description">Atajos de teclado para navegar por el sitio:</p>
   <dl class="keyboard-help-list">
     <div><dt><kbd>Alt + L</kbd></dt><dd>Larines PCCI-C5/PCCII</dd></div>
+    <div><dt><kbd>Alt + N</kbd></dt><dd>Traslados de trenes</dd></div>
     <div><dt><kbd>Alt + F</kbd></dt><dd>Formación de trenes</dd></div>
     <div><dt><kbd>Alt + V</kbd></dt><dd>Fracciones de vuelta</dd></div>
     <div><dt><kbd>Alt + M</kbd></dt><dd>Manuales</dd></div>
@@ -422,21 +436,10 @@ if (pageSearch) {
 
 
 
-// Larines y Otros recursos permanecen desplegados dentro del menú móvil.
-document.querySelectorAll("#menuLarines, #menuRecursos").forEach(larinesMenuToggle => {
- const collapsedNavigation=window.matchMedia("(max-width: 767.98px)");
- const updateLarinesNavigation=()=>{
-  larinesMenuToggle.disabled=collapsedNavigation.matches;
-  larinesMenuToggle.setAttribute("aria-expanded",String(collapsedNavigation.matches || larinesMenuToggle.nextElementSibling.classList.contains("show")));
- };
- collapsedNavigation.addEventListener("change",updateLarinesNavigation);
- updateLarinesNavigation();
-});
-
 // Cada desplegable conserva el anclaje horizontal a su opción y baja hasta el borde del navbar.
 document.querySelectorAll(".navbar .nav-item.dropdown").forEach(item => {
   const alignDropdown = () => {
-    if (window.innerWidth < 1200) return;
+    if (window.innerWidth < 992) return;
     const navbar = item.closest(".navbar");
     const distance = navbar.getBoundingClientRect().bottom - item.getBoundingClientRect().top;
     item.style.setProperty("--dropdown-nav-bottom", distance + "px");

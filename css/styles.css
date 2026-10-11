@@ -7,6 +7,11 @@ body {
   background-color: var(--page-background);
   color: var(--page-ink);
 }
+body > footer {
+  margin-block-start: 0;
+  border-top: 0 !important;
+}
+.main-footer-gap { padding-block-end: 2rem; }
 .page-heading {
   background-color: #eaf1ff;
   border-bottom: 1px solid #dce5f5;
@@ -48,7 +53,7 @@ body {
   background-color: var(--bs-secondary-bg);
   color: var(--bs-emphasis-color);
 }
-@media (min-width: 1200px) {
+@media (min-width: 992px) {
   .navbar .navbar-brand { font-size: 1rem; }
   .navbar .nav-link { white-space: nowrap; }
 }
@@ -66,11 +71,13 @@ body {
   width: 100%;
   table-layout: fixed;
   font-size: .95rem;
+  border-top: 0;
   --bs-table-color: #244563;
   --bs-table-striped-color: #244563;
   --bs-table-striped-bg: #f2f2f2;
   --bs-table-border-color: #dee2e6;
 }
+.larines-table > tbody.larin-section:first-of-type > tr:first-child { border-top: 0 !important; }
 .larines-table .col-clave { width: 8%; }
 .larines-table .col-corta { width: 21%; }
 .larines-table .col-larga { width: 71%; }
@@ -85,11 +92,68 @@ body {
   overflow-wrap: anywhere;
 }
 .larines-table th:first-child { text-align: center; }
+.larin-section-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: .45rem;
+  margin: 1rem 0 .25rem;
+}
+.larin-section-nav a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2rem;
+  padding: .35rem .65rem;
+  border: 1px solid #cbd6df;
+  border-radius: .375rem;
+  background: #fff;
+  color: #244563;
+  font-size: .875rem;
+  line-height: 1.2;
+  white-space: nowrap;
+  text-decoration: none;
+  transition: background-color .15s ease, border-color .15s ease;
+}
+.larin-section-nav a:hover,
+.larin-section-nav a:focus-visible {
+  border-color: #112c43;
+  background: #f2f5f8;
+  color: #112c43;
+}
+.larin-section-nav a[hidden],
+.larines-table > tbody.larin-section[hidden] { display: none; }
+.larines-table > tbody.larin-section > tr.larin-section-title { scroll-margin-top: calc(var(--site-header-height) + 12px); }
+.larines-table > tbody.larin-section > tr.larin-section-title > th {
+  padding: 1.15rem .5rem .9rem;
+  border: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  color: #112c43 !important;
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: .035em;
+  line-height: 1.2;
+  text-align: center;
+  text-transform: uppercase;
+  vertical-align: middle;
+}
+.larines-table > tbody.larin-section > tr.larin-section-title > th::after {
+  display: block;
+  width: 3.25rem;
+  height: .2rem;
+  margin: .5rem auto 0;
+  border-radius: 999px;
+  background: #e5232e;
+  content: "";
+}
 @media (max-width: 575.98px) {
   .larines-table .col-clave { width: 14%; }
   .larines-table .col-corta { width: 29%; }
   .larines-table .col-larga { width: 57%; }
   .larines-table > :not(caption) > * > * { padding: .625rem .375rem; }
+  .larin-section-nav { gap: .35rem; }
+  .larin-section-nav a { min-height: 1.875rem; padding: .3rem .5rem; font-size: .8125rem; }
+  .larines-table > tbody.larin-section > tr.larin-section-title > th { padding-top: 1rem; font-size: 1.05rem; }
 }
 
 
@@ -466,6 +530,7 @@ textarea {
   --bs-table-striped-bg: #f2f2f2;
   --bs-table-border-color: #dee2e6;
 }
+.procedimientos-table tbody td { font-size: .95rem; }
 .procedimientos-table > thead {
   --bs-table-bg: #112c43;
   --bs-table-color: #fff;
@@ -549,19 +614,6 @@ body > header .navbar-toggler-icon { width: 1.5rem; height: 1.5rem; }
   outline-offset: 3px;
 }
 
-/* Línea visible en Traslados, también cuando se oculta la descripción larga. */
-.traslados-table .col-clave { width: 8%; }
-.traslados-table .col-corta { width: 21%; }
-.traslados-table .col-larga { width: 64%; }
-.traslados-table .col-linea { width: 7%; }
-.traslados-table .traslado-linea,
-.traslados-table thead th:last-child { text-align: center; }
-@media (max-width: 767.98px) {
-  .traslados-table .col-clave { width: 18%; }
-  .traslados-table .col-corta { width: 68%; }
-  .traslados-table .col-linea { width: 14%; }
-}
-
 /* Navegación coordinada con el azul oscuro de las tablas. */
 .navbar {
   --bs-navbar-color: #41576b;
@@ -608,15 +660,15 @@ body > header .navbar-toggler:focus-visible {
 .formacion-section { min-width: 0; }
 #buscarFormacion { scroll-margin-top: calc(var(--site-header-height) + 16px); }
 #buscarFormacion::-webkit-search-cancel-button { -webkit-appearance: none; }
-@media (max-width: 1199.98px) {
+@media (max-width: 991.98px) {
   #menuLarines + .dropdown-menu,
   #menuRecursos + .dropdown-menu {
-    display: block;
+    display: none;
     position: static !important;
     transform: none !important;
   }
-  #menuLarines:disabled, #menuRecursos:disabled { opacity: 1; color: #112c43; }
-  #menuLarines::after, #menuRecursos::after { display: none; }
+  #menuLarines + .dropdown-menu.show,
+  #menuRecursos + .dropdown-menu.show { display: block; }
 }
 
 /* Volver arriba centrado horizontalmente en todas las pantallas. */
@@ -865,7 +917,7 @@ a.resource-file:focus-visible, .resource-categories a:focus-visible { outline: 2
 .profile-grid { margin-bottom: 0; }
 
 /* Alinea el último desplegable hacia el interior del navbar en escritorio. */
-@media (min-width: 1200px) {
+@media (min-width: 992px) {
   #menuRecursos + .dropdown-menu {
     right: 0;
     left: auto;
@@ -897,7 +949,11 @@ a.resource-file:focus-visible, .resource-categories a:focus-visible { outline: 2
   .manual-catalog-table:not(.manual-extra-table) tr > :nth-child(2) { width: 72%; overflow-wrap: anywhere; }
 }
 
-.formacion-section > h2 { text-transform: uppercase; text-align: left; }
+.formacion-section > h2 {
+  scroll-margin-top: calc(var(--site-header-height, 54px) + 16px);
+  text-transform: uppercase;
+  text-align: left;
+}
 
 /* Enlaces de consulta y textos copiables: indicación discreta solo al pasar el cursor. */
 main :is(.larines-table, .formacion-table, .manual-catalog-table, .procedimientos-table) :is(a, .larin-copy, .train-copy) {
@@ -933,15 +989,6 @@ main :is(.larines-table, .formacion-table, .manual-catalog-table, .procedimiento
 @media (max-width: 1199.98px) {
   .resource-categories,
   .service-badge-picker { justify-content: center; }
-}
-
-/* Traslados en móvil horizontal: espacio suficiente para el encabezado Línea. */
-@media (max-width: 1199.98px) and (orientation: landscape) {
-  .traslados-table thead th:last-child { white-space: nowrap; }
-}
-@media (min-width: 768px) and (max-width: 1199.98px) and (orientation: landscape) {
-  .traslados-table .col-linea { width: 10%; }
-  .traslados-table .col-larga { width: 61%; }
 }
 
 .energy-line-picker[hidden], .energy-panel[hidden] { display: none !important; }
@@ -992,7 +1039,7 @@ main :is(.larines-table, .formacion-table, .manual-catalog-table, .procedimiento
 }
 
 /* Los desplegables parten del borde inferior común del navbar. */
-@media (min-width: 1200px) {
+@media (min-width: 992px) {
   body > header .navbar { position: relative; }
   .navbar .navbar-nav > .dropdown { position: relative; }
   .navbar .navbar-nav > .dropdown > .dropdown-menu {
@@ -1007,7 +1054,7 @@ main :is(.larines-table, .formacion-table, .manual-catalog-table, .procedimiento
 .terminal-panel[hidden], .terminal-line-picker[hidden] { display: none !important; }
 .terminal-pending { width: 100%; font: inherit; text-align: left; color: #617183; background: #f5f7fa; cursor: default; }
 #menuRecursos + .dropdown-menu .dropdown-item { white-space: normal; }
-@media (min-width: 1200px) { #menuRecursos + .dropdown-menu { width: 19rem; } }
+@media (min-width: 992px) { #menuRecursos + .dropdown-menu { width: 19rem; } }
 
 /* Dos tipos de diagramas dentro de Distribución de la Energía. */
 .energy-tabs { display: flex; gap: .25rem; margin-bottom: 1rem; border-bottom: 1px solid #ccd6df; }
@@ -1021,132 +1068,7 @@ main :is(.larines-table, .formacion-table, .manual-catalog-table, .procedimiento
 .energy-pending { padding: 1.25rem; background: #f5f7fa; border: 1px dashed #bdcbd6; border-radius: .5rem; color: #41576b; }
 .energy-pending p { margin: .5rem 0 0; }
 
-/* En tablet y escritorio, la navegación ocupa una columna lateral fija. */
-@media (min-width: 768px) {
-  :root { --site-header-height: 0px; }
-  body {
-    padding-top: 0 !important;
-    padding-left: 270px !important;
-  }
-  body > main,
-  body > footer {
-    padding-inline: clamp(1rem, 2.4vw, 2.5rem);
-  }
-  body > header {
-    inset: 0 auto 0 0;
-    width: 270px;
-    height: 100vh;
-    overflow: hidden;
-    border-right: 1px solid #d6e0e8;
-    border-bottom: 0 !important;
-  }
-  body > header .navbar {
-    height: 100%;
-    min-height: 100%;
-    align-items: stretch;
-    padding: 1rem 0 !important;
-  }
-  body > header .navbar > .container-fluid {
-    height: 100%;
-    min-height: 0;
-    flex-direction: column;
-    align-items: stretch;
-    padding-inline: .8rem !important;
-  }
-  body > header .navbar-brand {
-    display: flex;
-    align-items: center;
-    gap: .55rem;
-    width: 100%;
-    max-width: none;
-    margin: 0 0 .8rem;
-    white-space: normal;
-    line-height: 1.25;
-  }
-  body > header .navbar-brand .navbar-mobile-logo { display: block; flex: 0 0 32px; }
-  body > header .navbar-toggler,
-  #menuPrincipal .offcanvas-header { display: none !important; }
-  #menuPrincipal {
-    position: static !important;
-    display: flex !important;
-    visibility: visible !important;
-    width: 100%;
-    max-width: none;
-    height: auto !important;
-    min-height: 0;
-    flex: 1 1 auto;
-    flex-direction: column;
-    overflow: hidden;
-    transform: none !important;
-    border: 0;
-    background: transparent !important;
-  }
-  #menuPrincipal .offcanvas-body {
-    height: 0;
-    min-height: 0;
-    max-height: 100%;
-    flex: 1 1 0;
-    overflow-y: auto;
-    overscroll-behavior: contain;
-    scrollbar-gutter: stable;
-    padding: 0;
-  }
-  #menuPrincipal .navbar-nav {
-    width: 100%;
-    margin-left: 0 !important;
-    flex-direction: column;
-    align-items: stretch;
-  }
-  #menuPrincipal .nav-item { width: 100%; }
-  #menuPrincipal .nav-link {
-    width: 100%;
-    padding: .38rem .55rem;
-    text-align: left;
-    white-space: normal;
-  }
-  #menuPrincipal .dropdown-menu,
-  #menuLarines + .dropdown-menu,
-  #menuRecursos + .dropdown-menu {
-    position: static !important;
-    display: block !important;
-    inset: auto !important;
-    width: 100%;
-    max-width: none;
-    margin: 0;
-    padding: 0 0 .25rem .65rem;
-    transform: none !important;
-    border: 0;
-    border-radius: 0;
-    background: transparent;
-    box-shadow: none;
-  }
-  #menuPrincipal .dropdown-menu {
-    margin-left: .35rem;
-    padding-left: 1.65rem !important;
-    border-left: 1px solid #d6e0e8 !important;
-  }
-  #menuPrincipal #menuLarines + .dropdown-menu,
-  #menuPrincipal #menuFracciones + .dropdown-menu,
-  #menuPrincipal #menuRecursos + .dropdown-menu { display: none !important; }
-  #menuPrincipal #menuLarines + .dropdown-menu.show,
-  #menuPrincipal #menuFracciones + .dropdown-menu.show,
-  #menuPrincipal #menuRecursos + .dropdown-menu.show { display: block !important; }
-  #menuPrincipal #menuLarines::after,
-  #menuPrincipal #menuFracciones::after,
-  #menuPrincipal #menuRecursos::after { transition: transform .15s ease-in-out; }
-  #menuPrincipal #menuLarines[aria-expanded="true"]::after,
-  #menuPrincipal #menuFracciones[aria-expanded="true"]::after,
-  #menuPrincipal #menuRecursos[aria-expanded="true"]::after { transform: rotate(180deg); }
-  #menuPrincipal .dropdown-item {
-    padding: .3rem .65rem;
-    white-space: normal;
-    line-height: 1.25;
-  }
-  #menuPrincipal .dropdown-toggle::after { float: right; margin-top: .45rem; }
-  .navbar [hidden] { display: none !important; }
-}
-
-/* Con la barra lateral, reserva ancho suficiente para que las tablas conserven legibilidad. */
+/* Ajusta la cantidad de tablas por fila al ancho disponible. */
 @media (min-width: 768px) and (max-width: 991.98px) {
   .lineas-grid { grid-template-columns: minmax(0, 1fr); }
 }
@@ -1166,9 +1088,10 @@ main :is(.larines-table, .formacion-table, .manual-catalog-table, .procedimiento
 
 .energy-document small { line-height: 1.4; }
 @media (max-width: 575.98px) { .energy-documents { grid-template-columns: minmax(0, 1fr); } .energy-document { min-height: 64px; } }
+.navbar [hidden] { display: none !important; }
 
 /* En desktop, coloca la navegación en una barra superior horizontal. */
-@media (min-width: 1200px) {
+@media (min-width: 992px) {
   :root { --site-header-height: 54px; }
   body {
     padding-top: var(--site-header-height) !important;
@@ -1240,10 +1163,7 @@ main :is(.larines-table, .formacion-table, .manual-catalog-table, .procedimiento
     padding: .45rem .55rem;
     white-space: nowrap;
   }
-  #menuPrincipal .dropdown-menu,
-  #menuPrincipal #menuLarines + .dropdown-menu,
-  #menuPrincipal #menuFracciones + .dropdown-menu,
-  #menuPrincipal #menuRecursos + .dropdown-menu {
+  #menuPrincipal .dropdown-menu {
     position: absolute !important;
     display: none !important;
     inset: calc(100% + .35rem) auto auto 0 !important;
@@ -1274,6 +1194,11 @@ main :is(.larines-table, .formacion-table, .manual-catalog-table, .procedimiento
   }
 }
 
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .navbar .navbar-brand { font-size: .875rem; }
+  #menuPrincipal .nav-link { padding-inline: .35rem; font-size: .9rem; }
+}
+
 /* Ayuda de atajos: tarjeta de cristal flotante en la esquina inferior derecha. */
 .keyboard-help[hidden] { display: none !important; }
 .keyboard-help {
@@ -1282,9 +1207,7 @@ main :is(.larines-table, .formacion-table, .manual-catalog-table, .procedimiento
   bottom: max(1.25rem, env(safe-area-inset-bottom));
   z-index: 1095;
   width: min(26rem, calc(100vw - 2rem));
-  max-height: min(72vh, 36rem);
-  overflow-y: auto;
-  padding: 1.15rem 1.25rem 1rem;
+  padding: .9rem 1.1rem .8rem;
   border: 1px solid rgb(255 255 255 / 35%);
   border-radius: 1rem;
   background: linear-gradient(145deg, rgb(30 48 69 / 83%), rgb(20 30 45 / 78%));
@@ -1298,7 +1221,7 @@ main :is(.larines-table, .formacion-table, .manual-catalog-table, .procedimiento
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
-  margin: -.1rem 0 .6rem;
+  margin: -.1rem 0 .4rem;
 }
 .keyboard-help-header h2 { margin: 0; font-size: 1.25rem; font-weight: 700; }
 .keyboard-help-close {
@@ -1318,14 +1241,14 @@ main :is(.larines-table, .formacion-table, .manual-catalog-table, .procedimiento
 }
 .keyboard-help-close:hover { background: rgb(255 255 255 / 20%); }
 .keyboard-help-close:focus-visible { outline: 2px solid #fff; outline-offset: 2px; }
-.keyboard-help-description { margin: 0 0 .6rem; color: rgb(255 255 255 / 82%); }
+.keyboard-help-description { margin: 0 0 .4rem; color: rgb(255 255 255 / 82%); }
 .keyboard-help-list { margin: 0; }
 .keyboard-help-list > div {
   display: grid;
   grid-template-columns: 6.25rem minmax(0, 1fr);
   align-items: center;
   gap: .65rem;
-  padding: .38rem 0;
+  padding: .24rem 0;
   border-top: 1px solid rgb(255 255 255 / 14%);
 }
 .keyboard-help-list dt,
@@ -1339,25 +1262,38 @@ main :is(.larines-table, .formacion-table, .manual-catalog-table, .procedimiento
   border-radius: .4rem;
   background: rgb(255 255 255 / 13%);
   color: #fff;
-  font: 600 .82rem/1.35 var(--bs-font-sans-serif);
+  font: 600 .78rem/1.3 var(--bs-font-sans-serif);
   text-align: center;
 }
 .keyboard-help-footer {
-  margin: .65rem 0 0;
-  padding-top: .6rem;
+  margin: .45rem 0 0;
+  padding-top: .4rem;
   border-top: 1px solid rgb(255 255 255 / 14%);
   color: rgb(255 255 255 / 78%);
-  font-size: .85rem;
+  font-size: .8rem;
 }
 @media (max-width: 575.98px) {
   .keyboard-help {
     right: max(.6rem, env(safe-area-inset-right));
     bottom: max(.6rem, env(safe-area-inset-bottom));
     width: min(26rem, calc(100vw - 1.2rem));
-    max-height: 78vh;
-    padding: 1rem;
+    padding: .75rem .9rem .7rem;
   }
-  .keyboard-help-list > div { grid-template-columns: 5.75rem minmax(0, 1fr); gap: .45rem; }
+  .keyboard-help-list > div { grid-template-columns: 5.25rem minmax(0, 1fr); gap: .4rem; }
+}
+@media (max-height: 620px) {
+  .keyboard-help { padding: .6rem .8rem .55rem; }
+  .keyboard-help-header { margin-bottom: .2rem; }
+  .keyboard-help-header h2 { font-size: 1.1rem; }
+  .keyboard-help-description { margin-bottom: .25rem; font-size: .8rem; }
+  .keyboard-help-list > div { padding: .12rem 0; font-size: .82rem; line-height: 1.12; }
+  .keyboard-help-list kbd,
+  .keyboard-help-footer kbd { padding: .1rem .32rem; font-size: .7rem; }
+  .keyboard-help-footer { margin-top: .3rem; padding-top: .3rem; font-size: .74rem; }
+}
+@media (max-height: 560px) and (min-width: 600px) {
+  .keyboard-help { width: min(40rem, calc(100vw - 1rem)); }
+  .keyboard-help-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: .85rem; }
 }
 @media (prefers-reduced-motion: reduce) {
   .keyboard-help, .keyboard-help * { scroll-behavior: auto !important; }

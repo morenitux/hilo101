@@ -7,10 +7,10 @@
     <title>Procedimientos | Apoyo para JR</title>
   <link rel="icon" href="img/favicon.ico" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <link href="css/styles.css" rel="stylesheet">
+    <link href="css/styles.css?v=footer-gap-white-20261011b" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous" defer=""></script>
     <script src="js/search.js" defer=""></script>
-    <script src="js/main.js" defer=""></script>
+    <script src="js/main.js?v=help-shortcut-order-20261011a" defer=""></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
     <link href="https://fonts.googleapis.com/css2?family=Arimo:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
@@ -18,7 +18,7 @@
   </head>
   <body class="d-flex flex-column min-vh-100" data-page="procedimientos">
     <header class="border-bottom">
-      <nav class="navbar navbar-expand-xl bg-body-tertiary py-3" data-bs-theme="light" aria-label="Navegación principal">
+      <nav class="navbar navbar-expand-lg bg-body-tertiary py-3" data-bs-theme="light" aria-label="Navegación principal">
         <div class="container-fluid px-3 px-xl-4">
           <a class="navbar-brand fw-bold" href="index.html"><img class="navbar-mobile-logo" src="img/metro.webp" alt="Metro de la Ciudad de México — Inicio" width="32" height="32"><span class="navbar-brand-text">Apoyo para Jefes de Reguladores</span></a>
           <button id="abrirMenu" class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#menuPrincipal" aria-controls="menuPrincipal" aria-expanded="false" aria-label="Abrir menú">
@@ -33,7 +33,7 @@
               <!-- Destinos provisionales hasta crear las páginas correspondientes. -->
               <ul class="navbar-nav ms-xl-auto">
                 <li class="nav-item dropdown">
-                  <button class="nav-link dropdown-toggle" id="menuLarines" type="button" data-bs-toggle="dropdown" aria-expanded="false" data-page-group="larines,larines-pcl12,traslados"><svg class="nav-item-icon" aria-hidden="true" viewBox="0 0 16 16"><path d="M2 12.5h12M3 10V4.2A1.7 1.7 0 0 1 4.7 2.5h6.6A1.7 1.7 0 0 1 13 4.2V10H3Zm1.5 2.5 1.2-2.5m5.8 2.5L10.3 10M5 5h6M5 7.5h6"/></svg><span class="nav-item-label">Larines</span></button>
+                  <button class="nav-link dropdown-toggle" id="menuLarines" type="button" aria-expanded="false" data-page-group="larines,larines-pcl12,traslados"><svg class="nav-item-icon" aria-hidden="true" viewBox="0 0 16 16"><path d="M2 12.5h12M3 10V4.2A1.7 1.7 0 0 1 4.7 2.5h6.6A1.7 1.7 0 0 1 13 4.2V10H3Zm1.5 2.5 1.2-2.5m5.8 2.5L10.3 10M5 5h6M5 7.5h6"/></svg><span class="nav-item-label">Larines</span></button>
                   <ul class="dropdown-menu" aria-labelledby="menuLarines">
                     <li>
                       <a class="dropdown-item" href="index.html" data-page="larines">PCCI-C5/PCCII</a>
@@ -52,7 +52,7 @@
                 </li>
                 <li class="nav-item"><a class="nav-link" href="fracciones_vuelta.html" id="menuFracciones" data-page="fracciones-de-vuelta"><svg class="nav-item-icon" aria-hidden="true" viewBox="0 0 16 16"><path d="M2 5h9l-2-2m5 8H5l2 2M2 5l2-2m10 8-2 2"/></svg><span class="nav-item-label">Fracciones de vuelta</span></a></li>
                 <li class="nav-item">
-                  <a class="nav-link" href="manuales.html" data-page="manuales"><svg class="nav-item-icon" aria-hidden="true" viewBox="0 0 16 16"><path d="M2.2 3.2A2.2 2.2 0 0 1 4.4 1h3.3v12H4.4a2.2 2.2 0 0 0-2.2 2.2V3.2Zm11.6 0A2.2 2.2 0 0 0 11.6 1H8.3v12h3.3a2.2 2.2 0 0 1 2.2 2.2V3.2Z"/></svg><span class="nav-item-label">Manuales</span></a>
+                  <a class="nav-link" href="manuales.html" data-page="manuales"><svg class="nav-item-icon" aria-hidden="true" viewBox="0 0 16 16"><path d="M2 3h4v10H2zM6 4h4v9H6zM10 2.5h4V13h-4zM3 5h2M7 6h2M11 4.5h2"/></svg><span class="nav-item-label">Manuales</span></a>
                 </li>
                 <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" id="menuRecursos" href="otros_recursos.html" aria-expanded="false" data-page-group="otros-recursos,procedimientos"><svg class="nav-item-icon" aria-hidden="true" viewBox="0 0 16 16"><path d="M2 2h5v5H2zM9 2h5v5H9zM2 9h5v5H2zM9 9h5v5H9z"/></svg><span class="nav-item-label">Otros recursos</span></a>
@@ -71,7 +71,7 @@
         </div>
       </nav>
     </header>
-    <main id="contenido" class="flex-grow-1 bg-white" tabindex="-1">
+    <main id="contenido" class="flex-grow-1 bg-white main-footer-gap" tabindex="-1">
       <section class="container-fluid px-0 larines-container" aria-labelledby="tituloProcedimientos">
         <h1 id="tituloProcedimientos" class="h3 mt-4 mb-0">Procedimientos</h1>
         <div class="larines-search py-3" role="search" aria-label="Buscar procedimientos">
@@ -84,7 +84,7 @@
           <p id="estadoProcedimientos" class="small text-secondary text-end mt-2 mb-0" role="status" aria-live="polite">313 archivos</p>
         </div>
         <table id="tablaProcedimientos" class="table table-striped table-bordered mb-0 procedimientos-table">
-          <caption class="visually-hidden">LISTADO DE PROCEDIMIENTOS. LOS NOMBRES PENDIENTES DE IDENTIFICAR ESTÁN VACÍOS. LOS ENLACES ABREN EL PDF EN OTRA PESTAÑA.</caption>
+          <caption class="visually-hidden">LISTADO DE PROCEDIMIENTOS. LOS ENLACES ABREN EL PDF EN OTRA PESTAÑA.</caption>
           <colgroup>
             <col style="width:30%">
             <col style="width:70%">
@@ -796,7 +796,7 @@
                 <a href="files/procedimientos/PROCEDIMIENTOS%20DEL%20FOLIO%20101%20AL%20200/111.pdf" target="_blank" rel="noopener" title="Abrir PDF: 111">111</a>
               </td>
               <!-- Nombre del procedimiento: escribe o modifica el texto de la siguiente celda. -->
-              <td></td>
+              <td>REPOSICION DE BOLETOS FALTANTES O DEFECTUOSOS DE FABRICA DETECTADOS EN TAQUILLA</td>
             </tr>
 
             <!-- Procedimiento 112 -->
@@ -805,7 +805,7 @@
                 <a href="files/procedimientos/PROCEDIMIENTOS%20DEL%20FOLIO%20101%20AL%20200/112.pdf" target="_blank" rel="noopener" title="Abrir PDF: 112">112</a>
               </td>
               <!-- Nombre del procedimiento: escribe o modifica el texto de la siguiente celda. -->
-              <td></td>
+              <td>RECEPCION Y DOTACIÓN DE BOLETOS</td>
             </tr>
 
             <!-- Procedimiento 113 -->
@@ -814,7 +814,7 @@
                 <a href="files/procedimientos/PROCEDIMIENTOS%20DEL%20FOLIO%20101%20AL%20200/113.pdf" target="_blank" rel="noopener" title="Abrir PDF: 113">113</a>
               </td>
               <!-- Nombre del procedimiento: escribe o modifica el texto de la siguiente celda. -->
-              <td></td>
+              <td>DISTRIBUCIÓN Y VENTA DE BOLETOS EN TAQUILLAS</td>
             </tr>
 
             <!-- Procedimiento 114 -->
@@ -823,7 +823,7 @@
                 <a href="files/procedimientos/PROCEDIMIENTOS%20DEL%20FOLIO%20101%20AL%20200/114.pdf" target="_blank" rel="noopener" title="Abrir PDF: 114">114</a>
               </td>
               <!-- Nombre del procedimiento: escribe o modifica el texto de la siguiente celda. -->
-              <td></td>
+              <td>CONTRATACIÓN Y PAGO DEL PERSONAL DE HONORARIOS</td>
             </tr>
 
             <!-- Procedimiento 116 -->
@@ -832,7 +832,7 @@
                 <a href="files/procedimientos/PROCEDIMIENTOS%20DEL%20FOLIO%20101%20AL%20200/116.pdf" target="_blank" rel="noopener" title="Abrir PDF: 116">116</a>
               </td>
               <!-- Nombre del procedimiento: escribe o modifica el texto de la siguiente celda. -->
-              <td></td>
+              <td>INVESTIGACIÓN DE INCIDENCIAS EN LA OPERACIÓN DEL PERSONAL DE TAQUILLAS</td>
             </tr>
 
             <!-- Procedimiento 119 -->
@@ -841,7 +841,7 @@
                 <a href="files/procedimientos/PROCEDIMIENTOS%20DEL%20FOLIO%20101%20AL%20200/119.pdf" target="_blank" rel="noopener" title="Abrir PDF: 119">119</a>
               </td>
               <!-- Nombre del procedimiento: escribe o modifica el texto de la siguiente celda. -->
-              <td></td>
+              <td>DESGLOSE DE LA VENTA DE BOLETOS</td>
             </tr>
 
             <!-- Procedimiento 120 -->
@@ -850,7 +850,7 @@
                 <a href="files/procedimientos/PROCEDIMIENTOS%20DEL%20FOLIO%20101%20AL%20200/120.pdf" target="_blank" rel="noopener" title="Abrir PDF: 120">120</a>
               </td>
               <!-- Nombre del procedimiento: escribe o modifica el texto de la siguiente celda. -->
-              <td></td>
+              <td>CONTROL DE BOLETOS DE DESECHO</td>
             </tr>
 
             <!-- Procedimiento 121 -->
@@ -859,7 +859,7 @@
                 <a href="files/procedimientos/PROCEDIMIENTOS%20DEL%20FOLIO%20101%20AL%20200/121.pdf" target="_blank" rel="noopener" title="Abrir PDF: 121">121</a>
               </td>
               <!-- Nombre del procedimiento: escribe o modifica el texto de la siguiente celda. -->
-              <td></td>
+              <td>PAGO POR CONCEPTO DE IMPUESTO PREDIAL</td>
             </tr>
 
             <!-- Procedimiento 122 -->
@@ -868,7 +868,7 @@
                 <a href="files/procedimientos/PROCEDIMIENTOS%20DEL%20FOLIO%20101%20AL%20200/122.pdf" target="_blank" rel="noopener" title="Abrir PDF: 122">122</a>
               </td>
               <!-- Nombre del procedimiento: escribe o modifica el texto de la siguiente celda. -->
-              <td></td>
+              <td>ELABORACIÓN, REGISTRO Y TRÁMITE DE CUENTAS POR PAGAR</td>
             </tr>
 
             <!-- Procedimiento 124 -->
@@ -877,7 +877,7 @@
                 <a href="files/procedimientos/PROCEDIMIENTOS%20DEL%20FOLIO%20101%20AL%20200/124.pdf" target="_blank" rel="noopener" title="Abrir PDF: 124">124</a>
               </td>
               <!-- Nombre del procedimiento: escribe o modifica el texto de la siguiente celda. -->
-              <td></td>
+              <td>TRAMITE DE CONTRATACIÓN O CAMBIO DE DOMICILIO DE LINEAS TELEFONICAS DIRECTAS</td>
             </tr>
 
             <!-- Procedimiento 125 -->
@@ -886,7 +886,7 @@
                 <a href="files/procedimientos/PROCEDIMIENTOS%20DEL%20FOLIO%20101%20AL%20200/125.pdf" target="_blank" rel="noopener" title="Abrir PDF: 125">125</a>
               </td>
               <!-- Nombre del procedimiento: escribe o modifica el texto de la siguiente celda. -->
-              <td></td>
+              <td>MANUAL DE NORMAS GENERALES PARA LA AFECTACIÓN, BAJA U DESTINO FINAL DE BIENES PROPIEDAD DEL STC</td>
             </tr>
 
             <!-- Procedimiento 126 -->
@@ -895,7 +895,7 @@
                 <a href="files/procedimientos/PROCEDIMIENTOS%20DEL%20FOLIO%20101%20AL%20200/126.pdf" target="_blank" rel="noopener" title="Abrir PDF: 126">126</a>
               </td>
               <!-- Nombre del procedimiento: escribe o modifica el texto de la siguiente celda. -->
-              <td></td>
+              <td>MANTENIMIENTO PREVENTIVO Y CORRECTIVO DE MOBILIARIO Y EQUIPO DE OFICINA</td>
             </tr>
 
             <!-- Procedimiento 127 -->
@@ -904,7 +904,7 @@
                 <a href="files/procedimientos/PROCEDIMIENTOS%20DEL%20FOLIO%20101%20AL%20200/127.pdf" target="_blank" rel="noopener" title="Abrir PDF: 127">127</a>
               </td>
               <!-- Nombre del procedimiento: escribe o modifica el texto de la siguiente celda. -->
-              <td></td>
+              <td>CERTIFICACIÓN DE SOLICITUD DE PRESTAMO QUE OTORGA EL ISSSTE A TRABAJADORES DEL STC</td>
             </tr>
 
             <!-- Procedimiento 128 -->
@@ -913,7 +913,7 @@
                 <a href="files/procedimientos/PROCEDIMIENTOS%20DEL%20FOLIO%20101%20AL%20200/128.pdf" target="_blank" rel="noopener" title="Abrir PDF: 128">128</a>
               </td>
               <!-- Nombre del procedimiento: escribe o modifica el texto de la siguiente celda. -->
-              <td></td>
+              <td>CONTROL DE ASISTENCIA Y ASIGNACION DE TIEMPO EXTRARODINARIOS AL PERSONAL CON CATEGORÍA DE CONDUCTOR</td>
             </tr>
 
             <!-- Procedimiento 129 -->
@@ -922,7 +922,7 @@
                 <a href="files/procedimientos/PROCEDIMIENTOS%20DEL%20FOLIO%20101%20AL%20200/129.pdf" target="_blank" rel="noopener" title="Abrir PDF: 129">129</a>
               </td>
               <!-- Nombre del procedimiento: escribe o modifica el texto de la siguiente celda. -->
-              <td></td>
+              <td>APLICACION DE CORRECCIONES DISCIPLINARIAS Y SANCIONES A LOS TRABAJADORES DEL SISTEMA DE TRANSPORTE COLECTIVO</td>
             </tr>
 
             <!-- Procedimiento 130 -->
@@ -931,7 +931,7 @@
                 <a href="files/procedimientos/PROCEDIMIENTOS%20DEL%20FOLIO%20101%20AL%20200/130.pdf" target="_blank" rel="noopener" title="Abrir PDF: 130">130</a>
               </td>
               <!-- Nombre del procedimiento: escribe o modifica el texto de la siguiente celda. -->
-              <td></td>
+              <td>INSTALACIÓN Y/O CAMBIO DE TELEFONOS</td>
             </tr>
 
             <!-- Procedimiento 131 -->
@@ -940,7 +940,7 @@
                 <a href="files/procedimientos/PROCEDIMIENTOS%20DEL%20FOLIO%20101%20AL%20200/131.pdf" target="_blank" rel="noopener" title="Abrir PDF: 131">131</a>
               </td>
               <!-- Nombre del procedimiento: escribe o modifica el texto de la siguiente celda. -->
-              <td></td>
+              <td>REGISTRO, CONTROL Y PAGO A LOS PRESTADORES DE SERVICIO SOCIAL O PRÁCTICAS PROFESIONALES EN EL STC</td>
             </tr>
 
             <!-- Procedimiento 132 -->
@@ -949,7 +949,7 @@
                 <a href="files/procedimientos/PROCEDIMIENTOS%20DEL%20FOLIO%20101%20AL%20200/132.pdf" target="_blank" rel="noopener" title="Abrir PDF: 132">132</a>
               </td>
               <!-- Nombre del procedimiento: escribe o modifica el texto de la siguiente celda. -->
-              <td></td>
+              <td>RECUPERACIÓN DE ADEUDOS</td>
             </tr>
 
             <!-- Procedimiento 136 -->
@@ -958,7 +958,7 @@
                 <a href="files/procedimientos/PROCEDIMIENTOS%20DEL%20FOLIO%20101%20AL%20200/136.pdf" target="_blank" rel="noopener" title="Abrir PDF: 136">136</a>
               </td>
               <!-- Nombre del procedimiento: escribe o modifica el texto de la siguiente celda. -->
-              <td></td>
+              <td>ALTAS, BAJAS Y LICENCIAS AL SERVICIO MÉDICO DE LOS TRABAJADORES DEL STC</td>
             </tr>
 
             <!-- Procedimiento 137 -->
@@ -967,7 +967,7 @@
                 <a href="files/procedimientos/PROCEDIMIENTOS%20DEL%20FOLIO%20101%20AL%20200/137.pdf" target="_blank" rel="noopener" title="Abrir PDF: 137">137</a>
               </td>
               <!-- Nombre del procedimiento: escribe o modifica el texto de la siguiente celda. -->
-              <td></td>
+              <td>PAGO DE TENENCIA Y DERECHOS VEHICULARES</td>
             </tr>
 
             <!-- Procedimiento 143 -->
@@ -976,7 +976,7 @@
                 <a href="files/procedimientos/PROCEDIMIENTOS%20DEL%20FOLIO%20101%20AL%20200/143.pdf" target="_blank" rel="noopener" title="Abrir PDF: 143">143</a>
               </td>
               <!-- Nombre del procedimiento: escribe o modifica el texto de la siguiente celda. -->
-              <td></td>
+              <td>REGISTRO, CONTROL Y PAGO DE TRÁFICO DE LOS BIENES DE IMPORTACIÓN</td>
             </tr>
 
             <!-- Procedimiento 144 -->
@@ -985,7 +985,7 @@
                 <a href="files/procedimientos/PROCEDIMIENTOS%20DEL%20FOLIO%20101%20AL%20200/144.pdf" target="_blank" rel="noopener" title="Abrir PDF: 144">144</a>
               </td>
               <!-- Nombre del procedimiento: escribe o modifica el texto de la siguiente celda. -->
-              <td></td>
+              <td>PROCEDIMIENTO PARA LA GESTION DE CARTA DE CREDITO IRREVOCABLE</td>
             </tr>
 
             <!-- Procedimiento 145 -->
@@ -994,7 +994,7 @@
                 <a href="files/procedimientos/PROCEDIMIENTOS%20DEL%20FOLIO%20101%20AL%20200/145.pdf" target="_blank" rel="noopener" title="Abrir PDF: 145">145</a>
               </td>
               <!-- Nombre del procedimiento: escribe o modifica el texto de la siguiente celda. -->
-              <td></td>
+              <td>RECUPERACIÓN DE INGRESOS POR OTROS SERVICIOS</td>
             </tr>
 
             <!-- Procedimiento 147 -->
@@ -1003,7 +1003,7 @@
                 <a href="files/procedimientos/PROCEDIMIENTOS%20DEL%20FOLIO%20101%20AL%20200/147.pdf" target="_blank" rel="noopener" title="Abrir PDF: 147">147</a>
               </td>
               <!-- Nombre del procedimiento: escribe o modifica el texto de la siguiente celda. -->
-              <td></td>
+              <td>ALTAS Y BAJAS AL SEGURO CONTRA ACCIDENTES ESCOLARES PARA LOS INFANTES INSCRITOS AL CENDI</td>
             </tr>
 
             <!-- Procedimiento 148 -->
@@ -1012,7 +1012,7 @@
                 <a href="files/procedimientos/PROCEDIMIENTOS%20DEL%20FOLIO%20101%20AL%20200/148.pdf" target="_blank" rel="noopener" title="Abrir PDF: 148">148</a>
               </td>
               <!-- Nombre del procedimiento: escribe o modifica el texto de la siguiente celda. -->
-              <td></td>
+              <td>COBRO DE INDEMNIZACIÓN DEL SEGURO DE VIDA</td>
             </tr>
 
             <!-- Procedimiento 149 -->
@@ -1021,7 +1021,7 @@
                 <a href="files/procedimientos/PROCEDIMIENTOS%20DEL%20FOLIO%20101%20AL%20200/149.pdf" target="_blank" rel="noopener" title="Abrir PDF: 149">149</a>
               </td>
               <!-- Nombre del procedimiento: escribe o modifica el texto de la siguiente celda. -->
-              <td></td>
+              <td>TRÁMITE Y PAGO POR DERECHOS DE REVISTA REGLAMENTARIA ANUAL</td>
             </tr>
 
             <!-- Procedimiento 151 -->
@@ -1030,7 +1030,7 @@
                 <a href="files/procedimientos/PROCEDIMIENTOS%20DEL%20FOLIO%20101%20AL%20200/151.pdf" target="_blank" rel="noopener" title="Abrir PDF: 151">151</a>
               </td>
               <!-- Nombre del procedimiento: escribe o modifica el texto de la siguiente celda. -->
-              <td></td>
+              <td>SOLICITUD DE FIANZA A PROVEEDORES</td>
             </tr>
 
             <!-- Procedimiento 152 -->
@@ -1039,7 +1039,7 @@
                 <a href="files/procedimientos/PROCEDIMIENTOS%20DEL%20FOLIO%20101%20AL%20200/152.pdf" target="_blank" rel="noopener" title="Abrir PDF: 152">152</a>
               </td>
               <!-- Nombre del procedimiento: escribe o modifica el texto de la siguiente celda. -->
-              <td></td>
+              <td>PROCEDIMIENTO PARA LA CONSTANCIA DE O NO RESPONSABILIDAD SOBRE MUEBLES INSTRUMENTALES</td>
             </tr>
 
             <!-- Procedimiento 153 -->
@@ -1048,7 +1048,7 @@
                 <a href="files/procedimientos/PROCEDIMIENTOS%20DEL%20FOLIO%20101%20AL%20200/153.pdf" target="_blank" rel="noopener" title="Abrir PDF: 153">153</a>
               </td>
               <!-- Nombre del procedimiento: escribe o modifica el texto de la siguiente celda. -->
-              <td></td>
+              <td>CONTROL DE ACCESOS Y SUPERVISIÓN DE LA SEGURIDAD EN TRABAJOS A REALIZAR POR COMPAÑIAS CONTRATISTAS EN DIFERENTES ÁREAS DEL STC</td>
             </tr>
 
             <!-- Procedimiento 154 -->
@@ -1057,7 +1057,7 @@
                 <a href="files/procedimientos/PROCEDIMIENTOS%20DEL%20FOLIO%20101%20AL%20200/154.pdf" target="_blank" rel="noopener" title="Abrir PDF: 154">154</a>
               </td>
               <!-- Nombre del procedimiento: escribe o modifica el texto de la siguiente celda. -->
-              <td></td>
+              <td>BIENES RECHAZADOS PROVENIENTES DEL EXTRANJERO</td>
             </tr>
 
             <!-- Procedimiento 156 -->
@@ -1066,7 +1066,7 @@
                 <a href="files/procedimientos/PROCEDIMIENTOS%20DEL%20FOLIO%20101%20AL%20200/156.pdf" target="_blank" rel="noopener" title="Abrir PDF: 156">156</a>
               </td>
               <!-- Nombre del procedimiento: escribe o modifica el texto de la siguiente celda. -->
-              <td></td>
+              <td>PROCEDIMIENTO PARA LA AUTORIZACIÓN DE LA INSTALACIÓN DE CARTELES GRATUITOS EN ESPACIOS INSTITUCIONALES</td>
             </tr>
 
             <!-- Procedimiento 157 -->
@@ -1075,7 +1075,7 @@
                 <a href="files/procedimientos/PROCEDIMIENTOS%20DEL%20FOLIO%20101%20AL%20200/157.pdf" target="_blank" rel="noopener" title="Abrir PDF: 157">157</a>
               </td>
               <!-- Nombre del procedimiento: escribe o modifica el texto de la siguiente celda. -->
-              <td></td>
+              <td>JUSTIFICACIÓN DE RETARDOS POR EL SERVICIO DE TRANSPORTE DE PERSONAL</td>
             </tr>
 
             <!-- Procedimiento 158 -->
@@ -1084,7 +1084,7 @@
                 <a href="files/procedimientos/PROCEDIMIENTOS%20DEL%20FOLIO%20101%20AL%20200/158.pdf" target="_blank" rel="noopener" title="Abrir PDF: 158">158</a>
               </td>
               <!-- Nombre del procedimiento: escribe o modifica el texto de la siguiente celda. -->
-              <td></td>
+              <td>PARA LA AUTORIZACIÓN DE TOMAS FOTOGRÁFICAS Y FILMACIONES EN EL SISTEMA DE TRANSPORTE COLECTIVO</td>
             </tr>
 
             <!-- Procedimiento 159 -->
@@ -1093,7 +1093,7 @@
                 <a href="files/procedimientos/PROCEDIMIENTOS%20DEL%20FOLIO%20101%20AL%20200/159.pdf" target="_blank" rel="noopener" title="Abrir PDF: 159">159</a>
               </td>
               <!-- Nombre del procedimiento: escribe o modifica el texto de la siguiente celda. -->
-              <td></td>
+              <td>CONTRATACIÓN DE PERSONAL EN EL STC</td>
             </tr>
 
             <!-- Procedimiento 160 -->
@@ -1102,7 +1102,7 @@
                 <a href="files/procedimientos/PROCEDIMIENTOS%20DEL%20FOLIO%20101%20AL%20200/160.pdf" target="_blank" rel="noopener" title="Abrir PDF: 160">160</a>
               </td>
               <!-- Nombre del procedimiento: escribe o modifica el texto de la siguiente celda. -->
-              <td></td>
+              <td>MANUAL DE NORMAS PARA LA INTERVENCIÓN DE LOS TORNIQUETES DEL SISTEMA DE TRANSPORTE COLECTIVO</td>
             </tr>
 
             <!-- Procedimiento 161 -->
@@ -1111,7 +1111,7 @@
                 <a href="files/procedimientos/PROCEDIMIENTOS%20DEL%20FOLIO%20101%20AL%20200/161.pdf" target="_blank" rel="noopener" title="Abrir PDF: 161">161</a>
               </td>
               <!-- Nombre del procedimiento: escribe o modifica el texto de la siguiente celda. -->
-              <td></td>
+              <td>PAGO POR CONCEPTO DE SERVICIO DE AGUA</td>
             </tr>
 
             <!-- Procedimiento 162 -->
@@ -1120,7 +1120,7 @@
                 <a href="files/procedimientos/PROCEDIMIENTOS%20DEL%20FOLIO%20101%20AL%20200/162.pdf" target="_blank" rel="noopener" title="Abrir PDF: 162">162</a>
               </td>
               <!-- Nombre del procedimiento: escribe o modifica el texto de la siguiente celda. -->
-              <td></td>
+              <td>PROCEDIMIENTO PARA LA AUTORIZACIÓN, ASIGNACIÓN, REGISTRO Y CONTROL Y COMPROBACIÓN DE VIÁTICOS NACIONALES</td>
             </tr>
 
             <!-- Procedimiento 163 -->
@@ -1129,7 +1129,7 @@
                 <a href="files/procedimientos/PROCEDIMIENTOS%20DEL%20FOLIO%20101%20AL%20200/163.pdf" target="_blank" rel="noopener" title="Abrir PDF: 163">163</a>
               </td>
               <!-- Nombre del procedimiento: escribe o modifica el texto de la siguiente celda. -->
-              <td></td>
+              <td>PROCEDIMIENTO PARA LA AUTORIZACIÓN, ASIGNACIÓN, REGISTRO, CONTROL Y COMPROBACIÓN DE VIÁTICOS INTERNACIONALES</td>
             </tr>
 
             <!-- Procedimiento 164 -->
@@ -1138,7 +1138,7 @@
                 <a href="files/procedimientos/PROCEDIMIENTOS%20DEL%20FOLIO%20101%20AL%20200/164.pdf" target="_blank" rel="noopener" title="Abrir PDF: 164">164</a>
               </td>
               <!-- Nombre del procedimiento: escribe o modifica el texto de la siguiente celda. -->
-              <td></td>
+              <td>PAGO EN EFECTIVO DE LOS DESCUENTOS INDEBIDOS APLICADOS AL PERSONAL</td>
             </tr>
 
             <!-- Procedimiento 166 -->
@@ -1147,7 +1147,7 @@
                 <a href="files/procedimientos/PROCEDIMIENTOS%20DEL%20FOLIO%20101%20AL%20200/166.pdf" target="_blank" rel="noopener" title="Abrir PDF: 166">166</a>
               </td>
               <!-- Nombre del procedimiento: escribe o modifica el texto de la siguiente celda. -->
-              <td></td>
+              <td>REGISTRO Y CONTROL DE ENTRADAS AL ALMACÉN DE BIENES DE IMPORTACIÓN</td>
             </tr>
 
             <!-- Procedimiento 167 -->
@@ -1156,7 +1156,7 @@
                 <a href="files/procedimientos/PROCEDIMIENTOS%20DEL%20FOLIO%20101%20AL%20200/167.pdf" target="_blank" rel="noopener" title="Abrir PDF: 167">167</a>
               </td>
               <!-- Nombre del procedimiento: escribe o modifica el texto de la siguiente celda. -->
-              <td></td>
+              <td>REGSITRO Y CONTROL DE SALIDAS DEL ALMACÉN</td>
             </tr>
 
             <!-- Procedimiento 168 -->
@@ -1165,7 +1165,7 @@
                 <a href="files/procedimientos/PROCEDIMIENTOS%20DEL%20FOLIO%20101%20AL%20200/168.pdf" target="_blank" rel="noopener" title="Abrir PDF: 168">168</a>
               </td>
               <!-- Nombre del procedimiento: escribe o modifica el texto de la siguiente celda. -->
-              <td></td>
+              <td>REGISTRO Y CONTROL DE TRASPASOS ENTRE ALMACENES</td>
             </tr>
 
             <!-- Procedimiento 171 -->
@@ -1174,7 +1174,7 @@
                 <a href="files/procedimientos/PROCEDIMIENTOS%20DEL%20FOLIO%20101%20AL%20200/171.pdf" target="_blank" rel="noopener" title="Abrir PDF: 171">171</a>
               </td>
               <!-- Nombre del procedimiento: escribe o modifica el texto de la siguiente celda. -->
-              <td></td>
+              <td>ELABORACIÓN DE LA NOTA DE DEVOLUCION DE LA DEPENDENCIA (CUANDO LAS ÁREAS USUARIAS PONEN A DISPOSICIÓN DEL DEPARTAMENTO DE ALMACENES, MATERIALES NUEVOS Y EN CONDICIONES PARA SU UTILIZACIÓN).</td>
             </tr>
 
             <!-- Procedimiento 173 -->
@@ -1183,7 +1183,7 @@
                 <a href="files/procedimientos/PROCEDIMIENTOS%20DEL%20FOLIO%20101%20AL%20200/173.pdf" target="_blank" rel="noopener" title="Abrir PDF: 173">173</a>
               </td>
               <!-- Nombre del procedimiento: escribe o modifica el texto de la siguiente celda. -->
-              <td></td>
+              <td>EXPEDICIÓN DE LA CREDENCIAL DEL STC A LOS TRABAJADORES DE NUEVO INGRESO</td>
             </tr>
 
             <!-- Procedimiento 174 -->
@@ -1192,7 +1192,7 @@
                 <a href="files/procedimientos/PROCEDIMIENTOS%20DEL%20FOLIO%20101%20AL%20200/174.pdf" target="_blank" rel="noopener" title="Abrir PDF: 174">174</a>
               </td>
               <!-- Nombre del procedimiento: escribe o modifica el texto de la siguiente celda. -->
-              <td></td>
+              <td>EXPEDICIÓN DE CREDENCIALES DEL STC POR ACTUALIZACIÓN</td>
             </tr>
 
             <!-- Procedimiento 175 -->
@@ -1201,7 +1201,7 @@
                 <a href="files/procedimientos/PROCEDIMIENTOS%20DEL%20FOLIO%20101%20AL%20200/175.pdf" target="_blank" rel="noopener" title="Abrir PDF: 175">175</a>
               </td>
               <!-- Nombre del procedimiento: escribe o modifica el texto de la siguiente celda. -->
-              <td></td>
+              <td>EXPEDICIÓN DE CREDENCIALES DEL STC POR EXTRAVÍO</td>
             </tr>
 
             <!-- Procedimiento 176 -->
@@ -1210,7 +1210,7 @@
                 <a href="files/procedimientos/PROCEDIMIENTOS%20DEL%20FOLIO%20101%20AL%20200/176.pdf" target="_blank" rel="noopener" title="Abrir PDF: 176">176</a>
               </td>
               <!-- Nombre del procedimiento: escribe o modifica el texto de la siguiente celda. -->
-              <td></td>
+              <td>EXPEDICIÓN DE CREDENCIALES DEL STC POR CAMBIO DE CATEGORIA Y/O ADSCRIPCIÓN</td>
             </tr>
 
             <!-- Procedimiento 177 -->
@@ -1219,7 +1219,7 @@
                 <a href="files/procedimientos/PROCEDIMIENTOS%20DEL%20FOLIO%20101%20AL%20200/177.pdf" target="_blank" rel="noopener" title="Abrir PDF: 177">177</a>
               </td>
               <!-- Nombre del procedimiento: escribe o modifica el texto de la siguiente celda. -->
-              <td></td>
+              <td>ALTA AL SEGURO DE VIDA PARA LOS INFANTES INSCRITOS EN EL PLAN VACACIONAL DEL STC</td>
             </tr>
 
             <!-- Procedimiento 179 -->
@@ -1228,7 +1228,7 @@
                 <a href="files/procedimientos/PROCEDIMIENTOS%20DEL%20FOLIO%20101%20AL%20200/179.pdf" target="_blank" rel="noopener" title="Abrir PDF: 179">179</a>
               </td>
               <!-- Nombre del procedimiento: escribe o modifica el texto de la siguiente celda. -->
-              <td></td>
+              <td>CAMBIO DE BENEFICIARIOS  Y ALTA A LA ASEGURADORA HIDALGO, S.A</td>
             </tr>
 
             <!-- Procedimiento 180 -->
@@ -1237,7 +1237,7 @@
                 <a href="files/procedimientos/PROCEDIMIENTOS%20DEL%20FOLIO%20101%20AL%20200/180.pdf" target="_blank" rel="noopener" title="Abrir PDF: 180">180</a>
               </td>
               <!-- Nombre del procedimiento: escribe o modifica el texto de la siguiente celda. -->
-              <td></td>
+              <td>SEGURO DE RETIRO DE LOS TRABAJADORES DEL STC</td>
             </tr>
 
             <!-- Procedimiento 181 -->
@@ -1246,7 +1246,7 @@
                 <a href="files/procedimientos/PROCEDIMIENTOS%20DEL%20FOLIO%20101%20AL%20200/181.pdf" target="_blank" rel="noopener" title="Abrir PDF: 181">181</a>
               </td>
               <!-- Nombre del procedimiento: escribe o modifica el texto de la siguiente celda. -->
-              <td></td>
+              <td>EXPEDICIÓN DE CONSTANCIAS DE INGRESO Y ANTIGÜEDAD A TRABAJADORES DEL STC</td>
             </tr>
 
             <!-- Procedimiento 182 -->
@@ -1255,7 +1255,7 @@
                 <a href="files/procedimientos/PROCEDIMIENTOS%20DEL%20FOLIO%20101%20AL%20200/182.pdf" target="_blank" rel="noopener" title="Abrir PDF: 182">182</a>
               </td>
               <!-- Nombre del procedimiento: escribe o modifica el texto de la siguiente celda. -->
-              <td></td>
+              <td>CRÉDITO HIPOTECARIO PARA TRABAJADORES DEL STC</td>
             </tr>
 
             <!-- Procedimiento 184 -->
@@ -1264,7 +1264,7 @@
                 <a href="files/procedimientos/PROCEDIMIENTOS%20DEL%20FOLIO%20101%20AL%20200/184.pdf" target="_blank" rel="noopener" title="Abrir PDF: 184">184</a>
               </td>
               <!-- Nombre del procedimiento: escribe o modifica el texto de la siguiente celda. -->
-              <td></td>
+              <td>CERTIFICACIÓN DE DOCUMENTOS Y TRÁMITE DE CREDITO FONACOT</td>
             </tr>
 
             <!-- Procedimiento 186 -->
@@ -1273,7 +1273,7 @@
                 <a href="files/procedimientos/PROCEDIMIENTOS%20DEL%20FOLIO%20101%20AL%20200/186.pdf" target="_blank" rel="noopener" title="Abrir PDF: 186">186</a>
               </td>
               <!-- Nombre del procedimiento: escribe o modifica el texto de la siguiente celda. -->
-              <td></td>
+              <td>ACTUALIZACIÓN DE LICENCIAS DE MANEJO</td>
             </tr>
 
             <!-- Procedimiento 187 -->
@@ -1282,7 +1282,7 @@
                 <a href="files/procedimientos/PROCEDIMIENTOS%20DEL%20FOLIO%20101%20AL%20200/187.pdf" target="_blank" rel="noopener" title="Abrir PDF: 187">187</a>
               </td>
               <!-- Nombre del procedimiento: escribe o modifica el texto de la siguiente celda. -->
-              <td></td>
+              <td>PROCEDIMIENTO PARA LA ELABORACION DEL ROL DEL PERSONAL DE TAQUILLA</td>
             </tr>
 
             <!-- Procedimiento 188 -->
@@ -1291,7 +1291,7 @@
                 <a href="files/procedimientos/PROCEDIMIENTOS%20DEL%20FOLIO%20101%20AL%20200/188.pdf" target="_blank" rel="noopener" title="Abrir PDF: 188">188</a>
               </td>
               <!-- Nombre del procedimiento: escribe o modifica el texto de la siguiente celda. -->
-              <td></td>
+              <td>PROCEDIMIENTO PARA LA VERIFICACION Y RECAUDACIÓN DEL EFECTIVO CAPTADO POR LA VENTA DE BOLETOS EN TAQUILLA</td>
             </tr>
 
             <!-- Procedimiento 189 -->
@@ -1300,7 +1300,7 @@
                 <a href="files/procedimientos/PROCEDIMIENTOS%20DEL%20FOLIO%20101%20AL%20200/189.pdf" target="_blank" rel="noopener" title="Abrir PDF: 189">189</a>
               </td>
               <!-- Nombre del procedimiento: escribe o modifica el texto de la siguiente celda. -->
-              <td></td>
+              <td>RECLAMACIÓN DEL PAGO DE FIANZAS</td>
             </tr>
 
             <!-- Procedimiento 190 -->
@@ -1309,7 +1309,7 @@
                 <a href="files/procedimientos/PROCEDIMIENTOS%20DEL%20FOLIO%20101%20AL%20200/190.pdf" target="_blank" rel="noopener" title="Abrir PDF: 190">190</a>
               </td>
               <!-- Nombre del procedimiento: escribe o modifica el texto de la siguiente celda. -->
-              <td></td>
+              <td>MANUAL DE PROCEDIMIENTOS PARA EL MANTENIMIENTO PREVENTIVO A LOS EQUIPOS QUE INTEGRAN EL SISTEMA DE SEÑALIZACIÓN DEL SISTEMA DE TRANSPORTE COLECTIVO</td>
             </tr>
 
             <!-- Procedimiento 192 -->
@@ -1318,7 +1318,7 @@
                 <a href="files/procedimientos/PROCEDIMIENTOS%20DEL%20FOLIO%20101%20AL%20200/192.pdf" target="_blank" rel="noopener" title="Abrir PDF: 192">192</a>
               </td>
               <!-- Nombre del procedimiento: escribe o modifica el texto de la siguiente celda. -->
-              <td></td>
+              <td>ATENCIÓN DE ÓRDENES DE SERVICIO</td>
             </tr>
 
             <!-- Procedimiento 193 -->
@@ -1327,7 +1327,7 @@
                 <a href="files/procedimientos/PROCEDIMIENTOS%20DEL%20FOLIO%20101%20AL%20200/193.pdf" target="_blank" rel="noopener" title="Abrir PDF: 193">193</a>
               </td>
               <!-- Nombre del procedimiento: escribe o modifica el texto de la siguiente celda. -->
-              <td></td>
+              <td>REGISTRO A CONTRATISTAS</td>
             </tr>
 
             <!-- Procedimiento 194 -->
@@ -1336,7 +1336,7 @@
                 <a href="files/procedimientos/PROCEDIMIENTOS%20DEL%20FOLIO%20101%20AL%20200/194.pdf" target="_blank" rel="noopener" title="Abrir PDF: 194">194</a>
               </td>
               <!-- Nombre del procedimiento: escribe o modifica el texto de la siguiente celda. -->
-              <td></td>
+              <td>PLANEACIÓN, PROGRAMACION Y PRESUPUESTACION DE OBRA PÚBLICA</td>
             </tr>
 
             <!-- Procedimiento 199 -->
@@ -1345,7 +1345,7 @@
                 <a href="files/procedimientos/PROCEDIMIENTOS%20DEL%20FOLIO%20101%20AL%20200/199.pdf" target="_blank" rel="noopener" title="Abrir PDF: 199">199</a>
               </td>
               <!-- Nombre del procedimiento: escribe o modifica el texto de la siguiente celda. -->
-              <td></td>
+              <td>RECEPCION DE OBRA PUBLICA Y SERVICIOS RELACIONADOS CON LA MISMA</td>
             </tr>
 
             <!-- Procedimiento 200 -->
@@ -1354,7 +1354,7 @@
                 <a href="files/procedimientos/PROCEDIMIENTOS%20DEL%20FOLIO%20101%20AL%20200/200.pdf" target="_blank" rel="noopener" title="Abrir PDF: 200">200</a>
               </td>
               <!-- Nombre del procedimiento: escribe o modifica el texto de la siguiente celda. -->
-              <td></td>
+              <td>LIBERACION DE FIANZAS POR ANTICIPO Y POR CUMPLIMIENTO DE CONTRATO DE OBRA PUBLICA</td>
             </tr>
 
             <!-- Procedimiento 201 -->

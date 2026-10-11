@@ -5,17 +5,17 @@
   <title>Manuales | Apoyo para JR</title>
   <link rel="icon" href="img/favicon.ico" type="image/x-icon">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-  <link href="css/styles.css" rel="stylesheet">
+  <link href="css/styles.css?v=footer-gap-white-20261011b" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous" defer=""></script>
   <script src="js/search.js" defer></script>
-  <script src="js/main.js" defer=""></script>
+  <script src="js/main.js?v=help-shortcut-order-20261011a" defer=""></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Arimo:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
 <script src="js/manuales.js" defer></script></head>
 <body class="d-flex flex-column min-vh-100" data-page="manuales">
   <header class="border-bottom">
-    <nav class="navbar navbar-expand-xl bg-body-tertiary py-3" data-bs-theme="light" aria-label="Navegación principal">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary py-3" data-bs-theme="light" aria-label="Navegación principal">
       <div class="container-fluid px-3 px-xl-4">
         <a class="navbar-brand fw-bold" href="index.html"><img class="navbar-mobile-logo" src="img/metro.webp" alt="Metro de la Ciudad de México — Inicio" width="32" height="32"><span class="navbar-brand-text">Apoyo para Jefes de Reguladores</span></a>
         <button id="abrirMenu" class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#menuPrincipal" aria-controls="menuPrincipal" aria-expanded="false" aria-label="Abrir menú">
@@ -29,11 +29,11 @@
           <div class="offcanvas-body">
             <!-- Destinos provisionales hasta crear las páginas correspondientes. -->
             <ul class="navbar-nav ms-xl-auto">
-              <li class="nav-item dropdown"><button class="nav-link dropdown-toggle" id="menuLarines" type="button" data-bs-toggle="dropdown" aria-expanded="false" data-page-group="larines,larines-pcl12,traslados"><svg class="nav-item-icon" aria-hidden="true" viewBox="0 0 16 16"><path d="M2 12.5h12M3 10V4.2A1.7 1.7 0 0 1 4.7 2.5h6.6A1.7 1.7 0 0 1 13 4.2V10H3Zm1.5 2.5 1.2-2.5m5.8 2.5L10.3 10M5 5h6M5 7.5h6"/></svg><span class="nav-item-label">Larines</span></button><ul class="dropdown-menu" aria-labelledby="menuLarines"><li><a class="dropdown-item" href="index.html" data-page="larines">PCCI-C5/PCCII</a></li><li><a class="dropdown-item" href="larines_pcl12.html" data-page="larines-pcl12">PCL-12</a></li><li><a class="dropdown-item" href="traslados_trenes.html" data-page="traslados">Traslados de trenes</a></li></ul></li>
+              <li class="nav-item dropdown"><button class="nav-link dropdown-toggle" id="menuLarines" type="button" aria-expanded="false" data-page-group="larines,larines-pcl12,traslados"><svg class="nav-item-icon" aria-hidden="true" viewBox="0 0 16 16"><path d="M2 12.5h12M3 10V4.2A1.7 1.7 0 0 1 4.7 2.5h6.6A1.7 1.7 0 0 1 13 4.2V10H3Zm1.5 2.5 1.2-2.5m5.8 2.5L10.3 10M5 5h6M5 7.5h6"/></svg><span class="nav-item-label">Larines</span></button><ul class="dropdown-menu" aria-labelledby="menuLarines"><li><a class="dropdown-item" href="index.html" data-page="larines">PCCI-C5/PCCII</a></li><li><a class="dropdown-item" href="larines_pcl12.html" data-page="larines-pcl12">PCL-12</a></li><li><a class="dropdown-item" href="traslados_trenes.html" data-page="traslados">Traslados de trenes</a></li></ul></li>
               <li class="nav-item"><a class="nav-link" href="disponibilidad.html" data-page="disponibilidad" hidden>Disponibilidad de Trenes</a></li>
               <li class="nav-item"><a class="nav-link" href="formacion_trenes.html" data-page="formacion-de-trenes"><svg class="nav-item-icon" aria-hidden="true" viewBox="0 0 16 16"><path d="M4 1.8h8A1.8 1.8 0 0 1 13.8 3.6v7.1A1.8 1.8 0 0 1 12 12.5H4a1.8 1.8 0 0 1-1.8-1.8V3.6A1.8 1.8 0 0 1 4 1.8Zm-1.3 7h10.6M5 5h1m4 0h1M4 12.5l-1 1.7m9-1.7 1 1.7"/></svg><span class="nav-item-label">Formación de trenes</span></a></li>
               <li class="nav-item"><a class="nav-link" href="fracciones_vuelta.html" id="menuFracciones" data-page="fracciones-de-vuelta"><svg class="nav-item-icon" aria-hidden="true" viewBox="0 0 16 16"><path d="M2 5h9l-2-2m5 8H5l2 2M2 5l2-2m10 8-2 2"/></svg><span class="nav-item-label">Fracciones de vuelta</span></a></li>
-              <li class="nav-item"><a class="nav-link active" aria-current="page" href="manuales.html" data-page="manuales"><svg class="nav-item-icon" aria-hidden="true" viewBox="0 0 16 16"><path d="M2.2 3.2A2.2 2.2 0 0 1 4.4 1h3.3v12H4.4a2.2 2.2 0 0 0-2.2 2.2V3.2Zm11.6 0A2.2 2.2 0 0 0 11.6 1H8.3v12h3.3a2.2 2.2 0 0 1 2.2 2.2V3.2Z"/></svg><span class="nav-item-label">Manuales</span></a></li>
+              <li class="nav-item"><a class="nav-link active" aria-current="page" href="manuales.html" data-page="manuales"><svg class="nav-item-icon" aria-hidden="true" viewBox="0 0 16 16"><path d="M2 3h4v10H2zM6 4h4v9H6zM10 2.5h4V13h-4zM3 5h2M7 6h2M11 4.5h2"/></svg><span class="nav-item-label">Manuales</span></a></li>
               
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" id="menuRecursos" href="otros_recursos.html" aria-expanded="false" data-page-group="otros-recursos,procedimientos"><svg class="nav-item-icon" aria-hidden="true" viewBox="0 0 16 16"><path d="M2 2h5v5H2zM9 2h5v5H9zM2 9h5v5H2zM9 9h5v5H9z"/></svg><span class="nav-item-label">Otros recursos</span></a>
@@ -56,7 +56,7 @@
     </nav>
   </header>
 
-  <main id="contenido" class="flex-grow-1 bg-white" tabindex="-1">
+  <main id="contenido" class="flex-grow-1 bg-white main-footer-gap" tabindex="-1">
     <div class="container-fluid px-0 larines-container">
       <h1 class="h3 mt-4 mb-0">Manuales</h1>
 <div class="larines-search py-3" role="search" aria-label="Buscar manuales">
