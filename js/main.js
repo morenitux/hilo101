@@ -202,7 +202,8 @@ if (copyNotice) {
       const registration = cell.textContent.trim();
       const model = row.cells[modelIndex].textContent.trim();
       if (!registration) return;
-      const text = (line === "LA" ? "FM-" : "M-") + registration + " " + model;
+      const prefix = model === "NM-22" ? "RC-" : line === "LA" ? "FM-" : "M-";
+      const text = prefix + registration + " " + model;
       const button = document.createElement("button");
       button.type = "button";
       button.className = "train-copy";
