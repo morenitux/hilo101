@@ -92,6 +92,18 @@ body > footer {
   overflow-wrap: anywhere;
 }
 .larines-table th:first-child { text-align: center; }
+.larin-preview-lines {
+  display: grid;
+  grid-template-rows: repeat(2, 1.4em);
+  max-height: 2.8em;
+  overflow: hidden;
+  line-height: 1.4;
+}
+.larin-preview-lines > span {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
 .larin-section-nav {
   display: flex;
   flex-wrap: wrap;
@@ -481,6 +493,9 @@ textarea {
 .search-clear:hover { color: #212529; background: #e9ecef; }
 .search-clear:focus-visible { outline: 2px solid #0d6efd; }
 #buscarLarin::-webkit-search-cancel-button { -webkit-appearance: none; }
+
+/* Mantiene los saltos a secciones inmediatos en todas las páginas. */
+html { scroll-behavior: auto !important; }
 
 /* Navbar de borde a borde; contenido móvil centrado al 98 %. */
 @media (max-width: 767.98px) {

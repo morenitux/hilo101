@@ -188,6 +188,55 @@ if (copyNotice) {
     if (!copied) throw new Error("No se pudo copiar");
   }
 
+  function escapeClipboardHtml(text) {
+    return text.replace(/[&<>\"]/g, character => ({
+      "&": "&amp;",
+      "<": "&lt;",
+      ">": "&gt;",
+      "\"": "&quot;"
+    })[character]);
+  }
+
+  function legacyCopyFormatted(html) {
+    const previousFocus = document.activeElement;
+    const field = document.createElement("div");
+    field.contentEditable = "true";
+    field.style.cssText = "position:fixed;top:0;left:-10000px;opacity:0;font-size:16px;";
+    field.innerHTML = html;
+    document.body.appendChild(field);
+    field.focus({ preventScroll: true });
+    const range = document.createRange();
+    range.selectNodeContents(field);
+    const selection = window.getSelection();
+    selection.removeAllRanges();
+    selection.addRange(range);
+    let copied = false;
+    try { copied = document.execCommand("copy"); }
+    finally {
+      selection.removeAllRanges();
+      field.remove();
+      if (previousFocus instanceof HTMLElement) previousFocus.focus({ preventScroll: true });
+    }
+    if (!copied) throw new Error("No se pudo copiar");
+  }
+
+  async function copyFormattedLarin(text) {
+    const htmlText = escapeClipboardHtml(text).replace(/\r\n|\r|\n/g, "<br>");
+    const html = `<div style="font-family:'Arial Narrow',Arial,sans-serif;font-size:11pt;color:#000;">${htmlText}</div>`;
+    if (navigator.clipboard?.write && window.ClipboardItem && window.isSecureContext) {
+      try {
+        const item = new ClipboardItem({
+          "text/html": new Blob([html], { type: "text/html" }),
+          "text/plain": new Blob([text], { type: "text/plain" })
+        });
+        await navigator.clipboard.write([item]);
+        return;
+      } catch { /* Intenta copiar con la selección HTML tradicional. */ }
+    }
+    try { legacyCopyFormatted(html); }
+    catch { legacyCopy(text); }
+  }
+
   // Matrículas de formación: conserva el texto original aunque la búsqueda lo resalte.
   document.querySelectorAll(".formacion-table[data-sheet]").forEach(table => {
     const line = table.dataset.sheet;
@@ -232,6 +281,7 @@ if (copyNotice) {
     const longCell = row.cells[2];
     if (!shortCell || !longCell) return;
     const shortText = shortCell.textContent;
+    const copyText = longCell.dataset.copyText || longCell.textContent;
 const button = document.createElement("button");
     button.type = "button";
     button.className = "larin-copy";
@@ -240,12 +290,7 @@ const button = document.createElement("button");
     shortCell.replaceChildren(button);
     const copyLarin = async () => {
       try {
-        if (navigator.clipboard && window.isSecureContext) {
-          try { await navigator.clipboard.writeText(longCell.textContent); }
-          catch { legacyCopy(longCell.textContent); }
-        } else {
-          legacyCopy(longCell.textContent);
-        }
+        await copyFormattedLarin(copyText);
         showCopyNotice("Larín copiado");
       } catch {
         showCopyNotice("No se pudo copiar. Inténtalo de nuevo.");
@@ -272,29 +317,21 @@ const pageSearch = document.querySelector("#buscarLarin, #buscarManual, #buscarP
 // Atajos globales para navegar a las secciones principales desde cualquier página.
 const navigationShortcuts = {
   l: "index.html",
+  t: "traslados_trenes.html",
   f: "formacion_trenes.html",
   v: "fracciones_vuelta.html",
   m: "manuales.html",
-  p: "otros_recursos.html#perfiles-linea",
-  t: "otros_recursos.html#terminales-vias",
-  e: "otros_recursos.html#distribucion-energia",
-  s: "otros_recursos.html#servicios-provisionales",
-  r: "procedimientos.html",
-  n: "traslados_trenes.html"
+  o: "otros_recursos.html"
 };
 
 // Marca la letra asociada al atajo dentro de los elementos disponibles del navbar.
 const shortcutLabels = [
   ["#menuLarines .nav-item-label", "l"],
+  ['.navbar a[data-page="traslados"]', "t"],
   ['.navbar a[data-page="formacion-de-trenes"]', "f"],
   ["#menuFracciones .nav-item-label", "v"],
   ['.navbar a[data-page="manuales"]', "m"],
-  ['.navbar a[href="procedimientos.html"]', "r"],
-  ['.navbar a[href$="#perfiles-linea"]', "p"],
-  ['.navbar a[href$="#terminales-vias"]', "t"],
-  ['.navbar a[href$="#distribucion-energia"]', "e", 1],
-  ['.navbar a[href$="#servicios-provisionales"]', "s"],
-  ['.navbar a[data-page="traslados"]', "n"]
+  ["#menuRecursos .nav-item-label", "o"]
 ];
 shortcutLabels.forEach(([selector, letter, occurrence = 0]) => {
   document.querySelectorAll(selector).forEach(element => {
@@ -352,15 +389,11 @@ keyboardHelp.innerHTML = `
   <p class="keyboard-help-description">Atajos de teclado para navegar por el sitio:</p>
   <dl class="keyboard-help-list">
     <div><dt><kbd>Alt + L</kbd></dt><dd>Larines PCCI-C5/PCCII</dd></div>
-    <div><dt><kbd>Alt + N</kbd></dt><dd>Traslados de trenes</dd></div>
+    <div><dt><kbd>Alt + T</kbd></dt><dd>Traslados de trenes</dd></div>
     <div><dt><kbd>Alt + F</kbd></dt><dd>Formación de trenes</dd></div>
     <div><dt><kbd>Alt + V</kbd></dt><dd>Fracciones de vuelta</dd></div>
     <div><dt><kbd>Alt + M</kbd></dt><dd>Manuales</dd></div>
-    <div><dt><kbd>Alt + P</kbd></dt><dd>Perfiles de Línea</dd></div>
-    <div><dt><kbd>Alt + T</kbd></dt><dd>Terminales</dd></div>
-    <div><dt><kbd>Alt + E</kbd></dt><dd>Distribución de la Energía</dd></div>
-    <div><dt><kbd>Alt + S</kbd></dt><dd>Servicios provisionales</dd></div>
-    <div><dt><kbd>Alt + R</kbd></dt><dd>Procedimientos</dd></div>
+    <div><dt><kbd>Alt + O</kbd></dt><dd>Otros Recursos</dd></div>
     <div><dt><kbd>/</kbd></dt><dd>Ir al cuadro de búsqueda</dd></div>
   </dl>
   <p class="keyboard-help-footer">Presiona <kbd>?</kbd> o <kbd>Esc</kbd> para cerrar.</p>`;
