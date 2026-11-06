@@ -684,6 +684,8 @@ body > header .navbar-toggler:focus-visible {
   }
   #menuLarines + .dropdown-menu.show,
   #menuRecursos + .dropdown-menu.show { display: block; }
+  #menuPrincipal.show #menuLarines + .dropdown-menu,
+  #menuPrincipal.show #menuRecursos + .dropdown-menu { display: block !important; }
 }
 
 /* Volver arriba centrado horizontalmente en todas las pantallas. */

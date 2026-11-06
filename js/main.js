@@ -15,12 +15,23 @@ const closePrimaryMenus = except => {
     toggle.setAttribute("aria-expanded", "false");
   });
 };
+const openMobilePrimaryMenus = () => {
+  if (!window.matchMedia("(max-width: 991.98px)").matches) return;
+  primaryMenuToggles.forEach(toggle => {
+    toggle.nextElementSibling?.classList.add("show");
+    toggle.setAttribute("aria-expanded", "true");
+  });
+};
 document.addEventListener("click", event => {
   const target = event.target instanceof Element ? event.target : null;
   const toggle = target?.closest("#menuLarines, #menuRecursos");
   if (toggle) {
     event.preventDefault();
     event.stopImmediatePropagation();
+    if (window.matchMedia("(max-width: 991.98px)").matches) {
+      openMobilePrimaryMenus();
+      return;
+    }
     const submenu = toggle.nextElementSibling;
     if (!submenu?.classList.contains("dropdown-menu")) return;
     const willOpen = !submenu.classList.contains("show");
@@ -42,9 +53,11 @@ document.addEventListener("keydown", event => {
 if (menu && menuToggle) {
   menu.addEventListener("show.bs.offcanvas", () => {
     menuToggle.setAttribute("aria-expanded", "true");
+    openMobilePrimaryMenus();
   });
   menu.addEventListener("hide.bs.offcanvas", () => {
     menuToggle.setAttribute("aria-expanded", "false");
+    closePrimaryMenus();
   });
 
   menu.querySelectorAll("a.nav-link, a.dropdown-item").forEach((link) => {
